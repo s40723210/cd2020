@@ -5,6 +5,8 @@ body {
   background-position: bottom -10px right -100px;
   background-repeat:no-repeat;
   background-attachment: fixed;
+  line-height: 1.7;
+  color: #4d4d4d;
   font-weight: 400;
   font-size: 1rem; }
 
@@ -1703,10 +1705,3 @@ h1, h2, h3, h4, h5,
 
 .testimonial-wrap .owl-nav {
   display: none; }
-.gotop {
-    color: rgba(44, 199, 242, 0.4);
-    position: fixed;
-	font-size: 100px;
-    bottom: 200px;
-    right: 130px;
-    cursor: pointer; }
