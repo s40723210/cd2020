@@ -32,12 +32,119 @@
 <hr color="00ffee"/>
 <p></p>
 <h1>assignment1</h1>
-<p><span></span></p>
-<h2>亂數分組程式</h2>
+<p></p>
+<p><iframe height="600" src="http://www.wibibi.com/info.php?tid=366" width="800"></iframe></p><h2>亂數分組程式</h2>
 <p>1.請描述如何針對該課程進行有效的隨機分組，或者隨機進行點名？</p>
-<h2>可攜編程系統</h2>
+<p>可以去這裡測試程式:<a href="https://repl.it/languages/python3" target="_blank">https://repl.it/languages/python3</a></p>
+<h4><strong><span style="color: #0000ff;">抽查的python程式</span></strong></h4>
+<p>如果要使用python來進行亂數分組抽查的話，可以導入random來從列表中隨機抽出所需要的n個不同元素，如下面的程式執行之後，就可以亂數抽出4位。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random 
+
+group = [4, 10, 12, 25, 32, 34, 38, 45, 50] 
+
+team = random.sample(group, 4) 
+print (team)</pre>
+<p>再來是要讀取網頁資料的話，就要導入requests，使用get請求即可直接下載，例如member = requests.get("網址")，再用print(member.text)就可以印出來了如下。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import requests
+
+web = "https://mdecourse.github.io/cd2020/downloads/2b_group_list.txt"
+
+member = requests.get(web)
+
+print(member.text)</pre>
+<p>如果使用讀取出的資料，還是無法使用的，因為member.text的性質是str字串，所以我就要將它變回原本的list列表，才可以進行亂數分組，改這個非常的簡單如下。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">x = eval(member.text)</pre>
+<p>最後我整理出來的程式，雖然沒有老師這麼精美，但是也是可以進行亂數分組的抽查的，如果要改抽查人數，改y = random.sample(i,2)的數字即可。</p>
+<h4><span style="color: #ff6600;"><span color="#0000ff"><b>最終程式碼</b></span></span></h4>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import requests
+import random
+ 
+web = "https://mdecourse.github.io/cd2020/downloads/2b_group_list.txt"
+member = requests.get(web)
+#print(memder.text)
+x=0
+for i in eval(member.text):
+    y = random.sample(i,2)
+    x+=1
+    print("group"+ str(x))
+    print(y)</pre>
+<h4><strong><span style="color: #0000ff;">亂數分組的的python程式</span></strong></h4>
+<p><strong></strong>一開始先從網頁上抓人員，這次跟上面的不太一樣，抓出來的本來就是str字串，所以必須把每個學號轉變為<span>list列表，直接將f.text加上 .split() 來轉換，完成之後就可以使用，random.shuffle()來將整個順序打亂，再來設定一共要分幾組，再使用while迴圈來判斷每一組要有幾個人，使用if判斷是來中斷迴圈，len()是指一共有幾個數量的意思，要加組別的話就要再多寫一列，接著使用for 迴圈來從，剛剛算好的每組人數，例如:13、12、12、12，再使用一個for迴圈，來一個一個配置組人員，這時候直接使用迭代iter()的next()，來抓人員這樣之就不會重複了，最後再加上一些說明、分格、標題，就可以開始進行亂數分組了。</span></p>
+<h4><span style="color: #ff6600;"><span color="#0000ff"><b>最終程式碼</b></span></span></h4>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import requests
+import random
+
+web = "http://s1.mde.nfu.edu.tw:8000/?semester=1082&amp;courseno=0780"
+f = requests.get(web)
+#print(type(f.text))
+x = f.text.split()
+#print(len(x))
+#print(x)
+random.shuffle(x)
+
+group1,group2,group3,group4 = 0,0,0,0
+while 1==1:
+    group1 += 1
+    if (group1+group2+group3+group4) == len(x):
+        break
+    group2 += 1
+    if (group1+group2+group3+group4) == len(x):
+        break
+    group3 += 1
+    if (group1+group2+group3+group4) == len(x):
+        break
+    group4 += 1
+    if (group1+group2+group3+group4) == len(x):
+        break
+#print(group1,group2,group3,group4)
+
+print("全班人數有"+str(len(x))+"人")
+print("="*20)
+num = group1,group2,group3,group4
+a = iter(x)
+team = 0
+for i in num:
+    team += 1
+    print("group"+str(team)+" 共 "+str(i)+" 人")
+    for g in range(i):
+        print(next(a))
+    print("-" * 20)</pre>
+<p></p>
+<p>
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
+Ace = ace.Editor(editor_id="kw_editor", console_id="kw_console", container_id="kw__container", storage_id="kw_py_src" )
+
+Ace.editor.setValue("""# 導入 sys 模組
+import sys
+# 導入 keyword 模組
+import keyword
+
+def helloWorld():
+    print("Hello World!")
+
+helloWorld()
+
+# 利用 sys 模組中的 version_info 印出 Python 版次
+print("Python version: ", sys.version_info)
+# 利用 keyword 模組中的 kwlist 印出關鍵字
+print("Python keywords: ", keyword.kwlist)
+""")
+Ace.editor.scrollToRow(0)
+Ace.editor.gotoLine(0)
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run'].bind('click', Ace.run)
+doc['kw_show_console'].bind('click', Ace.show_console)
+doc['kw_clear_console'].bind('click', Ace.clear_console)
+</script>
+</p><h2>可攜編程系統</h2>
 <p>2.描述如何為Windows 10 64位系統準備一個可移植的Python編程系統，以允許在Github上維護CMSiMDE網站，Pelican博客和Reveal.js演示文稿？</p>
-<h2>四輪車手冊</h2>
+<p>要創造可攜編程系統，首先需要的是start.bat以及stop.bat，</p>
+<p></p><h2>四輪車手冊</h2>
 <p>我們從<a href="https://www.coppeliarobotics.com/helpFiles/index.html">CoppeliaSim用戶手冊</a>中尋找有關於四輪機器人的文章，找到了幾個相關的文章，分別是<span style="color: #000000;"><a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/bubbleRobTutorial.htm" name="link194folder.9" style="color: #000000;">BubbleRob tutorial</a>、<a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/lineFollowingBubbleRobTutorial.htm" name="link196folder.9">Line following BubbleRob tutorial</a></span><span style="color: #000000;">、<a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/externalControllerTutorial.htm" name="link199folder.9">External controller tutorial</a></span><span style="color: #000000;">、<a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/simulation.htm" name="link184folder.7">Simulation</a>、<a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/simulationPropertiesDialog.htm" name="link185folder.7">Simulation dialog</a>，</span>一共五個有關四輪車的文章。</p>
 <h4>其中的<span style="color: #000000;"><a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/externalControllerTutorial.htm" name="link199folder.9" style="color: #000000;">External controller tutorial</a></span>為:</h4>
 <p><span><span>在CoppeliaSim中，有幾種方法可以控制機器人或仿真：</span></span></p>
