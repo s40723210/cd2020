@@ -164,8 +164,93 @@ img.add_border {
         </header>
     <div id="tipue_search_content">亂數分組程式 << <a href='亂數分組程式.html'>Previous</a> <a href='四輪車手冊.html'>Next</a> >> 四輪車手冊<br /><h1>可攜編程系統</h1>
 <p>2.描述如何為Windows 10 64位系統準備一個可移植的Python編程系統，以允許在Github上維護CMSiMDE網站，Pelican博客和Reveal.js演示文稿？</p>
-<p>要創造可攜編程系統，首先需要的是start.bat以及stop.bat，</p>
-<p></p><br />亂數分組程式 << <a href='亂數分組程式.html'>Previous</a> <a href='四輪車手冊.html'>Next</a> >> 四輪車手冊</div>
+<p>要創造可攜編程系統，首先需要的是start.bat以及stop.bat，放進system資料夾(自行創建)後，然後再創建一個data數據目錄資料夾(一樣放進<span>system資料夾內</span>)。</p>
+<hr/>
+<p style="top: 1595.4px;">start.bat 存放在system資料夾下</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+subst %Disk%: "data"
+
+%Disk%:
+
+set HomePath=%Disk%:\home_mdecourse
+set HomeDrive=%Disk%:\home_mdecourse
+set Home=%Disk%:\home_mdecourse
+set USERPROFILE=%Disk%:\home_mdecourse
+
+REM 將系統 Python 程式的 io 設為 utf-8
+set PYTHONIOENCODING="utf-8"
+
+set PYTHONPATH=%Disk%:\py382\DLLs;%Disk%:\py382\Lib;%Disk%:\py382\Lib\site-packages;
+set PYTHONHOME=%Disk%:\py382
+
+set path_python=%Disk%:\py382;%Disk%:\py382\Scripts;
+set path_msys2=%Disk%:\msys64\mingw64\bin;
+set path_tcc=%Disk%:\tcc;
+set path_git=%Disk%:\portablegit\bin;
+
+set GIT_HOME=%Disk%:\portablegit\bin\
+set GIT_SSH=%Disk%:\putty\plink.exe
+
+path=%Disk%:;%path_python%;%path_msys2%;%path_tcc%;%path_git%;%path_cmake%;%path_coreutils%;%path%;
+
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+
+start /MIN %Disk%:\wscite432\wscite\SciTE.exe
+start /MIN %Disk%:\wscite432\wscite\SciTE.exe
+
+Exit</pre>
+<p>stop.bat <span>存放在system資料夾下</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+path=%PATH%;
+
+taskkill /IM python.exe /F
+taskkill /IM pythonw.exe /F
+taskkill /IM SciTE.exe /F
+REM 終止虛擬硬碟與目錄的對應
+subst %Disk%: /D
+REM 關閉 cmd 指令視窗
+taskkill /IM cmd.exe /F
+EXIT</pre>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_96320"></div>
+</div>
+<h4><span style="color: #ff9900;"><strong>data的資料夾內:</strong></span></h4>
+<p>編輯器，使用<span>SciTE :</span> <a href="https://www.scintilla.org/SciTEDownload.html">https://www.scintilla.org/SciTEDownload.html</a></p>
+<p>下載<span>Windows 64-bit:</span> <span><a href="https://www.scintilla.org/wscite432.zip">full 64-bit download</a></span>，放進<span>data</span>目錄裡的<span>wscite432資料夾(自己創建)，接著</span><span>開啟<span>SciTE.exe</span><span>，點選 </span><span>Options下的</span><span><span style="text-decoration: underline;">Open Global Options File</span><span> ，使用ctrl + f 來收尋code.page=0，將code.page=65001的#刪掉，這樣才不會出現亂碼。</span></span><br/></span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">code.page=65001
+#code.page=0</pre>
+<p></p>
+<hr/>
+<p>Git控制軟體 :<span> <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></span></p>
+<p>下載Windows 64-bit: <span><a href="https://github.com/git-for-windows/git/releases/download/v2.25.1.windows.1/Git-2.25.1-64-bit.exe">64-bit Git for Windows Setup</a></span>，放進<span>data</span>目錄裡面並且重新命名為<span>portablegit 。</span></p>
+<hr/>
+<p><span>ssh</span>連線工具組，使用的<span>putty : </span><span><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">https://www.chiark.greenend.org.uk/~sgtatham/putty/</a></span></p>
+<p>直接下載老師之前給的:<span><a href="https://drive.google.com/file/d/1ISq1TJuaZyYZnfU33l-b7ifzmO3ejlEV/view">putty.7z</a></span>，解壓縮放入<span>data</span>目錄就可以了。</p>
+<hr/>
+<p>MSYS2：<a href="https://www.msys2.org/">https://www.msys2.org/ </a></p>
+<p>下載的是<a href="http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20190524.exe">msys2-x86</a><span><a href="http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20190524.exe">_64-20190524.exe</a></span> ，安裝在<span> data </span>目錄裡的<span>msys64資料夾(自己創建)</span>。</p>
+<hr/>
+<p>Tiny C Compiler : <a href="https://github.com/TinyCC/tinycc">https://github.com/TinyCC/tinycc</a></p>
+<p>直接在<span>data </span>目錄下進行<span>git clone </span><span><a href="https://github.com/TinyCC/tinycc">https://github.com/TinyCC/tinycc</a></span>  tcc </p>
+<hr/>
+<p>把現在再用的home_mdecourse，整個複製到data 目錄下。</p>
+<hr/>
+<p>Python : <a href="https://www.python.org/">https://www.python.org/</a>，下載3.8.2版本的<a href="https://www.python.org/ftp/python/3.8.2/python-3.8.2.exe">安裝檔</a>。</p>
+<p>1.完成後開啟，點選<span>Customize installation(定制安裝)。</span></p>
+<p>2.將第二個選項的pip取消勾選，其他都可以勾選起來。</p>
+<p>3.使用預設勾選，將路徑改為data內的py382資料夾(自己創建)。</p>
+<p>4.直接在y槽中執行，python <span>get-pip.py 來安裝pip軟件。</span></p>
+<p><span>5.完成之後，來安裝軟件包，輸入python pip install<span> </span><span>Flask</span> 依此類推。</span></p>
+<p>6.安裝的有<span>Flask</span>、<span>Markdown</span>、<span>lxml</span>、<span>bs4</span>、<span>flask_cors</span>、<span>pelican</span>、<span>leo</span>。</p>
+<hr/>
+<p>data目錄下的所有資料:</p>
+<p><img alt="" height="193" src="./../images/explorer_2020-03-21_21-05-25.png" width="519"/></p>
+<p><span>system資料夾內:</span></p>
+<p><span><img alt="" height="107" src="./../images/explorer_2020-03-21_21-44-29.png" width="491"/></span></p><br />亂數分組程式 << <a href='亂數分組程式.html'>Previous</a> <a href='四輪車手冊.html'>Next</a> >> 四輪車手冊</div>
         
     <!-- footer -->
       <div class="container">

@@ -16,7 +16,7 @@
 <p>5.用編輯器來開啟<span>start_mdecourse.bat檔案。</span></p>
 <p>6.<span>將</span><span>檔中的py373全部都改成py382後，重新啟動。</span></p>
 <p>7.直接在y槽中執行，python <span>get-pip.py 來安裝pip軟件。</span></p>
-<p><span>8.完成之後，來安裝軟件包，輸入 pip install <span style="color: #ff0000;">Flask</span> 依此類推。</span></p>
+<p><span>8.完成之後，來安裝軟件包，輸入python pip install <span style="color: #ff0000;">Flask</span> 依此類推。</span></p>
 <p>9.安裝的有<span style="color: #ff0000;">Flask</span>、<span style="color: #ff0000;">Markdown</span>、<span style="color: #ff0000;">lxml</span>、<span style="color: #ff0000;">bs4</span>、<span style="color: #ff0000;">flask_cors</span>、<span style="color: #ff0000;">pelican</span>、<span style="color: #ff0000;">leo</span>。</p>
 <p>我的教學影片:<a class="style-scope ytcp-video-share-dialog" href="https://youtu.be/Im6e8ZD1-Xo" id="watch-url" target="_blank">https://youtu.be/Im6e8ZD1-Xo</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Im6e8ZD1-Xo" width="560"></iframe></p>
@@ -30,8 +30,7 @@
 <p>1.先登入github，點進去想要fork的倉儲。<br/><br/>2.點選右上角的Fork，再選擇自己的github。<br/><br/>3.git clone --recurse-submodules (倉儲網址)。<br/><br/>4.更新git push完成，點選New pull request，等組長同意。<br/><br/>5.組員要進行更新時，要記得先git pull (分組網址) 檢查版本。<br/><br/>6.有衝突的話，組長要處理和整合分支並且解決衝突。<br/><br/>我的教學影片:<a href="https://youtu.be/1bZ16BgmF8c">https://youtu.be/1bZ16BgmF8c</a><a href="https://youtu.be/1bZ16BgmF8c"></a></p>
 <p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/1bZ16BgmF8c" width="560"></iframe></p>
 <hr color="00ffee"/>
-<p></p>
-<h1>assignment1</h1>
+<p></p><h1>assignment1</h1>
 <p></p>
 <p><iframe height="600" src="http://www.wibibi.com/info.php?tid=366" width="800"></iframe></p><h2>亂數分組程式</h2>
 <p>1.請描述如何針對該課程進行有效的隨機分組，或者隨機進行點名？</p>
@@ -56,6 +55,7 @@ print(member.text)</pre>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">x = eval(member.text)</pre>
 <p>最後我整理出來的程式，雖然沒有老師這麼精美，但是也是可以進行亂數分組的抽查的，如果要改抽查人數，改y = random.sample(i,2)的數字即可。</p>
 <h4><span style="color: #ff6600;"><span color="#0000ff"><b>最終程式碼</b></span></span></h4>
+<p>程式碼連結:<a href="https://github.com/s40723210/cd2020/blob/master/downloads/%E6%8A%BD%E6%9F%A5%E7%A8%8B%E5%BC%8F.py" target="_blank">抽查程式.py</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import requests
 import random
  
@@ -69,8 +69,9 @@ for i in eval(member.text):
     print("group"+ str(x))
     print(y)</pre>
 <h4><strong><span style="color: #0000ff;">亂數分組的的python程式</span></strong></h4>
-<p><strong></strong>一開始先從網頁上抓人員，這次跟上面的不太一樣，抓出來的本來就是str字串，所以必須把每個學號轉變為<span>list列表，直接將f.text加上 .split() 來轉換，完成之後就可以使用，random.shuffle()來將整個順序打亂，再來設定一共要分幾組，再使用while迴圈來判斷每一組要有幾個人，使用if判斷是來中斷迴圈，len()是指一共有幾個數量的意思，要加組別的話就要再多寫一列，接著使用for 迴圈來從，剛剛算好的每組人數，例如:13、12、12、12，再使用一個for迴圈，來一個一個配置組人員，這時候直接使用迭代iter()的next()，來抓人員這樣之就不會重複了，最後再加上一些說明、分格、標題，就可以開始進行亂數分組了。</span></p>
+<p><strong></strong>一開始先從網頁上抓人員，這次跟上面的不太一樣，抓出來的本來就是str字串，所以必須把每個學號轉變為<span>list列表，直接將f.text加上 .split() 來轉換，完成之後就可以使用，random.shuffle()來將整個順序打亂，再來設定一共要分幾組，再使用while迴圈來判斷每一組要有幾個人，使用if判斷是來中斷迴圈，len()是指一共有幾個數量的意思，要加組別的話就要再多寫一列，接著使用for 迴圈來從，剛剛算好的每組人數，例如:13、12、12、12，再使用一個for迴圈，來一個一個配置組人員，這時候直接使用迭代iter()的next()，來抓人員這樣子就不會重複了，最後再加上一些說明、分格、標題，就可以開始進行亂數分組了。</span></p>
 <h4><span style="color: #ff6600;"><span color="#0000ff"><b>最終程式碼</b></span></span></h4>
+<p>程式碼連結:<a href="https://github.com/s40723210/cd2020/blob/master/downloads/%E4%BA%82%E6%95%B8%E5%88%86%E7%B5%84.py">亂數分組.py</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import requests
 import random
 
@@ -109,40 +110,11 @@ for i in num:
     for g in range(i):
         print(next(a))
     print("-" * 20)</pre>
-<p></p>
-<p>
-<script type="text/python3">
-from browser import document as doc
-import ace
-
-# Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
-Ace = ace.Editor(editor_id="kw_editor", console_id="kw_console", container_id="kw__container", storage_id="kw_py_src" )
-
-Ace.editor.setValue("""# 導入 sys 模組
-import sys
-# 導入 keyword 模組
-import keyword
-
-def helloWorld():
-    print("Hello World!")
-
-helloWorld()
-
-# 利用 sys 模組中的 version_info 印出 Python 版次
-print("Python version: ", sys.version_info)
-# 利用 keyword 模組中的 kwlist 印出關鍵字
-print("Python keywords: ", keyword.kwlist)
-""")
-Ace.editor.scrollToRow(0)
-Ace.editor.gotoLine(0)
-
-# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
-doc['kw_run'].bind('click', Ace.run)
-doc['kw_show_console'].bind('click', Ace.show_console)
-doc['kw_clear_console'].bind('click', Ace.clear_console)
-</script>
-</p><h2>可攜編程系統</h2>
+<p></p><h2>可攜編程系統</h2>
 <p>2.描述如何為Windows 10 64位系統準備一個可移植的Python編程系統，以允許在Github上維護CMSiMDE網站，Pelican博客和Reveal.js演示文稿？</p>
+<p>要創造可攜編程系統，首先需要的是start.bat以及stop.bat，放進system資料夾(自行創建)後，然後再創建一個data數據目錄資料夾(一樣放進<span>system資料夾內</span>)。</p>
+<hr/>
+<p style="top: 1595.4px;">start.bat 存放在system資料夾下</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">@echo off
 set Disk=y
 subst %Disk%: "data"
@@ -162,14 +134,8 @@ set PYTHONHOME=%Disk%:\py382
 
 set path_python=%Disk%:\py382;%Disk%:\py382\Scripts;
 set path_msys2=%Disk%:\msys64\mingw64\bin;
-REM coreutils is for compiling fossil scm
-set path_coreutils=%Disk%:\coreutils-5.3.0\bin;%Disk%:\depends22_x64;
 set path_tcc=%Disk%:\tcc;
-set path_cmake=%Disk%:\cmake-3.10.1-win64-x64\bin;
-set path_nodejs=Disk%:\nodejs;%Disk%:\nodejs\appdata\roaming\npm;
 set path_git=%Disk%:\portablegit\bin;
-set path_xming=%Disk%:\Xming;
-set path_latex=%%Disk%:\Pandoc;%Disk%:\TinyTeX\bin\win32;
 
 set GIT_HOME=%Disk%:\portablegit\bin\
 set GIT_SSH=%Disk%:\putty\plink.exe
@@ -180,10 +146,57 @@ start /MIN cmd.exe
 start /MIN cmd.exe
 start /MIN cmd.exe
 
-start /MIN %Disk%:\wscite415\wscite\SciTE.exe
-start /MIN %Disk%:\wscite415\wscite\SciTE.exe
+start /MIN %Disk%:\wscite432\wscite\SciTE.exe
+start /MIN %Disk%:\wscite432\wscite\SciTE.exe
 
 Exit</pre>
+<p>stop.bat <span>存放在system資料夾下</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+path=%PATH%;
+
+taskkill /IM python.exe /F
+taskkill /IM pythonw.exe /F
+taskkill /IM SciTE.exe /F
+REM 終止虛擬硬碟與目錄的對應
+subst %Disk%: /D
+REM 關閉 cmd 指令視窗
+taskkill /IM cmd.exe /F
+EXIT</pre>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_96320"></div>
+</div>
+<h4><span style="color: #ff9900;"><strong>data的資料夾內:</strong></span></h4>
+<p>編輯器，使用<span>SciTE :</span> <a href="https://www.scintilla.org/SciTEDownload.html">https://www.scintilla.org/SciTEDownload.html</a></p>
+<p>下載<span>Windows 64-bit:</span> <span><a href="https://www.scintilla.org/wscite432.zip">full 64-bit download</a></span>，放進<span>data</span>目錄裡的<span>wscite432資料夾(自己創建)，接著</span><span>開啟<span>SciTE.exe</span><span>，點選 </span><span>Options下的</span><span><span style="text-decoration: underline;">Open Global Options File</span><span> ，使用ctrl + f 來收尋code.page=0，將code.page=65001的#刪掉，這樣才不會出現亂碼。</span></span><br/></span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">code.page=65001
+#code.page=0</pre>
+<p></p>
+<hr/>
+<p>Git控制軟體 :<span> <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></span></p>
+<p>下載Windows 64-bit: <span><a href="https://github.com/git-for-windows/git/releases/download/v2.25.1.windows.1/Git-2.25.1-64-bit.exe">64-bit Git for Windows Setup</a></span>，放進<span>data</span>目錄裡面並且重新命名為<span>portablegit 。</span></p>
+<hr/>
+<p><span>ssh</span>連線工具組，使用的<span>putty : </span><span><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">https://www.chiark.greenend.org.uk/~sgtatham/putty/</a></span></p>
+<p>直接下載老師之前給的:<span><a href="https://drive.google.com/file/d/1ISq1TJuaZyYZnfU33l-b7ifzmO3ejlEV/view">putty.7z</a></span>，解壓縮放入<span>data</span>目錄就可以了。</p>
+<hr/>
+<p>MSYS2：<a href="https://www.msys2.org/">https://www.msys2.org/ </a></p>
+<p>下載的是<a href="http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20190524.exe">msys2-x86</a><span><a href="http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20190524.exe">_64-20190524.exe</a></span> ，安裝在<span> data </span>目錄裡的<span>msys64資料夾(自己創建)</span>。</p>
+<hr/>
+<p>Tiny C Compiler : <a href="https://github.com/TinyCC/tinycc">https://github.com/TinyCC/tinycc</a></p>
+<p>直接在<span>data </span>目錄下進行<span>git clone </span><span><a href="https://github.com/TinyCC/tinycc">https://github.com/TinyCC/tinycc</a></span>  tcc </p>
+<hr/>
+<p>把現在再用的home_mdecourse，整個複製到data 目錄下。</p>
+<hr/>
+<p>Python : <a href="https://www.python.org/">https://www.python.org/</a>，下載3.8.2版本的<a href="https://www.python.org/ftp/python/3.8.2/python-3.8.2.exe">安裝檔</a>。</p>
+<p>1.完成後開啟，點選<span>Customize installation(定制安裝)。</span></p>
+<p>2.將第二個選項的pip取消勾選，其他都可以勾選起來。</p>
+<p>3.使用預設勾選，將路徑改為data內的py382資料夾(自己創建)。</p>
+<p>4.直接在y槽中執行，python <span>get-pip.py 來安裝pip軟件。</span></p>
+<p><span>5.完成之後，來安裝軟件包，輸入python pip install<span> </span><span>Flask</span> 依此類推。</span></p>
+<p>6.安裝的有<span>Flask</span>、<span>Markdown</span>、<span>lxml</span>、<span>bs4</span>、<span>flask_cors</span>、<span>pelican</span>、<span>leo</span>。</p>
+<hr/>
+<p>data目錄下的所有資料:</p>
+<p><img alt="" height="193" src="/images/explorer_2020-03-21_21-05-25.png" width="519"/></p>
 <p></p><h2>四輪車手冊</h2>
 <p>我們從<a href="https://www.coppeliarobotics.com/helpFiles/index.html">CoppeliaSim用戶手冊</a>中尋找有關於四輪機器人的文章，找到了幾個相關的文章，分別是<span style="color: #000000;"><a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/bubbleRobTutorial.htm" name="link194folder.9" style="color: #000000;">BubbleRob tutorial</a>、<a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/lineFollowingBubbleRobTutorial.htm" name="link196folder.9">Line following BubbleRob tutorial</a></span><span style="color: #000000;">、<a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/externalControllerTutorial.htm" name="link199folder.9">External controller tutorial</a></span><span style="color: #000000;">、<a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/simulation.htm" name="link184folder.7">Simulation</a>、<a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/simulationPropertiesDialog.htm" name="link185folder.7">Simulation dialog</a>，</span>一共五個有關四輪車的文章。</p>
 <h4>其中的<span style="color: #000000;"><a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/externalControllerTutorial.htm" name="link199folder.9" style="color: #000000;">External controller tutorial</a></span>為:</h4>
