@@ -164,7 +164,8 @@ img.add_border {
         </header>
     <div id="tipue_search_content">assignment1 << <a href='assignment1.html'>Previous</a> <a href='Portable system.html'>Next</a> >> Portable system<br /><h1>Random grouping</h1>
 <p>請描述如何針對該課程進行有效的隨機分組，或者隨機進行點名？</p>
-<p>可以去這裡測試程式:<a href="https://repl.it/languages/python3" target="_blank">https://repl.it/languages/python3</a></p>
+<h4><strong>測試程式:</strong></h4>
+<p><iframe allowfullscreen="allowfullscreen" allowtransparency="true" frameborder="no" height="400px" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals" scrolling="no" src="https://repl.it/@s40723210/SpeedyGrippingNotifications?lite=true" width="100%"></iframe></p>
 <h4><strong><span style="color: #0000ff;">抽查的python程式</span></strong></h4>
 <p>如果要使用python來進行亂數分組抽查的話，可以導入random來從列表中隨機抽出所需要的n個不同元素，如下面的程式執行之後，就可以亂數抽出4位。</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random 
@@ -188,7 +189,7 @@ print(member.text)</pre>
 <p>程式碼連結:<a href="https://github.com/s40723210/cd2020/blob/master/downloads/%E6%8A%BD%E6%9F%A5%E7%A8%8B%E5%BC%8F.py" target="_blank">抽查程式.py</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import requests
 import random
- 
+  
 web = "https://mdecourse.github.io/cd2020/downloads/2b_group_list.txt"
 member = requests.get(web)
 #print(memder.text)
@@ -231,17 +232,16 @@ while 1==1:
 
 print("全班人數有"+str(len(x))+"人")
 print("="*20)
-num = group1,group2,group3,group4
+grp_num = group1,group2,group3,group4
 a = iter(x)
 team = 0
-for i in num:
+for i in grp_num:
     team += 1
     print("group"+str(team)+" 共 "+str(i)+" 人")
     for g in range(i):
         print(next(a))
     print("-" * 20)</pre>
-<p></p>
-<br />assignment1 << <a href='assignment1.html'>Previous</a> <a href='Portable system.html'>Next</a> >> Portable system</div>
+<p></p><br />assignment1 << <a href='assignment1.html'>Previous</a> <a href='Portable system.html'>Next</a> >> Portable system</div>
         
     <!-- footer -->
       <div class="container">
