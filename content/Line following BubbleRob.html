@@ -162,10 +162,108 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <br /><h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p><br />About << <a href='About.html'>Previous</a> </div>
+    <div id="tipue_search_content">BubbleRob tutorial << <a href='BubbleRob tutorial.html'>Previous</a> <a href='External controller tutorial.html'>Next</a> >> External controller tutorial<br /><h1>Line following BubbleRob</h1>
+<p><span>由40723210提供</span></p>
+<p>在本教程中，我們旨在擴展BubbleRob的功能，以使他/她遵循地面上的規則。確保您已完全閱讀並理解第<a href="https://www.coppeliarobotics.com/helpFiles/en/bubbleRobTutorial.htm">一個BubbleRob教程</a>。本教程由Eric Rohmer提供。</p>
+<p>在CoppeliaSim的安裝文件夾中的<em>tutorials / BubbleRob中</em>加載第一個BubbleRob教程的場景。與本教程相關的場景文件位於<em>tutorials / LineFollowingBubbleRob中</em>。下圖說明了我們將設計的仿真場景：</p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/lbubbleRobTut1.jpg"/></p>
+<p></p>
+<p>我們首先創建3個<a href="https://www.coppeliarobotics.com/helpFiles/en/visionSensors.htm">視覺傳感器</a>中的第一個，並將其附加到<em>bubbleRob</em>對象。選擇[菜單欄-&gt;添加-&gt;視覺傳感器-&gt;正交類型]。雙擊<a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy">場景層次結構中</a>新創建的視覺傳感器圖標，編輯其屬性，然後更改參數以反映以下對話框：</p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/lbubbleRobTut2.jpg"/></p>
+<p></p>
+<p>視覺傳感器必鬚麵向地面，因此選擇它，然後在“ <a href="https://www.coppeliarobotics.com/helpFiles/en/orientationDialog.htm">方向”對話框</a>的“ 方向”選項卡上，將“ <em>Alpha</em> - <em>Beta</em> - <em>Gamma”</em>項設置為[180; 0; 0] 。</p>
+<p>我們有幾種可能性可以讀取視覺傳感器。由於我們的視覺傳感器只有一個像素，並且操作簡單，因此我們只需查詢視覺傳感器讀取的圖像的平均強度值即可。對於更複雜的情況，我們可以設置<a href="https://www.coppeliarobotics.com/helpFiles/en/visionCallbackFunctions.htm">視覺回調函數</a>。現在，將視覺傳感器複製並粘貼兩次，並將其名稱調整為<em>leftSensor</em>，<em>middleSensor</em>和<em>rightSensor</em>。將<em>bubbleRob設置為</em>其父級（<em>即將</em>其附加到<em>bubbleRob</em>對象）。現在，您的傳感器在場景層次中應如下所示：</p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/lbubbleRobTut4.jpg"/></p>
+<p></p>
+<p>讓我們正確放置傳感器。對於使用<a href="https://www.coppeliarobotics.com/helpFiles/en/positionDialog.htm">位置對話框</a>中，在位置選項卡，並設置以下的絕對坐標：</p>
+<p></p>
+<ul>
+<li>左傳感器：[0.2; 0.042; 0.018]</li>
+<li>中間傳感器：[0.2; 0; 0.018]</li>
+<li>右傳感器：[0.2; -0.042; 0.018]</li>
+</ul>
+<p></p>
+<p>現在讓我們修改環境。我們可以移去BubbleRob前面的幾個圓柱體。接下來，我們將構建機器人將嘗試遵循的<a href="https://www.coppeliarobotics.com/helpFiles/en/paths.htm">路徑</a>。現在最好切換到頂視圖：通過<a href="https://www.coppeliarobotics.com/helpFiles/en/pagesAndViews.htm#pageSelector">頁面選擇器工具欄按鈕</a>選擇<a href="https://www.coppeliarobotics.com/helpFiles/en/pagesAndViews.htm">頁面</a> 4 。然後單擊[菜單欄-&gt;添加-&gt;路徑-&gt;圓圈類型]。<a href="https://www.coppeliarobotics.com/helpFiles/en/objectMovement.htm">使用鼠標</a>啟用<a href="https://www.coppeliarobotics.com/helpFiles/en/objectMovement.htm">對象移動</a>。您可以通過兩種方式調整路徑的形狀：<a href="https://www.coppeliarobotics.com/helpFiles/en/pagesAndViews.htm#pageSelector"></a><a href="https://www.coppeliarobotics.com/helpFiles/en/objectMovement.htm"></a></p>
+<p></p>
+<ul>
+<li>選擇路徑（並且只有路徑）後，按住Ctrl並單擊其<a href="https://www.coppeliarobotics.com/helpFiles/en/pathsControlPointsAndBezierPoints.htm">控制點之一</a>。然後可以將它們拖動到正確的位置。</li>
+<li>選擇路徑後，進入<a href="https://www.coppeliarobotics.com/helpFiles/en/pathEditMode.htm">路徑編輯模式</a>。在那裡，您可以靈活地調整各個路徑控制點。</li>
+</ul>
+<p></p>
+<p>對路徑的幾何形狀滿意（您隨時可以在以後的階段對其進行修改）後，選擇它，然後取消選中<a href="https://www.coppeliarobotics.com/helpFiles/en/pathPropertiesDialog.htm">路徑屬性</a>中的“ 顯示點的方向”，“ 顯示路徑線”和“ 顯示路徑上的當前位置”。然後單擊“ 顯示路徑整形對話框”。這將打開<a href="https://www.coppeliarobotics.com/helpFiles/en/pathShaping.htm">路徑整形對話框</a>。單擊“ 啟用路徑整形”，將類型設置為“ 水平線段”，然後將“ 縮放比例”<a href="https://www.coppeliarobotics.com/helpFiles/en/pathPropertiesDialog.htm"></a><a href="https://www.coppeliarobotics.com/helpFiles/en/pathShaping.htm"></a>到4.0。最後將顏色調整為黑色。我們必須對路徑進行最後一個重要的調整：當前，路徑的z位置與地板的z位置重合。結果是有時我們會看到路徑，有時會看到地板（這種效果在openGl行話中被稱為“ <em>z-fighting</em> ”）。這不僅影響我們所看到的，而且還會影響視覺傳感器所看到的。為了避免與z戰鬥有關的問題，只需將路徑對象的位置向上移動0.5毫米即可。</p>
+<p>最後一步是調整BubbleRob的控制器，使其也將遵循黑色路徑。打開附著於<em>bubbleRob</em>的<a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm">子腳本</a>，並將其替換為以下代碼：<em></em></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">function speedChange_callback(ui,id,newVal)
+    speed=minMaxSpeed[1]+(minMaxSpeed[2]-minMaxSpeed[1])*newVal/100
+end
+
+function sysCall_init()
+    -- This is executed exactly once, the first time this script is executed
+    bubbleRobBase=sim.getObjectAssociatedWithScript(sim.handle_self)
+    leftMotor=sim.getObjectHandle("leftMotor")
+    rightMotor=sim.getObjectHandle("rightMotor")
+    noseSensor=sim.getObjectHandle("sensingNose")
+    minMaxSpeed={50*math.pi/180,300*math.pi/180}
+    backUntilTime=-1 -- Tells whether bubbleRob is in forward or backward mode
+    floorSensorHandles={-1,-1,-1}
+    floorSensorHandles[1]=sim.getObjectHandle("leftSensor")
+    floorSensorHandles[2]=sim.getObjectHandle("middleSensor")
+    floorSensorHandles[3]=sim.getObjectHandle("rightSensor")
+    -- Create the custom UI:
+        xml = '&lt;ui title="'..sim.getObjectName(bubbleRobBase)..' speed" closeable="false" resizeable="false" activate="false"&gt;'..[[
+        &lt;hslider minimum="0" maximum="100" onchange="speedChange_callback" id="1"/&gt;
+        &lt;label text="" style="* {margin-left: 300px;}"/&gt;
+        &lt;/ui&gt;
+        ]]
+    ui=simUI.reate(xml)
+    speed=(minMaxSpeed[1]+minMaxSpeed[2])*0.5
+    simUI.setSliderValue(ui,1,100*(speed-minMaxSpeed[1])/(minMaxSpeed[2]-minMaxSpeed[1]))
+end
+
+function sysCall_actuation()
+    result=sim.readProximitySensor(noseSensor)
+    if (result&gt;0) then backUntilTime=sim.getSimulationTime()+4 end
+
+    -- read the line detection sensors:
+    sensorReading={false,false,false}
+    for i=1,3,1 do
+        result,data=sim.readVisionSensor(floorSensorHandles[i])
+        if (result&gt;=0) then
+            sensorReading[i]=(data[11]&lt;0.3) -- data[11] is the average of intensity of the image
+        end
+        print(sensorReading[i])
+    end
+
+    -- compute left and right velocities to follow the detected line:
+    rightV=speed
+    leftV=speed
+    if sensorReading[1] then
+        leftV=0.03*speed
+    end
+    if sensorReading[3] then
+        rightV=0.03*speed
+    end
+    if sensorReading[1] and sensorReading[3] then
+        backUntilTime=sim.getSimulationTime()+2
+    end
+
+    if (backUntilTime&lt;sim.getSimulationTime()) then
+        -- When in forward mode, we simply move forward at the desired speed
+        sim.setJointTargetVelocity(leftMotor,leftV)
+        sim.setJointTargetVelocity(rightMotor,rightV)
+    else
+        -- When in backward mode, we simply backup in a curve at reduced speed
+        sim.setJointTargetVelocity(leftMotor,-speed/2)
+        sim.setJointTargetVelocity(rightMotor,-speed/8)
+    end
+end
+
+function sysCall_cleanup()
+	simUI.destroy(ui)
+end</pre>
+<pre class="lightRedBox"><br/><br/></pre>
+<p>您可以輕鬆地調試以下視覺傳感器的生產線：選擇一個，然後在場景視圖中選擇[右鍵-&gt;添加-&gt;浮動視圖]，然後在新添加的浮動視圖中選擇[右鍵-&gt;視圖- -&gt;將視圖與選定的視覺傳感器關聯]。</p>
+<p>最後，刪除在第<a href="https://www.coppeliarobotics.com/helpFiles/en/bubbleRobTutorial.htm">一個BubbleRob教程</a>中添加的輔助項：刪除圖像處理視覺傳感器及其關聯的浮動視圖，該浮動視圖表示障礙物的清除。通過<a href="https://www.coppeliarobotics.com/helpFiles/en/distanceCalculation.htm">距離對話框</a>也刪除距離計算對象。而已！</p>
+<br />BubbleRob tutorial << <a href='BubbleRob tutorial.html'>Previous</a> <a href='External controller tutorial.html'>Next</a> >> External controller tutorial</div>
         
     <!-- footer -->
       <div class="container">

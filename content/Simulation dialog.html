@@ -162,10 +162,25 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <br /><h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p><br />About << <a href='About.html'>Previous</a> </div>
+    <div id="tipue_search_content">Simulation << <a href='Simulation.html'>Previous</a> <a href='About.html'>Next</a> >> About<br /><h1>Simulation dialog</h1>
+<p><span>由40723210提供</span></p>
+<p><span>可以通過[菜單欄-&gt;模擬-&gt;模擬設置]或單擊以下工具欄按鈕來訪問模擬對話框：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/simulationDialog1.jpg"/></p>
+<p class="imageLabel"><span><span>[模擬工具欄按鈕]</span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/simulationDialog2.jpg"/></p>
+<p class="imageLabel"><span><span>[模擬設置對話框]</span></span></p>
+<ul>
+<li><strong><span><span>時間步</span></span></strong><span><span>：</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/simulation.htm"><span><span>模擬</span></span></a><span><span>時間步。</span><span>每次</span><span>執行</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/mainScript.htm"><span><span>主腳本</span></span></a><span><span>時，仿真時間都會增加仿真時間步長。</span><span>使用較大的時間步會導致快速但不准確/不穩定的仿真。</span><span>另一方面，較小的時間步長（通常）會導致更精確的仿真，但是會花費更多時間。</span><span>強烈建議保留默認時間步長。</span></span></li>
+<li><strong><span><span>每幀模擬遍數（ppf）</span></span></strong><span><span>：一個渲染遍的模擬遍數。</span><span>值為10表示刷新屏幕之前，主腳本已執行10次（10個模擬步驟）。</span><span>如果您的圖形卡較慢，則可以選擇僅顯示兩幅中的一幅。</span></span></li>
+<li><strong><span><span>當仿真時間高於時暫停</span></span></strong><span><span>：允許指定仿真時間，在該時間暫停仿真（例如，能夠在特定仿真時間分析某些結果）。</span></span></li>
+<li><strong><span><span>暫停腳本錯誤</span></span></strong><span><span>：如果啟用，則在發生</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/scripts.htm"><span><span>腳本</span></span></a><span><span>錯誤時</span><span>將暫停仿真</span><span>。</span></span></li>
+<li><strong><span><span>模擬開始時全屏</span></span></strong><span><span>：如果啟用，則模擬以全屏模式開始。</span><span>請注意，在全屏模式下，對話框和消息將不會出現或不可見，只有鼠標左鍵處於活動狀態。</span><span>因此，僅在正確配置場景並最終確定場景後才建議使用該模式。</span><span>可以使用esc鍵保留全屏模式，並</span><span>在仿真過程中</span><span>通過</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/apiConstants.htm#booleanParameters"><span><span>布爾參數</span></span></a><span> </span><em><span><span>sim_booparam_fullscreen</span></span></em><span><span>進行</span><span>切換<span> </span></span><span>。</span><span>Unler Linux和MacOS可能僅部分支持全屏模式，並且在某些系統上切換回普通模式可能會失敗。</span></span></li>
+<li><strong><span><span>實時仿真，倍增係數</span></span></strong><span><span>：如果選擇，則仿真時間將嘗試跟隨實時。</span><span>X的乘數將使仿真運行比實時快X倍。</span></span></li>
+<li><strong><span><span>落後時嘗試趕上</span></span></strong><span><span>：在實時仿真過程中，仿真時間可能無法實時跟踪（例如，由於某些瞬間繁重的計算）。</span><span>在這種情況下，如果選中此復選框，則模擬時間將嘗試趕上損失的時間（例如，當計算負載再次減少時），這會明顯提高速度。</span></span></li>
+<li><strong><span><span>復位場景初始狀態</span></span></strong><span><span>：當被選擇時，那麼所有</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/objects.htm"><span><span>的對象</span></span></a><span><span>將被復位到它們的初始狀態：包括對象的本地位置，局部方向和它的父（只要該對象沒有另外修飾的（例如縮放）），</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/joints.htm"><span><span>關節</span></span></a><span><span>以及</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/paths.htm"><span><span>路徑的</span></span></a><span><span>固有位置，浮動</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/pagesAndViews.htm"><span><span>視圖</span></span></a><span><span>位置和大小等。這意味著除非進行了重大更改（</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapes.htm"><span><span>形狀</span></span></a><span><span>縮放，對象移除等）</span><span>，否則下一次模擬運行將以與上一次相同的方式執行</span><span>。</span><span>此項目將忽略一些次要設置。</span></span></li>
+<li><strong><span><span>刪除新對象</span></span></strong><span><span>：選中該選項後，在仿真運行期間添加的場景對象將在仿真結束時被刪除。</span></span></li>
+</ul>
+<br />Simulation << <a href='Simulation.html'>Previous</a> <a href='About.html'>Next</a> >> About</div>
         
     <!-- footer -->
       <div class="container">

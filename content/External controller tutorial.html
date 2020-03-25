@@ -151,7 +151,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='Weeks.html'>Weeks</a><ul class='dropdown'><li><a href='Week1-5.html'>Week1-5</a></li></ul><li class='has-children'><a href='assignment1.html'>assignment1</a><ul class='dropdown'><li><a href='亂數分組程式.html'>亂數分組程式</a><li><a href='可攜編程系統.html'>可攜編程系統</a><li><a href='四輪車手冊.html'>四輪車手冊</a></li></ul><li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a></li>
+                     <li class='has-children'><a href='Weeks.html'>Weeks</a><ul class='dropdown'><li><a href='Week1-5.html'>Week1-5</a></li></ul><li class='has-children'><a href='assignment1.html'>assignment1</a><ul class='dropdown'><li><a href='Random grouping.html'>Random grouping</a><li><a href='Portable system.html'>Portable system</a><li class='has-children'><a href='Four wheel car.html'>Four wheel car</a><ul class='dropdown'><li><a href='BubbleRob tutorial.html'>BubbleRob tutorial</a><li><a href='Line following BubbleRob.html'>Line following BubbleRob</a><li><a href='External controller tutorial.html'>External controller tutorial</a><li><a href='Simulation.html'>Simulation</a><li><a href='Simulation dialog.html'>Simulation dialog</a></li></li></ul></ul><li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a></li>
                       </ul>
                 </nav>
               </div>
@@ -162,11 +162,9 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">可攜編程系統 << <a href='可攜編程系統.html'>Previous</a> <a href='About.html'>Next</a> >> About<br /><h1>四輪車手冊</h1>
-<p>我們從<a href="https://www.coppeliarobotics.com/helpFiles/index.html">CoppeliaSim用戶手冊</a>中尋找有關於四輪機器人的文章，找到了幾個相關的文章，分別是<span style="color: #000000;"><a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/bubbleRobTutorial.htm" name="link194folder.9" style="color: #000000;">BubbleRob tutorial</a>、<a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/lineFollowingBubbleRobTutorial.htm" name="link196folder.9">Line following BubbleRob tutorial</a></span><span style="color: #000000;">、<a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/externalControllerTutorial.htm" name="link199folder.9">External controller tutorial</a></span><span style="color: #000000;">、<a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/simulation.htm" name="link184folder.7">Simulation</a>、<a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/simulationPropertiesDialog.htm" name="link185folder.7">Simulation dialog</a>，</span>一共五個有關四輪車的文章。</p>
-<h4>其中的<span style="color: #000000;"><a class="el" href="https://www.coppeliarobotics.com/helpFiles/en/externalControllerTutorial.htm" name="link199folder.9" style="color: #000000;">External controller tutorial</a></span>為:</h4>
+    <div id="tipue_search_content">Line following BubbleRob << <a href='Line following BubbleRob.html'>Previous</a> <a href='Simulation.html'>Next</a> >> Simulation<br /><h1>External controller tutorial</h1>
+<p><span>由40723210提供</span></p>
 <p><span><span>在CoppeliaSim中，有幾種方法可以控制機器人或仿真：</span></span></p>
-<p><span><span></span></span></p>
 <ul>
 <li>The most convenient way is to write a<span> </span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm">child script</a><span> </span>that will handle the behaviour of a given robot or<span> </span><a href="https://www.coppeliarobotics.com/helpFiles/en/models.htm">model</a>. It is the most convenient way, because child scripts are directly attached to<span> </span><a href="https://www.coppeliarobotics.com/helpFiles/en/objects.htm">scene objects</a>, they will be duplicated together with their associated scene objects, they do not need any compilation with an external tool, they can run in<span> </span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#threaded">threaded</a><span> </span>or<span> </span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#nonThreaded">non-threaded</a><span> </span>mode, they can be extended via<span> </span><a href="https://www.coppeliarobotics.com/helpFiles/en/apiFunctionListCategory.htm#customizingLuaFunctions">custom Lua function</a><span> </span>or via a<span> </span><a href="http://luaforge.net/projects/">Lua extension library</a>. Another major advantage in using child scripts: there is no communication lag as with the last 3 methods mentioned in this section (i.e. the<span> </span><a href="https://www.coppeliarobotics.com/helpFiles/en/apiOverview.htm">regular API</a><span> </span>is used), and child scripts are part of the application main thread (inherent synchronous operation). There are several drawback to writing scripts however: you don't have the choice of the programming language, you can't have the fastest code, and you can't directly access external function libraries, except the Lua extension libraries.</li>
 </ul>
@@ -247,7 +245,8 @@ img.add_border {
 <li><span><span>在每次仿真過程中，將傳感器值發送到控制器，並從控制器讀取所需的電機值</span></span></li>
 <li><span><span>在每次模擬過程中，將所需的電機值應用於機器人的關節</span></span></li>
 </ul>
-<p><span><span>運行模擬，然後復制並粘貼機器人：您將看到重複的機器人將直接運行，因為附加的子腳本負責啟動各自外部應用程序的新實例，或調用適當的插件函數。</span></span></p><br />可攜編程系統 << <a href='可攜編程系統.html'>Previous</a> <a href='About.html'>Next</a> >> About</div>
+<p><span><span>運行模擬，然後復制並粘貼機器人：您將看到重複的機器人將直接運行，因為附加的子腳本負責啟動各自外部應用程序的新實例，或調用適當的插件函數。</span></span></p>
+<br />Line following BubbleRob << <a href='Line following BubbleRob.html'>Previous</a> <a href='Simulation.html'>Next</a> >> Simulation</div>
         
     <!-- footer -->
       <div class="container">

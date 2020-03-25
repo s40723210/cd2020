@@ -162,10 +162,86 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <br /><h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p><br />About << <a href='About.html'>Previous</a> </div>
+    <div id="tipue_search_content">External controller tutorial << <a href='External controller tutorial.html'>Previous</a> <a href='Simulation dialog.html'>Next</a> >> Simulation dialog<br /><h1>Simulation</h1>
+<p><span>由40723210提供</span></p>
+<p><span>可以使用[菜單欄-&gt;模擬-&gt;開始/暫停/停止模擬]或通過相關的工具欄按鈕來啟動，暫停和停止CoppeliaSim中的模擬：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/simulation1.jpg"/></p>
+<p class="imageLabel"><span><span>[模擬開始/暫停/停止工具欄按鈕]</span></span></p>
+<p><span><span>在內部，模擬器將使用其他中間狀態，以正確告知</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/scripts.htm"><span><span>腳本</span></span></a><span><span>或程序接下來將發生的情況。</span><span>以下狀態圖說明了模擬器的內部狀態：</span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/simulation2.jpg"/></p>
+<p class="imageLabel"><span><span>[模擬狀態圖]</span></span></p>
+<p><span><span>腳本和程序應始終根據當前系統調用功能以及可能的</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/regularApi/simGetSimulationState.htm"><span><span>模擬狀態進行反應</span></span></a><span><span>，以便正確運行。</span><span>優良作法是將每個控制代碼分成至少4個系統調用函數（例如，用於</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#nonThreaded"><span><span>非線程子腳本</span></span></a><span><span>）：</span></span></p>
+<p></p>
+<ul>
+<li><strong><span><span>初始化函數</span></span></strong><span><span>：</span><strong><strong><span>sysCall_init</span></strong></strong><span>：僅在腳本初始化時才調用該函數。</span></span><strong><strong><span></span></strong></strong><span></span></li>
+<li><strong><span></span></strong><span><strong><strong><span>激勵</span></strong></strong><strong><span>函數</span></strong><span>：</span><strong><strong><span>sysCall_actuation</span></strong></strong><span>：應在發生激勵時調用該函數。</span></span><strong><strong><span></span></strong></strong><span></span></li>
+<li><strong><span><span>Sensing函數</span></span></strong><span><span>：</span><strong><strong><span>sysCall_sensing</span></strong></strong><span>：應在發生傳感時調用此函數。</span></span><strong><strong><span></span></strong></strong><span></span></li>
+<li><strong><span><span>清理函數</span></span></strong><span><span>：</span><strong><strong><span>sysCall_cleanup</span></strong></strong><span>：在取消初始化腳本之前（例如，在模擬結束時或銷毀腳本時）調用該函數。</span></span><strong><strong><span></span></strong></strong><span></span></li>
+</ul>
+<p></p>
+<p><span><span>有關如何安排典型腳本的示例，請參考</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/mainScript.htm"><span><span>main腳本</span></span></a><span><span>，</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm"><span><span>子腳本</span></span></a><span><span>和</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/customizationScripts.htm"><span><span>自定義腳本</span></span></a><span><span>頁面。</span></span></p>
+<h4><span style="color: #000000;"><strong>仿真循環</strong></span></h4>
+<p><span><span>模擬器通過以恆定的時間步長推進模擬時間來進行操作。</span><span>下圖說明了主要的仿真循環：</span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/simulation3.jpg"/></p>
+<p class="imageLabel"><span><span>[主仿真循環]</span></span></p>
+<p><span><span>通過嘗試使仿真時間與實時保持同步來支持實時仿真：</span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/simulation4.jpg"/></p>
+<p class="imageLabel"><span><span>[實時仿真循環]</span></span></p>
+<p><span><span>以下是一個非常簡化的</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/mainClientApplication.htm"><span><span>主客戶端應用程序</span></span></a><span><span>（</span><span>為清晰起見，已省略了</span><span>消息，</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/plugins.htm"><span><span>插件</span></span></a><span><span>處理和其他詳細信息）：</span></span></p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">void initializationCallback
+{
+    // do some initialization here
+}
+
+void loopCallback
+{
+    if ( (simGetSimulationState()&amp;sim_simulation_advancing)!=0 )
+    {
+        if ( (simGetRealTimeSimulation()!=1)||(simIsRealTimeSimulationStepNeeded()==1) )
+        {
+            if ((simHandleMainScript()&amp;sim_script_main_script_not_called)==0)
+                simAdvanceSimulationByOneStep();
+        }
+    }
+}
+
+void deinitializationCallback
+{
+    // do some clean-up here
+}</pre>
+<p><span><span>取決於仿真的複雜性，計算機的性能和</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/simulationPropertiesDialog.htm"><span><span>仿真設置</span></span></a><span><span>，實時仿真可能並不總是可能的。</span></span></p>
+<h4><strong><span style="color: #000000;">仿真速度</span></strong></h4>
+<p><span><span>在非實時仿真中，仿真速度（即感知速度）主要取決於兩個因素：仿真時間步長和一個渲染通道的仿真通道數量（</span><span>有關更多詳細信息，</span><span>請參見</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/simulationPropertiesDialog.htm"><span><span>仿真對話框</span></span></a><span><span>）。</span><span>在實時仿真的情況下，仿真速度主要取決於實時乘法係數，而且在一定程度上取決於仿真時間步長（太小的仿真時間步長可能與實時時間不兼容）。由於計算機的計算能力有限，因此無法進行仿真。</span><span>在模擬過程中，可以使用以下工具欄按鈕來調整模擬速度：</span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/simulation5.jpg"/></p>
+<p class="imageLabel"><span><span>[模擬速度調整工具欄按鈕]</span></span></p>
+<p><span><span>以某種方式調整模擬速度，以使初始模擬時間步長永遠不會增加（例如，這可能因此而導致機制中斷）。</span><span>以下兩個圖說明了仿真速度調整機制：</span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/simulation6.jpg"/></p>
+<p class="imageLabel"><span><span>[<span> </span></span></span><strong><span><span>非實時</span></span></strong><span><span>模擬的模擬速度調整機制</span><span>]</span></span></p>
+<p></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/simulation7.jpg"/></p>
+<p class="imageLabel"><span><span>[用於</span></span><strong><span><span>實時</span></span></strong><span><span>仿真的仿真速度調整機制</span><span>]</span></span></p>
+<p><span><span>默認情況下，每個模擬週期由以下</span></span><strong><span><span>順序</span></span></strong><span><span>操作</span><span>組成</span><span>：</span></span></p>
+<p></p>
+<ul>
+<li><span><span>執行</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/mainScript.htm"><span><span>主腳本</span></span></a></li>
+<li><span><span>渲染場景</span></span></li>
+</ul>
+<h4><strong><span style="color: #000000;">螺紋渲染</span></strong></h4>
+<p></p>
+<p><span><span>渲染操作將始終增加仿真週期的持續時間，從而也降低了仿真速度。</span><span>可以定義每個場景渲染的主腳本執行次數（請參閱後面的內容），但這在某些情況下還不夠，因為渲染仍然會減慢每個第x個模擬週期的時間（這可能會限制實時性）。</span><span>在這種情況下，可以通過</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/settings.htm"><span><span>用戶設置</span></span></a><span><span>或以下工具欄按鈕</span><span>激活線程渲染模式</span><span>：</span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/threadedRenderingButton.jpg"/></p>
+<p class="imageLabel"><span><span>[線程渲染工具欄按鈕]</span></span></p>
+<p><span><span>激活線程渲染模式後，模擬週期將僅包括執行</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/mainScript.htm"><span><span>主腳本</span></span></a><span><span>，因此模擬將以最大速度運行。</span><span>渲染將通過不同的線程進行，並且不會減慢模擬任務的速度。</span><span>然而，必須考慮缺點。</span><span>激活線程渲染後，：</span></span></p>
+<p></p>
+<ul>
+<li><span><span>渲染將與模擬循環異步進行，並且可能會出現視覺故障</span></span></li>
+<li><span><span>該</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/aviRecorder.htm"><span><span>錄像機</span></span></a><span><span>將不以恆定速度運轉（某些幀可能會跳過）</span></span></li>
+<li><span><span>應用程序的穩定性可能會降低</span></span></li>
+<li><span><span>某些操作（例如擦除對像等）需要等待渲染線程完成工作才能執行，反之亦然。</span><span>在那些情況下，循環可能比順序渲染模式花費更多的時間。</span></span></li>
+</ul>
+<p></p>
+<p></p>
+<br />External controller tutorial << <a href='External controller tutorial.html'>Previous</a> <a href='Simulation dialog.html'>Next</a> >> Simulation dialog</div>
         
     <!-- footer -->
       <div class="container">
