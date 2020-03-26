@@ -4,8 +4,7 @@
 <p><a href="https://s40723210.github.io/cd2020/content/Week10-14.html">Week10-14</a></p>
 <p><a href="https://s40723210.github.io/cd2020/content/Week15-18.html">Week15-18</a></p>
 <hr/>
-<p></p>
-<p><iframe height="600px" iframe="" src="https://s40723210.github.io/cd2020/downloads/assignment1.pdf" width="100%"></iframe></p><h2>Week1-5</h2>
+<p></p><h2>Week1-5</h2>
 <h4 class="post-title entry-title" itemprop="name"><strong>建立個人cd2020倉儲</strong></h4>
 <p><span>1.下載<a href="https://drive.google.com/file/d/1fxMdqdCoCL__O1IpZ-Sv-A_4-c77Wx4E/view?usp=sharing">2019Fall可攜套件.7z</a>，完成後開啟start。</span><span><br/></span><span></span><span><span>2.先登入自己的github帳號，</span><span>創建一個新的倉儲cd2020。</span></span><span><span><br/></span><span>3.進入要存放該資料的資料夾tmp。</span></span><span><span><br/></span></span><span></span><span><span>4.git clone </span><span>https://github.com/s40723210/cd2020 。</span><span><br/></span><span>5.</span><span>git submodule add https://github.com/mdecourse/cmsimde.git。</span></span><span><span><br/>6.再進入cmsimde，將up_dir的所有項目複<span>製到cd2020</span>。</span></span><span><span><br/>7.完成後，python wsgi.py 開始編輯倉儲。<br/></span></span><span><span>8.login密碼為admin，gitconfig要有帳號密碼。</span></span><span><span><br/>9.處理完，git status &gt; git add . &gt; git commit -m "標題" &gt; git push。</span></span><span><span><br/>10.開啟github倉儲設定，點選要推送的branch即可。<br/></span></span></p>
 <p><span>我的教學影片:<a href="https://youtu.be/jBFzju1F43s">https://youtu.be/jBFzju1F43s<br/><br/><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/jBFzju1F43s" width="560"></iframe></a></span></p>
@@ -224,7 +223,8 @@ EXIT</pre>
 <p><span><a href="https://www.coppeliarobotics.com/helpFiles/en/externalControllerTutorial.htm">External controller tutorial</a></span>:本章屬於外部控制器的教程，讓我們可以使用遠端操控的方式，來控制四輪機器人，控制的方式有編寫腳本、編寫插件、遠程<span>API</span>、<span>ROS</span>節點、<span>BlueZero</span>節點、編寫外部應用程式，每種都要寫子腳本來進行鏈結。</p>
 <p><span><a href="https://www.coppeliarobotics.com/helpFiles/en/simulation.htm">Simulation</a></span>:此教程為模擬案鍵，當我們建立好腳本時，就可以控制模擬的狀況，為了增加模擬的準確性，就可以使用仿真的速度與螺紋渲染，但是必須要適當的調整，才不會造成系統運行中斷。</p>
 <p><span><a href="https://www.coppeliarobotics.com/helpFiles/en/simulationPropertiesDialog.htm">Simulation dialog</a></span>:此教程是上篇的進階設定，<strong>時間步</strong>為調整模擬時間，運行越快準確度越差，<strong>每幀模擬遍數</strong>為屏幕刷新速度，刷新越快得到的情報越快，只是電腦很吃效能，<strong>當仿真時間高於時暫停</strong>為允許特定仿真時間暫停，<strong>暫停腳本錯誤</strong>會在發生問題時暫停，<strong>模擬開始時全屏</strong>啟用時對話框和消息不會顯示，<strong>實時仿真-倍增係數</strong>使仿真運行快n倍，<strong>落後時嘗試趕上</strong>系統運行趕不上模擬時，會在低負載時趕上，<strong>復位場景初始狀態</strong>運行模擬結束時，所有設定將回歸初始狀態，<strong>刪除新對象</strong>模擬時，添加的東西將會在結束後移除，以上的各種設定，能讓我們在模擬時，更加的方便，進而提高許多效率。</p>
-<h3>BubbleRob tutorial</h3>
+<p>影片連結:<a href="https://youtu.be/y8DJ1sjuAqM">https://youtu.be/y8DJ1sjuAqM</a></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/y8DJ1sjuAqM" width="560"></iframe></p><h3>BubbleRob tutorial</h3>
 <p>由40723210提供</p>
 <p>本教程將在設計簡單的移動機器人<em>BubbleRob</em>時嘗試介紹很多CoppeliaSim功能。與本教程相關的CoppeliaSim場景文件位於CoppeliaSim的安裝文件夾的<em>tutorials / BubbleRob</em>文件夾中。下圖說明了我們將設計的仿真場景：</p>
 <p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut1.jpg"/></p>
@@ -485,7 +485,7 @@ end</pre>
 <hr/>
 <p></p>
 <ul>
-<li><span><span><em>scenes/controlTypeExamples/controlledViaScript</em><span>:</span>一個機器人通過控制</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#nonThreaded"><span><span>非螺紋孩子腳本</span></span></a><span><span>，另一種是通過受控的</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#threaded"><span><span>螺紋孩子腳本</span></span></a><span><span>。</span></span></li>
+<li><span><span><em>scenes/controlTypeExamples/controlledViaScript</em><span>:</span>一個機器人通過控制</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#nonThreaded"><span><span>非螺紋子腳本</span></span></a><span><span>，另一種是通過受控的</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#threaded"><span><span>螺紋子腳本</span></span></a><span><span>。</span></span></li>
 <li><span><span><em>scenes/controlTypeExamples/controlledViaPlugin</em>：機器人是通過</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/plugins.htm"><span><span>插件</span></span></a><span><span>控制的</span><span>。</span></span></li>
 <li><span><span><em>scenes/controlTypeExamples/controlledViaB0RemoteApi</em>：通過</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/b0RemoteApiOverview.htm"><span><span>基於B0的遠程API</span></span></a><span><span>來控制機器人</span><span>。</span></span></li>
 <li><span><span><em>scenes/controlTypeExamples/controlledViaLegacyRemoteApi</em>：通過</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/legacyRemoteApiOverview.htm"><span><span>舊版遠程API</span></span></a><span><span>控制機器人</span><span>。</span></span></li>
@@ -513,8 +513,7 @@ end</pre>
 <li><span><span>在每次仿真過程中，將傳感器值發送到控制器，並從控制器讀取所需的電機值</span></span></li>
 <li><span><span>在每次模擬過程中，將所需的電機值應用於機器人的關節</span></span></li>
 </ul>
-<p><span><span>運行模擬，然後復制並粘貼機器人：您將看到重複的機器人將直接運行，因為附加的子腳本負責啟動各自外部應用程序的新實例，或調用適當的插件函數。</span></span></p>
-<h3>Simulation</h3>
+<p><span><span>運行模擬，然後復制並粘貼機器人：您將看到重複的機器人將直接運行，因為附加的子腳本負責啟動各自外部應用程序的新實例，或調用適當的插件函數。</span></span></p><h3>Simulation</h3>
 <p><span>由40723210提供</span></p>
 <p><span>可以使用[菜單欄-&gt;模擬-&gt;開始/暫停/停止模擬]或通過相關的工具欄按鈕來啟動，暫停和停止CoppeliaSim中的模擬：</span></p>
 <p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/simulation1.jpg"/></p>
