@@ -1,0 +1,238 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>s40723210</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <script type="text/javascript">
+             document.oncontextmenu = function(){
+                    return false;
+             }
+             document.onselectstart = function(){
+                    return false;
+             }
+        </script>
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>s40723210 cd2020</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">s40723210 cd2020</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='Weeks.html'>Weeks</a><ul class='dropdown'><li><a href='Week1-5.html'>Week1-5</a></li></ul><li class='has-children'><a href='Assignments.html'>Assignments</a><ul class='dropdown'><li class='has-children'><a href='assignment1.html'>assignment1</a><ul class='dropdown'><li><a href='Random grouping.html'>Random grouping</a><li><a href='Portable system.html'>Portable system</a><li><a href='Four wheel car.html'>Four wheel car</a></li></ul><li><a href='assignment2.html'>assignment2</a><li><a href='assignment3.html'>assignment3</a></li></ul><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='BubbleRob tutorial.html'>BubbleRob tutorial</a><li><a href='Line following BubbleRob.html'>Line following BubbleRob</a><li><a href='External controller tutorial.html'>External controller tutorial</a><li><a href='Simulation.html'>Simulation</a><li><a href='Simulation dialog.html'>Simulation dialog</a></li></ul><li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">assignment3 << <a href='assignment3.html'>Previous</a> <a href='BubbleRob tutorial.html'>Next</a> >> BubbleRob tutorial<br /><h1>CoppeliaSim</h1>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/CoppeliaSim.png"/></p>
+<p align="center"><span><span>版本4.0.0</span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/welcome.jpg"/></p>
+<p><span><span>具有集成開發環境的機器人模擬器CoppeliaSim基於分佈式控制體系結構：可以通過嵌入式腳本，插件，ROS節點，BlueZero節點，遠程API客戶端或自定義解決方案分別控制每個對象/模型。</span><span>這使CoppeliaSim非常通用，非常適合多機器人應用。</span><span>控制器可以用C / C ++，Python，Java，Lua，Matlab，Octave或Urbi編寫。</span></span></p>
+<p><span><span>以下只是CoppeliaSim的部分應用程序：</span></span></p>
+<p></p>
+<ul>
+<li><span><span>工廠自動化系統仿真</span></span></li>
+<li><span><span>遠程監控</span></span></li>
+<li><span><span>硬件控制</span></span></li>
+<li><span><span>快速原型製作和驗證</span></span></li>
+<li><span><span>安全監控</span></span></li>
+<li><span><span>快速算法開發</span></span></li>
+<li><span><span>機器人相關教育</span></span></li>
+<li><span><span>產品介紹</span></span></li>
+</ul>
+<p></p>
+<p><span><span>CoppeliaSim可以用作獨立應用程序，也可以輕鬆地嵌入到主客戶端應用程序中：它的佔用空間小且精心設計的API使CoppeliaSim成為嵌入更高級別應用程序的理想選擇。</span><span>集成的Lua腳本解釋器使CoppeliaSim成為了一種極其通用的應用程序，使用戶可以自由組合低級/高級功能以獲得新的高級功能。</span></span></p>
+<p><span><span>快速入門CoppeliaSim的一個好方法是先看一下</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/tutorials.htm"><span><span>教程部分</span></span></a><span><span>。</span></span></p>
+<h4 class="recommendedTopics"><span><span>推薦主題</span></span></h4>
+<p></p>
+<ul>
+<li><a href="https://www.coppeliarobotics.com/helpFiles/en/coppeliaSimFeatures.htm"><span><span>CoppeliaSim主要功能</span></span></a></li>
+<li><a href="https://www.coppeliarobotics.com/helpFiles/en/versionInfo.htm"><span><span>CoppeliaSim版本歷史</span></span></a></li>
+<li><a href="https://www.coppeliarobotics.com/helpFiles/en/acknowledgments.htm"><span><span>致謝和鳴謝</span></span></a></li>
+<li><a href="https://www.coppeliarobotics.com/helpFiles/en/tutorials.htm"><span><span>講解</span></span></a></li>
+<li><a href="http://coppeliarobotics.com/contributions.html" target="_blank"><span><span>CoppeliaSim周圍的各種貢獻和外部資源</span></span></a></li>
+<li><a href="http://forum.coppeliarobotics.com/" target="_blank"><span><span>CoppeliaSim / V-REP論壇</span></span></a></li>
+</ul>
+<p></p>
+<p></p><br />assignment3 << <a href='assignment3.html'>Previous</a> <a href='BubbleRob tutorial.html'>Next</a> >> BubbleRob tutorial</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        

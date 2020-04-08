@@ -151,7 +151,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='Weeks.html'>Weeks</a><ul class='dropdown'><li><a href='Week1-5.html'>Week1-5</a></li></ul><li class='has-children'><a href='assignment1.html'>assignment1</a><ul class='dropdown'><li><a href='Random grouping.html'>Random grouping</a><li><a href='Portable system.html'>Portable system</a><li class='has-children'><a href='Four wheel car.html'>Four wheel car</a><ul class='dropdown'><li><a href='BubbleRob tutorial.html'>BubbleRob tutorial</a><li><a href='Line following BubbleRob.html'>Line following BubbleRob</a><li><a href='External controller tutorial.html'>External controller tutorial</a><li><a href='Simulation.html'>Simulation</a><li><a href='Simulation dialog.html'>Simulation dialog</a></li></li></ul></ul><li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a></li>
+                     <li class='has-children'><a href='Weeks.html'>Weeks</a><ul class='dropdown'><li><a href='Week1-5.html'>Week1-5</a></li></ul><li class='has-children'><a href='Assignments.html'>Assignments</a><ul class='dropdown'><li class='has-children'><a href='assignment1.html'>assignment1</a><ul class='dropdown'><li><a href='Random grouping.html'>Random grouping</a><li><a href='Portable system.html'>Portable system</a><li><a href='Four wheel car.html'>Four wheel car</a></li></ul><li><a href='assignment2.html'>assignment2</a><li><a href='assignment3.html'>assignment3</a></li></ul><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='BubbleRob tutorial.html'>BubbleRob tutorial</a><li><a href='Line following BubbleRob.html'>Line following BubbleRob</a><li><a href='External controller tutorial.html'>External controller tutorial</a><li><a href='Simulation.html'>Simulation</a><li><a href='Simulation dialog.html'>Simulation dialog</a></li></ul><li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a></li>
                       </ul>
                 </nav>
               </div>
@@ -180,7 +180,7 @@ img.add_border {
 </ul>
 <p></p>
 <p><span><span>有關如何安排典型腳本的示例，請參考</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/mainScript.htm"><span><span>main腳本</span></span></a><span><span>，</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm"><span><span>子腳本</span></span></a><span><span>和</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/customizationScripts.htm"><span><span>自定義腳本</span></span></a><span><span>頁面。</span></span></p>
-<h4><span style="color: #000000;"><strong>仿真循環</strong></span></h4>
+<h4><span><strong>仿真循環</strong></span></h4>
 <p><span><span>模擬器通過以恆定的時間步長推進模擬時間來進行操作。</span><span>下圖說明了主要的仿真循環：</span></span></p>
 <p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/simulation3.jpg"/></p>
 <p class="imageLabel"><span><span>[主仿真循環]</span></span></p>
@@ -210,7 +210,7 @@ void deinitializationCallback
     // do some clean-up here
 }</pre>
 <p><span><span>取決於仿真的複雜性，計算機的性能和</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/simulationPropertiesDialog.htm"><span><span>仿真設置</span></span></a><span><span>，實時仿真可能並不總是可能的。</span></span></p>
-<h4><strong><span style="color: #000000;">仿真速度</span></strong></h4>
+<h4><strong><span>仿真速度</span></strong></h4>
 <p><span><span>在非實時仿真中，仿真速度（即感知速度）主要取決於兩個因素：仿真時間步長和一個渲染通道的仿真通道數量（</span><span>有關更多詳細信息，</span><span>請參見</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/simulationPropertiesDialog.htm"><span><span>仿真對話框</span></span></a><span><span>）。</span><span>在實時仿真的情況下，仿真速度主要取決於實時乘法係數，而且在一定程度上取決於仿真時間步長（太小的仿真時間步長可能與實時時間不兼容）。由於計算機的計算能力有限，因此無法進行仿真。</span><span>在模擬過程中，可以使用以下工具欄按鈕來調整模擬速度：</span></span></p>
 <p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/simulation5.jpg"/></p>
 <p class="imageLabel"><span><span>[模擬速度調整工具欄按鈕]</span></span></p>
@@ -226,7 +226,7 @@ void deinitializationCallback
 <li><span><span>執行</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/mainScript.htm"><span><span>主腳本</span></span></a></li>
 <li><span><span>渲染場景</span></span></li>
 </ul>
-<h4><strong><span style="color: #000000;">螺紋渲染</span></strong></h4>
+<h4><strong><span>螺紋渲染</span></strong></h4>
 <p></p>
 <p><span><span>渲染操作將始終增加仿真週期的持續時間，從而也降低了仿真速度。</span><span>可以定義每個場景渲染的主腳本執行次數（請參閱後面的內容），但這在某些情況下還不夠，因為渲染仍然會減慢每個第x個模擬週期的時間（這可能會限制實時性）。</span><span>在這種情況下，可以通過</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/settings.htm"><span><span>用戶設置</span></span></a><span><span>或以下工具欄按鈕</span><span>激活線程渲染模式</span><span>：</span></span></p>
 <p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/threadedRenderingButton.jpg"/></p>
@@ -239,7 +239,6 @@ void deinitializationCallback
 <li><span><span>應用程序的穩定性可能會降低</span></span></li>
 <li><span><span>某些操作（例如擦除對像等）需要等待渲染線程完成工作才能執行，反之亦然。</span><span>在那些情況下，循環可能比順序渲染模式花費更多的時間。</span></span></li>
 </ul>
-<p></p>
 <p></p>
 <br />External controller tutorial << <a href='External controller tutorial.html'>Previous</a> <a href='Simulation dialog.html'>Next</a> >> Simulation dialog</div>
         
