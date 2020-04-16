@@ -4,8 +4,9 @@
 <p><a href="https://s40723210.github.io/cd2020/content/Week10-14.html">Week10-14</a></p>
 <p><a href="https://s40723210.github.io/cd2020/content/Week15-18.html">Week15-18</a></p>
 <hr/>
-<p></p>
-<h2>Week1-5</h2>
+<p>個人倉儲網址:<a href="https://github.com/s40723210/cd2020" title="https://github.com/s40723210/cd2020">https://github.com/s40723210/cd2020</a></p>
+<p>個人youtube:<a href="https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw">https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw</a></p>
+<p>分組倉儲網址:<a href="https://s40723210.github.io/cd2020bg4" title="https://s40723210.github.io/cd2020bg4">https://s40723210.github.io/cd2020bg4</a></p><h2>Week1-5</h2>
 <h4 class="post-title entry-title" itemprop="name"><strong>建立個人cd2020倉儲</strong></h4>
 <p><span>1.下載<a href="https://drive.google.com/file/d/1fxMdqdCoCL__O1IpZ-Sv-A_4-c77Wx4E/view?usp=sharing">2019Fall可攜套件.7z</a>，完成後開啟start。</span><span><br/></span><span></span><span><span>2.先登入自己的github帳號，</span><span>創建一個新的倉儲cd2020。</span></span><span><span><br/></span><span>3.進入要存放該資料的資料夾tmp。</span></span><span><span><br/></span></span><span></span><span><span>4.git clone </span><span>https://github.com/s40723210/cd2020 。</span><span><br/></span><span>5.</span><span>git submodule add https://github.com/mdecourse/cmsimde.git。</span></span><span><span><br/>6.再進入cmsimde，將up_dir的所有項目複<span>製到cd2020</span>。</span></span><span><span><br/>7.完成後，python wsgi.py 開始編輯倉儲。<br/></span></span><span><span>8.login密碼為admin，gitconfig要有帳號密碼。</span></span><span><span><br/>9.處理完，git status &gt; git add . &gt; git commit -m "標題" &gt; git push。</span></span><span><span><br/>10.開啟github倉儲設定，點選要推送的branch即可。<br/></span></span></p>
 <p><span>我的教學影片:<a href="https://youtu.be/jBFzju1F43s">https://youtu.be/jBFzju1F43s<br/><br/><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/jBFzju1F43s" width="560"></iframe></a></span></p>
@@ -81,8 +82,94 @@
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/YCAGt9qku6I" width="560"></iframe></p>
 <hr color="00ffee"/>
 <h4>V-rep bubbleRob Tutorial</h4>
-<p>我的操作影片(有字幕):<a href="https://youtu.be/BStp8J-KXuY">https://youtu.be/BStp8J-KXuY</a></p>
-<div><span><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/BStp8J-KXuY" width="560"></iframe></span></div><h1>Assignments</h1>
+<p>操作影片連結:<a href="https://youtu.be/BStp8J-KXuY">https://youtu.be/BStp8J-KXuY</a></p>
+<div><span><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/BStp8J-KXuY" width="560"></iframe><br/><br/></span></div>
+<hr color="00ffee"/>
+<h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">V-rep 馬達驅動四輪車</yt-formatted-string></h4>
+<p>使用內建功能來創建模型，並且模擬最基本馬達的直線移動。</p>
+<p>影片連結:<a href="https://youtu.be/y8DJ1sjuAqM">https://youtu.be/y8DJ1sjuAqM</a></p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/y8DJ1sjuAqM" width="560"></iframe></p>
+<hr color="00ffee"/>
+<h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">四輪車鍵盤控制轉向</yt-formatted-string></h4>
+<p>V-rep 檔案連結: <a href="/downloads/4 wheel car keyboard.ttt">4 wheel car keyboard.ttt</a></p>
+<p>四輪車加上轉向及鍵盤控制，先開啟之前做好的四輪車，將兩個前輪馬達複製貼上，再使兩個馬達原地轉向90度，創建兩個小正方體，位置與前輪一模一樣，<span>需要設定屬性避免與其他部件衝突，本體、輪子、小正方體都要關閉如下圖。</span></p>
+<p><img alt="" height="136" src="/images/4 wheel car 本體干涉.PNG" width="371"/><br/><br/>將控制迴路啟用，來控制轉向的限制角度，兩個馬達都用預設即可，如下圖設定。<br/><br/><img alt="" height="431" src="/images/4 wheel car 轉向設定.PNG" width="377"/></p>
+<p>將之前的馬達速度都關掉，<span>點擊馬達圖示視窗下的</span><span>show dynamic properties dialog</span><span>，把</span><span>motor properties的速度改為0</span><span>，底下的</span><span>lock motor when target velocity is zero是</span><span><span color="#000000">馬達速度為零時鎖定馬達，可開可不開。</span></span></p>
+<p><span><span color="#000000"><img alt="" height="171" src="/images/4 wheel car 後輪馬達.PNG" width="380"/></span></span></p>
+<p>最後把方塊拖移至對應馬達下，再整個放進本體下，把對應的前輪馬達放置方塊下，本體新增一個控制腳本，選擇cuboid，點擊菜單欄的Add &gt; Associated child script &gt; Threaded，將寫好的腳本複製貼上，更改前輪馬達的名子，這樣腳本才能控制，下圖為整個最終結構。<br/><br/><img alt="" height="355" src="/images/4 wheel car 結構.PNG" width="266"/></p>
+<p><span style="color: #0000ff;"><strong>四輪車鍵盤控制轉向程式碼:</strong></span></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">-- This script is threaded! It is a very simple example of how Ackermann steering can be handled.
+-- Normally, one would use a non-threaded script for that
+
+threadFunction=function()
+	while simGetSimulationState()~=sim_simulation_advancing_abouttostop do
+		-- Read the keyboard messages (make sure the focus is on the main window, scene view):
+		message,auxiliaryData=simGetSimulatorMessage()
+		while message~=-1 do
+			if (message==sim_message_keypress) then
+				if (auxiliaryData[1]==2007) then
+					-- up key
+					desiredWheelRotSpeed=desiredWheelRotSpeed+wheelRotSpeedDx
+				end
+				if (auxiliaryData[1]==2008) then
+					-- down key
+					desiredWheelRotSpeed=desiredWheelRotSpeed-wheelRotSpeedDx
+				end
+				if (auxiliaryData[1]==2009) then
+					-- left key
+					desiredSteeringAngle=desiredSteeringAngle+steeringAngleDx
+					if (desiredSteeringAngle&gt;45*math.pi/180) then
+						desiredSteeringAngle=45*math.pi/180
+					end
+				end
+				if (auxiliaryData[1]==2010) then
+					-- right key
+					desiredSteeringAngle=desiredSteeringAngle-steeringAngleDx
+					if (desiredSteeringAngle&lt;-45*math.pi/180) then
+						desiredSteeringAngle=-45*math.pi/180
+					end
+				end
+			end
+			message,auxiliaryData=simGetSimulatorMessage()
+		end
+
+		-- We handle the front left and right wheel steerings (Ackermann steering):
+		steeringAngleLeft=math.atan(l/(-d+l/math.tan(desiredSteeringAngle)))
+		steeringAngleRight=math.atan(l/(d+l/math.tan(desiredSteeringAngle)))
+		simSetJointTargetPosition(steeringLeft,steeringAngleLeft)
+		simSetJointTargetPosition(steeringRight,steeringAngleRight)
+
+		-- We take care of setting the desired wheel rotation speed:
+		simSetJointTargetVelocity(motorLeft,desiredWheelRotSpeed)
+		simSetJointTargetVelocity(motorRight,desiredWheelRotSpeed)
+
+		-- Since this script is threaded, don't waste time here:
+		simSwitchThread() -- Resume the script at next simulation loop start
+	end
+end
+
+-- Put some initialization code here:
+-- Retrieving of some handles and setting of some initial values:
+steeringLeft=simGetObjectHandle('Steer_left_joint')
+steeringRight=simGetObjectHandle('Steer_right_joint')
+motorLeft=simGetObjectHandle('Front_left_joint')
+motorRight=simGetObjectHandle('Front_right_joint')
+desiredSteeringAngle=0
+desiredWheelRotSpeed=0
+steeringAngleDx=2*math.pi/180
+wheelRotSpeedDx=20*math.pi/180
+d=0.755 -- 2*d=distance between left and right wheels
+l=2.5772 -- l=distance between front and read wheels
+
+-- Here we execute the regular thread code:
+res,err=xpcall(threadFunction,function(err) return debug.traceback(err) end)
+if not res then
+	simAddStatusbarMessage('Lua runtime error: '..err)
+end
+
+-- Put some clean-up code here:</pre>
+<p><span><span color="#000000"></span></span>教學影片連結:<a href="https://youtu.be/0W1wmC1tr4A">https://youtu.be/0W1wmC1tr4A</a></p>
+<p><span><strong><span color="#000000"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/0W1wmC1tr4A" width="560"></iframe></span></strong></span><strong><span></span></strong></p><h1>Assignments</h1>
 <p><span>報告連結:</span><a href="/downloads/assignment1.pdf">assignment1.pdf</a></p>
 <h2>assignment1</h2>
 <p>Due March 25, 2020 for class 2a and March 26, 2020 for class 2b.</p>
@@ -1071,18 +1158,3 @@ void deinitializationCallback
 <li><strong><span><span>復位場景初始狀態</span></span></strong><span><span>：當被選擇時，那麼所有</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/objects.htm"><span><span>的對象</span></span></a><span><span>將被復位到它們的初始狀態：包括對象的本地位置，局部方向和它的父（只要該對象沒有另外修飾的（例如縮放）），</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/joints.htm"><span><span>關節</span></span></a><span><span>以及</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/paths.htm"><span><span>路徑的</span></span></a><span><span>固有位置，浮動</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/pagesAndViews.htm"><span><span>視圖</span></span></a><span><span>位置和大小等。這意味著除非進行了重大更改（</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapes.htm"><span><span>形狀</span></span></a><span><span>縮放，對象移除等）</span><span>，否則下一次模擬運行將以與上一次相同的方式執行</span><span>。</span><span>此項目將忽略一些次要設置。</span></span></li>
 <li><strong><span><span>刪除新對象</span></span></strong><span><span>：選中該選項後，在仿真運行期間添加的場景對象將在仿真結束時被刪除。</span></span></li>
 </ul>
-<h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>

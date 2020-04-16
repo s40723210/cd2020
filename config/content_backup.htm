@@ -4,8 +4,9 @@
 <p><a href="https://s40723210.github.io/cd2020/content/Week10-14.html">Week10-14</a></p>
 <p><a href="https://s40723210.github.io/cd2020/content/Week15-18.html">Week15-18</a></p>
 <hr/>
-<p></p>
-<h2>Week1-5</h2>
+<p>個人倉儲網址:<a href="https://github.com/s40723210/cd2020" title="https://github.com/s40723210/cd2020">https://github.com/s40723210/cd2020</a></p>
+<p>個人youtube:<a href="https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw">https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw</a></p>
+<p>分組倉儲網址:<a href="https://s40723210.github.io/cd2020bg4" title="https://s40723210.github.io/cd2020bg4">https://s40723210.github.io/cd2020bg4</a></p><h2>Week1-5</h2>
 <h4 class="post-title entry-title" itemprop="name"><strong>建立個人cd2020倉儲</strong></h4>
 <p><span>1.下載<a href="https://drive.google.com/file/d/1fxMdqdCoCL__O1IpZ-Sv-A_4-c77Wx4E/view?usp=sharing">2019Fall可攜套件.7z</a>，完成後開啟start。</span><span><br/></span><span></span><span><span>2.先登入自己的github帳號，</span><span>創建一個新的倉儲cd2020。</span></span><span><span><br/></span><span>3.進入要存放該資料的資料夾tmp。</span></span><span><span><br/></span></span><span></span><span><span>4.git clone </span><span>https://github.com/s40723210/cd2020 。</span><span><br/></span><span>5.</span><span>git submodule add https://github.com/mdecourse/cmsimde.git。</span></span><span><span><br/>6.再進入cmsimde，將up_dir的所有項目複<span>製到cd2020</span>。</span></span><span><span><br/>7.完成後，python wsgi.py 開始編輯倉儲。<br/></span></span><span><span>8.login密碼為admin，gitconfig要有帳號密碼。</span></span><span><span><br/>9.處理完，git status &gt; git add . &gt; git commit -m "標題" &gt; git push。</span></span><span><span><br/>10.開啟github倉儲設定，點選要推送的branch即可。<br/></span></span></p>
 <p><span>我的教學影片:<a href="https://youtu.be/jBFzju1F43s">https://youtu.be/jBFzju1F43s<br/><br/><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/jBFzju1F43s" width="560"></iframe></a></span></p>
@@ -81,8 +82,94 @@
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/YCAGt9qku6I" width="560"></iframe></p>
 <hr color="00ffee"/>
 <h4>V-rep bubbleRob Tutorial</h4>
-<p>我的操作影片(有字幕):<a href="https://youtu.be/BStp8J-KXuY">https://youtu.be/BStp8J-KXuY</a></p>
-<div><span><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/BStp8J-KXuY" width="560"></iframe></span></div><h1>Assignments</h1>
+<p>操作影片連結:<a href="https://youtu.be/BStp8J-KXuY">https://youtu.be/BStp8J-KXuY</a></p>
+<div><span><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/BStp8J-KXuY" width="560"></iframe><br/><br/></span></div>
+<hr color="00ffee"/>
+<h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">V-rep 馬達驅動四輪車</yt-formatted-string></h4>
+<p>使用內建功能來創建模型，並且模擬最基本馬達的直線移動。</p>
+<p>影片連結:<a href="https://youtu.be/y8DJ1sjuAqM">https://youtu.be/y8DJ1sjuAqM</a></p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/y8DJ1sjuAqM" width="560"></iframe></p>
+<hr color="00ffee"/>
+<h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">四輪車鍵盤控制轉向</yt-formatted-string></h4>
+<p>V-rep 檔案連結: <a href="/downloads/4 wheel car keyboard.ttt">4 wheel car keyboard.ttt</a></p>
+<p>四輪車加上轉向及鍵盤控制，先開啟之前做好的四輪車，將兩個前輪馬達複製貼上，再使兩個馬達原地轉向90度，創建兩個小正方體，位置與前輪一模一樣，<span>需要設定屬性避免與其他部件衝突，本體、輪子、小正方體都要關閉如下圖。</span></p>
+<p><img alt="" height="136" src="/images/4 wheel car 本體干涉.PNG" width="371"/><br/><br/>將控制迴路啟用，來控制轉向的限制角度，兩個馬達都用預設即可，如下圖設定。<br/><br/><img alt="" height="431" src="/images/4 wheel car 轉向設定.PNG" width="377"/></p>
+<p>將之前的馬達速度都關掉，<span>點擊馬達圖示視窗下的</span><span>show dynamic properties dialog</span><span>，把</span><span>motor properties的速度改為0</span><span>，底下的</span><span>lock motor when target velocity is zero是</span><span><span color="#000000">馬達速度為零時鎖定馬達，可開可不開。</span></span></p>
+<p><span><span color="#000000"><img alt="" height="171" src="/images/4 wheel car 後輪馬達.PNG" width="380"/></span></span></p>
+<p>最後把方塊拖移至對應馬達下，再整個放進本體下，把對應的前輪馬達放置方塊下，本體新增一個控制腳本，選擇cuboid，點擊菜單欄的Add &gt; Associated child script &gt; Threaded，將寫好的腳本複製貼上，更改前輪馬達的名子，這樣腳本才能控制，下圖為整個最終結構。<br/><br/><img alt="" height="355" src="/images/4 wheel car 結構.PNG" width="266"/></p>
+<p>四輪車鍵盤控制轉向程式碼:</p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">-- This script is threaded! It is a very simple example of how Ackermann steering can be handled.
+-- Normally, one would use a non-threaded script for that
+
+threadFunction=function()
+	while simGetSimulationState()~=sim_simulation_advancing_abouttostop do
+		-- Read the keyboard messages (make sure the focus is on the main window, scene view):
+		message,auxiliaryData=simGetSimulatorMessage()
+		while message~=-1 do
+			if (message==sim_message_keypress) then
+				if (auxiliaryData[1]==2007) then
+					-- up key
+					desiredWheelRotSpeed=desiredWheelRotSpeed+wheelRotSpeedDx
+				end
+				if (auxiliaryData[1]==2008) then
+					-- down key
+					desiredWheelRotSpeed=desiredWheelRotSpeed-wheelRotSpeedDx
+				end
+				if (auxiliaryData[1]==2009) then
+					-- left key
+					desiredSteeringAngle=desiredSteeringAngle+steeringAngleDx
+					if (desiredSteeringAngle&gt;45*math.pi/180) then
+						desiredSteeringAngle=45*math.pi/180
+					end
+				end
+				if (auxiliaryData[1]==2010) then
+					-- right key
+					desiredSteeringAngle=desiredSteeringAngle-steeringAngleDx
+					if (desiredSteeringAngle&lt;-45*math.pi/180) then
+						desiredSteeringAngle=-45*math.pi/180
+					end
+				end
+			end
+			message,auxiliaryData=simGetSimulatorMessage()
+		end
+
+		-- We handle the front left and right wheel steerings (Ackermann steering):
+		steeringAngleLeft=math.atan(l/(-d+l/math.tan(desiredSteeringAngle)))
+		steeringAngleRight=math.atan(l/(d+l/math.tan(desiredSteeringAngle)))
+		simSetJointTargetPosition(steeringLeft,steeringAngleLeft)
+		simSetJointTargetPosition(steeringRight,steeringAngleRight)
+
+		-- We take care of setting the desired wheel rotation speed:
+		simSetJointTargetVelocity(motorLeft,desiredWheelRotSpeed)
+		simSetJointTargetVelocity(motorRight,desiredWheelRotSpeed)
+
+		-- Since this script is threaded, don't waste time here:
+		simSwitchThread() -- Resume the script at next simulation loop start
+	end
+end
+
+-- Put some initialization code here:
+-- Retrieving of some handles and setting of some initial values:
+steeringLeft=simGetObjectHandle('Steer_left_joint')
+steeringRight=simGetObjectHandle('Steer_right_joint')
+motorLeft=simGetObjectHandle('Front_left_joint')
+motorRight=simGetObjectHandle('Front_right_joint')
+desiredSteeringAngle=0
+desiredWheelRotSpeed=0
+steeringAngleDx=2*math.pi/180
+wheelRotSpeedDx=20*math.pi/180
+d=0.755 -- 2*d=distance between left and right wheels
+l=2.5772 -- l=distance between front and read wheels
+
+-- Here we execute the regular thread code:
+res,err=xpcall(threadFunction,function(err) return debug.traceback(err) end)
+if not res then
+	simAddStatusbarMessage('Lua runtime error: '..err)
+end
+
+-- Put some clean-up code here:</pre>
+<p><span><span color="#000000"></span></span>教學影片連結:<a href="https://youtu.be/0W1wmC1tr4A">https://youtu.be/0W1wmC1tr4A</a></p>
+<p><span><strong><span color="#000000"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/0W1wmC1tr4A" width="560"></iframe></span></strong></span><strong><span></span></strong></p><h1>Assignments</h1>
 <p><span>報告連結:</span><a href="/downloads/assignment1.pdf">assignment1.pdf</a></p>
 <h2>assignment1</h2>
 <p>Due March 25, 2020 for class 2a and March 26, 2020 for class 2b.</p>
@@ -285,8 +372,195 @@ EXIT</pre>
 <h2>assignment2</h2>
 <p></p>
 <h3>DigitalProductCollaboration</h3>
-<p></p>
-<h3>EngineeringProductDesign</h3>
+<p>原文pdf連結:<a href="https://drive.google.com/open?id=1YHQwYduSMisiJQS-Jr_HhJghzIqP_SBc">DigitalProductCollaboration.pdf</a></p>
+<p>翻譯連結:<a href="/downloads/DigitalProductCollaboration翻譯.pdf">DigitalProductCollaboration翻譯.pdf</a></p>
+<h4><strong>協同設計更好的產品</strong></h4>
+<p> 透過設計協調創作更好的產品<span> - </span>心態、工具、過程<span>  2019</span>年<span> 7</span>月<span> 10 </span>日</p>
+<p> </p>
+<p>現今的數位產品比以往都還要複雜。創建他們需要更多的團隊。每位成員都需要擁有自己的技藝與專業知識。例如<span>Savvy</span>，我們的顧客。需要與產品經理、<span>UX</span>設計師、視覺設計師、開發人員、內容策略師還有增長專家密切配合。</p>
+<p> </p>
+<p>我們藉由設計協同來處理這種複雜性。正確的設計協同可以讓每一位專家擁有思維、流程和工具來快速的建立更好的產品。</p>
+<p> </p>
+<p>我們撰寫這篇資源是為了幫助其他<span>APP</span>創作者採用文化偕同和流程。深入閱讀了解為何設計協同對於創作引人注目的產品和體驗來說非常重要</p>
+<p> </p>
+<h4><strong>什麼是設計協同<span>?</span></strong></h4>
+<p> </p>
+<p>在直接跳入主題前，我們需要了解什麼是設計協同<span>…</span>什麼不是。簡單來說，設計協同就是在以設計為主的環境中進行協同合作。但是，因為設計的本質，特別是在與<span>Savvy</span>合作的設計之中，設計協同往往會超出人們一般認為的合作範圍。</p>
+<p> </p>
+<p>協同一般被定義為兩個或更多的人一起為同樣的目標工作，然而設計協同所涉及的東西卻更多。</p>
+<p> </p>
+<p>設計協同包羅了更多具有不同技能的人、更艱困的挑戰、更大的目標並產生更深遠的影響</p>
+<p> </p>
+<p>你可能會認為協同就是兩個人懸掛一件藝術品，只需要溝通、團隊工作、和四隻手而已。設計合作是指由策劃團隊精心為參觀者設計的體驗，他們挑取藝術品並挑選掛在什麼地方、如何掛、掛在哪個房間<span>(</span>以及房間的燈光和家具<span>) </span>，甚至是前一個房間和整棟建築物。</p>
+<p> </p>
+<h4><strong>為什麼設計協同是重要的<span>?</span></strong></h4>
+<p> </p>
+<p>你可以在沒有協同的情況下設計出一件產品，但透過一個合作的設計過程可以讓產品變的更加優秀，這就是為什麼設計協同是如此的重要。</p>
+<p> </p>
+<p>我們並不只是為顧客構建應用程式，<span>Savvy</span>構建了多平台體驗、複雜的內部系統，並且在某些情況下，還可以構建整個品牌與業務，為此我們在戰略、設計、開發和成長等領域利用核心專業技術，每個項目都有許多人參加，每個人都有自己的技藝與專長。</p>
+<p> </p>
+<p>設計協同將這些人的思想概念結合在一起，將他們獨自的專業知識結合起來，創造出能夠解決共同目標所有方面問題的方案。設計協同不是從一個角度來解決一個問題，而是將所有問題放在專家面前，迫使他們考慮新的觀點與可能性。</p>
+<p> </p>
+<p>例如，我們在早期的設計過程就讓開翻人員參予進來，確保盡快解決技術問題與侷限性。這使我們能夠利用在推動技術能力過程時，進一步消除昂貴的路障。這也同時限制一個人在筒倉的工作量，保持工廠的開放性，將重點放在用戶需求與產品目標上。</p>
+<p> </p>
+<h4><strong>培養設計協同的心態</strong></h4>
+<p> </p>
+<p>正確的心態能幫助在設計過程中建立有效的合作關係，它為由誰來合作、如何合作以及合作的目的制定了準則。</p>
+<p> </p>
+<h4><strong>協同是人人都可以的</strong></h4>
+<p> </p>
+<p>設計師有時候會認為不是設計師的人是沒有資格給出好的反饋的。但是，好的設計是不僅僅有視覺效果而已的，它包含了一個產品的一切，從品牌到工程再到在到期發展的一切。</p>
+<p> </p>
+<p>設計協同引進了許多人，每個人都有其自己的觀點與優勢，它使每個人都可以擁有發言權，這些創新的視角給了設計師更多的信息。觀點可以讓設計師能夠做出正確的決定，這些選擇會對以後的設計、開發與營銷產生持久的引響。</p>
+<p> </p>
+<p>與客戶的合作和與其他設計師、團隊成員的合作同樣重要。在與<span>Savvy</span>的合作中，我們讓客戶參予產品的製作過程，並花時間解釋所選方案，與客戶進行討論，以確保我們了解他們的想法。</p>
+<p> </p>
+<p>這樣一來，我們就可以確保客戶的買帳並使工作有始有終，較大的揭露並不是什麼太大的驚喜，沒有人會因為第一次看到工作而感到驚訝。</p>
+<p> </p>
+<p>客戶的合作意味著更早產生一個確定的產品，避免了昂貴的迴避與不必要的會議。</p>
+<p> </p>
+<p>人們很容易沉浸在自己所扮演的角色中而忽略了大局關，透過讓更多的人在早期參與進來，就能將團隊成員之間的聯繫培養的更緊密，並培養出責任感與對產品是否能成功的興趣。你正在創造一個更開放、更透明的過程，以及一個更有聯繫和投入的團體。</p>
+<p> </p>
+<h4><strong>協同是有背景的</strong></h4>
+<p> </p>
+<p>客戶帶著複雜的挑戰與目標來尋找我們。更別提我們會持續與客戶合作數月甚至數年，累積了大量的知識，包含過去的決策、研究等其他有價值的背景。</p>
+<p> </p>
+<p>透過適者生存的方法，確保每個人都處於最高的知識水平。使他們能夠在開發產品的過程中能夠做出最明確的決定，為了能夠做到這一點，我們透過提前召集所有團隊成員，紀錄和紀錄會議的內容，建立一些重和點，並將下一個團隊成員視為顧客，讓<span>Savvy</span>團隊的每一個人都能及時了解相關資訊。</p>
+<p> </p>
+<p>在個案合作的基礎上，情境同樣重要，遵循這些準則，在合作中要把情境放在首位。</p>
+<p> </p>
+<p>在顯示您的工作之前提供上下文。在提供背景信息的情況下，如果您的作品出現在屏幕上，那麼您可能會失去聽眾的注意力。</p>
+<p> </p>
+<p>描述您要解決的問題或要達到的目標。</p>
+<p> </p>
+<p>介紹與當前問題相關的工作。說明您的想法以及做出某些決定的原因。</p>
+<p> </p>
+<p>請具體說明您要反饋的內容。</p>
+<p> </p>
+<h4><strong>合作是開放，誠實和無畏的</strong></h4>
+<p> </p>
+<p>將您的工作（和您自己）放在那裡並不容易。情緒會阻礙您提供坦誠的反饋，尤其是當您擔心會傷害對方的感受時。</p>
+<p> </p>
+<p>這並不意味著在協作中沒有情感的位置。在設計中，讓您感覺如何是很重要的。我們為人們思考並為他們創建解決方案，有情感並在決策中使用情感的人。在對話中留下的情感可能會縮短潛在的想法或解決方案。充其量，僅就事實和數據進行務實的討論將無法提供全面的信息。在最壞的情況下，它可能是掩人耳目或提供虛假的敘述。</p>
+<p> </p>
+<p>在與<span>Savvy</span>的合作中，我們使我們的團隊對收到反饋感到<span>“</span>無所畏懼<span>”</span>。這意味著放開對我們所創造的東西進行判斷不會感到任何焦慮。這也意味著我們在一起將會更加強大，更有機會創造偉大的事物。在無所畏懼的情況下，我們會更好地相互信任和相互賦予能力，以提供誠實和周到的反饋。</p>
+<p> </p>
+<p>我們的團隊還信奉無所畏懼地提供反饋。這意味著能夠了解需要解決的問題以及客戶的品牌和目標。同時也意味著可以問很多問題，以發現相關的思想或幫助指導決策。</p>
+<p> </p>
+<p>嘗試以探索性和指導性的方式提出反饋意見，目的是建立和改進工作，而不是拆散工作。</p>
+<p> </p>
+<p>您的反饋意見應具有建設性。與其說您不喜歡某些東西，不如說出您的反饋意見以指出您要幫助解決的問題。提供可行的步驟來改進工作，或者至少提供您思考背後的理由。並且不要忘了表達您喜歡什麼以及為什麼。</p>
+<p> </p>
+<h4><strong>合作不僅僅是新的想法</strong></h4>
+<p> </p>
+<p>開放並接受協作反饋是一回事，解析這些想法並將其用來催生您自己的想法是另一回事。隨著時間的推移，這是一項更高級的技能。實踐方法將成為更好的聽眾。</p>
+<p> </p>
+<p>通常，在與他人交談時，我們會更多地考慮接下來要說的內容，而不是別人在說什麼。這會影響反饋過程，尤其是在設計過程中，因為在聽到其他意見或解決方案之前，我們通常會知道我們要說的話。</p>
+<p> </p>
+<p>當您選擇先聆聽然後再做出反應時，它可以讓您完全理解其他人的反饋，並讓您更深入地了解自己<span> — </span>他們使用的觀點是什麼以及來自何處？很有可能這是您在創建過程中未曾考慮過的觀點。通過聽取並理解收到反饋時背後的上下文和推理，您可以以更多的方式來審視，思考和體驗設計。然後，您可以針對要設計的挑戰，目標和用例來測試這些新觀點，以查看它們是否更適合用戶。</p>
+<p> </p>
+<p>當所有協作者都在積極聆聽時，更容易接受反饋。最終，提供良好反饋的技能來自於學習如何獲得反饋。當我們努力成為更好的聽眾時，我們也發現自己變得更加謙虛，並認為我們是更好的設計師。</p>
+<p> </p>
+<p>尋找和使用正確的設計協作工具</p>
+<p> </p>
+<p>正確的工具在增強團隊的設計協作思維方面大有幫助。在本節中，您將學習在協作工具中尋找什麼。我們還根據自己的經驗推薦工具。</p>
+<p> </p>
+<h4><strong>選擇合適的工具</strong></h4>
+<p> </p>
+<p>有效的協作工具消除了協作者想要快速輕鬆地訪問工作並與之交互時的所有障礙。這將重點放在提供反饋上。它們還允許其他人在不破壞原始設計的情況下進行協作。</p>
+<p> </p>
+<p>過去，我們依賴於提供基本版本控製而不是真正的協作功能的工具。例如，設計人員將保存一個<span>Sketch</span>文件並將其上傳到<span>Dropbox</span>。然後，另一個團隊成員下載它，進行處理，然後重新上傳。當文件在另一個人手中時，沒有辦法用簡單的方法來進行更改。我們使用<span>Github</span>嘗試了類似的方法，該工具被證明非常適合管理代碼庫，但對於反覆設計的工作卻沒有太多幫助。不用說，這些版本控製過程使我們的協作更加耗時，混亂並且非常不協作。</p>
+<p> </p>
+<p>現在，我們根據要實現的協作類型從各種更高級的工具中進行選擇。</p>
+<p> </p>
+<h4><strong>設計工具<span>FIGMA</span></strong></h4>
+<p> </p>
+<p>這是一個以協作為優先的共享工作區工具。<span> Figma</span>非常適合在設計文件的同一區域中包含多個人。您可以時時觀看隊友的設計或在同一個設計上一起工作。</p>
+<p> </p>
+<p>Figma的好處：</p>
+<p> </p>
+<p>Figma降低了某人在筒倉中工作的能力。</p>
+<p> </p>
+<p>無需添加不必要的修飾或創建可交付結果的靜態即可實現協作。因此，您無需更改工作流程即可展示設計。</p>
+<p> </p>
+<p>可以輕鬆地在其本環境中查看並與之交互，並隨意進行調整。</p>
+<p> </p>
+<p>使用時：流程文檔，高保真線框，即時協作，以及引導客戶瀏覽一系列屏幕，以解釋並獲得有關設計方向的反饋。</p>
+<p> </p>
+<h4><strong>MARVEL app</strong><strong>軟體</strong></h4>
+<p> </p>
+<p>雖然<span>Figma</span>傾向於自由和靈活，但<span>Marvel</span>允許採用更標準化的協作形式。這也使我們的客戶可以輕鬆地與我們合作。</p>
+<p> </p>
+<p>Marvel的好處：</p>
+<p> </p>
+<p>Marvel是一個更簡潔、規範和專注的空間，非常適合與非設計團隊成員進行協作。</p>
+<p> </p>
+<p>它消除了客戶為帳戶付款或對工具進行深入了解的所有需求。</p>
+<p> </p>
+<p>客戶可以下載屏幕，並通過<span>Marvel</span>應用程序在設備環境中查看它們的運行情況。</p>
+<p> </p>
+<p>使用時：與客戶和開發人員一起呈現更多的最終設計工作。 （了解<span>Marvel</span>如何與其他原型工具進行比較。）</p>
+<p> </p>
+<h4><strong>其他合作工具</strong></h4>
+<p> </p>
+<p>Zeplin是一個有用的傳遞工具，使開發人員可以深入研究設計工作的細節。 （我們在這裡更深入地討論<span>Zeplin</span>。）</p>
+<p> </p>
+<p>Quip是集思廣益在產品<span>/</span>流程文件的絕佳平台。我們使用它來記錄和組織團隊成員在項目上需要了解的所有環境和知識。對於集思廣益新思路而不是視覺關注的新想法也很有用。</p>
+<p> </p>
+<p>請注意，還有許多其他工具可以為協作增加與上面類似的好處。此列表代表了在我們日常合作中對我們有效的工具，但並不表示所有可能對您的團隊有效的選項。</p>
+<p> </p>
+<p>精明的設計合作過程在實踐中</p>
+<p> </p>
+<p>現在，讓我們採用上面概述的最佳實踐和工具，並展示它們如何在現實生活中融合在一起。我們將使用<span>Press Play</span>應用程序中的實際繪圖經驗來演示設計協作的重要性。這種經驗涉及多個學科領域的團隊成員之間的重大協作，其中包括視覺設計師，<span>UX</span>設計人員，開發人員，產品經理，當然還有客戶。</p>
+<p> </p>
+<h4><strong>語境與挑戰</strong></h4>
+<p> </p>
+<p>Press Play是一個抽獎活動應用程序，可保存每日，每周和每月的圖紙。用戶通過觀看廣告賺取門票，並通過五個表情符號的選擇來輸入圖紙。然後，根據獲獎者的選擇與繪畫中隨機選擇的表情符號匹配的方式來獎勵獲獎者。這項特殊任務使我們為等待現場繪畫結果的用戶創造了一種有趣而激動人心的現場體驗。</p>
+<p> </p>
+<p>對於我們來說，為這種體驗創建類似遊戲的動畫非常重要。我們特別想在屏幕上喚起用戶的嬉戲感和期待感，讓用戶看到他們選擇的表情符號與抽獎活動圖上的表情符號相匹配。</p>
+<p> </p>
+<p>也就是說，我們需要注意動畫所需的複雜程度及其對整體產品時間表和成本的影響。我們的目標是在合理的時間內提高真實度，而又不顯著影響項目預算。</p>
+<p> </p>
+<h4><strong>合作的過程</strong></h4>
+<p> </p>
+<p>階段<span>1</span>：線框和自由討論</p>
+<p> </p>
+<p>首先，一位精明的<span>UX</span>設計師創建了<span>Press Play</span>的整體<span>UX</span>和線框，確定需要哪些屏幕以及每個屏幕的時間安排。她還為實時繪畫動畫整理了一個粗略的概念，根據客戶的需求和項目已建立的用戶體驗表達了初步的想法。</p>
+<p> </p>
+<p>她向產品經理和視覺設計師展示了線框和粗糙的動畫。然後這三個人都與客戶會面，因此每個人都可以直接聽到反饋。</p>
+<p> </p>
+<p>第二階段：研究與背景</p>
+<p> </p>
+<p>精明的視覺設計師負責創建實際的繪畫動畫，他們的眼睛新鮮，而且對<span>Press Play</span>產品沒有太多的了解。為了加快速度，他與<span>UX</span>設計師和產品經理進行了深入交流。他還花費額外的研究時間來了解總體產品目標，挑戰並熟悉迄今為止的工作。如前所述，他展示線框演示的一部分，並向客戶提出反饋。</p>
+<p> </p>
+<p>在這種情況下，他進行了一些與手頭任務直接相關的其他研究。通過這樣做，他確保自己了解現場繪畫體驗的要求、目標和挑戰。他查看了具有類似體驗和真實度的其他應用，並參考了粗糙的動畫以了解最終動畫到底需要顯示什麼（在這種情況下，是獲勝的表情符號和用戶的表情符號選擇）。在過於依賴解決方案之前，他會見了一位精明的<span>iOS</span>開發人員，以了解技術限制和注意事項。</p>
+<p> </p>
+<p>然後，我們的視覺設計師和<span>UX</span>設計師集思廣益，視覺效果非常重要。他們一致認為，需要慢慢進行透露，以便為用戶建立懸念<span>/</span>期待</p>
+<p> </p>
+<p>階段<span>3</span>：迭代和反饋</p>
+<p> </p>
+<p>當我們的視覺設計師沿多個不同方向工作時，他邀請了<span>UX</span>設計師來聊聊他在<span>Figma</span>中的進度和設計。通過討論工作，他們激發了更多的想法和迭代，同時確保它們符合客戶的期望。有了更多可靠的選擇，他再次與<span>iOS</span>開發人員會面，以確保從技術角度來看一切都符合要求。</p>
+<p> </p>
+<p>階段<span>4</span>：客戶的反饋和發展</p>
+<p>當我們找到了幾種最終確定的體驗版本時，視覺設計師使用<span>Figma</span>與客戶一起瀏覽了它們。<span> Press Play</span>的產品經理和<span>UX</span>設計師也提供了反饋和指導。</p>
+<p> </p>
+<p>一旦他們都了解了會引起客戶興趣的東西，視覺設計師便開始著手讓視覺效果最大化，並為開發做好準備。他繼續與<span>iOS</span>開發人員合作，以在技術層面上充分利用該概念。</p>
+<p> </p>
+<h4><strong>最終結果</strong></h4>
+<p> </p>
+<p>Press Play的實際繪圖動畫是工作中設計協作的一個示例。一隊跨學科專家團隊，共同解決具有更大影響的設計和開發挑戰。沒有設計協作，我們將找不到用戶體驗，視覺和技術之間的理想交匯處。</p>
+<p> </p>
+<p>當客戶在他的應用程序中看到動畫是生動時，他稱其為<span>“</span>開創性的<span>”</span>。</p>
+<p> </p>
+<p>此外，對這種<span>Press Play</span>體驗的研究、協作和創造，幫助我們發現了產品用戶旅程中的空白。最初，實際繪圖的目的是將結果顯示給用戶的一種有趣的方式。在設計過程中，我們意識到，如果用戶不因為觀看實際圖形而迷失了方向，那麼他們就不會體驗到該圖形的用戶旅程。</p>
+<p> </p>
+<p>基於這一發現，我們決定在其他兩個地方也改進該應用程序。我們在<span>“</span>獲勝者圈子<span>”</span>中添加了一個結果<span>/</span>實際繪圖元素，並在應用程序的<span>“</span>用戶詳細信息<span>”</span>端添加了<span>“</span>輸贏歷史記錄<span>”</span>部分。最後，設計協作使我們能夠實現用戶體驗中這未滿足的需求。</p>
+<p> </p>
+<h4><strong>結論說明</strong></h4>
+<p> </p>
+<p>它需要設計協調來處理構建出色的產品和體驗所伴隨的複雜並關鍵的問題。通過利用跨學科的多個團隊成員的專業知識，設計協作可確保團隊從各個角度應對挑戰並尋求更好的解決方案。通過正確的思維方式、工具和流程，設計協調能使團隊能夠通過創造性思維和更深入迭代。</p>
+<p> </p>
+<p>我們希望本指南為您提供一個良好的基礎，您可以以此為基礎建立自己的有效設計協作流程。您可以在<span>Savvy</span>博客上了解有關設計和產品策略的更多信息，也可以隨時在<span>Savvy Apps</span>網站上與我們聯繫以獲取幫助。</p><h3>EngineeringProductDesign</h3>
 <p>原文pdf連結:<a href="https://drive.google.com/file/d/1KRwEcU7Vn65xL6twStG_EWaTKz1Ag8PG/view?usp=sharing">IndustrialAndEngineeringProductDesignCollaboration.pdf</a></p>
 <p>翻譯連結:<a href="/downloads/IndustrialAndEngineeringProductDesignCollaboration翻譯.pdf">IndustrialAndEngineeringProductDesignCollaboration翻譯.pdf</a></p>
 <h4><strong>產品公司中的工業和工程設計的協作產品設計過程</strong></h4>
@@ -884,18 +1158,3 @@ void deinitializationCallback
 <li><strong><span><span>復位場景初始狀態</span></span></strong><span><span>：當被選擇時，那麼所有</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/objects.htm"><span><span>的對象</span></span></a><span><span>將被復位到它們的初始狀態：包括對象的本地位置，局部方向和它的父（只要該對象沒有另外修飾的（例如縮放）），</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/joints.htm"><span><span>關節</span></span></a><span><span>以及</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/paths.htm"><span><span>路徑的</span></span></a><span><span>固有位置，浮動</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/pagesAndViews.htm"><span><span>視圖</span></span></a><span><span>位置和大小等。這意味著除非進行了重大更改（</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapes.htm"><span><span>形狀</span></span></a><span><span>縮放，對象移除等）</span><span>，否則下一次模擬運行將以與上一次相同的方式執行</span><span>。</span><span>此項目將忽略一些次要設置。</span></span></li>
 <li><strong><span><span>刪除新對象</span></span></strong><span><span>：選中該選項後，在仿真運行期間添加的場景對象將在仿真結束時被刪除。</span></span></li>
 </ul>
-<h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
