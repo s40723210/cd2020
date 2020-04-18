@@ -151,7 +151,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='Weeks.html'>Weeks</a><ul class='dropdown'><li><a href='Week1-5.html'>Week1-5</a><li><a href='Week6-9.html'>Week6-9</a></li></ul><li class='has-children'><a href='Assignments.html'>Assignments</a><ul class='dropdown'><li class='has-children'><a href='assignment1.html'>assignment1</a><ul class='dropdown'><li><a href='Random grouping.html'>Random grouping</a><li><a href='Portable system.html'>Portable system</a><li><a href='Four wheel car.html'>Four wheel car</a></li></ul><li class='has-children'><a href='assignment2.html'>assignment2</a><ul class='dropdown'><li><a href='DigitalProductCollaboration.html'>DigitalProductCollaboration</a><li><a href='EngineeringProductDesign.html'>EngineeringProductDesign</a><li><a href='MechanicalDesignProcess.html'>MechanicalDesignProcess</a></li></ul><li><a href='assignment3.html'>assignment3</a></li></ul><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='BubbleRob tutorial.html'>BubbleRob tutorial</a><li><a href='Line following BubbleRob.html'>Line following BubbleRob</a><li><a href='External controller tutorial.html'>External controller tutorial</a><li><a href='Simulation.html'>Simulation</a><li><a href='Simulation dialog.html'>Simulation dialog</a></li>
+                     <li class='has-children'><a href='Weeks.html'>Weeks</a><ul class='dropdown'><li><a href='Week1-5.html'>Week1-5</a><li><a href='Week6-9.html'>Week6-9</a></li></ul><li class='has-children'><a href='Assignments.html'>Assignments</a><ul class='dropdown'><li class='has-children'><a href='assignment1.html'>assignment1</a><ul class='dropdown'><li><a href='Random grouping.html'>Random grouping</a><li><a href='Portable system.html'>Portable system</a><li><a href='Four wheel car.html'>Four wheel car</a></li></ul><li class='has-children'><a href='assignment2.html'>assignment2</a><ul class='dropdown'><li><a href='DigitalProductCollaboration.html'>DigitalProductCollaboration</a><li><a href='EngineeringProductDesign.html'>EngineeringProductDesign</a><li><a href='MechanicalDesignProcess.html'>MechanicalDesignProcess</a><li><a href='Keyboard control car.html'>Keyboard control car</a></li></ul><li><a href='assignment3.html'>assignment3</a></li></ul><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='BubbleRob tutorial.html'>BubbleRob tutorial</a><li><a href='Line following BubbleRob.html'>Line following BubbleRob</a><li><a href='External controller tutorial.html'>External controller tutorial</a><li><a href='Simulation.html'>Simulation</a><li><a href='Simulation dialog.html'>Simulation dialog</a></li>
                       </ul>
                 </nav>
               </div>
@@ -186,7 +186,7 @@ print(member.text)</pre>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">x = eval(member.text)</pre>
 <p>最後我整理出來的程式，雖然沒有老師這麼精美，但是也是可以進行亂數分組的抽查的，如果要改抽查人數，改y = random.sample(i,2)的數字即可。</p>
 <h4><span style="color: #ff6600;"><span color="#0000ff"><b>最終程式碼</b></span></span></h4>
-<p>程式碼連結:抽查程式.py</p>
+<p>程式碼連結:<a href="https://github.com/s40723210/cd2020/blob/master/downloads/%E4%BA%82%E6%95%B8%E5%88%86%E7%B5%84.py" target="_blank">抽查程式.py</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import requests
 import random
   
@@ -202,7 +202,7 @@ for i in eval(member.text):
 <h4><strong><span style="color: #0000ff;">亂數分組的的python程式</span></strong></h4>
 <p><strong></strong>一開始先從網頁上抓人員，這次跟上面的不太一樣，抓出來的本來就是str字串，所以必須把每個學號轉變為<span>list列表，直接將f.text加上 .split() 來轉換，完成之後就可以使用，random.shuffle()來將整個順序打亂，再來設定一共要分幾組，再使用while迴圈來判斷每一組要有幾個人，使用if判斷是來中斷迴圈，len()是指一共有幾個數量的意思，要加組別的話就要再多寫一列，接著使用for 迴圈來從，剛剛算好的每組人數，例如:13、12、12、12，再使用一個for迴圈，來一個一個配置組人員，這時候直接使用迭代iter()的next()，來抓人員這樣子就不會重複了，最後再加上一些說明、分格、標題，就可以開始進行亂數分組了。</span></p>
 <h4><span style="color: #ff6600;"><span color="#0000ff"><b>最終程式碼</b></span></span></h4>
-<p>程式碼連結:<a href="https://github.com/s40723210/cd2020/blob/master/downloads/%E4%BA%82%E6%95%B8%E5%88%86%E7%B5%84.py">亂數分組.py</a></p>
+<p>程式碼連結:<a arget="_blank" href="https://github.com/s40723210/cd2020/blob/master/downloads/%E4%BA%82%E6%95%B8%E5%88%86%E7%B5%84.py" t="">亂數分組.py</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import requests
 import random
 

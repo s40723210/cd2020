@@ -4,9 +4,11 @@
 <p><a href="https://s40723210.github.io/cd2020/content/Week10-14.html">Week10-14</a></p>
 <p><a href="https://s40723210.github.io/cd2020/content/Week15-18.html">Week15-18</a></p>
 <hr/>
-<p>個人倉儲網址:<a href="https://github.com/s40723210/cd2020" title="https://github.com/s40723210/cd2020">https://github.com/s40723210/cd2020</a></p>
-<p>個人youtube:<a href="https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw">https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw</a></p>
-<p>分組倉儲網址:<a href="https://s40723210.github.io/cd2020bg4" title="https://s40723210.github.io/cd2020bg4">https://s40723210.github.io/cd2020bg4</a></p><h2>Week1-5</h2>
+<p>倉儲網址:<a href="https://github.com/s40723210/cd2020" title="https://github.com/s40723210/cd2020">https://github.com/s40723210/cd2020</a></p>
+<p>youtube:<a href="https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw">https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw</a></p>
+<p>分組倉儲網址:<a href="https://s40723210.github.io/cd2020bg4" title="https://s40723210.github.io/cd2020bg4">https://s40723210.github.io/cd2020bg4</a></p>
+<p><span>gitter : </span><a href="https://gitter.im/40723210/cd2020">https://gitter.im/40723210/cd2020</a></p>
+<h2>Week1-5</h2>
 <h4 class="post-title entry-title" itemprop="name"><strong>建立個人cd2020倉儲</strong></h4>
 <p><span>1.下載<a href="https://drive.google.com/file/d/1fxMdqdCoCL__O1IpZ-Sv-A_4-c77Wx4E/view?usp=sharing">2019Fall可攜套件.7z</a>，完成後開啟start。</span><span><br/></span><span></span><span><span>2.先登入自己的github帳號，</span><span>創建一個新的倉儲cd2020。</span></span><span><span><br/></span><span>3.進入要存放該資料的資料夾tmp。</span></span><span><span><br/></span></span><span></span><span><span>4.git clone </span><span>https://github.com/s40723210/cd2020 。</span><span><br/></span><span>5.</span><span>git submodule add https://github.com/mdecourse/cmsimde.git。</span></span><span><span><br/>6.再進入cmsimde，將up_dir的所有項目複<span>製到cd2020</span>。</span></span><span><span><br/>7.完成後，python wsgi.py 開始編輯倉儲。<br/></span></span><span><span>8.login密碼為admin，gitconfig要有帳號密碼。</span></span><span><span><br/>9.處理完，git status &gt; git add . &gt; git commit -m "標題" &gt; git push。</span></span><span><span><br/>10.開啟github倉儲設定，點選要推送的branch即可。<br/></span></span></p>
 <p><span>我的教學影片:<a href="https://youtu.be/jBFzju1F43s">https://youtu.be/jBFzju1F43s<br/><br/><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/jBFzju1F43s" width="560"></iframe></a></span></p>
@@ -97,7 +99,7 @@
 <p>將之前的馬達速度都關掉，<span>點擊馬達圖示視窗下的</span><span>show dynamic properties dialog</span><span>，把</span><span>motor properties的速度改為0</span><span>，底下的</span><span>lock motor when target velocity is zero是</span><span><span color="#000000">馬達速度為零時鎖定馬達，可開可不開。</span></span></p>
 <p><span><span color="#000000"><img alt="" height="171" src="/images/4 wheel car 後輪馬達.PNG" width="380"/></span></span></p>
 <p>最後把方塊拖移至對應馬達下，再整個放進本體下，把對應的前輪馬達放置方塊下，本體新增一個控制腳本，選擇cuboid，點擊菜單欄的Add &gt; Associated child script &gt; Threaded，將寫好的腳本複製貼上，更改前輪馬達的名子，這樣腳本才能控制，下圖為整個最終結構。<br/><br/><img alt="" height="355" src="/images/4 wheel car 結構.PNG" width="266"/></p>
-<p>四輪車鍵盤控制轉向程式碼:</p>
+<p><span style="color: #0000ff;"><strong>四輪車鍵盤控制轉向程式碼:</strong></span></p>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">-- This script is threaded! It is a very simple example of how Ackermann steering can be handled.
 -- Normally, one would use a non-threaded script for that
 
@@ -169,7 +171,8 @@ end
 
 -- Put some clean-up code here:</pre>
 <p><span><span color="#000000"></span></span>教學影片連結:<a href="https://youtu.be/0W1wmC1tr4A">https://youtu.be/0W1wmC1tr4A</a></p>
-<p><span><strong><span color="#000000"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/0W1wmC1tr4A" width="560"></iframe></span></strong></span><strong><span></span></strong></p><h1>Assignments</h1>
+<p><span><strong><span color="#000000"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/0W1wmC1tr4A" width="560"></iframe></span></strong></span><strong><span></span></strong></p>
+<h1>Assignments</h1>
 <p><span>報告連結:</span><a href="/downloads/assignment1.pdf">assignment1.pdf</a></p>
 <h2>assignment1</h2>
 <p>Due March 25, 2020 for class 2a and March 26, 2020 for class 2b.</p>
@@ -211,7 +214,7 @@ print(member.text)</pre>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">x = eval(member.text)</pre>
 <p>最後我整理出來的程式，雖然沒有老師這麼精美，但是也是可以進行亂數分組的抽查的，如果要改抽查人數，改y = random.sample(i,2)的數字即可。</p>
 <h4><span style="color: #ff6600;"><span color="#0000ff"><b>最終程式碼</b></span></span></h4>
-<p>程式碼連結:抽查程式.py</p>
+<p>程式碼連結:<a href="https://github.com/s40723210/cd2020/blob/master/downloads/%E4%BA%82%E6%95%B8%E5%88%86%E7%B5%84.py" target="_blank">抽查程式.py</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import requests
 import random
   
@@ -227,7 +230,7 @@ for i in eval(member.text):
 <h4><strong><span style="color: #0000ff;">亂數分組的的python程式</span></strong></h4>
 <p><strong></strong>一開始先從網頁上抓人員，這次跟上面的不太一樣，抓出來的本來就是str字串，所以必須把每個學號轉變為<span>list列表，直接將f.text加上 .split() 來轉換，完成之後就可以使用，random.shuffle()來將整個順序打亂，再來設定一共要分幾組，再使用while迴圈來判斷每一組要有幾個人，使用if判斷是來中斷迴圈，len()是指一共有幾個數量的意思，要加組別的話就要再多寫一列，接著使用for 迴圈來從，剛剛算好的每組人數，例如:13、12、12、12，再使用一個for迴圈，來一個一個配置組人員，這時候直接使用迭代iter()的next()，來抓人員這樣子就不會重複了，最後再加上一些說明、分格、標題，就可以開始進行亂數分組了。</span></p>
 <h4><span style="color: #ff6600;"><span color="#0000ff"><b>最終程式碼</b></span></span></h4>
-<p>程式碼連結:<a href="https://github.com/s40723210/cd2020/blob/master/downloads/%E4%BA%82%E6%95%B8%E5%88%86%E7%B5%84.py">亂數分組.py</a></p>
+<p>程式碼連結:<a arget="_blank" href="https://github.com/s40723210/cd2020/blob/master/downloads/%E4%BA%82%E6%95%B8%E5%88%86%E7%B5%84.py" t="">亂數分組.py</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import requests
 import random
 
@@ -370,7 +373,18 @@ EXIT</pre>
 <p>影片連結:<a href="https://youtu.be/y8DJ1sjuAqM">https://youtu.be/y8DJ1sjuAqM</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/y8DJ1sjuAqM" width="560"></iframe></p>
 <h2>assignment2</h2>
-<p></p>
+<p>Due April 22, 2020 for class 2a and April 23, 2020 for class 2b.</p>
+<ol>
+<li>
+<p>According to the material of Topic 0 and Topic 1, can you describe specifically what the mechanical design team need to do for accomplishing Assignment 1's four wheeled robot.</p>
+</li>
+<li>
+<p>What do you need to know from<span> </span><a href="https://cyberbotics.com/doc/guide/index" rel="nofollow">https://cyberbotics.com/doc/guide/index</a><span> </span>to implement a four-wheeled robot?</p>
+</li>
+</ol>
+<hr/>
+<p>報告連結:<a href="/downloads/assignment1.pdf">assignment1.pdf</a></p>
+<p><iframe height="700px" iframe="" src="https://s40723210.github.io/cd2020/downloads/assignment.pdf" width="100%"></iframe></p>
 <h3>DigitalProductCollaboration</h3>
 <p>原文pdf連結:<a href="https://drive.google.com/open?id=1YHQwYduSMisiJQS-Jr_HhJghzIqP_SBc">DigitalProductCollaboration.pdf</a></p>
 <p>翻譯連結:<a href="/downloads/DigitalProductCollaboration翻譯.pdf">DigitalProductCollaboration翻譯.pdf</a></p>
@@ -560,7 +574,8 @@ EXIT</pre>
 <p> </p>
 <p>它需要設計協調來處理構建出色的產品和體驗所伴隨的複雜並關鍵的問題。通過利用跨學科的多個團隊成員的專業知識，設計協作可確保團隊從各個角度應對挑戰並尋求更好的解決方案。通過正確的思維方式、工具和流程，設計協調能使團隊能夠通過創造性思維和更深入迭代。</p>
 <p> </p>
-<p>我們希望本指南為您提供一個良好的基礎，您可以以此為基礎建立自己的有效設計協作流程。您可以在<span>Savvy</span>博客上了解有關設計和產品策略的更多信息，也可以隨時在<span>Savvy Apps</span>網站上與我們聯繫以獲取幫助。</p><h3>EngineeringProductDesign</h3>
+<p>我們希望本指南為您提供一個良好的基礎，您可以以此為基礎建立自己的有效設計協作流程。您可以在<span>Savvy</span>博客上了解有關設計和產品策略的更多信息，也可以隨時在<span>Savvy Apps</span>網站上與我們聯繫以獲取幫助。</p>
+<h3>EngineeringProductDesign</h3>
 <p>原文pdf連結:<a href="https://drive.google.com/file/d/1KRwEcU7Vn65xL6twStG_EWaTKz1Ag8PG/view?usp=sharing">IndustrialAndEngineeringProductDesignCollaboration.pdf</a></p>
 <p>翻譯連結:<a href="/downloads/IndustrialAndEngineeringProductDesignCollaboration翻譯.pdf">IndustrialAndEngineeringProductDesignCollaboration翻譯.pdf</a></p>
 <h4><strong>產品公司中的工業和工程設計的協作產品設計過程</strong></h4>
@@ -737,7 +752,185 @@ EXIT</pre>
 <p>設計過程模型的抽象特徵和研究中的一門學科方法與實際實踐並不完全匹配，並且被確定為造成這種問題情況的原因（<span>Brooks Jr</span>，<span>2010</span>；<span> Eckert</span>＆<span>Clarkson</span>，<span>2005</span>）。在這方面，有人要求結合不同的設計過程模型（<span>Albers</span>，<span>2010</span>；<span> Dorst</span>，<span>2008</span>）。四種類型的過程是工業設計師驅動的以解決方案為導向的方法和工程設計師以問題為導向的方法的組合過程。它們表明，即使在單個領域（即消費類電子產品）中，實際的設計過程也無法用單個模型來表示。為了提高設計過程的適用性並在設計實踐中獲得設計方法的適當支持，需要考慮公司和項目具體環境的更為具體的過程模型（<span>Finkelstein</span>＆<span>Finkelstein</span>，<span>1983</span>；<span> Gericke</span>＆<span>Blessing</span>，<span>2011</span>）。我們特別專注於消費電子領域，在這一領域中，工業設計師和工程設計師在產品開發中起著重要的合作作用。我們發現了四種類型的設計過程，並確定了它們的目的和背景。因此，我們發現的有關上下文的詳細信息將為公司計劃針對新產品開發的有效設計過程管理提供有用的信息，尤其是在消費電子領域。</p>
 <p>根據研究方法，我們展示瞭如何從設計師的深入訪談數據中建立協作設計過程。我們確定了過程元素，並使用它們構造了部分過程，並使用鑲嵌方法建立了詳細的協作設計過程。我們還引入了“過程塊”，並定義了一個或兩個交互塊作為一個階段。我們認為這種方法有利於確定最佳水平的實際設計過程。我們認為該方法適用於發現其他設計過程。我們的過程模型的形式可與其他基於階段的模型相比較（例如<span>French</span>，<span>1998</span>；<span> Pahl</span>等，<span>2007</span>）。我們從模型中發現，在階段之間很少發生反向迭代或反饋。這與現有的基於階段的工程設計過程模型的描述不同。在理想情況下，我們認為雙向迭代是可能的，但是實際上由於激烈的市場競爭，我們認為這種情況很少發生。</p>
 <p>特別是針對其他產品領域中的其他項目案例，需要對該方法進行進一步的研究。本研究中的公司均為電子產品製造商。因此，結果僅限於此產品類別。我們需要測試這四個協作設計過程如何在其他公司中應用。相反，值得研究創新產品開發和應用過程的案例。</p>
-<p> </p><h3>MechanicalDesignProcess</h3><h2>assignment3</h2>
+<p> </p>
+<h3>MechanicalDesignProcess</h3>
+<p>原文pdf連結: <a href="https://drive.google.com/file/d/13THamnfayiRT4Wa9KzmjXQSP4ZW2jIej/view?usp=sharing">MechanicalDesignProcess.pdf</a></p>
+<p>翻譯連結: <a href="/downloads/MechanicalDesignProcess翻譯.pdf">MechanicalDesignProcess翻譯.pdf</a></p>
+<p><iframe height="700px" iframe="" src="https://github.com/s40723210/cd2020/blob/master/downloads/MechanicalDesignProcess%E7%BF%BB%E8%AD%AF.pdf" width="100%"></iframe></p>
+<h3>Keyboard control car</h3>
+<h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">V-rep 馬達驅動四輪車</yt-formatted-string></h4>
+<p><span>V-rep 檔案連結: <a href="/downloads/4 wheel car.ttt">4 wheel car.ttt</a></span></p>
+<p>剛開始可以使用內建的功能來創建模型，Add &gt; Primitive shape &gt; Cuboid(需要的 形狀)，給定所需形狀的參數值即可，創建出一個正方形本體，還有四個圓柱形輪子， 移動到相對應的位置，再來加上馬達 Add &gt; Joint &gt; Revolute，分別定位在四個輪 子的軸上，雙擊Revolute_joint圖示，在彈出的屬性框點擊Show dynamic parameters dialog，勾選 Motor enable，並設置 Target velocity 為 10，四個馬達都是如此。 </p>
+<p>影片連結:<a href="https://youtu.be/y8DJ1sjuAqM">https://youtu.be/y8DJ1sjuAqM</a></p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/y8DJ1sjuAqM" width="560"></iframe></p>
+<hr color="00ffee"/>
+<h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">四輪車鍵盤控制轉向</yt-formatted-string></h4>
+<p>V-rep 檔案連結: <a href="/downloads/4%20wheel%20car%20keyboard.ttt">4 wheel car keyboard.ttt</a></p>
+<p>四輪車加上轉向及鍵盤控制，先開啟之前做好的四輪車，將兩個前輪馬達複製貼上，再使兩個馬達原地轉向90度，創建兩個小正方體，位置與前輪一模一樣，<span>需要設定屬性避免與其他部件衝突，本體、輪子、小正方體都要關閉如下圖。</span></p>
+<p><img alt="" height="136" src="/images/4%20wheel%20car%20%E6%9C%AC%E9%AB%94%E5%B9%B2%E6%B6%89.PNG" width="371"/><br/><br/>將控制迴路啟用，來控制轉向的限制角度，兩個馬達都用預設即可，如下圖設定。<br/><br/><img alt="" height="431" src="/images/4%20wheel%20car%20%E8%BD%89%E5%90%91%E8%A8%AD%E5%AE%9A.PNG" width="377"/></p>
+<p>將之前的馬達速度都關掉，<span>點擊馬達圖示視窗下的</span><span>show dynamic properties dialog</span><span>，把</span><span>motor properties的速度改為0</span><span>，底下的</span><span>lock motor when target velocity is zero是</span><span><span color="#000000">馬達速度為零時鎖定馬達，可開可不開。</span></span></p>
+<p><span><span color="#000000"><img alt="" height="171" src="/images/4%20wheel%20car%20%E5%BE%8C%E8%BC%AA%E9%A6%AC%E9%81%94.PNG" width="380"/></span></span></p>
+<p>最後把方塊拖移至對應馬達下，再整個放進本體下，把對應的前輪馬達放置方塊下，本體新增一個控制腳本，選擇cuboid，點擊菜單欄的Add &gt; Associated child script &gt; Threaded，將寫好的腳本複製貼上，更改前輪馬達的名子，這樣腳本才能控制，下圖為整個最終結構。<br/><br/><img alt="" height="355" src="/images/4%20wheel%20car%20%E7%B5%90%E6%A7%8B.PNG" width="266"/></p>
+<p><span><strong>四輪車鍵盤控制轉向程式碼:</strong></span></p>
+<div>
+<div class="syntaxhighlighter lua" id="highlighter_696434">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+<div class="line number13 index12 alt2">13</div>
+<div class="line number14 index13 alt1">14</div>
+<div class="line number15 index14 alt2">15</div>
+<div class="line number16 index15 alt1">16</div>
+<div class="line number17 index16 alt2">17</div>
+<div class="line number18 index17 alt1">18</div>
+<div class="line number19 index18 alt2">19</div>
+<div class="line number20 index19 alt1">20</div>
+<div class="line number21 index20 alt2">21</div>
+<div class="line number22 index21 alt1">22</div>
+<div class="line number23 index22 alt2">23</div>
+<div class="line number24 index23 alt1">24</div>
+<div class="line number25 index24 alt2">25</div>
+<div class="line number26 index25 alt1">26</div>
+<div class="line number27 index26 alt2">27</div>
+<div class="line number28 index27 alt1">28</div>
+<div class="line number29 index28 alt2">29</div>
+<div class="line number30 index29 alt1">30</div>
+<div class="line number31 index30 alt2">31</div>
+<div class="line number32 index31 alt1">32</div>
+<div class="line number33 index32 alt2">33</div>
+<div class="line number34 index33 alt1">34</div>
+<div class="line number35 index34 alt2">35</div>
+<div class="line number36 index35 alt1">36</div>
+<div class="line number37 index36 alt2">37</div>
+<div class="line number38 index37 alt1">38</div>
+<div class="line number39 index38 alt2">39</div>
+<div class="line number40 index39 alt1">40</div>
+<div class="line number41 index40 alt2">41</div>
+<div class="line number42 index41 alt1">42</div>
+<div class="line number43 index42 alt2">43</div>
+<div class="line number44 index43 alt1">44</div>
+<div class="line number45 index44 alt2">45</div>
+<div class="line number46 index45 alt1">46</div>
+<div class="line number47 index46 alt2">47</div>
+<div class="line number48 index47 alt1">48</div>
+<div class="line number49 index48 alt2">49</div>
+<div class="line number50 index49 alt1">50</div>
+<div class="line number51 index50 alt2">51</div>
+<div class="line number52 index51 alt1">52</div>
+<div class="line number53 index52 alt2">53</div>
+<div class="line number54 index53 alt1">54</div>
+<div class="line number55 index54 alt2">55</div>
+<div class="line number56 index55 alt1">56</div>
+<div class="line number57 index56 alt2">57</div>
+<div class="line number58 index57 alt1">58</div>
+<div class="line number59 index58 alt2">59</div>
+<div class="line number60 index59 alt1">60</div>
+<div class="line number61 index60 alt2">61</div>
+<div class="line number62 index61 alt1">62</div>
+<div class="line number63 index62 alt2">63</div>
+<div class="line number64 index63 alt1">64</div>
+<div class="line number65 index64 alt2">65</div>
+<div class="line number66 index65 alt1">66</div>
+<div class="line number67 index66 alt2">67</div>
+<div class="line number68 index67 alt1">68</div>
+<div class="line number69 index68 alt2">69</div>
+<div class="line number70 index69 alt1">70</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="lua comments">-- This script is threaded! It is a very simple example of how Ackermann steering can be handled.</code></div>
+<div class="line number2 index1 alt1"><code class="lua comments">-- Normally, one would use a non-threaded script for that</code></div>
+<div class="line number3 index2 alt2"> </div>
+<div class="line number4 index3 alt1"><code class="lua plain">threadFunction=</code><code class="lua keyword">function</code><code class="lua plain">()</code></div>
+<div class="line number5 index4 alt2"><code class="lua spaces">    </code><code class="lua keyword">while</code> <code class="lua plain">simGetSimulationState()~=sim_simulation_advancing_abouttostop </code><code class="lua keyword">do</code></div>
+<div class="line number6 index5 alt1"><code class="lua spaces">        </code><code class="lua comments">-- Read the keyboard messages (make sure the focus is on the main window, scene view):</code></div>
+<div class="line number7 index6 alt2"><code class="lua spaces">        </code><code class="lua plain">message,auxiliaryData=simGetSimulatorMessage()</code></div>
+<div class="line number8 index7 alt1"><code class="lua spaces">        </code><code class="lua keyword">while</code> <code class="lua plain">message~=-1 </code><code class="lua keyword">do</code></div>
+<div class="line number9 index8 alt2"><code class="lua spaces">            </code><code class="lua keyword">if</code> <code class="lua plain">(message==sim_message_keypress) </code><code class="lua keyword">then</code></div>
+<div class="line number10 index9 alt1"><code class="lua spaces">                </code><code class="lua keyword">if</code> <code class="lua plain">(auxiliaryData[1]==2007) </code><code class="lua keyword">then</code></div>
+<div class="line number11 index10 alt2"><code class="lua spaces">                    </code><code class="lua comments">-- up key</code></div>
+<div class="line number12 index11 alt1"><code class="lua spaces">                    </code><code class="lua plain">desiredWheelRotSpeed=desiredWheelRotSpeed+wheelRotSpeedDx</code></div>
+<div class="line number13 index12 alt2"><code class="lua spaces">                </code><code class="lua keyword">end</code></div>
+<div class="line number14 index13 alt1"><code class="lua spaces">                </code><code class="lua keyword">if</code> <code class="lua plain">(auxiliaryData[1]==2008) </code><code class="lua keyword">then</code></div>
+<div class="line number15 index14 alt2"><code class="lua spaces">                    </code><code class="lua comments">-- down key</code></div>
+<div class="line number16 index15 alt1"><code class="lua spaces">                    </code><code class="lua plain">desiredWheelRotSpeed=desiredWheelRotSpeed-wheelRotSpeedDx</code></div>
+<div class="line number17 index16 alt2"><code class="lua spaces">                </code><code class="lua keyword">end</code></div>
+<div class="line number18 index17 alt1"><code class="lua spaces">                </code><code class="lua keyword">if</code> <code class="lua plain">(auxiliaryData[1]==2009) </code><code class="lua keyword">then</code></div>
+<div class="line number19 index18 alt2"><code class="lua spaces">                    </code><code class="lua comments">-- left key</code></div>
+<div class="line number20 index19 alt1"><code class="lua spaces">                    </code><code class="lua plain">desiredSteeringAngle=desiredSteeringAngle+steeringAngleDx</code></div>
+<div class="line number21 index20 alt2"><code class="lua spaces">                    </code><code class="lua keyword">if</code> <code class="lua plain">(desiredSteeringAngle&gt;45*</code><code class="lua functions">math.pi</code><code class="lua plain">/180) </code><code class="lua keyword">then</code></div>
+<div class="line number22 index21 alt1"><code class="lua spaces">                        </code><code class="lua plain">desiredSteeringAngle=45*</code><code class="lua functions">math.pi</code><code class="lua plain">/180</code></div>
+<div class="line number23 index22 alt2"><code class="lua spaces">                    </code><code class="lua keyword">end</code></div>
+<div class="line number24 index23 alt1"><code class="lua spaces">                </code><code class="lua keyword">end</code></div>
+<div class="line number25 index24 alt2"><code class="lua spaces">                </code><code class="lua keyword">if</code> <code class="lua plain">(auxiliaryData[1]==2010) </code><code class="lua keyword">then</code></div>
+<div class="line number26 index25 alt1"><code class="lua spaces">                    </code><code class="lua comments">-- right key</code></div>
+<div class="line number27 index26 alt2"><code class="lua spaces">                    </code><code class="lua plain">desiredSteeringAngle=desiredSteeringAngle-steeringAngleDx</code></div>
+<div class="line number28 index27 alt1"><code class="lua spaces">                    </code><code class="lua keyword">if</code> <code class="lua plain">(desiredSteeringAngle&lt;-45*</code><code class="lua functions">math.pi</code><code class="lua plain">/180) </code><code class="lua keyword">then</code></div>
+<div class="line number29 index28 alt2"><code class="lua spaces">                        </code><code class="lua plain">desiredSteeringAngle=-45*</code><code class="lua functions">math.pi</code><code class="lua plain">/180</code></div>
+<div class="line number30 index29 alt1"><code class="lua spaces">                    </code><code class="lua keyword">end</code></div>
+<div class="line number31 index30 alt2"><code class="lua spaces">                </code><code class="lua keyword">end</code></div>
+<div class="line number32 index31 alt1"><code class="lua spaces">            </code><code class="lua keyword">end</code></div>
+<div class="line number33 index32 alt2"><code class="lua spaces">            </code><code class="lua plain">message,auxiliaryData=simGetSimulatorMessage()</code></div>
+<div class="line number34 index33 alt1"><code class="lua spaces">        </code><code class="lua keyword">end</code></div>
+<div class="line number35 index34 alt2"> </div>
+<div class="line number36 index35 alt1"><code class="lua spaces">        </code><code class="lua comments">-- We handle the front left and right wheel steerings (Ackermann steering):</code></div>
+<div class="line number37 index36 alt2"><code class="lua spaces">        </code><code class="lua plain">steeringAngleLeft=</code><code class="lua functions">math.atan</code><code class="lua plain">(l/(-d+l/</code><code class="lua functions">math.tan</code><code class="lua plain">(desiredSteeringAngle)))</code></div>
+<div class="line number38 index37 alt1"><code class="lua spaces">        </code><code class="lua plain">steeringAngleRight=</code><code class="lua functions">math.atan</code><code class="lua plain">(l/(d+l/</code><code class="lua functions">math.tan</code><code class="lua plain">(desiredSteeringAngle)))</code></div>
+<div class="line number39 index38 alt2"><code class="lua spaces">        </code><code class="lua plain">simSetJointTargetPosition(steeringLeft,steeringAngleLeft)</code></div>
+<div class="line number40 index39 alt1"><code class="lua spaces">        </code><code class="lua plain">simSetJointTargetPosition(steeringRight,steeringAngleRight)</code></div>
+<div class="line number41 index40 alt2"> </div>
+<div class="line number42 index41 alt1"><code class="lua spaces">        </code><code class="lua comments">-- We take care of setting the desired wheel rotation speed:</code></div>
+<div class="line number43 index42 alt2"><code class="lua spaces">        </code><code class="lua plain">simSetJointTargetVelocity(motorLeft,desiredWheelRotSpeed)</code></div>
+<div class="line number44 index43 alt1"><code class="lua spaces">        </code><code class="lua plain">simSetJointTargetVelocity(motorRight,desiredWheelRotSpeed)</code></div>
+<div class="line number45 index44 alt2"> </div>
+<div class="line number46 index45 alt1"><code class="lua spaces">        </code><code class="lua comments">-- Since this script is threaded, don't waste time here:</code></div>
+<div class="line number47 index46 alt2"><code class="lua spaces">        </code><code class="lua plain">simSwitchThread() </code><code class="lua comments">-- Resume the script at next simulation loop start</code></div>
+<div class="line number48 index47 alt1"><code class="lua spaces">    </code><code class="lua keyword">end</code></div>
+<div class="line number49 index48 alt2"><code class="lua keyword">end</code></div>
+<div class="line number50 index49 alt1"> </div>
+<div class="line number51 index50 alt2"><code class="lua comments">-- Put some initialization code here:</code></div>
+<div class="line number52 index51 alt1"><code class="lua comments">-- Retrieving of some handles and setting of some initial values:</code></div>
+<div class="line number53 index52 alt2"><code class="lua plain">steeringLeft=simGetObjectHandle(</code><code class="lua string">'Steer_left_joint'</code><code class="lua plain">)</code></div>
+<div class="line number54 index53 alt1"><code class="lua plain">steeringRight=simGetObjectHandle(</code><code class="lua string">'Steer_right_joint'</code><code class="lua plain">)</code></div>
+<div class="line number55 index54 alt2"><code class="lua plain">motorLeft=simGetObjectHandle(</code><code class="lua string">'Front_left_joint'</code><code class="lua plain">)</code></div>
+<div class="line number56 index55 alt1"><code class="lua plain">motorRight=simGetObjectHandle(</code><code class="lua string">'Front_right_joint'</code><code class="lua plain">)</code></div>
+<div class="line number57 index56 alt2"><code class="lua plain">desiredSteeringAngle=0</code></div>
+<div class="line number58 index57 alt1"><code class="lua plain">desiredWheelRotSpeed=0</code></div>
+<div class="line number59 index58 alt2"><code class="lua plain">steeringAngleDx=2*</code><code class="lua functions">math.pi</code><code class="lua plain">/180</code></div>
+<div class="line number60 index59 alt1"><code class="lua plain">wheelRotSpeedDx=20*</code><code class="lua functions">math.pi</code><code class="lua plain">/180</code></div>
+<div class="line number61 index60 alt2"><code class="lua plain">d=0.755 </code><code class="lua comments">-- 2*d=distance between left and right wheels</code></div>
+<div class="line number62 index61 alt1"><code class="lua plain">l=2.5772 </code><code class="lua comments">-- l=distance between front and read wheels</code></div>
+<div class="line number63 index62 alt2"> </div>
+<div class="line number64 index63 alt1"><code class="lua comments">-- Here we execute the regular thread code:</code></div>
+<div class="line number65 index64 alt2"><code class="lua plain">res,err=</code><code class="lua functions">xpcall</code><code class="lua plain">(threadFunction,</code><code class="lua keyword">function</code><code class="lua plain">(err) </code><code class="lua keyword">return</code> <code class="lua functions">debug.traceback</code><code class="lua plain">(err) </code><code class="lua keyword">end</code><code class="lua plain">)</code></div>
+<div class="line number66 index65 alt1"><code class="lua keyword">if</code> <code class="lua keyword">not</code> <code class="lua plain">res </code><code class="lua keyword">then</code></div>
+<div class="line number67 index66 alt2"><code class="lua spaces">    </code><code class="lua plain">simAddStatusbarMessage(</code><code class="lua string">'Lua runtime error: '</code><code class="lua plain">..err)</code></div>
+<div class="line number68 index67 alt1"><code class="lua keyword">end</code></div>
+<div class="line number69 index68 alt2"> </div>
+<div class="line number70 index69 alt1"><code class="lua comments">-- Put some clean-up code here:</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><span><span color="#000000"></span></span>教學影片連結:<a href="https://youtu.be/0W1wmC1tr4A">https://youtu.be/0W1wmC1tr4A</a></p>
+<p><span><strong><span color="#000000"><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/0W1wmC1tr4A" width="560"></iframe></span></strong></span></p>
+<h2>assignment3</h2>
 <p></p>
 <h1>CoppeliaSim</h1>
 <p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/CoppeliaSim.png"/></p>
