@@ -162,39 +162,80 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">assignment3 << <a href='assignment3.html'>Previous</a> <a href='BubbleRob tutorial.html'>Next</a> >> BubbleRob tutorial<br /><h1>CoppeliaSim</h1>
-<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/CoppeliaSim.png"/></p>
-<p align="center"><span><span>版本4.0.0</span></span></p>
-<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/welcome.jpg"/></p>
-<p><span><span>具有集成開發環境的機器人模擬器CoppeliaSim基於分佈式控制體系結構：可以通過嵌入式腳本，插件，ROS節點，BlueZero節點，遠程API客戶端或自定義解決方案分別控制每個對象/模型。</span><span>這使CoppeliaSim非常通用，非常適合多機器人應用。</span><span>控制器可以用C / C ++，Python，Java，Lua，Matlab，Octave或Urbi編寫。</span></span></p>
-<p><span><span>以下只是CoppeliaSim的部分應用程序：</span></span></p>
-<p></p>
-<ul>
-<li><span><span>工廠自動化系統仿真</span></span></li>
-<li><span><span>遠程監控</span></span></li>
-<li><span><span>硬件控制</span></span></li>
-<li><span><span>快速原型製作和驗證</span></span></li>
-<li><span><span>安全監控</span></span></li>
-<li><span><span>快速算法開發</span></span></li>
-<li><span><span>機器人相關教育</span></span></li>
-<li><span><span>產品介紹</span></span></li>
-</ul>
-<p></p>
-<p><span><span>CoppeliaSim可以用作獨立應用程序，也可以輕鬆地嵌入到主客戶端應用程序中：它的佔用空間小且精心設計的API使CoppeliaSim成為嵌入更高級別應用程序的理想選擇。</span><span>集成的Lua腳本解釋器使CoppeliaSim成為了一種極其通用的應用程序，使用戶可以自由組合低級/高級功能以獲得新的高級功能。</span></span></p>
-<p><span><span>快速入門CoppeliaSim的一個好方法是先看一下</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/tutorials.htm"><span><span>教程部分</span></span></a><span><span>。</span></span></p>
-<h4 class="recommendedTopics"><span><span>推薦主題</span></span></h4>
-<p></p>
-<ul>
-<li><a href="https://www.coppeliarobotics.com/helpFiles/en/coppeliaSimFeatures.htm"><span><span>CoppeliaSim主要功能</span></span></a></li>
-<li><a href="https://www.coppeliarobotics.com/helpFiles/en/versionInfo.htm"><span><span>CoppeliaSim版本歷史</span></span></a></li>
-<li><a href="https://www.coppeliarobotics.com/helpFiles/en/acknowledgments.htm"><span><span>致謝和鳴謝</span></span></a></li>
-<li><a href="https://www.coppeliarobotics.com/helpFiles/en/tutorials.htm"><span><span>講解</span></span></a></li>
-<li><a href="http://coppeliarobotics.com/contributions.html" target="_blank"><span><span>CoppeliaSim周圍的各種貢獻和外部資源</span></span></a></li>
-<li><a href="http://forum.coppeliarobotics.com/" target="_blank"><span><span>CoppeliaSim / V-REP論壇</span></span></a></li>
-</ul>
-<p></p>
-<p></p>
-<br />assignment3 << <a href='assignment3.html'>Previous</a> <a href='BubbleRob tutorial.html'>Next</a> >> BubbleRob tutorial</div>
+    <div id="tipue_search_content">Week6-9 << <a href='Week6-9.html'>Previous</a> <a href='Assignments.html'>Next</a> >> Assignments<br /><h1>Q&A</h1>
+<p>網頁無法顯示Brython，Spur Gear 導入錯誤，案F12來開啟Console檢查錯誤。</p>
+<p><strong><span style="color: #ff0000;">問題(一)如下圖</span></strong></p>
+<p><img caption="false" height="445" src="https://s40723210.github.io/40723210/images/chrome_rg3IpZC7Gr.png" width="650"/></p>
+<p>解決方法:</p>
+<p>開啟本倉儲資料夾，打開flaskapp.py，案ctrl+f來找到<span>page_content = request.form['page_content']，有2個地方都在底下加入</span></p>
+<div class="line number1 index0 alt2"><code class="html plain">page_content = page_content.replace('//<span> </span></code><code class="html color2">&lt;![CDATA[', '')</code></div>
+<div class="line number2 index1 alt1"><code class="html color2">page_content = page_content.replace('// ]]&gt;</code><code class="html plain">', '')<br/><br/></code></div>
+<div class="line number2 index1 alt1"><code class="html plain"></code></div>
+<div class="line number2 index1 alt1"><code class="html plain">save後即可解決問題。</code></div>
+<div class="line number2 index1 alt1"><code class="html plain"></code></div>
+<div class="line number2 index1 alt1"><code class="html plain">====================================================================</code></div>
+<div class="line number2 index1 alt1"><strong><span style="color: #ff0000;"><code class="html plain">問題(二)如下圖</code></span></strong></div>
+<div class="line number2 index1 alt1"><code class="html plain"></code><img caption="false" height="289" src="https://s40723210.github.io/40723210/images/chrome_A6plPf3iNf.png" width="650"/></div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1">解決方法:</div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1">檢查本倉儲資料夾static底下是否有brython.js與<span>brython_stdlib.js，沒有的話就必須加入這2個js檔案，有的話就是導入指令錯誤如:</span></div>
+<div class="line number2 index1 alt1"><span></span></div>
+<div class="line number2 index1 alt1">
+<div class="line number1 index0 alt2"><code class="html comments">&lt;!-- 導入 Brython 標準程式庫 --&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">&lt;</code><code class="html keyword">script</code><span> </span><code class="html color1">src</code><code class="html plain">=</code><code class="html string">"./../cmsimde/static/brython.js"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">script</code><code class="html plain">&gt;</code></div>
+<div class="line number3 index2 alt2"><code class="html plain">&lt;</code><code class="html keyword">script</code><span> </span><code class="html color1">src</code><code class="html plain">=</code><code class="html string">"./../cmsimde/static/brython_stdlib.js"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">script</code><code class="html plain">&gt;</code></div>
+<div class="line number3 index2 alt2"><code class="html plain"></code></div>
+<div class="line number3 index2 alt2"><code class="html plain">必須改為:</code></div>
+<div class="line number3 index2 alt2"><code class="html plain"></code></div>
+<div class="line number3 index2 alt2">
+<div class="line number1 index0 alt2"><code class="html comments">&lt;!-- 導入 Brython 標準程式庫 --&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">&lt;</code><code class="html keyword">script</code><span> </span><code class="html color1">src</code><code class="html plain">=</code><code class="html string">"/static/brython.js"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">script</code><code class="html plain">&gt;</code></div>
+<div class="line number3 index2 alt2"><code class="html plain">&lt;</code><code class="html keyword">script</code><span> </span><code class="html color1">src</code><code class="html plain">=</code><code class="html string">"/static/brython_stdlib.js"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">script</code><code class="html plain">&gt;</code></div>
+</div>
+<div class="line number3 index2 alt2"><code class="html plain"></code></div>
+<div class="line number3 index2 alt2"><code class="html plain">即可解決顯示問題。</code></div>
+<div class="line number3 index2 alt2"><code class="html plain"></code></div>
+</div>
+<div class="line number2 index1 alt1"><hr/></div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1"><strong><span style="color: #ff0000;">問題(三)如下圖: </span></strong></div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1">python wsgi.py 無法執行的話</div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1"><img alt="" height="211" src="https://s40723210.github.io/cad2019/images/cmd_2019-11-29_14-53-05.png" width="496"/></div>
+<div class="line number2 index1 alt1">將start_mdecourse用編輯器打開</div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1">path=<span>%path%;</span>%Disk%:;%path_python%;%path_msys2%;%path_tcc%;%path_git%;%path_cmake%;%path_coreutils%;</div>
+<div class="line number2 index1 alt1">改成</div>
+<div class="line number2 index1 alt1">path=%Disk%:;%path_python%;%path_msys2%;%path_tcc%;%path_git%;%path_cmake%;%path_coreutils%;%path%;</div>
+<div class="line number2 index1 alt1">如下圖就可以解決。</div>
+<div class="line number2 index1 alt1"></div>
+<p><img alt="" height="600" src="https://s40723210.github.io/cad2019/images/SciTE_2019-11-29_15-00-04.png" width="661"/></p>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1"><hr/></div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1"><strong><span style="color: #ff0000;">問題(四)如下圖:</span></strong></div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1">出現了亂碼的話，開啟Options。</div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1"><img alt="" height="487" src="https://s40723210.github.io/cad2019/images/wish_2019-11-29_16-04-41.png" width="838"/></div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1">把cp950改成utf-8如下圖，就可以解決。</div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1"><img alt="" height="657" src="https://s40723210.github.io/cad2019/images/wish_2019-11-29_16-05-23.png" width="876"/></div>
+<hr/>
+<p><strong><span style="color: #ff0000;">問題(五)如圖下:</span></strong></p>
+<p><img alt="" height="115" src="https://s40723210.github.io/cad2019/images/cmd_2019-12-06_14-31-40.png" width="417"/></p>
+<p>因為之前putty是ipv6<span>，現在網路改成ipv4，所以putty要改成None(如下圖)。</span></p>
+<p><img alt="" height="442" src="https://s40723210.github.io/cad2019/images/putty_2019-12-06_14-36-51.png" width="452"/></p>
+<hr/>
+<p><strong><span style="color: #ff0000;">問題(六)更新至python3.8.2後，輸入leo軟體開起來會閃退:</span></strong></p>
+<p><span>1.輸入 pip list ，檢查leo 版本是否為 6.1 版。</span></p>
+<p><span>2.是的話就先卸載 </span><span>pip uninstall leo 。</span></p>
+<p><span>3.再重新載一次 leo ，輸入 pip install leo==6.2.1 來只訂版本。</span></p>
+<p><span>4.載完之後，再輸入 leo  一次，就可以正常開啟了。</span></p>
+<br />Week6-9 << <a href='Week6-9.html'>Previous</a> <a href='Assignments.html'>Next</a> >> Assignments</div>
         
     <!-- footer -->
       <div class="container">
