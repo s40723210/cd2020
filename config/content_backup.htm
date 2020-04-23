@@ -31,15 +31,240 @@
 <p>負責各主題的人，主要以課堂上的進度，來更新個人的倉儲，每次更新進度時要做一下紀錄。所有的主題必須要在<span>2020年3月26日之前完成，提交3-5頁的兩欄pdf報告，並在youtube上保存3-5分鐘的影片，將pdf文件放在個人倉儲 downloads / assignment1.pdf。最後整合的作業以assignment1放在自己的網站連結加/ assignment1內。有問題可以在我的 <a href="https://gitter.im/40723210/cd2020">gitter</a> 以及 老師的 <a href="https://gitter.im/mdecourse/cd2020">gitter</a> 上面發問，會的人也可以幫忙回答。<br/></span><br/>直播影片:<a href="https://www.youtube.com/watch?v=r0AABAp474U">https://www.youtube.com/watch?v=r0AABAp474U</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/r0AABAp474U" width="560"></iframe></p>
 <hr color="00ffee"/>
+<h4><span>Fork分組倉儲</span></h4>
+<p><span>1.先登入github，在搜尋自己組的倉儲，點進去。<br/><br/>2.點選右上角的Fork，選擇自己的github。<br/><br/>3.git clone --recurse-submodules (倉儲網址)。<br/><br/>4.git push完成，點選New pull request，等組長同意。<br/><br/>5.有衝突的話，進行git pull (分組網址) 。<br/><br/>6.整合完成之後即可git push，等待組長同意。</span></p>
+<p><span><span>我的教學影片(有字幕):</span></span><span><a href="https://youtu.be/1bZ16BgmF8c">https://youtu.be/1bZ16BgmF8c</a><a href="https://youtu.be/1bZ16BgmF8c"></a></span></p>
+<p><span><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/1bZ16BgmF8c" width="560"></iframe></span></p>
+<hr color="00ffee"/>
 <h4>New pull request</h4>
 <p>1.先登入github，點進去想要fork的倉儲。<br/><br/>2.點選右上角的Fork，再選擇自己的github。<br/><br/>3.git clone --recurse-submodules (倉儲網址)。<br/><br/>4.更新git push完成，點選New pull request，等組長同意。<br/><br/>5.組員要進行更新時，要記得先git pull (分組網址) 檢查版本。<br/><br/>6.有衝突的話，組長要處理和整合分支並且解決衝突。<br/><br/>我的教學影片:<a href="https://youtu.be/1bZ16BgmF8c">https://youtu.be/1bZ16BgmF8c</a><a href="https://youtu.be/1bZ16BgmF8c"></a></p>
 <p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/1bZ16BgmF8c" width="560"></iframe></p>
 <hr color="00ffee"/>
+<h4><strong><span>抽查的python程式</span></strong></h4>
+<p>如果要使用python來進行亂數分組抽查的話，可以導入random來從列表中隨機抽出所需要的n個不同元素，如下面的程式執行之後，就可以亂數抽出4位。</p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_49589">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py keyword">import</code> <code class="py plain">random </code></div>
+<div class="line number2 index1 alt1"> </div>
+<div class="line number3 index2 alt2"><code class="py plain">group </code><code class="py keyword">=</code> <code class="py plain">[</code><code class="py value">4</code><code class="py plain">, </code><code class="py value">10</code><code class="py plain">, </code><code class="py value">12</code><code class="py plain">, </code><code class="py value">25</code><code class="py plain">, </code><code class="py value">32</code><code class="py plain">, </code><code class="py value">34</code><code class="py plain">, </code><code class="py value">38</code><code class="py plain">, </code><code class="py value">45</code><code class="py plain">, </code><code class="py value">50</code><code class="py plain">] </code></div>
+<div class="line number4 index3 alt1"> </div>
+<div class="line number5 index4 alt2"><code class="py plain">team </code><code class="py keyword">=</code> <code class="py plain">random.sample(group, </code><code class="py value">4</code><code class="py plain">) </code></div>
+<div class="line number6 index5 alt1"><code class="py functions">print</code> <code class="py plain">(team)</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>再來是要讀取網頁資料的話，就要導入requests，使用get請求即可直接下載，例如member = requests.get("網址")，再用print(member.text)就可以印出來了如下。</p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_121611">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py keyword">import</code> <code class="py plain">requests</code></div>
+<div class="line number2 index1 alt1"> </div>
+<div class="line number3 index2 alt2"><code class="py plain">web </code><code class="py keyword">=</code> <code class="py string">"https://mdecourse.github.io/cd2020/downloads/2b_group_list.txt"</code></div>
+<div class="line number4 index3 alt1"> </div>
+<div class="line number5 index4 alt2"><code class="py plain">member </code><code class="py keyword">=</code> <code class="py plain">requests.get(web)</code></div>
+<div class="line number6 index5 alt1"> </div>
+<div class="line number7 index6 alt2"><code class="py functions">print</code><code class="py plain">(member.text)</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>如果使用讀取出的資料，還是無法使用的，因為member.text的性質是str字串，所以我就要將它變回原本的list列表，才可以進行亂數分組，改這個非常的簡單如下。</p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_157297">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py plain">x </code><code class="py keyword">=</code> <code class="py functions">eval</code><code class="py plain">(member.text)</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>最後我整理出來的程式，雖然沒有老師這麼精美，但是也是可以進行亂數分組的抽查的，如果要改抽查人數，改y = random.sample(i,2)的數字即可。</p>
+<h4><span><span color="#0000ff"><b>最終程式碼</b></span></span></h4>
+<p>程式碼連結:<a href="https://github.com/s40723210/cd2020/blob/master/downloads/%E4%BA%82%E6%95%B8%E5%88%86%E7%B5%84.py" target="_blank">抽查程式.py</a></p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_969950">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py keyword">import</code> <code class="py plain">requests</code></div>
+<div class="line number2 index1 alt1"><code class="py keyword">import</code> <code class="py plain">random</code></div>
+<div class="line number3 index2 alt2"><code class="py spaces">  </code> </div>
+<div class="line number4 index3 alt1"><code class="py plain">web </code><code class="py keyword">=</code> <code class="py string">"https://mdecourse.github.io/cd2020/downloads/2b_group_list.txt"</code></div>
+<div class="line number5 index4 alt2"><code class="py plain">member </code><code class="py keyword">=</code> <code class="py plain">requests.get(web)</code></div>
+<div class="line number6 index5 alt1"><code class="py comments">#print(memder.text)</code></div>
+<div class="line number7 index6 alt2"><code class="py plain">x</code><code class="py keyword">=</code><code class="py value">0</code></div>
+<div class="line number8 index7 alt1"><code class="py keyword">for</code> <code class="py plain">i </code><code class="py keyword">in</code> <code class="py functions">eval</code><code class="py plain">(member.text):</code></div>
+<div class="line number9 index8 alt2"><code class="py spaces">    </code><code class="py plain">y </code><code class="py keyword">=</code> <code class="py plain">random.sample(i,</code><code class="py value">2</code><code class="py plain">)</code></div>
+<div class="line number10 index9 alt1"><code class="py spaces">    </code><code class="py plain">x</code><code class="py keyword">+</code><code class="py keyword">=</code><code class="py value">1</code></div>
+<div class="line number11 index10 alt2"><code class="py spaces">    </code><code class="py functions">print</code><code class="py plain">(</code><code class="py string">"group"</code><code class="py keyword">+</code> <code class="py functions">str</code><code class="py plain">(x))</code></div>
+<div class="line number12 index11 alt1"><code class="py spaces">    </code><code class="py functions">print</code><code class="py plain">(y)</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h4><strong><span>亂數分組的的python程式</span></strong></h4>
+<p><strong></strong>一開始先從網頁上抓人員，這次跟上面的不太一樣，抓出來的本來就是str字串，所以必須把每個學號轉變為<span>list列表，直接將f.text加上 .split() 來轉換，完成之後就可以使用，random.shuffle()來將整個順序打亂，再來設定一共要分幾組，再使用while迴圈來判斷每一組要有幾個人，使用if判斷是來中斷迴圈，len()是指一共有幾個數量的意思，要加組別的話就要再多寫一列，接著使用for 迴圈來從，剛剛算好的每組人數，例如:13、12、12、12，再使用一個for迴圈，來一個一個配置組人員，這時候直接使用迭代iter()的next()，來抓人員這樣子就不會重複了，最後再加上一些說明、分格、標題，就可以開始進行亂數分組了。</span></p>
+<h4><span><span color="#0000ff"><b>最終程式碼</b></span></span></h4>
+<p>程式碼連結:<a arget="_blank" href="https://github.com/s40723210/cd2020/blob/master/downloads/%E4%BA%82%E6%95%B8%E5%88%86%E7%B5%84.py" t="">亂數分組.py</a></p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_776297">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+<div class="line number13 index12 alt2">13</div>
+<div class="line number14 index13 alt1">14</div>
+<div class="line number15 index14 alt2">15</div>
+<div class="line number16 index15 alt1">16</div>
+<div class="line number17 index16 alt2">17</div>
+<div class="line number18 index17 alt1">18</div>
+<div class="line number19 index18 alt2">19</div>
+<div class="line number20 index19 alt1">20</div>
+<div class="line number21 index20 alt2">21</div>
+<div class="line number22 index21 alt1">22</div>
+<div class="line number23 index22 alt2">23</div>
+<div class="line number24 index23 alt1">24</div>
+<div class="line number25 index24 alt2">25</div>
+<div class="line number26 index25 alt1">26</div>
+<div class="line number27 index26 alt2">27</div>
+<div class="line number28 index27 alt1">28</div>
+<div class="line number29 index28 alt2">29</div>
+<div class="line number30 index29 alt1">30</div>
+<div class="line number31 index30 alt2">31</div>
+<div class="line number32 index31 alt1">32</div>
+<div class="line number33 index32 alt2">33</div>
+<div class="line number34 index33 alt1">34</div>
+<div class="line number35 index34 alt2">35</div>
+<div class="line number36 index35 alt1">36</div>
+<div class="line number37 index36 alt2">37</div>
+<div class="line number38 index37 alt1">38</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py keyword">import</code> <code class="py plain">requests</code></div>
+<div class="line number2 index1 alt1"><code class="py keyword">import</code> <code class="py plain">random</code></div>
+<div class="line number3 index2 alt2"> </div>
+<div class="line number4 index3 alt1"><code class="py plain">web </code><code class="py keyword">=</code> <code class="py string">"http://s1.mde.nfu.edu.tw:8000/?semester=1082&amp;courseno=0780"</code></div>
+<div class="line number5 index4 alt2"><code class="py plain">f </code><code class="py keyword">=</code> <code class="py plain">requests.get(web)</code></div>
+<div class="line number6 index5 alt1"><code class="py comments">#print(type(f.text))</code></div>
+<div class="line number7 index6 alt2"><code class="py plain">x </code><code class="py keyword">=</code> <code class="py plain">f.text.split()</code></div>
+<div class="line number8 index7 alt1"><code class="py comments">#print(len(x))</code></div>
+<div class="line number9 index8 alt2"><code class="py comments">#print(x)</code></div>
+<div class="line number10 index9 alt1"><code class="py plain">random.shuffle(x)</code></div>
+<div class="line number11 index10 alt2"> </div>
+<div class="line number12 index11 alt1"><code class="py plain">group1,group2,group3,group4 </code><code class="py keyword">=</code> <code class="py value">0</code><code class="py plain">,</code><code class="py value">0</code><code class="py plain">,</code><code class="py value">0</code><code class="py plain">,</code><code class="py value">0</code></div>
+<div class="line number13 index12 alt2"><code class="py keyword">while</code> <code class="py value">1</code><code class="py keyword">=</code><code class="py keyword">=</code><code class="py value">1</code><code class="py plain">:</code></div>
+<div class="line number14 index13 alt1"><code class="py spaces">    </code><code class="py plain">group1 </code><code class="py keyword">+</code><code class="py keyword">=</code> <code class="py value">1</code></div>
+<div class="line number15 index14 alt2"><code class="py spaces">    </code><code class="py keyword">if</code> <code class="py plain">(group1</code><code class="py keyword">+</code><code class="py plain">group2</code><code class="py keyword">+</code><code class="py plain">group3</code><code class="py keyword">+</code><code class="py plain">group4) </code><code class="py keyword">=</code><code class="py keyword">=</code> <code class="py functions">len</code><code class="py plain">(x):</code></div>
+<div class="line number16 index15 alt1"><code class="py spaces">        </code><code class="py keyword">break</code></div>
+<div class="line number17 index16 alt2"><code class="py spaces">    </code><code class="py plain">group2 </code><code class="py keyword">+</code><code class="py keyword">=</code> <code class="py value">1</code></div>
+<div class="line number18 index17 alt1"><code class="py spaces">    </code><code class="py keyword">if</code> <code class="py plain">(group1</code><code class="py keyword">+</code><code class="py plain">group2</code><code class="py keyword">+</code><code class="py plain">group3</code><code class="py keyword">+</code><code class="py plain">group4) </code><code class="py keyword">=</code><code class="py keyword">=</code> <code class="py functions">len</code><code class="py plain">(x):</code></div>
+<div class="line number19 index18 alt2"><code class="py spaces">        </code><code class="py keyword">break</code></div>
+<div class="line number20 index19 alt1"><code class="py spaces">    </code><code class="py plain">group3 </code><code class="py keyword">+</code><code class="py keyword">=</code> <code class="py value">1</code></div>
+<div class="line number21 index20 alt2"><code class="py spaces">    </code><code class="py keyword">if</code> <code class="py plain">(group1</code><code class="py keyword">+</code><code class="py plain">group2</code><code class="py keyword">+</code><code class="py plain">group3</code><code class="py keyword">+</code><code class="py plain">group4) </code><code class="py keyword">=</code><code class="py keyword">=</code> <code class="py functions">len</code><code class="py plain">(x):</code></div>
+<div class="line number22 index21 alt1"><code class="py spaces">        </code><code class="py keyword">break</code></div>
+<div class="line number23 index22 alt2"><code class="py spaces">    </code><code class="py plain">group4 </code><code class="py keyword">+</code><code class="py keyword">=</code> <code class="py value">1</code></div>
+<div class="line number24 index23 alt1"><code class="py spaces">    </code><code class="py keyword">if</code> <code class="py plain">(group1</code><code class="py keyword">+</code><code class="py plain">group2</code><code class="py keyword">+</code><code class="py plain">group3</code><code class="py keyword">+</code><code class="py plain">group4) </code><code class="py keyword">=</code><code class="py keyword">=</code> <code class="py functions">len</code><code class="py plain">(x):</code></div>
+<div class="line number25 index24 alt2"><code class="py spaces">        </code><code class="py keyword">break</code></div>
+<div class="line number26 index25 alt1"><code class="py comments">#print(group1,group2,group3,group4)</code></div>
+<div class="line number27 index26 alt2"> </div>
+<div class="line number28 index27 alt1"><code class="py functions">print</code><code class="py plain">(</code><code class="py string">"全班人數有"</code><code class="py keyword">+</code><code class="py functions">str</code><code class="py plain">(</code><code class="py functions">len</code><code class="py plain">(x))</code><code class="py keyword">+</code><code class="py string">"人"</code><code class="py plain">)</code></div>
+<div class="line number29 index28 alt2"><code class="py functions">print</code><code class="py plain">(</code><code class="py string">"="</code><code class="py keyword">*</code><code class="py value">20</code><code class="py plain">)</code></div>
+<div class="line number30 index29 alt1"><code class="py plain">grp_num </code><code class="py keyword">=</code> <code class="py plain">group1,group2,group3,group4</code></div>
+<div class="line number31 index30 alt2"><code class="py plain">a </code><code class="py keyword">=</code> <code class="py functions">iter</code><code class="py plain">(x)</code></div>
+<div class="line number32 index31 alt1"><code class="py plain">team </code><code class="py keyword">=</code> <code class="py value">0</code></div>
+<div class="line number33 index32 alt2"><code class="py keyword">for</code> <code class="py plain">i </code><code class="py keyword">in</code> <code class="py plain">grp_num:</code></div>
+<div class="line number34 index33 alt1"><code class="py spaces">    </code><code class="py plain">team </code><code class="py keyword">+</code><code class="py keyword">=</code> <code class="py value">1</code></div>
+<div class="line number35 index34 alt2"><code class="py spaces">    </code><code class="py functions">print</code><code class="py plain">(</code><code class="py string">"group"</code><code class="py keyword">+</code><code class="py functions">str</code><code class="py plain">(team)</code><code class="py keyword">+</code><code class="py string">" 共 "</code><code class="py keyword">+</code><code class="py functions">str</code><code class="py plain">(i)</code><code class="py keyword">+</code><code class="py string">" 人"</code><code class="py plain">)</code></div>
+<div class="line number36 index35 alt1"><code class="py spaces">    </code><code class="py keyword">for</code> <code class="py plain">g </code><code class="py keyword">in</code> <code class="py functions">range</code><code class="py plain">(i):</code></div>
+<div class="line number37 index36 alt2"><code class="py spaces">        </code><code class="py functions">print</code><code class="py plain">(</code><code class="py functions">next</code><code class="py plain">(a))</code></div>
+<div class="line number38 index37 alt1"><code class="py spaces">    </code><code class="py functions">print</code><code class="py plain">(</code><code class="py string">"-"</code> <code class="py keyword">*</code> <code class="py value">20</code><code class="py plain">)</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h4 class="title style-scope ytd-video-primary-info-renderer"></h4>
+<hr color="00ffee"/>
 <h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">V-rep可動四輪車</yt-formatted-string></h4>
 <p>使用內建功能來創建模型，並且模擬最基本的直線移動。</p>
 <p>影片連結:<a href="https://youtu.be/y8DJ1sjuAqM">https://youtu.be/y8DJ1sjuAqM</a></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/y8DJ1sjuAqM" width="560"></iframe></p>
-<h2>Week6-9</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/y8DJ1sjuAqM" width="560"></iframe></p><h2>Week6-9</h2>
 <h4>直播會議Assignment 2</h4>
 <p>分工表:</p>
 <table style="width: 333.6px;">
@@ -173,8 +398,7 @@ end
 <p><span><span color="#000000"></span></span>教學影片連結:<a href="https://youtu.be/0W1wmC1tr4A">https://youtu.be/0W1wmC1tr4A</a></p>
 <p><span><strong><span color="#000000"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/0W1wmC1tr4A" width="560"></iframe></span></strong></span><strong><span></span></strong></p>
 <h1>Assignments</h1>
-<p><span>報告連結:</span><a href="/downloads/assignment1.pdf">assignment1.pdf</a></p>
-<h2>assignment1</h2>
+<p><span>報告連結:</span><a href="/downloads/assignment1.pdf">assignment1.pdf</a>、<a href="/downloads/assignment2.pdf">assignment2.pdf</a></p><h2>assignment1</h2>
 <p>Due March 25, 2020 for class 2a and March 26, 2020 for class 2b.</p>
 <ol>
 <li>
@@ -1332,20 +1556,62 @@ void deinitializationCallback
 </ul>
 <p></p>
 <h2>Simulation dialog</h2>
-<p><span>由40723210提供</span></p>
-<p><span>可以通過[菜單欄-&gt;模擬-&gt;模擬設置]或單擊以下工具欄按鈕來訪問模擬對話框：</span></p>
+<p><span mce-data-marked="1">由40723210提供</span></p>
+<p><span mce-data-marked="1">可以通過[菜單欄-&gt;模擬-&gt;模擬設置]或單擊以下工具欄按鈕來訪問模擬對話框：</span></p>
 <p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/simulationDialog1.jpg"/></p>
-<p class="imageLabel"><span><span>[模擬工具欄按鈕]</span></span></p>
+<p class="imageLabel"><span mce-data-marked="1"><span mce-data-marked="1">[模擬工具欄按鈕]</span></span></p>
 <p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/simulationDialog2.jpg"/></p>
-<p class="imageLabel"><span><span>[模擬設置對話框]</span></span></p>
+<p class="imageLabel"><span mce-data-marked="1"><span mce-data-marked="1">[模擬設置對話框]</span></span></p>
 <ul>
-<li><strong><span><span>時間步</span></span></strong><span><span>：</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/simulation.htm"><span><span>模擬</span></span></a><span><span>時間步。</span><span>每次</span><span>執行</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/mainScript.htm"><span><span>主腳本</span></span></a><span><span>時，仿真時間都會增加仿真時間步長。</span><span>使用較大的時間步會導致快速但不准確/不穩定的仿真。</span><span>另一方面，較小的時間步長（通常）會導致更精確的仿真，但是會花費更多時間。</span><span>強烈建議保留默認時間步長。</span></span></li>
-<li><strong><span><span>每幀模擬遍數（ppf）</span></span></strong><span><span>：一個渲染遍的模擬遍數。</span><span>值為10表示刷新屏幕之前，主腳本已執行10次（10個模擬步驟）。</span><span>如果您的圖形卡較慢，則可以選擇僅顯示兩幅中的一幅。</span></span></li>
-<li><strong><span><span>當仿真時間高於時暫停</span></span></strong><span><span>：允許指定仿真時間，在該時間暫停仿真（例如，能夠在特定仿真時間分析某些結果）。</span></span></li>
-<li><strong><span><span>暫停腳本錯誤</span></span></strong><span><span>：如果啟用，則在發生</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/scripts.htm"><span><span>腳本</span></span></a><span><span>錯誤時</span><span>將暫停仿真</span><span>。</span></span></li>
-<li><strong><span><span>模擬開始時全屏</span></span></strong><span><span>：如果啟用，則模擬以全屏模式開始。</span><span>請注意，在全屏模式下，對話框和消息將不會出現或不可見，只有鼠標左鍵處於活動狀態。</span><span>因此，僅在正確配置場景並最終確定場景後才建議使用該模式。</span><span>可以使用esc鍵保留全屏模式，並</span><span>在仿真過程中</span><span>通過</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/apiConstants.htm#booleanParameters"><span><span>布爾參數</span></span></a><span> </span><em><span><span>sim_booparam_fullscreen</span></span></em><span><span>進行</span><span>切換<span> </span></span><span>。</span><span>Unler Linux和MacOS可能僅部分支持全屏模式，並且在某些系統上切換回普通模式可能會失敗。</span></span></li>
-<li><strong><span><span>實時仿真，倍增係數</span></span></strong><span><span>：如果選擇，則仿真時間將嘗試跟隨實時。</span><span>X的乘數將使仿真運行比實時快X倍。</span></span></li>
-<li><strong><span><span>落後時嘗試趕上</span></span></strong><span><span>：在實時仿真過程中，仿真時間可能無法實時跟踪（例如，由於某些瞬間繁重的計算）。</span><span>在這種情況下，如果選中此復選框，則模擬時間將嘗試趕上損失的時間（例如，當計算負載再次減少時），這會明顯提高速度。</span></span></li>
-<li><strong><span><span>復位場景初始狀態</span></span></strong><span><span>：當被選擇時，那麼所有</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/objects.htm"><span><span>的對象</span></span></a><span><span>將被復位到它們的初始狀態：包括對象的本地位置，局部方向和它的父（只要該對象沒有另外修飾的（例如縮放）），</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/joints.htm"><span><span>關節</span></span></a><span><span>以及</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/paths.htm"><span><span>路徑的</span></span></a><span><span>固有位置，浮動</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/pagesAndViews.htm"><span><span>視圖</span></span></a><span><span>位置和大小等。這意味著除非進行了重大更改（</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapes.htm"><span><span>形狀</span></span></a><span><span>縮放，對象移除等）</span><span>，否則下一次模擬運行將以與上一次相同的方式執行</span><span>。</span><span>此項目將忽略一些次要設置。</span></span></li>
-<li><strong><span><span>刪除新對象</span></span></strong><span><span>：選中該選項後，在仿真運行期間添加的場景對象將在仿真結束時被刪除。</span></span></li>
+<li><strong><span mce-data-marked="1"><span mce-data-marked="1">時間步</span></span></strong><span mce-data-marked="1"><span mce-data-marked="1">：</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/simulation.htm"><span mce-data-marked="1"><span mce-data-marked="1">模擬</span></span></a><span mce-data-marked="1"><span mce-data-marked="1">時間步。</span><span mce-data-marked="1">每次</span><span mce-data-marked="1">執行</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/mainScript.htm"><span mce-data-marked="1"><span mce-data-marked="1">主腳本</span></span></a><span mce-data-marked="1"><span mce-data-marked="1">時，仿真時間都會增加仿真時間步長。</span><span mce-data-marked="1">使用較大的時間步會導致快速但不准確/不穩定的仿真。</span><span mce-data-marked="1">另一方面，較小的時間步長（通常）會導致更精確的仿真，但是會花費更多時間。</span><span mce-data-marked="1">強烈建議保留默認時間步長。</span></span></li>
+<li><strong><span mce-data-marked="1"><span mce-data-marked="1">每幀模擬遍數（ppf）</span></span></strong><span mce-data-marked="1"><span mce-data-marked="1">：一個渲染遍的模擬遍數。</span><span mce-data-marked="1">值為10表示刷新屏幕之前，主腳本已執行10次（10個模擬步驟）。</span><span mce-data-marked="1">如果您的圖形卡較慢，則可以選擇僅顯示兩幅中的一幅。</span></span></li>
+<li><strong><span mce-data-marked="1"><span mce-data-marked="1">當仿真時間高於時暫停</span></span></strong><span mce-data-marked="1"><span mce-data-marked="1">：允許指定仿真時間，在該時間暫停仿真（例如，能夠在特定仿真時間分析某些結果）。</span></span></li>
+<li><strong><span mce-data-marked="1"><span mce-data-marked="1">暫停腳本錯誤</span></span></strong><span mce-data-marked="1"><span mce-data-marked="1">：如果啟用，則在發生</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/scripts.htm"><span mce-data-marked="1"><span mce-data-marked="1">腳本</span></span></a><span mce-data-marked="1"><span mce-data-marked="1">錯誤時</span><span mce-data-marked="1">將暫停仿真</span><span mce-data-marked="1">。</span></span></li>
+<li><strong><span mce-data-marked="1"><span mce-data-marked="1">模擬開始時全屏</span></span></strong><span mce-data-marked="1"><span mce-data-marked="1">：如果啟用，則模擬以全屏模式開始。</span><span mce-data-marked="1">請注意，在全屏模式下，對話框和消息將不會出現或不可見，只有鼠標左鍵處於活動狀態。</span><span mce-data-marked="1">因此，僅在正確配置場景並最終確定場景後才建議使用該模式。</span><span mce-data-marked="1">可以使用esc鍵保留全屏模式，並</span><span mce-data-marked="1">在仿真過程中</span><span mce-data-marked="1">通過</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/apiConstants.htm#booleanParameters"><span mce-data-marked="1"><span mce-data-marked="1">布爾參數</span></span></a><span mce-data-marked="1"> </span><em><span mce-data-marked="1"><span mce-data-marked="1">sim_booparam_fullscreen</span></span></em><span mce-data-marked="1"><span mce-data-marked="1">進行</span><span mce-data-marked="1">切換<span mce-data-marked="1"> </span></span><span mce-data-marked="1">。</span><span mce-data-marked="1">Unler Linux和MacOS可能僅部分支持全屏模式，並且在某些系統上切換回普通模式可能會失敗。</span></span></li>
+<li><strong><span mce-data-marked="1"><span mce-data-marked="1">實時仿真，倍增係數</span></span></strong><span mce-data-marked="1"><span mce-data-marked="1">：如果選擇，則仿真時間將嘗試跟隨實時。</span><span mce-data-marked="1">X的乘數將使仿真運行比實時快X倍。</span></span></li>
+<li><strong><span mce-data-marked="1"><span mce-data-marked="1">落後時嘗試趕上</span></span></strong><span mce-data-marked="1"><span mce-data-marked="1">：在實時仿真過程中，仿真時間可能無法實時跟踪（例如，由於某些瞬間繁重的計算）。</span><span mce-data-marked="1">在這種情況下，如果選中此復選框，則模擬時間將嘗試趕上損失的時間（例如，當計算負載再次減少時），這會明顯提高速度。</span></span></li>
+<li><strong><span mce-data-marked="1"><span mce-data-marked="1">復位場景初始狀態</span></span></strong><span mce-data-marked="1"><span mce-data-marked="1">：當被選擇時，那麼所有</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/objects.htm"><span mce-data-marked="1"><span mce-data-marked="1">的對象</span></span></a><span mce-data-marked="1"><span mce-data-marked="1">將被復位到它們的初始狀態：包括對象的本地位置，局部方向和它的父（只要該對象沒有另外修飾的（例如縮放）），</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/joints.htm"><span mce-data-marked="1"><span mce-data-marked="1">關節</span></span></a><span mce-data-marked="1"><span mce-data-marked="1">以及</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/paths.htm"><span mce-data-marked="1"><span mce-data-marked="1">路徑的</span></span></a><span mce-data-marked="1"><span mce-data-marked="1">固有位置，浮動</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/pagesAndViews.htm"><span mce-data-marked="1"><span mce-data-marked="1">視圖</span></span></a><span mce-data-marked="1"><span mce-data-marked="1">位置和大小等。這意味著除非進行了重大更改（</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapes.htm"><span mce-data-marked="1"><span mce-data-marked="1">形狀</span></span></a><span mce-data-marked="1"><span mce-data-marked="1">縮放，對象移除等）</span><span mce-data-marked="1">，否則下一次模擬運行將以與上一次相同的方式執行</span><span mce-data-marked="1">。</span><span mce-data-marked="1">此項目將忽略一些次要設置。</span></span></li>
+<li><strong><span mce-data-marked="1"><span mce-data-marked="1">刪除新對象</span></span></strong><span mce-data-marked="1"><span mce-data-marked="1">：選中該選項後，在仿真運行期間添加的場景對象將在仿真結束時被刪除。</span></span><span mce-data-marked="1"><span mce-data-marked="1"></span></span></li>
 </ul>
+<h1>Webots Tutorial</h1>
+<p><span>首先</span><span>Webots是一個具備建模、程式設計和模擬移動機器人開發平臺，主要用於地面機器人模擬。使用者可以在一個共享的環境中設計多種複雜的異構機器人，可以自定義環境大小，環境中所有物體的屬性包括形狀、顏色、文字、質量、功能等也都可由使用者來進行自由配置，它使用ODE檢測物體碰撞和模擬剛性結構的動力學特性，可以精確的模擬物體速度、慣性和摩擦力等物理屬性。每個機器人可以裝配大量可供選擇的模擬感測器和驅動器，機器人的控制器可以通過內部整合化開發環境或者第三方開發環境進行程式設計，機器人每個行為都可以在真實世界中測試。</span></p>
+<h4>Webots Tutorial-1</h4>
+<p>1.創建一個新目錄和世界，都要改名子。</p>
+<p>2.開始設定地板的格子與外牆的高度。</p>
+<p>3.加入一個木箱並且調整大小和高度。</p>
+<p>4.複製出三個木箱並且移動到牆角，儲存世界。</p>
+<p>5.再來要添加一台e-puck機器，儲存後模擬。</p>
+<p>6.使用alt+左鍵拖移，來測試施加外力狀況。</p>
+<p>7.設定木箱的物理重量，才能夠施加外力。</p>
+<p>8.創建控制器程式(python)，名子一樣要改。</p>
+<p>9.修改程式碼後，更改e-puck的controllers。</p>
+<p>10.完成後儲存，即可照著腳本進行移動。</p>
+<p><span mce-data-marked="1">我的操作影片(有字幕):<a href="https://youtu.be/zINF95Z_b1s">https://youtu.be/zINF95Z_b1s</a></span></p>
+<p><span mce-data-marked="1"><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/zINF95Z_b1s" width="560"></iframe></span></p>
+<hr/>
+<div></div>
+<p></p>
+<h4>Webots Tutorial-2</h4>
+<p><span mce-data-marked="1">1.另存一個新的檔案。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">2.創建一個新地板場景和實體球。</span><br/><br/><span mce-data-marked="1">3.設定其形狀、位置以及參數。</span><br/><br/><span mce-data-marked="1">4.更改球體大小以及命名。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">5.將邊界物體訂為剛命名的。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1">6.創建四面牆壁，儲存並測試。</span></p>
+<p>我的操作影片(有字幕):<a href="https://youtu.be/bE5tuK2tLBU">https://youtu.be/bE5tuK2tLBU</a></p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/bE5tuK2tLBU" width="560"></iframe></p>
+<hr/>
+<h4>Webots Tutorial-3</h4>
+<p><span mce-data-marked="1">1.另存一個新的檔案。</span><br/><span mce-data-marked="1"><span mce-data-marked="1"><br/></span></span><span mce-data-marked="1"></span><span mce-data-marked="1"><span mce-data-marked="1">2.更改四個牆壁的顏色及參數。</span></span><br/><span mce-data-marked="1"><span mce-data-marked="1"><br/></span></span><span mce-data-marked="1"></span><span mce-data-marked="1"><span mce-data-marked="1"><span mce-data-marked="1">3.準備</span></span><span mce-data-marked="1">將球的外觀做改變。</span></span><br/><span mce-data-marked="1"><span mce-data-marked="1"><br/></span>4.<span mce-data-marked="1">設定所要圖案的路徑，儲存。</span></span><br/><span mce-data-marked="1"><span mce-data-marked="1"><br/></span></span><span mce-data-marked="1"></span><span mce-data-marked="1"><span mce-data-marked="1">5.再來測試</span><span mce-data-marked="1">渲染模式即可。</span></span></p>
+<p>我的操作影片(有字幕):<a href="https://youtu.be/d25DXY8W_rU">https://youtu.be/d25DXY8W_rU</a></p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/d25DXY8W_rU" width="560"></iframe></p>
+<hr/>
+<h4>Webots Tutorial-4</h4>
+<p><span mce-data-marked="1">1.一樣先建立新的檔案。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">2.創建一個python程式檔。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">3.將控制改為現在的程式檔。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">4.將教材給的程式複製貼上。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">5.儲存之後即可開始模擬。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">6.機器會緩慢的閃避障礙物。</span></p>
+<p>我的操作影片(有字幕):<a href="https://youtu.be/7zeqP98Y2ek">https://youtu.be/7zeqP98Y2ek</a></p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/7zeqP98Y2ek" width="560"></iframe></p>
+<hr/>
+<h4>Webots Tutorial-5</h4>
+<p><span mce-data-marked="1">1.另存一個新的檔案。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">2.新增實體</span><span mce-data-marked="1">在創建連趕及三個型體。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">3.設定好三個的形狀、大小及參數。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">4.調整位子、</span><span mce-data-marked="1">重量、密度和</span><span mce-data-marked="1">質心位置。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">5.將物體</span><span mce-data-marked="1">方向轉正，提</span><span mce-data-marked="1">高位置。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">6.設置啞鈴沒有摩擦力，儲存即可。</span></p>
+<p>我的操作影片(有字幕):<a href="https://youtu.be/iJBotPDJ5ME">https://youtu.be/iJBotPDJ5ME</a></p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/iJBotPDJ5ME" width="560"></iframe></p>
+<hr/>
+<h4>Webots Tutorial-6</h4>
+<p><span mce-data-marked="1">1.一樣另存一個新的檔案。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">2.刪掉其他東西，只留牆壁和地板。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">3.創建一個robot，</span><span mce-data-marked="1">將實體加上去。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">4.</span><span mce-data-marked="1">新增一個身體和四個輪子，命名。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">5.調整全部的參數、實體</span><span mce-data-marked="1">位置和軸位置。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">6.</span><span mce-data-marked="1">添加感應器，</span><span mce-data-marked="1">調整大小和位置。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">7.x軸方向要向外，角度是0.3 rad。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">8.創建一個</span><span mce-data-marked="1">python控制器，命名儲存。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">9.更改robot的控制器，選擇剛建的。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">10.提高robot的高度，</span><span mce-data-marked="1">模擬測試即可。</span></p>
+<p>我的操作影片(有字幕):<a href="https://youtu.be/vxuzuLsOoUs">https://youtu.be/vxuzuLsOoUs</a></p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/vxuzuLsOoUs" width="560"></iframe></p>
