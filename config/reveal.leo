@@ -21,6 +21,18 @@
 <v t="leo.20200408200022.1"><vh>封面投影片</vh>
 <v t="leo.20200408200022.2"><vh>封面投影片內容</vh></v>
 </v>
+<v t="leo.20200430130708.1"><vh>W2</vh>
+<v t="leo.20200430130708.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200430131151.1"><vh>w2建倉</vh>
+<v t="leo.20200430131151.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200430131341.1"><vh>w2建倉</vh>
+<v t="leo.20200430131341.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200430131342.1"><vh>w2建倉</vh>
+<v t="leo.20200430131342.2"><vh>封面投影片內容</vh></v>
+</v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
 </v>
@@ -328,6 +340,61 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 [CMSimfly 網誌](./../blog/index.html)
 
 
+</t>
+<t tx="leo.20200430130708.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200430130708.2">##  [assignment1](https://s40723210.github.io/cd2020/content/assignment1.html)
+
+* Describe how to do an efficient random grouping for this course or do the roll calling randomly?
+&lt;hr&gt;
+* Describe how to prepare a portable Python programming system for Windows 10 64bit system to allow one the maintain CMSiMDE website, Pelican blog and Reveal.js presentation on Github?
+&lt;hr&gt;
+* What do you need to know from http://www.coppeliarobotics.com/helpFiles/index.html to implement a four-wheeled robot?</t>
+<t tx="leo.20200430131151.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200430131151.2">##  Random grouping
+
+&lt;iframe height="520" src="https://s40723210.github.io/cd2020/content/Random%20grouping.html" width="710"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200430131341.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200430131341.2">##  Portable system
+
+&lt;iframe height="520" src="https://s40723210.github.io/cd2020/content/Portable%20system.html" width="710"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200430131342.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200430131342.2">##  Four wheel car
+
+&lt;iframe height="520" src="https://s40723210.github.io/cd2020/content/Four%20wheel%20car.html" width="710"&gt;&lt;/iframe&gt;
 </t>
 </tnodes>
 </leo_file>

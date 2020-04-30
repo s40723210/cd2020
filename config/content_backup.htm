@@ -412,7 +412,87 @@ end
 <p>1.pip install numpy</p>
 <p>2.pip install imutils</p>
 <p>3.pip install opencv-python</p>
-<p>才可以開始嘗試<span>透過廣域網路連線控制。盡量使用python3.8.2來配置環境，輸入程式時可能會跑很久，是正常的情況。</span></p><h1>Assignments</h1>
+<p>才可以開始嘗試<span>透過廣域網路連線控制。盡量使用python3.8.2來配置環境，輸入程式時可能會跑很久，是正常的情況。</span></p>
+<p><strong><span>python3.8.2，輸入leo 後軟體閃退問題</span></strong></p>
+<p><span>1.輸入 pip list ，檢查leo 版本是否為 6.1 版。</span></p>
+<p><span>2.是的話就先卸載 </span><span>pip uninstall leo 。</span></p>
+<p><span>3.再重新載一次 leo ，輸入 pip install leo==6.2.1 來只訂版本。</span></p>
+<p><span>4.載完之後，再輸入 leo  一次，就可以正常開啟了。</span></p>
+<h4><span>第8周meet分組直播影片</span></h4>
+<p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/9avBO7tY8MI" width="560"></iframe></span></p><h1>Q&amp;A</h1>
+<p>網頁無法顯示Brython，Spur Gear 導入錯誤，案F12來開啟Console檢查錯誤。</p>
+<p><strong><span style="color: #ff0000;">問題(一)如下圖</span></strong></p>
+<p><img caption="false" height="445" src="https://s40723210.github.io/40723210/images/chrome_rg3IpZC7Gr.png" width="650"/></p>
+<p>解決方法:</p>
+<p>開啟本倉儲資料夾，打開flaskapp.py，案ctrl+f來找到<span>page_content = request.form['page_content']，有2個地方都在底下加入</span></p>
+<div class="line number1 index0 alt2"><code class="html plain">page_content = page_content.replace('//<span> </span></code><code class="html color2">&lt;![CDATA[', '')</code></div>
+<div class="line number2 index1 alt1"><code class="html color2">page_content = page_content.replace('// ]]&gt;</code><code class="html plain">', '')<br/><br/></code></div>
+<div class="line number2 index1 alt1"><code class="html plain"></code></div>
+<div class="line number2 index1 alt1"><code class="html plain">save後即可解決問題。</code></div>
+<div class="line number2 index1 alt1"><code class="html plain"></code></div>
+<div class="line number2 index1 alt1"><code class="html plain">====================================================================</code></div>
+<div class="line number2 index1 alt1"><strong><span style="color: #ff0000;"><code class="html plain">問題(二)如下圖</code></span></strong></div>
+<div class="line number2 index1 alt1"><code class="html plain"></code><img caption="false" height="289" src="https://s40723210.github.io/40723210/images/chrome_A6plPf3iNf.png" width="650"/></div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1">解決方法:</div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1">檢查本倉儲資料夾static底下是否有brython.js與<span>brython_stdlib.js，沒有的話就必須加入這2個js檔案，有的話就是導入指令錯誤如:</span></div>
+<div class="line number2 index1 alt1"><span></span></div>
+<div class="line number2 index1 alt1">
+<div class="line number1 index0 alt2"><code class="html comments">&lt;!-- 導入 Brython 標準程式庫 --&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">&lt;</code><code class="html keyword">script</code><span> </span><code class="html color1">src</code><code class="html plain">=</code><code class="html string">"./../cmsimde/static/brython.js"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">script</code><code class="html plain">&gt;</code></div>
+<div class="line number3 index2 alt2"><code class="html plain">&lt;</code><code class="html keyword">script</code><span> </span><code class="html color1">src</code><code class="html plain">=</code><code class="html string">"./../cmsimde/static/brython_stdlib.js"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">script</code><code class="html plain">&gt;</code></div>
+<div class="line number3 index2 alt2"><code class="html plain"></code></div>
+<div class="line number3 index2 alt2"><code class="html plain">必須改為:</code></div>
+<div class="line number3 index2 alt2"><code class="html plain"></code></div>
+<div class="line number3 index2 alt2">
+<div class="line number1 index0 alt2"><code class="html comments">&lt;!-- 導入 Brython 標準程式庫 --&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">&lt;</code><code class="html keyword">script</code><span> </span><code class="html color1">src</code><code class="html plain">=</code><code class="html string">"/static/brython.js"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">script</code><code class="html plain">&gt;</code></div>
+<div class="line number3 index2 alt2"><code class="html plain">&lt;</code><code class="html keyword">script</code><span> </span><code class="html color1">src</code><code class="html plain">=</code><code class="html string">"/static/brython_stdlib.js"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">script</code><code class="html plain">&gt;</code></div>
+</div>
+<div class="line number3 index2 alt2"><code class="html plain"></code></div>
+<div class="line number3 index2 alt2"><code class="html plain">即可解決顯示問題。</code></div>
+<div class="line number3 index2 alt2"><code class="html plain"></code></div>
+</div>
+<div class="line number2 index1 alt1"><hr/></div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1"><strong><span style="color: #ff0000;">問題(三)如下圖: </span></strong></div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1">python wsgi.py 無法執行的話</div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1"><img alt="" height="211" src="https://s40723210.github.io/cad2019/images/cmd_2019-11-29_14-53-05.png" width="496"/></div>
+<div class="line number2 index1 alt1">將start_mdecourse用編輯器打開</div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1">path=<span>%path%;</span>%Disk%:;%path_python%;%path_msys2%;%path_tcc%;%path_git%;%path_cmake%;%path_coreutils%;</div>
+<div class="line number2 index1 alt1">改成</div>
+<div class="line number2 index1 alt1">path=%Disk%:;%path_python%;%path_msys2%;%path_tcc%;%path_git%;%path_cmake%;%path_coreutils%;%path%;</div>
+<div class="line number2 index1 alt1">如下圖就可以解決。</div>
+<div class="line number2 index1 alt1"></div>
+<p><img alt="" height="600" src="https://s40723210.github.io/cad2019/images/SciTE_2019-11-29_15-00-04.png" width="661"/></p>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1"><hr/></div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1"><strong><span style="color: #ff0000;">問題(四)如下圖:</span></strong></div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1">出現了亂碼的話，開啟Options。</div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1"><img alt="" height="487" src="https://s40723210.github.io/cad2019/images/wish_2019-11-29_16-04-41.png" width="838"/></div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1">把cp950改成utf-8如下圖，就可以解決。</div>
+<div class="line number2 index1 alt1"></div>
+<div class="line number2 index1 alt1"><img alt="" height="657" src="https://s40723210.github.io/cad2019/images/wish_2019-11-29_16-05-23.png" width="876"/></div>
+<hr/>
+<p><strong><span style="color: #ff0000;">問題(五)如圖下:</span></strong></p>
+<p><img alt="" height="115" src="https://s40723210.github.io/cad2019/images/cmd_2019-12-06_14-31-40.png" width="417"/></p>
+<p>因為之前putty是ipv6<span>，現在網路改成ipv4，所以putty要改成None(如下圖)。</span></p>
+<p><img alt="" height="442" src="https://s40723210.github.io/cad2019/images/putty_2019-12-06_14-36-51.png" width="452"/></p>
+<hr/>
+<p><strong><span style="color: #ff0000;">問題(六)更新至python3.8.2後，輸入leo軟體開起來會閃退:</span></strong></p>
+<p><span>1.輸入 pip list ，檢查leo 版本是否為 6.1 版。</span></p>
+<p><span>2.是的話就先卸載 </span><span>pip uninstall leo 。</span></p>
+<p><span>3.再重新載一次 leo ，輸入 pip install leo==6.2.1 來只訂版本。</span></p>
+<p><span>4.載完之後，再輸入 leo  一次，就可以正常開啟了。</span></p>
+<h1>Assignments</h1>
 <p><span>報告連結:</span><a href="/downloads/assignment1.pdf">assignment1.pdf</a>、<a href="/downloads/assignment2.pdf">assignment2.pdf</a></p><h2>assignment1</h2>
 <p>Due March 25, 2020 for class 2a and March 26, 2020 for class 2b.</p>
 <ol>
@@ -1000,7 +1080,7 @@ EXIT</pre>
 <p>剛開始可以使用內建的功能來創建模型，Add &gt; Primitive shape &gt; Cuboid(需要的 形狀)，給定所需形狀的參數值即可，創建出一個正方形本體，還有四個圓柱形輪子， 移動到相對應的位置，再來加上馬達 Add &gt; Joint &gt; Revolute，分別定位在四個輪 子的軸上，雙擊Revolute_joint圖示，在彈出的屬性框點擊Show dynamic parameters dialog，勾選 Motor enable，並設置 Target velocity 為 10，四個馬達都是如此。 </p>
 <p>影片連結:<a href="https://youtu.be/y8DJ1sjuAqM">https://youtu.be/y8DJ1sjuAqM</a></p>
 <p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/y8DJ1sjuAqM" width="560"></iframe></p>
-<hr color="00ffee"/>
+<hr color="00ffee">
 <h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">四輪車鍵盤控制轉向</yt-formatted-string></h4>
 <p>V-rep 檔案連結: <a href="/downloads/4%20wheel%20car%20keyboard.ttt">4 wheel car keyboard.ttt</a></p>
 <p>四輪車加上轉向及鍵盤控制，先開啟之前做好的四輪車，將兩個前輪馬達複製貼上，再使兩個馬達原地轉向90度，創建兩個小正方體，位置與前輪一模一樣，<span>需要設定屬性避免與其他部件衝突，本體、輪子、小正方體都要關閉如下圖。</span></p>
@@ -1448,7 +1528,7 @@ end</pre>
 <ul>
 <li><span><span>控制機器人或模擬的第七種方法是編寫一個外部應用程序，該應用程序通過各種方式（例如管道，套接字，串行端口等）與CoppeliaSim插件或CoppeliaSim腳本進行通信。</span><span>選擇編程語言（可以是任何一種語言）和靈活性是兩個主要優點。</span><span>同樣，控制代碼也可以在機器人或其他計算機上運行。</span><span>但是，與使用</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiOverview.htm"><span><span>遠程API</span></span></a><span><span>的方法相比，這種控制仿真或模型的方法更加乏味</span><span>。</span></span><span><span></span></span></li>
 </ul>
-<hr/>
+<hr>
 <p><span><span>有8個與本教程相關的場景文件：</span></span></p>
 <ul>
 <li><em>scenes/controlTypeExamples/controlledViaScript</em>: one robot is controlled via a<span> </span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#nonThreaded">non-threaded child script</a>, the other is controlled via a<span> </span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#threaded">threaded child script</a>.</li>
@@ -1460,7 +1540,7 @@ end</pre>
 <li><em>scenes/controlTypeExamples/controlledViaRos2</em>: the robot is controlled via the<span> </span><a href="https://www.coppeliarobotics.com/helpFiles/en/rosInterf.htm">ROS2 interface</a>.</li>
 <li><em>scenes/controlTypeExamples/controlledViaTcp</em>: the robot is controlled via<span> </span><a href="http://w3.impa.br/~diego/software/luasocket/">LuaSocket</a><span> </span>and TCP.</li>
 </ul>
-<hr/>
+<hr>
 <p></p>
 <ul>
 <li><span><span><em>scenes/controlTypeExamples/controlledViaScript</em><span>:</span>一個機器人通過控制</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#nonThreaded"><span><span>非螺紋子腳本</span></span></a><span><span>，另一種是通過受控的</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#threaded"><span><span>螺紋子腳本</span></span></a><span><span>。</span></span></li>
@@ -1603,7 +1683,7 @@ void deinitializationCallback
 <p>10.完成後儲存，即可照著腳本進行移動。</p>
 <p><span mce-data-marked="1">我的操作影片(有字幕):<a href="https://youtu.be/zINF95Z_b1s">https://youtu.be/zINF95Z_b1s</a></span></p>
 <p><span mce-data-marked="1"><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/zINF95Z_b1s" width="560"></iframe></span></p>
-<hr/>
+<hr>
 <div></div>
 <p></p>
 <h4>Webots Tutorial-2</h4>
@@ -1629,4 +1709,4 @@ void deinitializationCallback
 <h4>Webots Tutorial-6</h4>
 <p><span mce-data-marked="1">1.一樣另存一個新的檔案。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">2.刪掉其他東西，只留牆壁和地板。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">3.創建一個robot，</span><span mce-data-marked="1">將實體加上去。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">4.</span><span mce-data-marked="1">新增一個身體和四個輪子，命名。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">5.調整全部的參數、實體</span><span mce-data-marked="1">位置和軸位置。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">6.</span><span mce-data-marked="1">添加感應器，</span><span mce-data-marked="1">調整大小和位置。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">7.x軸方向要向外，角度是0.3 rad。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">8.創建一個</span><span mce-data-marked="1">python控制器，命名儲存。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">9.更改robot的控制器，選擇剛建的。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">10.提高robot的高度，</span><span mce-data-marked="1">模擬測試即可。</span></p>
 <p>我的操作影片(有字幕):<a href="https://youtu.be/vxuzuLsOoUs">https://youtu.be/vxuzuLsOoUs</a></p>
-<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/vxuzuLsOoUs" width="560"></iframe></p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/vxuzuLsOoUs" width="560"></iframe></p></hr></hr></hr></hr>
