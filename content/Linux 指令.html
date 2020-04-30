@@ -162,19 +162,102 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Four wheel car << <a href='Four wheel car.html'>Previous</a> <a href='DigitalProductCollaboration.html'>Next</a> >> DigitalProductCollaboration<br /><h1>assignment2</h1>
-<p>Due April 22, 2020 for class 2a and April 23, 2020 for class 2b.</p>
+    <div id="tipue_search_content">Notes << <a href='Notes.html'>Previous</a> <a href='vi 與 vim 的指令整理.html'>Next</a> >> vi 與 vim 的指令整理<br /><h1>Linux 指令</h1>
+<p><a href="https://blog.techbridge.cc/2017/12/23/linux-commnd-line-tutorial/">https://blog.techbridge.cc/2017/12/23/linux-commnd-line-tutorial/</a></p>
+<p>理論上所有的 Linux 發佈版本應該都要遵守檔案系統的標準（Filesystem Hierarchy Standard, FHS），但根據發佈版本不同或有差異，不過大致上檔案系統架構如下：</p>
 <ol>
-<li>
-<p>According to the material of Topic 0 and Topic 1, can you describe specifically what the mechanical design team need to do for accomplishing Assignment 1's four wheeled robot.</p>
-</li>
-<li>
-<p>What do you need to know from<span> </span><a href="https://cyberbotics.com/doc/guide/index" rel="nofollow">https://cyberbotics.com/doc/guide/index</a><span> </span>to implement a four-wheeled robot?</p>
-</li>
+<li>/bin, /sbin<br/> /bin主要放置一般使用者可以操作的指令，/sbin 放置系統管理員可以操作的指令。連結到 /usr/bin，/usr/sbin</li>
+<li>/boot<br/> 主要放置開機相關檔案</li>
+<li>/dev<br/> 放置 device 裝置檔案，包話滑鼠鍵盤等</li>
+<li>/etc<br/> 主要放置系統檔案</li>
+<li>/home, /root<br/> /home主要是一般帳戶的家目錄，/root 為系統管理者的家目錄</li>
+<li>/lib, /lib64<br/> 主要為系統函式庫和核心函式庫，若是 64 位元則放在/lib64。連結到 /usr/lib, /usr/lib64</li>
+<li>/proc<br/> 將記憶體內的資料做成檔案類型</li>
+<li>/sys<br/> 與/proc 類似，但主要針對硬體相關參數</li>
+<li>/usr<br/> /usr全名為 unix software resource 縮寫，放置系統相關軟體、服務（注意不是 user 的縮寫喔！）</li>
+<li>/var<br/> 全名為variable，放置一些變數或記錄檔</li>
+<li>/tmp<br/> 全名為temporary，放置暫存檔案</li>
+<li>/media, /mnt<br/> 放置隨插即用的裝置慣用目錄，/mnt 為管理員/使用者手動掛上（mount）的目錄</li>
+<li>/opt<br/> 全名為optional，通常為第三方廠商放置軟體處</li>
+<li>/run<br/> 系統進行服務軟體運作管理處</li>
+<li>/srv<br/> 通常是放置開發的服務（service），如：網站服務www 等</li>
 </ol>
-<hr/>
-<p>報告連結:<a href="./../downloads/assignment2.pdf">assignment2.pdf</a></p>
-<p><iframe height="700px" iframe="" src="https://s40723210.github.io/cd2020/downloads/assignment2.pdf" width="100%"></iframe></p><br />Four wheel car << <a href='Four wheel car.html'>Previous</a> <a href='DigitalProductCollaboration.html'>Next</a> >> DigitalProductCollaboration</div>
+<p>檔案與目錄管理指令</p>
+<p>在 Ubuntu 中我們可以打開終端機進行指令操作，就可以透過指令來管理檔案。</p>
+<p>一般指令格式如下：</p>
+<p>$ 指令<span> [</span>選項<span>] [</span>選項值<span>]</span></p>
+<ol>
+<li>ls：list，查看檔案及子目錄</li>
+</ol>
+<p>列出基本資料夾資料：</p>
+<p> ls</p>
+<p>列出詳細資料和隱藏資料：</p>
+<p> // -l 列出詳細資料<span> -a </span>列出隱藏資料</p>
+<p> $ ls -la</p>
+<p>列出部分檔案：</p>
+<p> // 列出為<span> .js </span>的檔案</p>
+<p> $ ls *.js</p>
+<ol start="2">
+<li>pwd：print work directory，印出目前工作目錄</li>
+<li>$ pwd</li>
+<li>// /Users/happycoder/Desktop/projects/HappyCoder</li>
+<li>cd：change directory，移動進入資料夾</li>
+</ol>
+<p>移動到目前資料夾下的 examples 資料夾：</p>
+<p> $ cd ./examples</p>
+<p>移動到家目錄：~：</p>
+<p> $ cd ~</p>
+<p>移動到上一層目錄 ..：</p>
+<p> $ cd ..</p>
+<p>移動到根目錄 /：</p>
+<p> $ cd /</p>
+<ol start="6">
+<li>mkdir：make directory，創建新資料夾</li>
+<li>$ mkdir examples</li>
+<li>cp：copy，複製檔案</li>
+</ol>
+<p>先將字串 TEST 存入 README.md 文件中</p>
+<p> $ echo "TEST" &gt; README.md</p>
+<p> $ cp README.md</p>
+<ol start="9">
+<li>mv：move (rename) files，移動檔案或是重新命名檔案</li>
+</ol>
+<p>移動檔案：</p>
+<p> $ mv README.md /examples/README.md</p>
+<p>重新命名</p>
+<p> $ mv README.md README_MV.md</p>
+<ol start="10">
+<li>rm：remove file，刪除檔案</li>
+<li>$ rm README.md</li>
+</ol>
+<p>刪除目前資料夾下副檔名為 .js 檔案：</p>
+<p> $ rm *.js</p>
+<p>刪除資料夾和所有檔案：</p>
+<p> $ rm -f examples</p>
+<ol start="12">
+<li>touch：用來更新已存在文件的 timestamp 時間戳記或是新增空白檔案</li>
+<li>$ touch README.md</li>
+<li>cat：將文件印出在終端機上</li>
+<li>$ cat README.md</li>
+<li>tail：顯示檔案最後幾行內容</li>
+</ol>
+<ul>
+<li>$ tail README.md</li>
+</ul>
+<p>持續顯示更新內容，常用於 web server 看 log debug 使用：</p>
+<p>$ tail -f README.md</p>
+<ol start="18">
+<li>more：將檔案一頁頁印在終端機上</li>
+</ol>
+<p>可以使用上下移動換頁，按 q 離開：</p>
+<p>$ more README.md</p>
+<ol start="19">
+<li>file：檢查檔案類型</li>
+</ol>
+<ul>
+<li>$ file README.md</li>
+</ul>
+<p>// README.md: HTML document text, UTF-8 Unicode text</p><br />Notes << <a href='Notes.html'>Previous</a> <a href='vi 與 vim 的指令整理.html'>Next</a> >> vi 與 vim 的指令整理</div>
         
     <!-- footer -->
       <div class="container">

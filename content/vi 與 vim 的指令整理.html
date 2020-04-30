@@ -162,19 +162,167 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Four wheel car << <a href='Four wheel car.html'>Previous</a> <a href='DigitalProductCollaboration.html'>Next</a> >> DigitalProductCollaboration<br /><h1>assignment2</h1>
-<p>Due April 22, 2020 for class 2a and April 23, 2020 for class 2b.</p>
-<ol>
-<li>
-<p>According to the material of Topic 0 and Topic 1, can you describe specifically what the mechanical design team need to do for accomplishing Assignment 1's four wheeled robot.</p>
-</li>
-<li>
-<p>What do you need to know from<span> </span><a href="https://cyberbotics.com/doc/guide/index" rel="nofollow">https://cyberbotics.com/doc/guide/index</a><span> </span>to implement a four-wheeled robot?</p>
-</li>
-</ol>
-<hr/>
-<p>報告連結:<a href="./../downloads/assignment2.pdf">assignment2.pdf</a></p>
-<p><iframe height="700px" iframe="" src="https://s40723210.github.io/cd2020/downloads/assignment2.pdf" width="100%"></iframe></p><br />Four wheel car << <a href='Four wheel car.html'>Previous</a> <a href='DigitalProductCollaboration.html'>Next</a> >> DigitalProductCollaboration</div>
+    <div id="tipue_search_content">Linux 指令 << <a href='Linux 指令.html'>Previous</a> <a href='Q&A.html'>Next</a> >> Q&A<br /><h1>vi 與 vim 的指令整理</h1>
+<p><strong>編輯模式</strong></p>
+<table border="1">
+<tbody>
+<tr>
+<th>指令</th>
+<th>說明</th>
+</tr>
+<tr>
+<td>i</td>
+<td>在游標位置進入編輯模式</td>
+</tr>
+<tr>
+<td>I</td>
+<td>在游標行的第一個非空白字元進入編輯模式</td>
+</tr>
+<tr>
+<td>a</td>
+<td>在游標位置後進入編輯模式</td>
+</tr>
+<tr>
+<td>A</td>
+<td>在游標行的最後一個字元進入編輯模式</td>
+</tr>
+<tr>
+<td>o</td>
+<td>向下新增一行，並進入編輯模式</td>
+</tr>
+<tr>
+<td>O</td>
+<td>向上新增一行，並進入編輯模式</td>
+</tr>
+<tr>
+<td>cc</td>
+<td>刪除游標行，並進入編輯模式</td>
+</tr>
+<tr>
+<td><span>h 或 向左方向鍵</span></td>
+<td><span>游標向左移動一個字元</span></td>
+</tr>
+<tr>
+<td><span>j 或 向下方向鍵</span></td>
+<td><span>游標向下移動一個字元</span></td>
+</tr>
+<tr>
+<td><span>k 或 向上方向鍵</span></td>
+<td><span>游標向上移動一個字元</span></td>
+</tr>
+<tr>
+<td><span>l 或 向右方向鍵</span></td>
+<td><span>游標向右移動一個字元</span></td>
+</tr>
+<tr>
+<td>[ESC]</td>
+<td>取消指令或退出編輯模式</td>
+</tr>
+</tbody>
+</table>
+<p><strong>刪除</strong></p>
+<table border="1">
+<tbody>
+<tr>
+<th>指令</th>
+<th>說明</th>
+</tr>
+<tr>
+<td>dd</td>
+<td>刪除游標行</td>
+</tr>
+<tr>
+<td><em>行數</em><span> </span>→ dd</td>
+<td>刪除 n 行</td>
+</tr>
+<tr>
+<td>dG</td>
+<td>刪除游標行到最後一行</td>
+</tr>
+<tr>
+<td>d1G</td>
+<td>刪除游標行到第一行</td>
+</tr>
+<tr>
+<td>d$</td>
+<td>刪除游標處到最後一個字元</td>
+</tr>
+<tr>
+<td>d0</td>
+<td>刪除游標處到第一個字元</td>
+</tr>
+</tbody>
+</table>
+<p><strong>檔案功能</strong></p>
+<table border="1">
+<tbody>
+<tr>
+<th>指令</th>
+<th>說明</th>
+</tr>
+<tr>
+<td>:w</td>
+<td>存檔 (加 ! 表示強制存檔)</td>
+</tr>
+<tr>
+<td>:w<span> </span><em>檔案名稱</em></td>
+<td>另存新檔</td>
+</tr>
+<tr>
+<td>:q</td>
+<td>退出 vi (加 ! 表示不存檔強制退出)</td>
+</tr>
+<tr>
+<td>:wq</td>
+<td>存檔並退出 vi</td>
+</tr>
+<tr>
+<td>:<span id="x">x</span></td>
+<td>存檔並退出 vi</td>
+</tr>
+<tr>
+<td>:e<span> </span><em>檔案名稱</em></td>
+<td>編輯其它檔案</td>
+</tr>
+<tr>
+<td>:e!</td>
+<td>還原至檔案編修前的狀態</td>
+</tr>
+<tr>
+<td>:r<span> </span><em>檔案名稱</em></td>
+<td>讀入檔案內容，並加到游標行的後面</td>
+</tr>
+<tr>
+<td>:n</td>
+<td>切換到下一個開啟的檔案</td>
+</tr>
+<tr>
+<td>:N</td>
+<td>切換到上一個開啟的檔案</td>
+</tr>
+<tr>
+<td>:set nu</td>
+<td>顯示行號</td>
+</tr>
+<tr>
+<td>:set nonu</td>
+<td>取消行號顯示</td>
+</tr>
+<tr>
+<td>:files</td>
+<td>列出所有開啟的檔案</td>
+</tr>
+<tr>
+<td>:Ex</td>
+<td>開啟檔案瀏覽器</td>
+</tr>
+<tr>
+<td>:Ex<span> </span><em>路徑</em></td>
+<td>於指定路徑開啟檔案瀏覽器</td>
+</tr>
+</tbody>
+</table>
+<br />Linux 指令 << <a href='Linux 指令.html'>Previous</a> <a href='Q&A.html'>Next</a> >> Q&A</div>
         
     <!-- footer -->
       <div class="container">
