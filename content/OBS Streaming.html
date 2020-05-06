@@ -1,0 +1,268 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>s40723210</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <script type="text/javascript">
+             document.oncontextmenu = function(){
+                    return false;
+             }
+             document.onselectstart = function(){
+                    return false;
+             }
+        </script>
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>s40723210 cd2020</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">s40723210 cd2020</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='Weeks.html'>Weeks</a><ul class='dropdown'><li class='has-children'><a href='Week1-5.html'>Week1-5</a><ul class='dropdown'><li><a href='OBS Streaming.html'>OBS Streaming</a></li></ul><li class='has-children'><a href='Week6-9.html'>Week6-9</a><ul class='dropdown'><li><a href='Article impression.html'>Article impression</a></li></li></ul></ul><li class='has-children'><a href='Notes.html'>Notes</a><ul class='dropdown'><li><a href='Linux 指令.html'>Linux 指令</a><li><a href='vi 與 vim 的指令整理.html'>vi 與 vim 的指令整理</a><li><a href='Q&A.html'>Q&A</a></li></ul><li class='has-children'><a href='Assignments.html'>Assignments</a><ul class='dropdown'><li class='has-children'><a href='assignment1.html'>assignment1</a><ul class='dropdown'><li><a href='Random grouping.html'>Random grouping</a><li><a href='Portable system.html'>Portable system</a><li><a href='Four wheel car.html'>Four wheel car</a></li></ul><li class='has-children'><a href='assignment2.html'>assignment2</a><ul class='dropdown'><li><a href='DigitalProductCollaboration.html'>DigitalProductCollaboration</a><li><a href='EngineeringProductDesign.html'>EngineeringProductDesign</a><li><a href='MechanicalDesignProcess.html'>MechanicalDesignProcess</a><li><a href='Keyboard control car.html'>Keyboard control car</a></li></ul><li><a href='assignment3.html'>assignment3</a></li></ul><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='BubbleRob tutorial.html'>BubbleRob tutorial</a><li><a href='Line following BubbleRob.html'>Line following BubbleRob</a><li><a href='External controller tutorial.html'>External controller tutorial</a><li><a href='Simulation.html'>Simulation</a><li><a href='Simulation dialog.html'>Simulation dialog</a></li></ul><li class='has-children'><a href='Webots Tutorial.html'>Webots Tutorial</a><ul class='dropdown'><li><a href='User Interface.html'>User Interface</a><li><a href='Scene Tree.html'>Scene Tree</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Week1-5 << <a href='Week1-5.html'>Previous</a> <a href='Week6-9.html'>Next</a> >> Week6-9<br /><h1>OBS Streaming</h1>
+<p>OBS官方網站:<a href="https://obsproject.com/">https://obsproject.com/</a></p>
+<p><span style="background-color: #ffff00;"><strong>資料一</strong></span>:<a href="https://pcrookie.com/?p=2113">https://pcrookie.com/?p=2113</a></p>
+<p><span style="background-color: #ffff00;"><strong>資料二</strong></span>:<a href="https://www.dlc.ntu.edu.tw/wp-content/uploads/2020/03/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-OBS-%E8%88%87-Youtube-%E9%80%B2%E8%A1%8C%E8%AA%B2%E5%A0%82%E7%9B%B4%E6%92%AD-1.pdf">如何使用-OBS-與-Youtube-進行直播.pdf</a></p>
+<p>下載OBS Studio的安裝程式，直接執行即可安裝，安裝畫面如下圖，雖然為英文，不過只要一直按〔Next〕或〔Agree〕按鈕即可完成，非常簡單。</p>
+<p><img alt="image" border="0" data-large_image_height="368" data-large_image_width="474" data-recalc-dims="1" height="388" scale="1.25" src="https://i1.wp.com/image.pcrookie.com/2020/03/OBS-Studio_12BAE/image.png?zoom=1.25&amp;resize=499%2C388" src-orig="https://i1.wp.com/image.pcrookie.com/2020/03/OBS-Studio_12BAE/image.png?resize=499%2C388" srcset="https://i1.wp.com/image.pcrookie.com/2020/03/OBS-Studio_12BAE/image.png?zoom=1.25&amp;resize=499%2C388" title="image" width="499"/></p>
+<p>OBS Studio的執行畫面如下，會自動切換為正體中文語系，所以不用擔心操作界面看懂。</p>
+<p>畫面中央的黑色範圍是預覽視窗，下方則有「場景」、「來源」、「混音器」、「轉場特效」及「控制項」五個部份，簡單介紹一下它們的功用：</p>
+<p><img alt="image" border="0" data-large_image_height="452" data-large_image_width="641" data-recalc-dims="1" height="476" scale="1.25" src="https://i0.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_4.png?zoom=1.25&amp;resize=675%2C476" src-orig="https://i0.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_4.png?resize=675%2C476" srcset="https://i0.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_4.png?zoom=1.25&amp;resize=675%2C476" title="image" width="675"/></p>
+<h4>1.場景：</h4>
+<p>  就像拍電影、錄電視節目一樣，可以事先編排好不同的場景，每個場景都可配置不同的畫面、格式、影音訊號源，可在錄影或直播時自由切換。</p>
+<p>你可以按下「場景」左下角的〔+〕來新增 或 〔—〕刪除場景，點擊場景名稱即可切換，或是在場景上方點擊滑鼠右鍵呼叫躬耕</p>
+<p><img alt="image" border="0" data-large_image_height="363" data-large_image_width="227" data-recalc-dims="1" height="383" scale="1.25" src="https://i0.wp.com/image.pcrookie.com/2020/03/OBS-Studio_12BAE/image_3.png?zoom=1.25&amp;resize=239%2C383" src-orig="https://i0.wp.com/image.pcrookie.com/2020/03/OBS-Studio_12BAE/image_3.png?resize=239%2C383" srcset="https://i0.wp.com/image.pcrookie.com/2020/03/OBS-Studio_12BAE/image_3.png?zoom=1.25&amp;resize=239%2C383" title="image" width="239"/></p>
+<h4>2.來源：</h4>
+<p>來源就是要錄製的影音或文字資料，按下〔＋〕按鈕可以加入圖片(例如當背景圖、LOGO…)、媒體來源(電腦中的影片或音樂檔)、文字(可當字幕、說明、LOGO…)、擷取音訊輸入(可用麥克風錄音)、視窗擷取(擷取某個軟體的視窗)、視訊擷取裝置(如webcam)、遊戲擷取、顯示器擷取(擷取整個螢幕的畫面)…等，功能相當多樣。</p>
+<p><img alt="image" border="0" data-large_image_height="495" data-large_image_width="290" data-recalc-dims="1" height="522" scale="1.25" src="https://i1.wp.com/image.pcrookie.com/2020/03/OBS-Studio_12BAE/image_4.png?zoom=1.25&amp;resize=306%2C522" src-orig="https://i1.wp.com/image.pcrookie.com/2020/03/OBS-Studio_12BAE/image_4.png?resize=306%2C522" srcset="https://i1.wp.com/image.pcrookie.com/2020/03/OBS-Studio_12BAE/image_4.png?zoom=1.25&amp;resize=306%2C522" title="image" width="306"/></p>
+<p>新增想要的訊號來源之後，可以在上面點二下滑鼠左鍵來進行設定，例如我最常用的「視窗擷取」，就可以在「視窗」選單下拉選出要錄製的視窗，如此一來就不怕在錄影或直播時不小心把其他的操作畫面也錄製進去。</p>
+<p><img alt="image" border="0" data-large_image_height="527" data-large_image_width="621" data-recalc-dims="1" height="555" scale="1.25" src="https://i0.wp.com/image.pcrookie.com/2020/03/OBS-Studio_12BAE/image_5.png?zoom=1.25&amp;resize=654%2C555" src-orig="https://i0.wp.com/image.pcrookie.com/2020/03/OBS-Studio_12BAE/image_5.png?resize=654%2C555" srcset="https://i0.wp.com/image.pcrookie.com/2020/03/OBS-Studio_12BAE/image_5.png?zoom=1.25&amp;resize=654%2C555" title="image" width="654"/></p>
+<p>下圖就是阿正老師加入了「文字」(右上角的字樣)、「圖片」(左下角)、媒體來源(右下角的影片)及視窗擷取(左上角的瀏覽器畫面)來進行示範，每個加入的來源都可以在預覽視窗上點擊選取，選中的項目就會出現紅色外框(如下方的「軟體玩家直播測試」文字)，可以自由移動、縮放。</p>
+<p><img alt="image" border="0" data-large_image_height="440" data-large_image_width="617" data-recalc-dims="1" height="464" scale="1.25" src="https://i2.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_8.png?zoom=1.25&amp;resize=650%2C464" src-orig="https://i2.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_8.png?resize=650%2C464" srcset="https://i2.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_8.png?zoom=1.25&amp;resize=650%2C464" title="image" width="650"/></p>
+<p>如果要編輯「來源」的任一個項目，只要在項目上方點二下滑鼠，而右邊有一個眼睛圖示跟一個鎖頭圖示，點擊「眼睛」即可隱藏該項目，「鎖頭」則是將該項目鎖定(無法移動/縮放)。</p>
+<p>愈上面的項目就愈上層顯示（例如下圖的「文字」就會蓋過「圖片」，在圖片的上方顯示），可以利用下方的︿跟 ﹀按鈕來上下移動顯示的順序。</p>
+<p><img alt="image" border="0" data-large_image_height="262" data-large_image_width="394" data-recalc-dims="1" height="276" scale="1.25" src="https://i0.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_9.png?zoom=1.25&amp;resize=415%2C276" src-orig="https://i0.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_9.png?resize=415%2C276" srcset="https://i0.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_9.png?zoom=1.25&amp;resize=415%2C276" title="image" width="415"/></p>
+<h4>3.混音器：</h4>
+<p>如果多個訊號來源都有聲音，則可以使用「混音器」來調整聲音的大小，只要拖曳音量控制桿(下圖紅色箭頭處)即可，按下右方的喇叭圖示即可切換為靜音。</p>
+<p><img alt="image" border="0" data-large_image_height="203" data-large_image_width="430" data-recalc-dims="1" height="214" scale="1.25" src="https://i2.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_10.png?zoom=1.25&amp;resize=453%2C214" src-orig="https://i2.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_10.png?resize=453%2C214" srcset="https://i2.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_10.png?zoom=1.25&amp;resize=453%2C214" title="image" width="453"/></p>
+<h4>4.轉場特效：</h4>
+<p>當你在錄影或直播時有多個場景，可以自由切換不同的場景，而「轉場特效」就是在切換場景時所要使用的特效，類似PowerPoint的「轉場動畫」，不過特效目前只有四種，不像PowerPoint那麼花俏。</p>
+<p><img alt="image" border="0" data-large_image_height="189" data-large_image_width="233" data-recalc-dims="1" height="199" scale="1.25" src="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_11.png?zoom=1.25&amp;resize=246%2C199" src-orig="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_11.png?resize=246%2C199" srcset="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_11.png?zoom=1.25&amp;resize=246%2C199" title="image" width="246"/> <span> </span><img alt="image" border="0" data-large_image_height="189" data-large_image_width="233" data-recalc-dims="1" height="199" scale="1.25" src="https://i0.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_12.png?zoom=1.25&amp;resize=246%2C199" src-orig="https://i0.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_12.png?resize=246%2C199" srcset="https://i0.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_12.png?zoom=1.25&amp;resize=246%2C199" title="image" width="246"/></p>
+<h4>5.控制項：</h4>
+<p>「控制項」裡面的按鈕可以掌控整個直播或錄影的程序，例如〔開始串流〕就是開始直播、〔開始錄製〕可以進行錄影、〔工作室模式〕可以切割為兩個畫面方便進行多場景的調整及直播、〔設定〕則是整個OBS的功能設置。</p>
+<p>要開始直播或錄影之前，請先按下〔設定〕按鈕。</p>
+<p><img alt="image" border="0" data-large_image_height="237" data-large_image_width="301" data-recalc-dims="1" height="250" scale="1.25" src="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_13.png?zoom=1.25&amp;resize=317%2C250" src-orig="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_13.png?resize=317%2C250" srcset="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_13.png?zoom=1.25&amp;resize=317%2C250" title="image" width="317"/></p>
+<p>裡面一共有七大類，數十個詳細的設定項目。</p>
+<p><img alt="image" border="0" data-large_image_height="504" data-large_image_width="636" data-recalc-dims="1" height="531" scale="1.25" src="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_14.png?zoom=1.25&amp;resize=670%2C531" src-orig="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_14.png?resize=670%2C531" srcset="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_14.png?zoom=1.25&amp;resize=670%2C531" title="image" width="670"/></p>
+<p>例如想要進行串流直播，則需切換到「串流」頁面，並在「服務」選單中選擇要串流的服務類型，選擇後再進行相關的直播設定。</p>
+<p><img alt="image" border="0" data-large_image_height="230" data-large_image_width="661" data-recalc-dims="1" height="243" scale="1.25" src="https://i2.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_15.png?zoom=1.25&amp;resize=696%2C243" src-orig="https://i2.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_15.png?resize=696%2C243" srcset="https://i2.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_15.png?zoom=1.25&amp;resize=696%2C243" title="image" width="696"/></p>
+<p>另外在「輸出」頁面中，設定要串流及錄影的品質，並選擇編碼器和錄影格式，如果有獨立顯示卡還可使用硬體編碼，以減少CPU的負載。</p>
+<p><img alt="image" border="0" data-large_image_height="288" data-large_image_width="661" data-recalc-dims="1" height="304" scale="1.25" src="https://i0.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_16.png?zoom=1.25&amp;resize=696%2C304" src-orig="https://i0.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_16.png?resize=696%2C304" srcset="https://i0.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_16.png?zoom=1.25&amp;resize=696%2C304" title="image" width="696"/></p>
+<p>如果你有多個場景要進行直播，可以點擊「工作室模式」，就會切換為左右兩個視窗，左邊是預覽的場景，右邊則是實際播出的場景。</p>
+<p>可以在左下角的「場景」中先點選一個場景，就會顯示在左邊的「預覽」視窗中，按下兩個視窗中央的 〔轉場〕按鈕即可切換為當前預覽的場景。</p>
+<p><img alt="image" border="0" data-large_image_height="440" data-large_image_width="617" data-recalc-dims="1" height="464" scale="1.25" src="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_17.png?zoom=1.25&amp;resize=650%2C464" src-orig="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_17.png?resize=650%2C464" srcset="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_17.png?zoom=1.25&amp;resize=650%2C464" title="image" width="650"/></p>
+<p>還可按下中間的〔＋〕，預先加入多種快速轉場按鈕，之後就可以點擊這些按鈕來使用不同的轉場特效。</p>
+<p><img alt="image" border="0" data-large_image_height="266" data-large_image_width="346" data-recalc-dims="1" height="281" scale="1.25" src="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_18.png?zoom=1.25&amp;resize=365%2C281" src-orig="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_18.png?resize=365%2C281" srcset="https://i1.wp.com/image.pcrookie.com/2019/10/OBS-Studio_12BAE/image_18.png?zoom=1.25&amp;resize=365%2C281" title="image" width="365"/></p>
+<p>看了以上介紹之後，相信你應該對OBS Studio的操作有所認識，最後阿正老師再來簡單整理一下2種常用的使用方式：</p>
+<p><strong>第1種：單一場景 錄影或直播</strong></p>
+<ul>
+<li>按〔設定〕來設定要串流的平台或錄影的格式 →</li>
+<li>在「來源」按〔＋〕加入訊號來源 →</li>
+<li>按下〔開始串流〕 或 〔開始錄製〕→</li>
+<li>完成之後按〔停止串流〕或〔停止直播〕</li>
+</ul>
+<p><strong>第2種：多重場景 錄影或直播</strong></p>
+<ul>
+<li>按〔設定〕來設定要串流的平台或錄影的格式 →</li>
+<li>在〔場景〕按〔＋〕加入場景→</li>
+<li>點選場景 ， 在「來源」按〔＋〕加入訊號來源 →</li>
+<li>切換到其餘的每個場景 ， 在「來源」按〔＋〕加入訊號來源 →</li>
+<li>進入「工作室模式」，選擇要轉播/錄製的場景 →</li>
+<li>按下〔開始串流〕 或 〔開始錄製〕→</li>
+<li>完成之後按〔停止串流〕或〔停止直播〕</li>
+</ul><br />Week1-5 << <a href='Week1-5.html'>Previous</a> <a href='Week6-9.html'>Next</a> >> Week6-9</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        

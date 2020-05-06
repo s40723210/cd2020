@@ -1,0 +1,241 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>s40723210</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <script type="text/javascript">
+             document.oncontextmenu = function(){
+                    return false;
+             }
+             document.onselectstart = function(){
+                    return false;
+             }
+        </script>
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>s40723210 cd2020</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">s40723210 cd2020</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='Weeks.html'>Weeks</a><ul class='dropdown'><li class='has-children'><a href='Week1-5.html'>Week1-5</a><ul class='dropdown'><li><a href='OBS Streaming.html'>OBS Streaming</a></li></ul><li class='has-children'><a href='Week6-9.html'>Week6-9</a><ul class='dropdown'><li><a href='Article impression.html'>Article impression</a></li></li></ul></ul><li class='has-children'><a href='Notes.html'>Notes</a><ul class='dropdown'><li><a href='Linux 指令.html'>Linux 指令</a><li><a href='vi 與 vim 的指令整理.html'>vi 與 vim 的指令整理</a><li><a href='Q&A.html'>Q&A</a></li></ul><li class='has-children'><a href='Assignments.html'>Assignments</a><ul class='dropdown'><li class='has-children'><a href='assignment1.html'>assignment1</a><ul class='dropdown'><li><a href='Random grouping.html'>Random grouping</a><li><a href='Portable system.html'>Portable system</a><li><a href='Four wheel car.html'>Four wheel car</a></li></ul><li class='has-children'><a href='assignment2.html'>assignment2</a><ul class='dropdown'><li><a href='DigitalProductCollaboration.html'>DigitalProductCollaboration</a><li><a href='EngineeringProductDesign.html'>EngineeringProductDesign</a><li><a href='MechanicalDesignProcess.html'>MechanicalDesignProcess</a><li><a href='Keyboard control car.html'>Keyboard control car</a></li></ul><li><a href='assignment3.html'>assignment3</a></li></ul><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='BubbleRob tutorial.html'>BubbleRob tutorial</a><li><a href='Line following BubbleRob.html'>Line following BubbleRob</a><li><a href='External controller tutorial.html'>External controller tutorial</a><li><a href='Simulation.html'>Simulation</a><li><a href='Simulation dialog.html'>Simulation dialog</a></li></ul><li class='has-children'><a href='Webots Tutorial.html'>Webots Tutorial</a><ul class='dropdown'><li><a href='User Interface.html'>User Interface</a><li><a href='Scene Tree.html'>Scene Tree</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Week6-9 << <a href='Week6-9.html'>Previous</a> <a href='Notes.html'>Next</a> >> Notes<br /><h1>Article impression</h1>
+<h4><strong>DesignCollaboration</strong></h4>
+<p>這一本主要講述到何謂協同設計，所謂協同設計是指為了完成某一設計目標，由兩個或兩個以上的隊員，通過一定的信息交換和相互協同機制，分別以不同的設計任務共同完成這一設計目標。協同設計往往都可以，使產品變得更加優秀，每個人都有自己的技藝與專長，就能彌補各自不擅長的領域。一個成功的協同設計，需要選擇合適的工具，如本文所提到各種設計工具<span>: </span></p>
+<ul>
+<li><strong>FIGMA</strong><strong>:</strong>非常適合在設計文件的同一區域中包含多個人。您可以時時觀看隊友的設計或在同一個設計上一起工作。是一個以協作為優先的共享工作區工具。</li>
+</ul>
+<ul>
+<li><strong>MARVEL</strong><strong>:</strong>是一個更簡潔、規範和專注的空間，非常適合與非設計團隊成員進行協作。允許採用更標準化的協作形式，使客戶可以輕鬆地與我們合作。</li>
+<li><strong>Zeplin</strong><strong>:</strong>是一個有用的傳遞工具，使開發人員可以深入研究設計工作的細節。</li>
+<li><strong>Quip</strong><strong>:</strong>是集思廣益在產品<span>/</span>流程文件的絕佳平台。用它來記錄和組織團隊成員在項目上需要了解的所有環境和知識。</li>
+</ul>
+<p><span style="color: #ff0000;"><strong>總結:</strong></span>毫無疑問的，協同合作對於設計的共同管理、控制和改善是一個有效的策略，因此透過協同作，成本會因為無效率的人工流程的減少而大幅降低，設計創作的能見度會因此提高，資產的利用率也會改善。然而光說不練是沒有用的，這些效益必須建立在「實踐」上，要把策略轉化為行動，讓每個人專注於各自技藝與專長。要達成協同合作的策略，必須改善資訊的管理，縮減各夥伴間資訊能力的差距。其間當然存在著各項挑戰，但只要與設計的夥伴們多加協調，並善用資訊科技的服務提供者所提供的協同合作功能，一定能夠克服各種困難。</p>
+<h4><strong></strong></h4>
+<hr/>
+<h4><strong></strong></h4>
+<h4><strong>EngineeringProductDesignCollaboration</strong></h4>
+<p>本文與來自六個產品製造商的<span> 34 </span>名工業和工程設計師 進行了有關實際產品設計項目的深入採訪，最後簡化了協作流程，以創建具有代表性的流程模型，發現了四種類型的典型協同產品設計流程及其特徵<span>:</span></p>
+<ul>
+<li><strong>類型<span> 1</span></strong>： 由<span>ID (</span>工業設計師<span>)</span>主導的概念驅動過程。</li>
+<li><strong>類型<span> 2</span></strong>： 由<span>ID (</span>工業設計師<span>)</span>主導的內外聯合過程。</li>
+<li><strong>類型<span> 3</span></strong>： 由<span>ED (</span>工程設計師<span>)</span>主導的由內到外的流程。</li>
+<li><strong>類型<span> 4</span></strong>：<span> ID</span>＆<span>ED (</span>工業與工程設計師<span>) </span>協同流程。</li>
+</ul>
+<p>在研究協同設計過程中，使用紮實的理論方法收集數據和分析，在進行深度訪談時，案例的公司選擇設置三個標準<span>:1.</span>公司應生產中等複雜的電子產品。<span>2.</span>獨立的工業設計和工程設計部門。<span>3.</span>市場上領先的公司，生產精心設計的高質量產品。來增加協同的適用性，再來是選擇受訪者的條件，至少要有兩年以上公司工作經驗，參與至少一個產品開發過程的周期，能與同行的緊密合作和互動，最後是面試的程序，要有效率的訪談，主要分為四個主題<span>:</span>個人信息、設計過程、角色和專業知識、交互，受訪者必須提供詳細的背景訊息，為了避免面試官產生偏見，在每一次的會議都要有會議記錄並且錄音，以便之後的一些發展。</p>
+<p>    每個人都會有經歷設計的過程，儘管轉錄數據都包含與設計過程有關的信息，但它們都與其他內容混合在一起，包括項目情況和目標、個人角色、技能和知識，所以我們必須再確定每個人的經歷。下一步是通過鑲嵌法將公司的設計過程，結合到協同設計過程當中，在鑲嵌方法中，結合交叉檢查的局部過程，有利於提高可靠性和通用性。一旦制定了公司的協同產品設計流程，就將它們分類以確定它們的目的和條件，再通過簡化公司的設計流程，以幫助它保持可比性和基本特徵。</p>
+<p>    我們確定了協同設計過程類型的存在，根據工業和工程設計師的深入訪談，建立起了協同設計流程，發現了四種類型的協同設計過程，根據設計過程早期階段的不同進行分類，四種類型的過程在不同的上下文中用於不同的目的。有時是戰略性地用於開發新設計或重新設計，有時是因為內部和外部因素而應用，工業設計師是有影響力的，而且是擴展的。</p>
+<h4><strong></strong></h4>
+<hr/>
+<h4><strong></strong></h4>
+<h4><strong>MechanicalDesignProcess</strong></h4>
+<p><span style="color: #0000ff;"><strong>第1章 成功的設計:</strong></span><strong><br/> </strong>主要是向我們介紹電子產品外殼設計，首先呢要求設計一個產品，就必須了解到客戶需要什麼，在一個一個把要求給列出來，並將每一個目標實現，一個成功的產品，必須要有完整的規範，整個團隊需要有各個領域的人，來互相交付整個工程工作，一個好的團隊要會時間分配、資源分配、優先級管理、符合產品規格、實現成本目標、各項目的報告，首先不管什麼職業都一定要遵守約定，必須要按規定來、按時交貨，資源要有效的分配，不能擅自將整個資源變動，管理呢是需要針對單個項目以及相對於爭奪相同資源，產品成本是工程經濟的基本，設計師必須注意成本目標、零件的材料和工藝選擇、適合產品整個生命週期、將成本信息提供給團隊，最後就是將各個項目的情況寫成報告。再來設計人員要知道，在何時切換素描、細部化兩種模式，素描是一個非常快速的構思階段，只使用鉛筆來完成構想，細部化就是提供某些部分的詳細說明，在這種詳細的模式下，就可以準確的計算出設計的關鍵部分，設計經常伴隨著溝通及評論，溝通及評論是設計成功的必要條件，互相交流來傳達有關設計的訊息，各個不同身分的人，都能帶給我們更多的創新想法，因此設計中涉及的其他主要團隊及其通常的功能，來完成設計成功的一大步。</p>
+<p><strong><span style="color: #0000ff;">第2章 構建設計</span><span><span style="color: #0000ff;">:</span><br/> </span></strong>我們在設計一個產品，都必須要先從產品構思開始，為了要證明產品構思的理念是對的，就要模擬或做出構建原型，首先設計師的工作就是，設計一個全新的產品，或是繼續設計現有的產品，全新的設計在基本上是沒有任何限制的，延續設計是針對產品的一些部分，來進行修改的，在這種情況下設計師也會面臨，跟全新的設計一樣困難的挑戰，要考慮到不破壞原本的系統結構，但是也可以利用現有的設計來進行更改，再來是現有的設計重大改變，設計師要更改整體設計的一部分，就需要修改很大一部分，因此與全新設計相比，存在更多約束。設計一個產品系統是有很多種的，設計人員必須要牢記各種設計系統，其中有關注個人責任、了解該設計交互的其他設備、熟悉整體的系統功能，在構思草圖這是項目是理想的階段，一旦想法採用某種形式，就可以輕鬆地對其進行審查和修訂，審查其想法並進行原型製作，最後再分析及修改來進行最終測試，通過後就可以正式批准生產的設計。<span><br/>     </span>開始製作後要考慮的東西就多了，產品的壽命、要求的環境溫度、成本的考量、生產的各尺寸及數量等等，還有最佳的放置位置及間隙距離，主要設計最有效的系統安排，首先要考慮的標準，是產品的總體尺寸，他們必須確定是否可以在，給定的總體規模內滿足所有要求。零件和外殼的最佳間隙距離，如果要保持特定的距離的外部尺寸，則設計必須允許公差的最厚外殼、最大零件尺寸，對於給定的整體大小，對象之間的距離將有一些特定的限制，對象之間的距離將取決於對象的尺寸公差和對象位置的公差。在大多數設計當中，都必須使物體的整體尺寸變小，這導致設計對象縮小之間距離，使總體尺寸和所產生的重量最小化，所以我們的東西通常重量輕、較小的生態足跡、有效的節省空間、降低成本，盡可能地滿足客戶需求。</p>
+<p><strong><span style="color: #0000ff;">第3章 考量結構問題</span><span><span style="color: #0000ff;">:</span><br/></span></strong>堅固的產品需要一個好的結構設計，為了滿足條件我認為我們必須建立在穩固的基礎，以便其他設計可以以此為基礎，我們需要利用各種材料強度來提出結構解決方案，定義通用流程來考慮電子外殼結構設計，滿足客戶來應付在各種環境下使用。在材料的強度上，要考慮的不僅僅是強度，還需要考慮最具成本效益的方式，設計電子外殼結構，要先收尋是否有類似產品，使用該產品設計好的解決方案作為快速起點，只是會缺乏創造力而無法解決特定產品的問題，快速粗略計算設計，對於簡化結構元素上使用了基本設計方程，在複雜的分析中來進行討論，最後是過度的設計，雖然能解決一些問題，但過度設計可能會導致產品成本增加。結構設計過程中有通用的六種步驟，<strong>相似設計</strong>可能是自己公司的產品，也有可能是公司外面的競爭產品，<strong>分力</strong>是作用在物體上的力，通常是電子外殼中的幅度和方向，是指物件、零件、構件的動態力，<strong>現有結束條件</strong>是確定對象的最終條件固定和自由，<strong>建議材料和橫截面</strong>為確定支撐這些力所需的材料和橫截面組合，使用最大應力公式來判斷最佳組合方案，<strong>合併功能</strong>查看正在組合的零件的另外想法方面，是實際上要從一個單個零件創建兩個單獨的零件，此舉可以降低總體成本，<strong>所需的安全因素</strong>在設計過程中最重要的一點，必須確保工作人員與客戶的安全，不能因成本高或費時就不考慮。</p>
+<p><strong><span style="color: #0000ff;">第4章 材料與工藝</span><span><span style="color: #0000ff;">:</span><br/></span></strong>看完了設計的結構基礎，我們就要開始來了解，如何選擇組件的各個零件，材料和工藝的組裝和維修，將是設計產品所需要考慮的，成本會是設計過程中做出選擇的決定因素，各個零件的材料、生產零件的過程、組裝零件的組裝程序、測試零件和組件的測試程序、制定質量控製程序、滿足服務要求，在對於產品上是非常重要的選擇。電子外殼在設計師腦海中，有非常多永恆的問題，通稱為設計師的思維空間，將項目進度或設計問題傳達給設計團隊的其他成員，以及需要誰進行設計審查，是要考慮的情況中比較重要的。</p>
+<p><span style="color: #ff0000;"><strong>總結:</strong></span>產品的設計階段需要全面確定整個產品的結構、規格，來確定整個生產系統的佈局，因而，產品設計意義重大，具有牽一發而動全局的重要意義。如果一個產品的設計缺乏生產觀點，那麼生產時就將耗費大量費用來調整和更換設備、物料和勞動力。相反，好的產品設計，不僅表現在功能上的優越性，而且便於製造，生產的成本低，從而使產品的綜合競爭力得以增強。許多在市場競爭中占優勢的企業都十分注意產品設計的細節，以便設計出造價低而又具有獨特功能的產品。設計屬於熱門的戰略工具，好的設計才是贏得顧客的重要關鍵。</p><br />Week6-9 << <a href='Week6-9.html'>Previous</a> <a href='Notes.html'>Next</a> >> Notes</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        

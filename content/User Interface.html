@@ -1,0 +1,553 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>s40723210</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <script type="text/javascript">
+             document.oncontextmenu = function(){
+                    return false;
+             }
+             document.onselectstart = function(){
+                    return false;
+             }
+        </script>
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>s40723210 cd2020</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">s40723210 cd2020</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='Weeks.html'>Weeks</a><ul class='dropdown'><li class='has-children'><a href='Week1-5.html'>Week1-5</a><ul class='dropdown'><li><a href='OBS Streaming.html'>OBS Streaming</a></li></ul><li class='has-children'><a href='Week6-9.html'>Week6-9</a><ul class='dropdown'><li><a href='Article impression.html'>Article impression</a></li></li></ul></ul><li class='has-children'><a href='Notes.html'>Notes</a><ul class='dropdown'><li><a href='Linux 指令.html'>Linux 指令</a><li><a href='vi 與 vim 的指令整理.html'>vi 與 vim 的指令整理</a><li><a href='Q&A.html'>Q&A</a></li></ul><li class='has-children'><a href='Assignments.html'>Assignments</a><ul class='dropdown'><li class='has-children'><a href='assignment1.html'>assignment1</a><ul class='dropdown'><li><a href='Random grouping.html'>Random grouping</a><li><a href='Portable system.html'>Portable system</a><li><a href='Four wheel car.html'>Four wheel car</a></li></ul><li class='has-children'><a href='assignment2.html'>assignment2</a><ul class='dropdown'><li><a href='DigitalProductCollaboration.html'>DigitalProductCollaboration</a><li><a href='EngineeringProductDesign.html'>EngineeringProductDesign</a><li><a href='MechanicalDesignProcess.html'>MechanicalDesignProcess</a><li><a href='Keyboard control car.html'>Keyboard control car</a></li></ul><li><a href='assignment3.html'>assignment3</a></li></ul><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='BubbleRob tutorial.html'>BubbleRob tutorial</a><li><a href='Line following BubbleRob.html'>Line following BubbleRob</a><li><a href='External controller tutorial.html'>External controller tutorial</a><li><a href='Simulation.html'>Simulation</a><li><a href='Simulation dialog.html'>Simulation dialog</a></li></ul><li class='has-children'><a href='Webots Tutorial.html'>Webots Tutorial</a><ul class='dropdown'><li><a href='User Interface.html'>User Interface</a><li><a href='Scene Tree.html'>Scene Tree</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Webots Tutorial << <a href='Webots Tutorial.html'>Previous</a> <a href='Scene Tree.html'>Next</a> >> Scene Tree<br /><h1>User Interface</h1>
+<p><span><span>Webots GUI由四個主要窗口組成：</span><span>顯示並允許您與3D模擬進行交互</span><span>的</span></span><em><span><span>3D窗口</span></span></em><span><span>，</span><span>表示當前世界的層次結構</span><span>的“<span> </span></span></span><em><span><span>場景樹”</span></span></em><span><span>，允許您編輯源代碼</span><span>的“<span> </span></span></span><em><span><span>文本”編輯器</span></span></em><span><span>，以及最後，</span><span>同時顯示編譯和控制器輸出</span><span>的</span></span><em><span><span>控制台</span></span></em><span><span>。</span></span></p>
+<figure name="webots-gui"><img alt="main_window.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/main_window.thumbnail.jpg"/>
+<figcaption class="anchor-header"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-user-interface#webots-gui"><span class="anchor-link-image"></span></a><span><span>Webots GUI</span></span></figcaption>
+</figure>
+<p><span><span>GUI有九個菜單：</span></span><code>File, Edit, View, Simulation, Build, Overlays, Tools, Wizards</code><span><span>和</span></span><code>Help</code><span><span>。</span></span></p>
+<h4><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-user-interface#file-menu"><span class="anchor-link-image"></span></a><span><span>文件菜單</span></span></h4>
+<p><span><span>“<span> </span></span></span><strong><span><span>文件”</span></span></strong><span><span>菜單允許您執行常規的文件操作：加載，保存等。</span></span></p>
+<ul>
+<li>
+<p><span><span>所述</span></span><strong><span><span>新世界</span></span></strong><span><span>菜單項目（和按鈕）中只含有模擬窗打開一個新的世界</span></span><a href="https://cyberbotics.com/doc/reference/elevationgrid"><span><span>ElevationGrid</span></span></a><span><span>，顯示為10×10平方1米×1米的表面上的棋盤。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/open-button.png" width="26"/><span><span>“<span> </span></span></span><strong><span><span>打開世界...”</span></span></strong><span><span>菜單項（和按鈕）打開一個文件選擇對話框，該對話框允許您選擇要加載的“ .wbt”文件。</span></span></p>
+</li>
+<li>
+<p><span><span>通過“<span> </span></span></span><strong><span><span>打開最近的世界”</span></span></strong><span><span>菜單項，可以從子菜單中顯示的列表中選擇一個最近打開的“ .wbt”文件，以重新打開該文件。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>打開示例世界”</span></span></strong><span><span>菜單項將打開一個對話框，列出所有可用的示例世界，在其中可以通過在搜索字段中輸入文件名或其中的一部分來搜索要加載的特定“ .wbt”文件。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/save-button.png" width="26"/><span><span>“<span> </span></span></span><strong><span><span>保存世界”</span></span></strong><span><span>菜單項（和按鈕）使用當前文件名（顯示在主窗口頂部的文件名）保存當前世界。</span><span>在每個</span></span><code>Save</code><span><span>.wbt文件的內容上都將被覆蓋，Webots不會創建任何備份副本，因此，您應謹慎使用此按鈕，並最終手動進行安全副本。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>另存為...”</span></span></strong><span><span>菜單項（和按鈕）使用用戶輸入的新文件名保存當前世界。</span><span>請注意，“。wbt”文件應始終保存在Webots項目目錄以及“ worlds”子目錄中，否則將無法重新打開該文件。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/revert-button.png" width="26"/><span><span>“<span> </span></span></span><strong><span><span>重新加載世界”</span></span></strong><span><span>菜單項（和按鈕）從已保存的版本重新加載當前世界，並從頭開始重新進行仿真。</span></span></p>
+<blockquote>
+<p><strong><span><span>注意</span></span></strong><span><span>：打開（或重新加載）世界時，如果世界花費了2秒鐘以上的時間來加載窗口，則會彈出窗口並顯示進度。</span><span>使用此窗口可以取消加載世界，在這種情況下，將打開空白世界。</span></span></p>
+</blockquote>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/reset-simulation-button.png" width="26"/><span><span>所述</span></span><strong><span><span>復位仿真</span></span></strong><span><span>菜單項目（和按鈕）恢復模擬的初始狀態。</span><span>仿真並沒有像重新加載一樣完全被破壞和重建，但是所有節點的初始狀態都得以恢復，這要快得多。</span></span></p>
+<blockquote>
+<p><strong><span><span>注意</span></span></strong><span><span>：為了重置模擬，執行以下步驟：</span></span></p>
+<ul>
+<li><span><span>模擬時間設置為00:00:00</span></span></li>
+<li><span><span>仿真期間添加的所有節點都將被刪除。</span></span></li>
+<li><span><span>所有聲源均已停止。</span></span></li>
+<li><span><span>Webots內部使用的隨機種子將被重置。</span></span></li>
+<li><span><span>重置所有節點。</span><span>根據節點類型，這具有以下含義：</span></span></li>
+<li><strong><a href="https://cyberbotics.com/doc/reference/brake"><span><span>剎車</span></span></a></strong><span><span>：剎車被釋放。</span></span></li>
+<li><strong><a href="https://cyberbotics.com/doc/reference/charger"><span><span>Charger</span></span></a></strong><span><span>：</span><span>恢復</span><span>第一個</span><a href="https://cyberbotics.com/doc/reference/shape"><span><span> </span>Shape</span></a><span>子節點</span><span>的</span></span><code>battery</code><span><span>字段和</span><a href="https://cyberbotics.com/doc/reference/material"><span><span> </span>Material</span></a><span>節點</span><span>的</span></span><code>emissiveColor</code><span><span>字段</span><span>。</span></span><a href="https://cyberbotics.com/doc/reference/material"><span></span></a><span></span><a href="https://cyberbotics.com/doc/reference/shape"><span></span></a><span></span></li>
+<li><strong><a href="https://cyberbotics.com/doc/reference/connector"><span><span>連接器</span></span></a></strong><span><span>：如果已連接，則分離連接器，並</span></span><code>isLocked</code><span><span>恢復</span><span>該</span><span>字段</span><span>的值</span><span>。</span></span></li>
+<li><strong><a href="https://cyberbotics.com/doc/reference/display"><span><span>顯示</span></span></a></strong><span><span>：圖像被清除。</span></span></li>
+<li><strong><a href="https://cyberbotics.com/doc/reference/emitter"><span><span>發射</span></span></a><span></span><a href="https://cyberbotics.com/doc/reference/receiver"><span><span>器</span></span></a></strong><span><strong><span><span> </span>/<span> </span></span></strong><strong><a href="https://cyberbotics.com/doc/reference/receiver"><span>接收器</span></a></strong><span>：消息隊列已清除。</span></span></li>
+<li><strong><a href="https://cyberbotics.com/doc/reference/joint"><span><span>關節</span></span></a><span><span><span> </span>/<span> </span></span></span><a href="https://cyberbotics.com/doc/reference/motor"><span><span>電機</span></span></a></strong><span><span>：位置，速度，加速度，可用扭矩和可用力將恢復。</span></span></li>
+<li><strong><a href="https://cyberbotics.com/doc/reference/led"><span><span>LED</span></span></a></strong><span><span>：如果第一個子節點是Light節點，則其</span></span><code>color</code><span><span>字段將恢復並關閉。</span><span>如果第一個子</span><span>節點</span><span>是</span></span><a href="https://cyberbotics.com/doc/reference/shape"><span><span><span> </span>Shape</span></span></a><span><span>節點，則將</span><span>還原</span></span><code>emissiveColor</code><span><span>其</span></span><a href="https://cyberbotics.com/doc/reference/material"><span><span><span> </span>Material</span></span></a><span><span>節點</span><span>的</span><span>字段</span><span>。</span></span></li>
+<li><strong><a href="https://cyberbotics.com/doc/reference/lidar"><span><span>激光雷達</span></span></a></strong><span><span>：恢復旋轉頭的位置。</span></span></li>
+<li><strong><a href="https://cyberbotics.com/doc/reference/pen"><span><span>筆</span></span></a></strong><span><span>：清除所有繪製的紋理。</span></span></li>
+<li><strong><a href="https://cyberbotics.com/doc/reference/propeller"><span><span>螺旋槳</span></span></a></strong><span><span>：慢速螺旋線及其初始位置已恢復。</span></span></li>
+<li><strong><a href="https://cyberbotics.com/doc/reference/robot"><span><span>機械手</span></span></a></strong><span><span>：</span></span><code>battery</code><span><span>還原字段，刪除所有主管標籤，還原節點可見性，並重新啟動控制器。</span></span></li>
+<li><strong><a href="https://cyberbotics.com/doc/reference/solid"><span><span>穩定</span></span></a></strong><span><span>：</span></span><code>translation</code><span><span>和</span></span><code>rotation</code><span><span>字段被恢復，物理場被重置。</span></span></li>
+<li><strong><a href="https://cyberbotics.com/doc/reference/track"><span><span>Track</span></span></a></strong><span><span>：還原電動機位置，並且還原</span><span>第一個</span><a href="https://cyberbotics.com/doc/reference/shape"><span><span> </span>Shape</span></a><span>子節點</span></span><code>translation</code><span><span>的</span></span><a href="https://cyberbotics.com/doc/reference/appearance"><span><span><span> </span>Appearance</span></span></a><span><span>節點</span><span>的textureTransform節點</span><span>的</span><span>字段</span><span>。</span></span><a href="https://cyberbotics.com/doc/reference/shape"><span></span></a><span></span></li>
+<li><strong><a href="https://cyberbotics.com/doc/reference/viewpoint"><span><span>觀點</span></span></a></strong><span><span>：</span></span><code>orientation</code><span><span>和</span></span><code>position</code><span><span>字段已還原。</span></span></li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/new-button.png" width="26"/><span><span>“<span> </span></span></span><strong><span><span>新建文本文件”</span></span></strong><span><span>菜單項（和按鈕）在文本編輯器中打開一個空文本文件。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/open-button.png" width="26"/><span><span>“<span> </span></span></span><strong><span><span>打開文本文件...”</span></span></strong><span><span>菜單項（和按鈕）打開一個文件選擇對話框，該對話框允許您選擇要加載的文本文件（例如“ .java”文件）。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/save-button.png" width="26"/><span><span>“<span> </span></span></span><strong><span><span>保存文本文件”</span></span></strong><span><span>菜單項（和按鈕）將保存當前文本文件。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/save_as-button.png" width="26"/><span><span>“<span> </span></span></span><strong><span><span>將文本文件另存為...”</span></span></strong><span><span>菜單項（和按鈕）使用用戶輸入的新文件名保存當前文本文件。</span></span></p>
+</li>
+<li>
+<p><span><span>將</span></span><strong><span><span>保存所有文本文件</span></span></strong><span><span>菜單項保存所有打開的和未保存的文本文件。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/revert-button.png" width="26"/><span><span>“<span> </span></span></span><strong><span><span>還原文本文件”</span></span></strong><span><span>菜單項（和按鈕）從保存的版本中重新加載文本文件。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>打印預覽...”</span></span></strong><span><span>菜單項打開一個窗口，可讓您管理頁面佈局，以便從文本編輯器中打印文件。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>打印...”</span></span></strong><span><span>菜單項打開一個窗口，使您可以打印文本編輯器的當前文件。</span></span></p>
+</li>
+<li>
+<p><span><span>在</span></span><strong><span><span>導入VRML97 ...</span></span></strong><span><span>菜單項，在現場樹的末尾添加VRML97對象。</span><span>這些對象來自您必須指定的VRML97文件。</span><span>此功能對於導入在3D建模程序中建模的複雜形狀，然後導出到VRML97（以前稱為VRML 2.0）非常有用。</span><span>大多數3D建模軟件，例如3D Studio Max，Maya，AutoCAD，Pro Engineer，AC3D或Art Of Illusion，都包含VRML97（或VRML 2.0）導出功能。</span><span>請注意，Webots無法以VRML 1.0格式導入文件。</span><span>導入後，這些對象</span><span>將在場景樹的底部</span><span>顯示為</span></span><a href="https://cyberbotics.com/doc/reference/group"><span><span>Group</span></span></a><span><span>，</span></span><a href="https://cyberbotics.com/doc/reference/transform"><span><span>Transform</span></span></a><span><span>或</span></span><a href="https://cyberbotics.com/doc/reference/shape"><span><span>Shape</span></span></a><span><span>節點。</span><span>然後，您可以將這些對象轉換為Webots節點（例如</span></span><a href="https://cyberbotics.com/doc/reference/solid"><span><span>Solid</span></span></a><span><span>，</span></span><a href="https://cyberbotics.com/doc/reference/robot"><span><span>Robot</span></span></a><span><span>等），或將它們剪切並粘貼到</span></span><code>children</code><span><span>現有Webots節點列表中。</span></span></p>
+</li>
+<li>
+<p><span><span>該</span></span><strong><span><span>出口VRML97 ...</span></span></strong><span><span>項目讓您當前載入世界保存為“.WRL”的文件，符合VRML97標準。</span><span>反過來，可以使用任何VRML97查看器和大多數3D建模軟件打開此類文件。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/screenshot-button.png" width="26"/><span><span>使用</span></span><strong><span><span>“截取屏幕截圖...”</span></span></strong><span><span>項可以截取Webots中當前視圖的截屏。</span><span>它會打開一個文件對話框，將當前視圖另存為PNG或JPG圖像。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/movie-button.png" width="26"/><span><span>在</span></span><strong><span><span>製作電影...</span></span></strong><span><span>項允許你創建MPEG電影（Linux和MacOS）或AVI動畫（Windows）中。</span><span>電影錄製開始後，將在中更改此項</span></span><code>Stop Movie...</code><span><span>。</span><span>在錄製期間，可以更改運行模式並暫停模擬。</span><span>但是，僅在Webots步驟期間捕獲幀，而在暫停模擬時不捕獲。</span><span>除了選擇影片的分辨率和壓縮質量外，還可以通過設置動畫來以加速模式或慢動作記錄模擬。</span></span><code>Video acceleration</code><span><span>彈出對話框中的值。</span><span>如果視頻加速度值小於1，則錄製的動畫將比模擬慢。</span><span>最大減慢速度，即最小加速度值，是由模擬的基本時間步長定義的，因為不可能以比模擬更新率更高的幀率進行記錄。</span><span>為了增加最大的減慢速度，您應該減少仿真的基本時間步長。</span><span>選中視頻字幕選項將在電影的右上角顯示加速度值。</span></span></p>
+</li>
+</ul>
+<figure name="make-movie--dialog"><img alt="make_movie_dialog.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/make_movie_dialog.png"/>
+<figcaption class="anchor-header"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-user-interface#make-movie--dialog"><span class="anchor-link-image"></span></a><span><span>“製作電影...”對話框</span></span></figcaption>
+</figure>
+<ul>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>導出HTML5模型...”</span></span></strong><span><span>項允許您將當前世界導出為交互式3D“ .html”文件。</span><span>您可以在</span></span><a class="dynamicLoad" href="https://cyberbotics.com/doc/guide/web-scene"><span><span>本節中</span></span></a><span><span>獲得有關此主題的更多信息</span><span>。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/animation-button.png" width="26"/><span><span>“<span> </span></span></span><strong><span><span>製作HTML5動畫...”</span></span></strong><span><span>項使您可以將模擬記錄為3D動畫並將其發佈在HTML5網頁上。</span><span>開始動畫錄製後，此項目將更改為</span></span><code>Stop HTML5 Animation...</code><span><span>，可用於停止動畫錄製。</span><span>您可以在</span></span><a class="dynamicLoad" href="https://cyberbotics.com/doc/guide/web-animation"><span><span>本節中</span></span></a><span><span>獲得有關此主題的更多信息</span><span>。</span></span></p>
+</li>
+<li>
+<p><strong><span><span>退出將</span></span></strong><span><span>終止當前的模擬並關閉Webot。</span></span></p>
+</li>
+</ul>
+<blockquote>
+<p><strong><span><span>注意：</span></span></strong><span><span>在Windows上，使用“退出”代替“退出”。</span></span></p>
+</blockquote>
+<h4 class="anchor-header" id="editmenu" name="edit-menu"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-user-interface#edit-menu"><span class="anchor-link-image"></span></a><span><span>編輯菜單</span></span></h4>
+<p><span><span>“<span> </span></span></span><strong><span><span>編輯”</span></span></strong><span><span>菜單提供了常用的文本編輯功能，可操縱在“<span> </span></span></span><em><span><span>文本”編輯器中</span></span></em><span><span>打開的</span><em><span>文件</span></em><span>，例如“複製”，“粘貼”，“剪切”等。</span></span></p>
+<h4 class="anchor-header" id="viewmenu" name="view-menu"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-user-interface#view-menu"><span class="anchor-link-image"></span></a><span><span>查看菜單</span></span></h4>
+<p><span><span>使用“<span> </span></span></span><strong><span><span>查看”</span></span></strong><span><span>菜單可以控制模擬窗口中的查看。</span></span></p>
+<ul>
+<li>
+<p><span><span>的</span></span><strong><span><span>跟隨對象</span></span></strong><span><span>子菜單可固定的（靜態）視點和跟隨移動對象（通常是一個機器人）的視點之間切換。</span><span>如果希望視點跟隨對象，則首先需要用鼠標選擇對象，然後根據所需的以下行為檢查子菜單中的一項。</span><span>有關不同以下行為的更多信息，</span><span>請參考</span></span><a href="https://cyberbotics.com/doc/reference/viewpoint"><span><span>Viewpoint</span></span></a><span><span>文檔。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/restore_viewpoint.png" width="26"/><span><span>加載或還原文件後，</span><span>“<span> </span></span></span><strong><span><span>還原</span></span><a href="https://cyberbotics.com/doc/reference/viewpoint"><span><span>視點”</span></span></a></strong><span><span>項會將視點的位置和方向恢復為其初始設置。</span><span>當您在場景中導航時迷路並想要返回原始視點時，此功能非常方便。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/move_viewpoint_to_object_button.png" width="26"/><span> </span><strong><span><span>將視點移至對象</span></span></strong><span><span>會將視點移至中心並在選定節點上縮放。</span><span>如果所選項目是字段，則將定位上級父節點。</span><span>該對象將位於3D視圖的中心，並且將完全可見。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/front_view.png" width="26"/><span><span>在</span></span><strong><span><span>更改視圖</span></span></strong><span><span>子菜單移動視點對準它在任何所選擇的對象周圍的世界六大對齊軸。</span><span>如果未選擇任何對象，則視點將以世界原點為中心。</span><span>可用的選項為</span></span><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/front_view.png" width="26"/><span> </span><strong><span><span>前視圖</span></span></strong><span><span>，</span></span><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/back_view.png" width="26"/><span> </span><strong><span><span>後視圖</span></span></strong><span><span>，</span></span><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/left_view.png" width="26"/><span> </span><strong><span><span>左視圖</span></span></strong><span><span>，</span></span><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/right_view.png" width="26"/><span> </span><strong><span><span>右視圖</span></span></strong><span><span>，</span></span><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/top_view.png" width="26"/><span> </span><strong><span><span>頂視圖</span></span></strong><span><span>和</span></span><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/bottom_view.png" width="26"/><span> </span><strong><span><span>底視圖</span></span></strong><span><span>。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>全屏”</span></span></strong><span><span>項啟用和禁用在整個屏幕上顯示3D窗口。</span></span></p>
+</li>
+<li>
+<p><span><span>該</span></span><strong><span><span>虛擬現實耳機</span></span></strong><span><span>子菜單允許你使用虛擬現實的耳機，如HTC萬歲或Oculus Rift以查看模擬：</span></span></p>
+<ul>
+<li><span><span>將</span></span><strong><span><span>啟用</span></span></strong><span><span>選項允許你切換模擬視圖耳機。</span></span></li>
+<li><span><span>“<span> </span></span></span><strong><span><span>跟踪頭戴式耳機位置”</span></span></strong><span><span>和“<span> </span></span></span><strong><span><span>跟踪頭戴式耳機方向”</span></span></strong><span><span>項目指定是否應跟踪頭戴式耳機的位置和方向並將其應用於視點。</span></span></li>
+<li><span><span>“<span> </span></span></span><strong><span><span>查看左眼”</span></span></strong><span><span>，“<span> </span></span></span><strong><span><span>查看右眼”</span></span></strong><span><span>和“<span> </span></span></span><strong><span><span>空視圖”</span></span></strong><span><span>單選按鈕使您可以選擇在模擬視圖中應顯示的內容。</span><span>您可以看到左眼圖像，右眼圖像或什麼都看不到。</span></span></li>
+<li><span><span>使用“<span> </span></span></span><strong><span><span>抗鋸齒”</span></span></strong><span><span>項可以在兩隻眼睛的圖像上啟用抗鋸齒（請注意，抗鋸齒會降低仿真速度）。</span></span></li>
+<li><span></span><a class="dynamicLoad" href="https://cyberbotics.com/doc/guide/computer-peripherals"><span><span>此處</span></span></a><span><span>介紹耳機的安裝過程</span><span>。</span></span></li>
+</ul>
+<blockquote>
+<p><strong><span><span>注意</span></span></strong><span><span>：此菜單當前僅在Windows上存在。</span><span>如果您在Windows上並且未啟用菜單，則表明未安裝驅動程序或未連接耳機。</span></span></p>
+</blockquote>
+</li>
+<li>
+<p><span><span>通過“<span> </span></span></span><strong><span><span>投影”</span></span></strong><span><span>單選按鈕組，可以在“<span> </span></span></span><strong><span><span>透視投影”</span></span></strong><span><span>（默認）和“<span> </span></span><span>Webots模擬”窗口的“<span> </span></span></span><strong><span><span>正投影”</span></span></strong><span><span>模式</span><span>之間進行選擇</span><span>。</span><span>該</span></span><em><span><span>透視</span></span></em><span><span>模式對應於天然投影：其中所述更遠的對象是從觀察者，較小它出現在圖像中。</span><span>使用</span></span><em><span><span>正交</span></span></em><span><span>投影時，與查看者的距離不會影響物體的大小。</span><span>此外，在</span></span><em><span><span>正交</span></span></em><span><span>模式下，模型中平行的線在屏幕上平行繪製，因此，此投影有時在建模階段很有用。</span><span>在</span></span><em><span><span>正交</span></span></em><span><span>模式下</span><span>不會渲染陰影</span><span>。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>渲染”</span></span></strong><span><span>單選按鈕組使您可以在“<span> </span></span></span><strong><span><span>普通渲染”</span></span></strong><span><span>（默認）和“<span> </span></span><span>Webots模擬”<span> </span></span><span>的“<span> </span></span></span><strong><span><span>線框”</span></span></strong><span><span>模式</span><span>之間進行選擇</span><span>。</span><span>在</span></span><em><span><span>普通渲染</span></span></em><span><span>模式下，對像以其幾何面，材質，顏色和紋理進行渲染，其方式與通常用眼睛或照相機看到的方式相同。</span><span>在</span></span><em><span><span>線框渲染</span></span></em><span><span>模式下，只有可呈現圖元的段被渲染。</span><span>此模式對於調試網格很有用。</span><span>如果</span></span><em><span><span>線框渲染</span></span></em><span><span>模式和</span></span><code>View / Optional Rendering / Show All Bounding Objects</code><span><span>切換按鈕均被激活，則僅繪製邊界對象（不渲染可渲染圖元）。</span><span>這可用於調試衝突檢測問題。</span></span></p>
+</li>
+<li>
+<p><span><span>在</span></span><strong><span><span>可選的渲染</span></span></strong><span><span>子菜單，可以顯示或隱藏，補充信息。</span><span>這些渲染僅顯示在主渲染中，並隱藏在機器人攝像機中。</span><span>它們用於更好地了解模擬的行為：</span></span></p>
+<ul>
+<li>
+<p><span><span>使用“<span> </span></span></span><strong><span><span>顯示坐標系”，</span></span></strong><span><span>可以將3D窗口右下角的全局坐標系顯示或隱藏為分別代表x，y和z軸的紅色，綠色和藍色箭頭。</span></span></p>
+</li>
+<li>
+<p><span><span>使用“<span> </span></span></span><strong><span><span>顯示所有邊界對象”，</span></span></strong><span><span>可以顯示或隱藏所有邊界對象（在</span><span>每個</span><em><span>Solid</span></em><span>節點</span><span>的</span></span><em><span><span>boundingObject</span></span></em><span><span>字段中</span><span>定義</span><span>）。</span><span>邊界對象由白線表示。</span><span>當發生碰撞時，這些線變為玫瑰，而當實體處於空閒狀態（即，它靜止不與任何其他活動的實體相互作用）時，這些線變為藍色。</span></span><em><span></span></em><span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>顯示接觸點”</span></span></strong><span><span>使您可以顯示或隱藏由碰撞檢測引擎生成的接觸點。</span><span>沒有示出沒有產生相應的接觸力的接觸點。</span><span>接觸力僅對使用物理模擬的對像生成（</span><span>需要</span></span><a href="https://cyberbotics.com/doc/reference/physics"><span><span>物理</span></span></a><span><span>節點）。</span><span>需要考慮此操作的步驟。</span></span></p>
+</li>
+<li>
+<p><span><span>使用</span></span><strong><span><span>顯示連接器軸</span></span></strong><span><span>可以顯示或隱藏連接器軸。</span><span>旋轉對齊方式顯示為黑色，而y和z軸分別顯示為綠色和藍色。</span></span></p>
+</li>
+<li>
+<p><span><span>使用“<span> </span></span></span><strong><span><span>顯示關節軸”</span></span></strong><span><span>可以顯示或隱藏關節軸。</span><span>關節軸用黑線表示。</span></span></p>
+</li>
+<li>
+<p><span><span>所述</span></span><strong><span><span>顯示測距儀平截頭體</span></span></strong><span><span>，可以顯示或隱藏，OpenGL的平截頭體剔除和場景中的每個測距儀所記錄的圖像，使用黃色線框。</span><span>如果測距儀設備被禁用或第一張圖像尚不可用，則視錐將以灰色繪製。</span><span>OpenGL剔除視錐是與測距儀視場相對應的截頂金字塔。</span><span>記錄的圖像顯示在視錐台所描述的平面上，其距離對應於距設備中心的測距儀的最小範圍。</span><span>有關此概念的更多信息，請參見OpenGL文檔。</span></span></p>
+</li>
+<li>
+<p><span><span>使用“<span> </span></span></span><strong><span><span>顯示激光雷達路徑”</span></span></strong><span><span>，您可以使用青色線框顯示或隱藏場景中每個激光雷達的圖層（激光射線路徑）。</span><span>如果禁用了激光雷達設備或尚無法進行第一次測量，則將這些層繪製為灰色。</span></span></p>
+</li>
+<li>
+<p><span><span>該</span></span><strong><span><span>展會激光雷達點雲</span></span></strong><span><span>，可以顯示或隱藏，對於每一個激光雷達點雲點雲模式下啟用的場景。</span><span>點雲由這些點本身的位置以及從激光雷達原點到這些點的光線（從藍色（頂層）到紅色（底層）的漸變）表示。</span><span>這種可選的渲染在計算上很昂貴，因此會大大降低仿真速度。</span><span>請注意，如果點雲包含超過2500個點，則不會顯示從激光雷達原點到該點的射線。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>顯示攝像機視錐”</span></span></strong><span><span>允許您使用洋紅色線框顯示或隱藏場景中每個攝像機的OpenGL消隱視錐和記錄的圖像。</span><span>如果禁用了相機設備或第一張圖像尚不可用，則視錐將以灰色繪製。</span><span>OpenGL剔除視錐是與攝像機視場相對應的截頂金字塔。</span><span>由於遠端平面設置為無窮大，因此未顯示金字塔的背面。</span><span>記錄的圖像顯示在相機的近平面上。</span><span>有關此概念的更多信息，請參見OpenGL文檔。</span></span></p>
+</li>
+<li>
+<p><span><span>所述</span></span><strong><span><span>顯示DistanceSensor射線</span></span></strong><span><span>，可以顯示或隱藏，光線由距離傳感器設備鑄造。</span><span>這些光線繪製為紅線（在碰撞點之外變為綠色）。</span><span>它們的長度對應於設備的最大範圍。</span><span>如果距離傳感器設備被禁用或尚無法進行第一次測量，則光線將以灰色繪製。</span></span></p>
+</li>
+<li>
+<p><span><span>所述</span></span><strong><span><span>顯示LightSensor射線</span></span></strong><span><span>，可以顯示或隱藏，光線鑄造由光傳感器裝置。</span><span>這些射線繪製為黃線。</span><span>如果禁用了光傳感器設備或尚無法進行第一次測量，則光線將以灰色繪製。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>顯示光位置”</span></span></strong><span><span>允許您顯示或隱藏</span></span><a href="https://cyberbotics.com/doc/reference/pointlight"><span><span>PointLight</span></span></a><span><span>和</span></span><a href="https://cyberbotics.com/doc/reference/spotlight"><span><span>SpotLight</span></span></a><span><span>燈</span><span>的位置</span><span>。<span> </span></span><span>沒有顯示</span></span><a href="https://cyberbotics.com/doc/reference/directionallight"><span><span>DirectionalLight</span></span></a><span><span>節點。<span> </span></span></span><a href="https://cyberbotics.com/doc/reference/pointlight"><span><span>PointLight</span></span></a><span><span>和</span></span><a href="https://cyberbotics.com/doc/reference/spotlight"><span><span>SpotLight</span></span></a><span><span>節點由被耀斑圍繞的彩色圓圈表示。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>顯示筆繪畫射線”</span></span></strong><span><span>使您可以顯示或隱藏筆設備繪畫的射線。</span><span>如果啟用繪畫，這些光線將繪製為紫線，否則繪製為灰線。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>顯示雷達視錐”</span></span></strong><span><span>允許您顯示或隱藏雷達視錐。</span><span>如果啟用了雷達設備，則視錐表將顯示為藍色，否則，如果禁用了雷達或尚無法進行首次測量，則視錐表將顯示為灰色。</span><span>雷達視錐表代表雷達可以在其中檢測目標的體積。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>顯示重心”</span></span></strong><span><span>使您可以顯示或隱藏具有非NULL<span> </span></span></span><a href="https://cyberbotics.com/doc/reference/physics"><span><span>物理</span></span></a><span><span>節點</span><span>的選定實體的全局重心</span><span>。</span><span>重心呈深藍色。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>顯示浮力中心”</span></span></strong><span><span>使您可以顯示或隱藏具有非NULL<span> </span></span></span><a href="https://cyberbotics.com/doc/reference/physics"><span><span>物理</span></span></a><span><span>節點</span><span>的選定實體的整體浮力中心</span><span>。</span><span>浮力中心以紫色渲染。</span></span></p>
+</li>
+<li>
+<p><span><span>使用</span></span><strong><span><span>顯示支撐多邊形，</span></span></strong><span><span>可以顯示或隱藏具有非NULL<span> </span></span></span><a href="https://cyberbotics.com/doc/reference/physics"><span><span>物理</span></span></a><span><span>節點</span><span>的選定實體的支撐多邊形</span><span>。</span><span>所謂支撐多邊形，是指實體的接觸點的凸包在水平平面上的投影，該平麵包含最低的多邊形。</span><span>此外，如果質心在後面的平面中的投影位於支撐多邊形內（靜態平衡），則呈綠色，否則呈紅色。</span><span>此渲染選項僅可用於頂部沒有其他實體的實體。</span></span></p>
+</li>
+</ul>
+</li>
+<li>
+<p><span><span>如果</span><span>啟用</span><span>了“<span> </span></span></span><strong><span><span>禁用選擇”</span></span></strong><span><span>選項，則它會阻止您在單擊3D窗口時更改所選的實體節點。</span><span>當您要更改視點而不修改場景樹中的可見字段和選定字段時，這在建模階段特別有用。</span></span></p>
+</li>
+<li>
+<p><span><span>如果</span><span>啟用</span><span>了“<span> </span></span></span><strong><span><span>鎖定視點”</span></span></strong><span><span>選項，則可以阻止您</span><span>在3D窗口上拖動鼠標或移動鼠標滾輪時</span><span>更改“<span> </span></span></span><a href="https://cyberbotics.com/doc/reference/viewpoint"><span><span>視點”</span></span></a><span><span>節點</span><span>的位置和方向</span><span>。</span><span>當您不想意外更改視點的位置和方向時，此功能特別有用。</span></span></p>
+</li>
+</ul>
+<blockquote>
+<p><strong><span><span>注意</span></span></strong><span><span>：“按</span></span><em><span><span>對象”</span></span></em><span><span>，“按</span></span><em><span><span>對象和旋轉”</span></span></em><span><span>，“<span> </span></span></span><em><span><span>投影”</span></span></em><span><span>，“<span> </span></span></span><em><span><span>渲染”</span></span></em><span><span>，“<span> </span></span></span><em><span><span>可選渲染項目”</span></span></em><span><span>，“<span> </span></span></span><em><span><span>禁用選擇”</span></span></em><span><span>和“<span> </span></span></span><em><span><span>鎖定視點”</span></span></em><span><span>選項按每個世界保存，而其他選項為全局。</span></span></p>
+</blockquote>
+<h4 class="anchor-header" id="simulationmenu" name="simulation-menu"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-user-interface#simulation-menu"><span class="anchor-link-image"></span></a><span><span>模擬菜單</span></span></h4>
+<p><span><span>該</span></span><strong><span><span>模擬</span></span></strong><span><span>菜單用於控制模擬模式。</span></span></p>
+<ul>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/pause-button.png" width="26"/><span><span>在</span></span><strong><span><span>暫停</span></span></strong><span><span>菜單項（和按鈕）暫停仿真。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/step-button.png" width="26"/><span><span>“<span> </span></span></span><strong><span><span>步驟”</span></span></strong><span><span>菜單項（和按鈕）執行模擬的一個基本時間步。</span><span>該步驟的持續時間</span><span>在</span><a href="https://cyberbotics.com/doc/reference/worldinfo"><span>WorldInfo</span></a><span>節點</span><span>的</span></span><strong><span><span>basicTimeStep</span></span></strong><span><span>字段中</span><span>定義</span><span>，可以在場景樹窗口中進行調整以滿足您的需求。</span></span><a href="https://cyberbotics.com/doc/reference/worldinfo"><span></span></a><span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/realtime-button.png" width="26"/><span><span>該</span></span><strong><span><span>實時</span></span></strong><span><span>菜單項（和按鈕），直到它被中斷運行在實時仿真</span></span><code>Pause</code><span><span>或</span></span><code>Step</code><span><span>。</span><span>在運行模式下，場景的3D顯示每</span></span><em><span><span>n個</span></span></em><span><span>基本時間步</span><span>刷新一次</span><span>，其中</span></span><em><span><span>n</span></span></em><span></span><code>displayRefresh</code><span><span>在</span></span><a href="https://cyberbotics.com/doc/reference/worldinfo"><span><span>WorldInfo</span></span></a><span><span>節點</span><span>的</span><span>字段中</span><span>定義</span><span>。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/run-button.png" width="26"/><span><span>“<span> </span></span></span><strong><span><span>運行”</span></span></strong><span><span>菜單項（和按鈕）類似於</span></span><code>Real-time</code><span><span>，除了它運行得盡可能快。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/fast-button.png" width="26"/><span><span>的</span></span><strong><span><span>快速</span></span></strong><span><span>菜單項目（和按鈕）是一樣</span></span><code>Run</code><span><span>，不同的是沒有圖形渲染被執行。</span><span>由於禁用了圖形渲染（黑屏），因此可以加快仿真速度，因此非常適合CPU密集型仿真（遺傳算法，視覺，學習等）。</span></span></p>
+</li>
+</ul>
+<h4 class="anchor-header" id="buildmenu" name="build-menu"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-user-interface#build-menu"><span class="anchor-link-image"></span></a><span><span>構建菜單</span></span></h4>
+<p><span><span>在</span></span><strong><span><span>生成</span></span></strong><span><span>菜單提供的功能，以編譯（或交叉編譯）控制器的代碼。</span></span><a class="dynamicLoad" href="https://cyberbotics.com/doc/guide/webots-built-in-editor"><span><span>此處</span></span></a><span><span>將更詳細地描述構建菜單</span><span>。</span></span></p>
+<h4 class="anchor-header" id="overlaysmenu" name="overlays-menu"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-user-interface#overlays-menu"><span class="anchor-link-image"></span></a><span><span>疊加菜單</span></span></h4>
+<p><span><span>“<span> </span></span></span><strong><span><span>覆蓋”</span></span></strong><span><span>菜單提供特定於渲染設備覆蓋的操作（“<span> </span></span></span><a href="https://cyberbotics.com/doc/reference/camera"><span><span>相機”</span></span></a><span><span>，“<span> </span></span></span><a href="https://cyberbotics.com/doc/reference/display"><span><span>顯示”</span></span></a><span><span>，“”<span> </span></span></span><code>Rangefinder</code><span><span>）。</span><span>僅當在3D窗口中選擇了機械手或模擬中只有一個機械手時，此菜單的某些操作才有效：</span></span></p>
+<ul>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>攝像機設備”</span></span></strong><span><span>子菜單包含所選機器人及其後代機器人的所有攝像機設備的列表，並允許用戶通過選中或取消選中相應項目來顯示或隱藏單個攝像機覆蓋圖像。</span><span>相機覆蓋層與顯示覆蓋層不同，因為它們具有洋紅色邊框。</span><span>請注意，如果</span></span><code>Hide All Camera Overlays</code><span><span>選中</span><span>該</span><span>項目，則與</span></span><code>Camera Devices</code><span><span>菜單項</span><span>的狀態無關，攝像頭設備的疊加層在3D視圖中將不可見</span><span>。</span><span>一</span></span><code>Camera Devices</code><span><span>，如果在外部窗口通過雙擊它顯示的疊加層的紋理菜單項將被禁用。</span></span></p>
+</li>
+<li>
+<p><span><span>所述</span></span><strong><span><span>測距儀設備</span></span></strong><span><span>子菜單包含所有選定的機器人的測距儀設備和其後代機器人的列表，並讓用戶顯示或隱藏由選中或取消選中相應的項的單測距儀的疊加圖像。</span><span>測距儀疊加層與照相機疊加層不同，因為它們具有黃色邊框。</span><span>請注意，如果</span></span><code>Hide All RangeFinder Overlays</code><span><span>選中</span><span>該</span><span>項目，則與</span></span><code>RangeFinder Devices</code><span><span>菜單項</span><span>的狀態無關，在3D視圖中將不會顯示測距儀設備覆蓋圖</span><span>。</span><span>一</span></span><code>RangeFinder Devices</code><span><span>，如果在外部窗口通過雙擊它顯示的疊加層的紋理菜單項將被禁用。</span></span></p>
+</li>
+<li>
+<p><span><span>所述</span></span><strong><span><span>顯示設備</span></span></strong><span><span>的子菜單包含所選機器人的所有的顯示設備和其後代機器人的列表，並讓通過檢查或取消選中相應的項目的用戶顯示或隱藏單個顯示疊加圖像。</span><span>顯示覆蓋圖與相機覆蓋圖不同，因為其青色邊框。</span><span>請注意，如果</span></span><code>Hide All Display Overlays</code><span><span>選中</span><span>該</span><span>項目，則顯示設備覆蓋圖在3D視圖中將不可見，而與</span></span><code>Display Devices</code><span><span>菜單項</span><span>的狀態無關</span><span>。</span><span>一</span></span><code>Display Devices</code><span><span>，如果在外部窗口通過雙擊它顯示的疊加層的紋理菜單項將被禁用。</span></span></p>
+</li>
+</ul>
+<p><span><span>另一方面，以下各項始終處於活動狀態，並適用於世界上所有的機器人：</span></span></p>
+<ul>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>隱藏所有攝像機覆蓋物”</span></span></strong><span><span>選項可獨立於</span></span><code>Camera Devices</code><span><span>子菜單中</span><span>設置的特定機器人設備選項，在3D視圖中隱藏所有攝像機設備覆蓋物</span><span>。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>隱藏所有RangeFinder疊加層”</span></span></strong><span><span>選項獨立於</span></span><code>RangeFinder Devices</code><span><span>子菜單中</span><span>設置的特定機器人的設備選項，在3D視圖中隱藏所有相機設備的疊加層</span><span>。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>隱藏所有顯示覆蓋圖”</span></span></strong><span><span>選項可獨立於</span></span><code>Display Devices</code><span><span>子菜單中</span><span>設置的特定機器人的設備選項，隱藏3D視圖中的所有顯示設備覆蓋圖</span><span>。</span></span></p>
+</li>
+</ul>
+<h4 class="anchor-header" id="toolsmenu" name="tools-menu"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-user-interface#tools-menu"><span class="anchor-link-image"></span></a><span><span>工具菜單</span></span></h4>
+<p><span><span>在</span></span><strong><span><span>工具</span></span></strong><span><span>菜單可以打開各種Webots窗口。</span></span></p>
+<ul>
+<li>
+<p><span><span>在</span></span><strong><span><span>3D視圖</span></span></strong><span><span>菜單項顯示或隱藏3D窗口，並允許您與3D模擬互動。</span></span></p>
+</li>
+<li>
+<p><span><span>該</span></span><strong><span><span>場景樹</span></span></strong><span><span>菜單項打開</span></span><code>Scene Tree</code><span><span>，可以在其中編輯虛擬世界的窗口。</span><span>或者，也可以雙擊主窗口中的某些對象：這將自動打開“場景樹”，並選擇相應的對象。</span></span></p>
+</li>
+<li>
+<p><span><span>在</span></span><strong><span><span>文本編輯器</span></span></strong><span><span>菜單項打開Webots文本編輯器。</span><span>該編輯器可用於編輯和編譯控制器源代碼。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>控制台”</span></span></strong><span><span>菜單項將打開“ Webots控制台”，這是一個只讀控制台，用於顯示Webots錯誤消息和控制器輸出。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>文檔”</span></span></strong><span><span>菜單項顯示或隱藏脫機“ Webots”文檔窗口。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>還原佈局”</span></span></strong><span><span>菜單項可還原主窗口面板的出廠佈局。</span></span></p>
+</li>
+<li>
+<p><span><span>該</span></span><strong><span><span>清除控制台</span></span></strong><span><span>菜單項清除控制台。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>編輯物理插件”</span></span></strong><span><span>菜單項將在文本編輯器中打開</span><strong><span>物理插件</span></strong><span>的源代碼。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>首選項”</span></span></strong><span><span>項將彈出</span></span><a class="dynamicLoad" href="https://cyberbotics.com/doc/guide/preferences"><span><span>本節中</span></span></a><span><span>描述的窗口</span><span>。</span></span></p>
+</li>
+</ul>
+<h4 class="anchor-header" id="wizardsmenu" name="wizards-menu"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-user-interface#wizards-menu"><span class="anchor-link-image"></span></a><span><span>嚮導菜單</span></span></h4>
+<p><span><span>該</span></span><strong><span><span>嚮導</span></span></strong><span><span>菜單可以更容易地創建新的項目和新的控制器。</span></span></p>
+<ul>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>新建項目目錄...”</span></span></strong><span><span>菜單項首先提示您選擇文件系統位置，然後創建一個項目目錄。</span><span>項目目錄包含幾個子目錄，這些子目錄用於存儲與特定Webots項目相關的文件，即世界文件，控制器文件，數據文件，插件等。Webots會記住當前項目目錄，並自動從中打開並保存任何類型的文件。當前項目目錄的相應子目錄。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>New Robot Controller ...”</span></span></strong><span><span>菜單項允許您創建新的控制器程序。</span><span>首先將提示您在C，C ++，Java，Python或</span></span><em><span><span>MATLAB<span> </span></span></span></em><sup><span><span>TM</span></span></sup><span><span>控制器</span><span>之間進行選擇</span><span>。</span><span>如果您在Windows上選擇C或C ++，Webots將為您提供創建Makefile / gcc項目或Visual Studio項目的可能性。</span><span>然後，Webots將要求您輸入控制器的名稱，最後它將在當前項目目錄中創建所有必需的文件（包括模板源代碼文件）。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>新建物理插件...”</span></span></strong><span><span>菜單項將使您可以為項目創建新的物理插件。</span><span>Webots要求您選擇一種編程語言（C或C ++）和新的物理插件的名稱。</span><span>然後，它將在當前項目中創建目錄，模板源代碼文件和Makefile。</span></span></p>
+</li>
+</ul>
+<h4 class="anchor-header" id="helpmenu" name="help-menu"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-user-interface#help-menu"><span class="anchor-link-image"></span></a><span><span>幫助菜單</span></span></h4>
+<p><span><span>使用“<span> </span></span></span><strong><span><span>幫助”</span></span></strong><span><span>菜單可以更輕鬆地訪問文檔，支持和常規信息。</span></span></p>
+<ul>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>關於...”</span></span></strong><span><span>項將打開一個</span></span><code>About...</code><span><span>顯示許可證信息</span><span>的</span><span>窗口。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>Webots導覽...”</span></span></strong><span><span>菜單項啟動了一個導覽，通過一系列示例演示了Webots的功能。</span></span></p>
+</li>
+<li>
+<p><span><span>“<span> </span></span></span><strong><span><span>檢查更新...”</span></span></strong><span><span>項會彈出一個窗口，通知正在使用的Webots版本是否為最新版本，並在需要時提供下載最新版本的鏈接。</span></span></p>
+</li>
+<li>
+<p><span><span>在</span></span><strong><span><span>OpenGL的信息...</span></span></strong><span><span>菜單項，為您提供有關當前OpenGL硬件和驅動程序的信息。</span><span>它可以用於診斷渲染問題。</span></span></p>
+</li>
+</ul>
+<p><span><span>其餘菜單項以HTML頁面，PDF文檔等形式顯示各種信息。</span></span></p>
+<h4 class="anchor-header" id="maintoolbar" name="main-toolbar"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-user-interface#main-toolbar"><span class="anchor-link-image"></span></a><span><span>主工具欄</span></span></h4>
+<p><span><span>主工具欄包含用於添加新節點對世界的按鈕，速度表（見本</span></span><a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/the-user-interface#speedometer-and-virtual-time"><span><span>節</span></span></a><span><span>）和快捷方式的項目</span></span><code>File</code><span><span>，</span></span><code>Simulation</code><span><span>和</span></span><code>View</code><span><span>菜單。</span></span></p>
+<ul>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/show_scene_tree-button.png" width="26"/><span> </span><strong><span><span>隱藏/顯示場景樹</span></span></strong><span><span>：顯示或隱藏場景樹，並因此調整3D窗口的大小。</span></span></p>
+</li>
+<li>
+<p><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/add-button.png" width="26"/><span> </span><strong><span><span>添加</span></span></strong><span><span>：添加節點或對象。</span><span>對於節點，這會觸發一個對話框，使您可以從列表中選擇節點類型。</span><span>將使用默認值創建新節點，之後可以對其進行修改。</span><span>您只能插入適合相應字段的節點。</span><span>該對話框還可以通過單擊</span></span><strong><span><span>導入...</span></span></strong><span><span>按鈕</span><span>來加載先前導出的節點</span><span>。</span><span>有關如何導出節點的更多信息，請參見</span></span><a class="dynamicLoad" href="https://cyberbotics.com/doc/guide/the-scene-tree#field-editor"><span><span>此處</span></span></a><span><span>。</span></span></p>
+</li>
+</ul>
+<h4 class="anchor-header" id="speedometerandvirtualtime" name="speedometer-and-virtual-time"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-user-interface#speedometer-and-virtual-time"><span class="anchor-link-image"></span></a><span><span>車速表和虛擬時間</span></span></h4>
+<p><span><span>速度計（請參見下</span></span><a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/the-user-interface#speedometer"><span><span>圖</span></span></a><span><span>）指示計算機上模擬的速度。</span><span>它顯示在主工具欄上，並指示仿真與實時相比運行的速度。</span><span>換句話說，它代表虛擬時間的速度。</span><span>如果速度計的值為2，則意味著您的計算機仿真的運行速度是相應真實機器人的兩倍。</span><span>此信息在</span></span><code>Run</code><span><span>模式和</span></span><code>Fast</code><span><span>模式下</span><span>均有效</span><span>。</span><span>注意：在逐步模式下運行模擬時，不會顯示模擬速度（</span></span><code>N/A</code><span><span>而是顯示）。</span></span></p>
+<figure name="speedometer"><img alt="speedometer.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/speedometer.png"/>
+<figcaption class="anchor-header"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-user-interface#speedometer"><span class="anchor-link-image"></span></a><span><span>車速表</span></span></figcaption>
+</figure>
+<p><span><span>在速度表的左側，</span><span>使用以下格式顯示</span></span><em><span><span>虛擬時間</span></span></em><span><span>：</span></span></p>
+<pre><code>H:MM:SS:MMM
+</code></pre>
+<p><span><span>其中</span></span><em><span><span>H</span></span></em><span><span>是小時數（可以是幾位數字），</span></span><em><span><span>MM</span></span></em><span><span>是分鐘數，</span></span><em><span><span>SS</span></span></em><span><span>是秒數，</span></span><em><span><span>MMM</span></span></em><span><span>是毫秒數（請參見此</span></span><a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/the-user-interface#speedometer"><span><span>圖</span></span></a><span><span>）。</span><span>如果車速表的值大於1，則虛擬時間的進度要快於實時時間。</span></span></p>
+<p><span><span>可以</span><span>在場景樹窗口</span></span><code>basicTimeStep</code><span><span>的</span></span><a href="https://cyberbotics.com/doc/reference/worldinfo"><span><span>WorldInfo</span></span></a><span><span>節點</span><span>的</span><span>字段中</span><span>設置模擬的基本時間步長</span><span>。</span><span>它以虛擬時間毫秒錶示。</span><span>該時間步長的值定義了在</span></span><code>Step</code><span><span>模式</span><span>期間執行的時間步長</span><span>。</span><span>此步驟乘以</span></span><code>displayRefresh</code><span><span>同一</span></span><a href="https://cyberbotics.com/doc/reference/worldinfo"><span><span>WorldInfo</span></span></a><span><span>節點</span><span>的</span><span>字段，</span><span>以定義刷新顯示的頻率。</span></span></p>
+<br />Webots Tutorial << <a href='Webots Tutorial.html'>Previous</a> <a href='Scene Tree.html'>Next</a> >> Scene Tree</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        

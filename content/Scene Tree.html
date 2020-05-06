@@ -162,17 +162,24 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Week1-5.html'>Next</a> >> Week1-5<br /><h1>Weeks</h1>
-<p><a href="https://s40723210.github.io/cd2020/content/Week1-5.html">Week1-5</a></p>
-<p><a href="https://s40723210.github.io/cd2020/content/Week6-9.html">Week6-9</a></p>
-<p><a href="https://s40723210.github.io/cd2020/content/Week10-14.html">Week10-14</a></p>
-<p><a href="https://s40723210.github.io/cd2020/content/Week15-18.html">Week15-18</a></p>
-<hr/>
-<p>倉儲網址:<a href="https://github.com/s40723210/cd2020" title="https://github.com/s40723210/cd2020">https://github.com/s40723210/cd2020</a></p>
-<p>youtube:<a href="https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw">https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw</a></p>
-<p>分組倉儲網址:<a href="https://s40723210.github.io/cd2020bg4" title="https://s40723210.github.io/cd2020bg4">https://s40723210.github.io/cd2020bg4</a></p>
-<p><span>gitter : </span><a href="https://gitter.im/40723210/cd2020">https://gitter.im/40723210/cd2020</a></p>
-<br /> <a href='Week1-5.html'>Next</a> >> Week1-5</div>
+    <div id="tipue_search_content">User Interface << <a href='User Interface.html'>Previous</a> <br /><h1>Scene Tree</h1>
+<p><span>如上一節所述，要訪問“場景樹窗口”，可以</span><code>Scene Tree</code><span>在</span><code>Tools</code><span>菜單中選擇，也可以按</span><code>Show Scene Tree</code><span>主工具欄中的按鈕。場景樹包含描述模擬世界（包括機器人和環境）及其圖形表示的信息。Webots的場景樹的結構類似於VRML97文件。它由節點列表組成，每個節點包含字段。字段可以包含值（文本字符串，數字值）或其他節點。</span></p>
+<p><span><span>本節描述了“場景樹”的用戶界面，並概述了VRML97節點和Webots節點。</span></span></p>
+<figure name="scene-tree-window"><img alt="scene_tree1.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/scene_tree1.thumbnail.jpg"/>
+<figcaption class="anchor-header"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-scene-tree#scene-tree-window"><span class="anchor-link-image"></span></a><span><span>場景樹窗口</span></span></figcaption>
+</figure>
+<p><span><span>場景樹具有上下文菜單，該上下文菜單包含許多有用的操作，具體取決於選擇，包括但不限於：剪切，複製和粘貼操作，將字段重置為其默認值，將</span></span><a href="https://cyberbotics.com/doc/reference/viewpoint"><span><span>視點</span></span></a><span><span>移至對象，設置</span></span><a href="https://cyberbotics.com/doc/reference/viewpoint"><span><span>視點</span></span></a><span><span>跟隨對象，或打開文檔查看器以查看所選節點的文檔。</span></span></p>
+<p><span><span>此外，如果當前選擇是</span></span><a href="https://cyberbotics.com/doc/reference/robot"><span><span>Robot</span></span></a><span><span>節點（或後代，或</span></span><code>PROTO</code><span><span>基於</span></span><a href="https://cyberbotics.com/doc/reference/robot"><span><span>Robot的</span></span></a><span><span>實例</span><span>），則可以在文本編輯器中打開相應的機器人窗口或打開機器人的控制器。</span></span></p>
+<h4 class="anchor-header" id="fieldeditor" name="field-editor"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-scene-tree#field-editor"><span class="anchor-link-image"></span></a><span><span>現場編輯</span></span></h4>
+<p><span><span>可以雙擊擴展節點。</span><span>選擇字段後，可以在“場景樹”的底部編輯其值。</span><span>雙擊或按</span></span><code>Enter</code><span><span>字段上</span><span>的</span><span>鍵將選擇字段編輯器面板的第一個可編輯項目。</span><span>可以通過在字段編輯器面板中的所有項目之間切換來將鍵盤焦點返回到“場景樹”。</span><span>對於文本字段，通過按鍵應用更改</span></span><code>Enter</code><span><span>。</span><span>這對於數字字段是相同的，但是向上和向下箭頭鍵也可以用於向上和向下調整值，並立即應用更改。</span><span>對於復選框，使用</span></span><code>Space</code><span><span>欄</span><span>更改值</span><span>。</span><span>應用的更改將立即反映在3D窗口中。</span><span>字段編輯器部分提供以下按鈕：</span></span></p>
+<figure name="webots-node-editor"><img alt="field_editor.png" src="https://raw.githubusercontent.com/cyberbotics/webots/master/docs/guide/images/field_editor.png"/>
+<figcaption class="anchor-header"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/the-scene-tree#webots-node-editor"><span class="anchor-link-image"></span></a><span><span>Webots節點編輯器</span></span></figcaption>
+</figure>
+<ul>
+<li>
+<p><strong><span><span>顯示調整大小手柄</span></span></strong><span><span>：顯示用於調整大小和縮放3D窗口中選定節點的手柄。</span><span>僅對“幾何”節點和“<span> </span></span></span><a href="https://cyberbotics.com/doc/reference/transform"><span><span>變換”</span></span></a><span><span>節點</span><span>派生的節點顯示此選項</span><span>。</span><span>對於過程性PROTO節點，僅當在模板語句中未使用調整大小或縮放所涉及的字段時才可用。</span></span></p>
+</li>
+</ul><br />User Interface << <a href='User Interface.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
