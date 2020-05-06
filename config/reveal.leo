@@ -21,17 +21,53 @@
 <v t="leo.20200408200022.1"><vh>封面投影片</vh>
 <v t="leo.20200408200022.2"><vh>封面投影片內容</vh></v>
 </v>
+<v t="leo.20200506221703.1"><vh>W1</vh>
+<v t="leo.20200506221703.2"><vh>封面投影片內容</vh></v>
+</v>
 <v t="leo.20200430130708.1"><vh>W2</vh>
 <v t="leo.20200430130708.2"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20200430131151.1"><vh>w2建倉</vh>
-<v t="leo.20200430131151.2"><vh>封面投影片內容</vh></v>
+<v t="leo.20200506222827.1"><vh>meet1</vh>
+<v t="leo.20200506222827.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200506224619.1"><vh>1111</vh>
+<v t="leo.20200506224619.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20200430131341.1"><vh>w2建倉</vh>
 <v t="leo.20200430131341.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20200430131342.1"><vh>w2建倉</vh>
 <v t="leo.20200430131342.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200430131151.1"><vh>1pdff</vh>
+<v t="leo.20200430131151.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200506223845.1"><vh>W6</vh>
+<v t="leo.20200506223845.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200506225811.1"><vh>webcam</vh>
+<v t="leo.20200506225811.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200506225132.1"><vh>a2</vh>
+<v t="leo.20200506225132.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200506224443.1"><vh>meet2</vh>
+<v t="leo.20200506224443.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200506224819.1"><vh>w2建倉</vh>
+<v t="leo.20200506224819.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200506224820.1"><vh>w2建倉</vh>
+<v t="leo.20200506224820.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200506224822.1"><vh>w2建倉</vh>
+<v t="leo.20200506224822.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200506230204.1"><vh>w2建倉</vh>
+<v t="leo.20200506230204.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200506225339.1"><vh>2pdf</vh>
+<v t="leo.20200506225339.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
@@ -366,9 +402,9 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 
 						
 </t>
-<t tx="leo.20200430131151.2">##  Random grouping
+<t tx="leo.20200430131151.2">###  assignment1 pdf
 
-&lt;iframe height="520" src="https://s40723210.github.io/cd2020/content/Random%20grouping.html" width="710"&gt;&lt;/iframe&gt;
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/downloads/assignment1.pdf" width="880"&gt;&lt;/iframe&gt;
 </t>
 <t tx="leo.20200430131341.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -379,9 +415,9 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 
 						
 </t>
-<t tx="leo.20200430131341.2">##  Portable system
+<t tx="leo.20200430131341.2">###  Portable system
 
-&lt;iframe height="520" src="https://s40723210.github.io/cd2020/content/Portable%20system.html" width="710"&gt;&lt;/iframe&gt;
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/content/Portable%20system.html" width="880"&gt;&lt;/iframe&gt;
 </t>
 <t tx="leo.20200430131342.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -392,9 +428,191 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 
 						
 </t>
-<t tx="leo.20200430131342.2">##  Four wheel car
+<t tx="leo.20200430131342.2">###  Four wheel car
 
-&lt;iframe height="520" src="https://s40723210.github.io/cd2020/content/Four%20wheel%20car.html" width="710"&gt;&lt;/iframe&gt;
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/content/Four%20wheel%20car.html" width="880"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200506221703.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200506221703.2">###  [Week1-5](https://s40723210.github.io/cd2020/content/Week1-5.html)
+
+* 進行亂數分組
+&lt;hr&gt;
+* 建立個人倉儲cd2020
+&lt;hr&gt;
+* 更新至python 3.8.2
+&lt;hr&gt;
+* 創建分組倉儲
+&lt;hr&gt;
+* 直播分配作業一
+&lt;hr&gt;
+* 完成assignment1報告
+&lt;hr&gt;
+</t>
+<t tx="leo.20200506222827.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200506222827.2">##  作業一直播會議
+
+&lt;iframe width="760" height="520" src="https://www.youtube.com/embed/r0AABAp474U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200506223845.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200506223845.2">##  [Week6-9](https://s40723210.github.io/cd2020/content/Week6-9.html)
+
+* 直播分配作業二
+&lt;hr&gt;
+* 使用webcam進行串流
+&lt;hr&gt;
+* 了解V-rep和webots
+&lt;hr&gt;
+* V-rep四輪車模擬
+&lt;hr&gt;
+* 配置remote api環境
+&lt;hr&gt;
+* 完成assignment2報告
+&lt;hr&gt;
+
+</t>
+<t tx="leo.20200506224443.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200506224443.2">##  作業二直播會議
+
+&lt;iframe width="760" height="520" src="https://www.youtube.com/embed/a69tNWKmC64" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200506224619.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200506224619.2">### Random grouping
+
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/content/Random%20grouping.html" width="880"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200506224819.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200506224819.2">###  DigitalProductCollaboration
+
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/content/DigitalProductCollaboration.html" width="880"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200506224820.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200506224820.2">###  EngineeringProductDesign
+
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/content/EngineeringProductDesign.html" width="880"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200506224822.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200506224822.2">###  MechanicalDesignProcess
+
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/downloads/MechanicalDesignProcess%E7%BF%BB%E8%AD%AF.pdf" width="880"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200506225132.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200506225132.2">##  [assignment2](https://s40723210.github.io/cd2020/content/assignment2.html)
+
+* According to the material of Topic 0 and Topic 1, can you describe specifically what the mechanical design team need to do for accomplishing Assignment 1's four wheeled robot.
+&lt;hr&gt;
+* What do you need to know from https://cyberbotics.com/doc/guide/index to implement a four-wheeled robot?
+&lt;hr&gt;
+</t>
+<t tx="leo.20200506225339.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200506225339.2">###  assignment1 pdf
+
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/downloads/assignment2.pdf" width="880"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200506225811.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200506225811.2">##  webcam畫面製作
+
+&lt;iframe width="760" height="520" src="https://www.youtube.com/embed/YCAGt9qku6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200506230204.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200506230204.2">### Article impression
+
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/content/Article%20impression.html" width="880"&gt;&lt;/iframe&gt;
 </t>
 </tnodes>
 </leo_file>
