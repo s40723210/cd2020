@@ -1,0 +1,488 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>s40723210</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <script type="text/javascript">
+             document.oncontextmenu = function(){
+                    return false;
+             }
+             document.onselectstart = function(){
+                    return false;
+             }
+        </script>
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>s40723210 cd2020</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">s40723210 cd2020</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='Weeks.html'>Weeks</a><ul class='dropdown'><li class='has-children'><a href='Week1-5.html'>Week1-5</a><ul class='dropdown'><li><a href='OBS Streaming.html'>OBS Streaming</a></li></ul><li class='has-children'><a href='Week6-9.html'>Week6-9</a><ul class='dropdown'><li><a href='Article impression.html'>Article impression</a></li></ul><li><a href='Week10-14.html'>Week10-14</a></li></ul><li class='has-children'><a href='Notes.html'>Notes</a><ul class='dropdown'><li><a href='Linux 指令.html'>Linux 指令</a><li><a href='vi 與 vim 的指令整理.html'>vi 與 vim 的指令整理</a><li><a href='Q&A.html'>Q&A</a></li></ul><li class='has-children'><a href='Assignments.html'>Assignments</a><ul class='dropdown'><li class='has-children'><a href='assignment1.html'>assignment1</a><ul class='dropdown'><li><a href='Random grouping.html'>Random grouping</a><li><a href='Portable system.html'>Portable system</a><li><a href='Four wheel car.html'>Four wheel car</a></li></ul><li class='has-children'><a href='assignment2.html'>assignment2</a><ul class='dropdown'><li><a href='DigitalProductCollaboration.html'>DigitalProductCollaboration</a><li><a href='EngineeringProductDesign.html'>EngineeringProductDesign</a><li><a href='MechanicalDesignProcess.html'>MechanicalDesignProcess</a><li><a href='Keyboard control car.html'>Keyboard control car</a></li></ul><li class='has-children'><a href='assignment3.html'>assignment3</a><ul class='dropdown'><li><a href='MechaEducFutureNeed.html'>MechaEducFutureNeed</a></li></li></ul></ul><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='BubbleRob tutorial.html'>BubbleRob tutorial</a><li><a href='Line following BubbleRob.html'>Line following BubbleRob</a><li><a href='External controller tutorial.html'>External controller tutorial</a><li><a href='Simulation.html'>Simulation</a><li><a href='Simulation dialog.html'>Simulation dialog</a></li></ul><li class='has-children'><a href='Webots Tutorial.html'>Webots Tutorial</a><ul class='dropdown'><li><a href='User Interface.html'>User Interface</a><li><a href='Scene Tree.html'>Scene Tree</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">assignment3 << <a href='assignment3.html'>Previous</a> <a href='CoppeliaSim.html'>Next</a> >> CoppeliaSim<br /><h1>MechaEducFutureNeed</h1>
+<p>原文pdf連結:<a href="https://drive.google.com/file/d/1AFADmyNrwprE7AesaFAecZZquIfzbLw-/view?usp=sharing">MechaEducFutureNeed.pdf</a></p>
+<p>翻譯連結:<a href="./../downloads/MechaEducFutureNeed翻譯.pdf">MechaEducFutureNeed翻譯.pdf</a></p>
+<h4 class="c17"><span style="color: #0000ff;"><strong><span class="c5 c22 c26">Ch15機電一體化教育：滿足未來需求</span></strong></span></h4>
+<p class="c2"><span class="c15 c7">15.1簡介</span></p>
+<p class="c2"><span class="c0">在員工大會、會議和部落格上熱烈討論的所有主題中，未來的教育效果和相關性似乎總是在上升。教授們回想起自己的教育經歷和在學術界達到目前的地位而奮鬥的過程，這是因為目前缺乏數學和缺乏學生才能以及從硬設計轉變為即插即用的思維方式。軟件即服務（SaaS）、雲計算以及平台即服務（PaaS）和機電一體化系統之間存在明顯的脫節。</span></p>
+<p class="c2"><span class="c0">  雖然從構成物聯網（IoT）的計算單元內部進行抽象可能會加快產品的發布速度，但在實際應用領域中工作的機電工程師卻正在考慮軟件及其原始碼的完整性、可靠性。實際環境中的時間，如何管理組件升級以及故障後的系統恢復。本章包含作者經驗中的真實經歷、困難、挑戰和討論主題，旨在突出機電工程師必須了解的知識並說明創新和技術靈活性的必要性。選擇本章的每個小節都是為了突出技術和非技術主題，這些主題應該成為機電一體化教育不可或缺的一部分。</span></p>
+<p class="c2"><span class="c0">  在2014年6月於瑞典Karlstad,Sweden舉行的2014年機電一體化會議上，作者是受邀小組成員，進行了激烈的討論。他在製造系統集成行業和學術界工作了近五十年。本章中表達的是他本人的觀點，旨在發起討論，並希望在其讀者機構的教學人員和管理人員中實現機電一體化教育的真正進步。隨著教學交付機制從傳統的講課課堂遷移到更多的基於結果的教學大綱和技術增強的學習中，希望讀者能夠決定機電一體化和類似學科的最佳行動方案學習課程。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c15 c7">15.2教育經歷與就業</span></p>
+<p class="c2"><span class="c0">對教育過程進行快速的審核，很明顯與專業相反，沒有機電一體化的真正知識。比較在大學甚至大學前的共同核心教育，不在本章的範圍之內。目的是強調如何構成未來工程學隊列的學生、教授與眾不同的相似元素，從而降低在線交付的效率。</span></p>
+<p class="c2"><span class="c7">  儘管在撰寫本文時，在線教學可能處於上升之中，North Carolina Charlotte大學（UNCC）的教學中心列出了150種不同的教學方法，但不能肯定所有方法都適用於機電一體化。這些範圍從著名的</span><span class="c5">老師的演講</span><span class="c7">（排名第一）到</span><span class="c5">小組集體討論</span><span class="c7">（排名第150）。排名第106的是</span><span class="c5">技術和教學資源的使用</span><span class="c7">。 該章作者最喜歡冒險的是＃127</span><span class="c5">參觀民族餐廳</span><span class="c0">。 但是，什麼是最適合學生的呢？</span></p>
+<p class="c2"><span class="c0">  有許多教學方法。 表15.1是Southern Nevada大學（CSN）網站的，並總結了可以與各種教學方式相關的一些教學方法。</span></p>
+<p class="c2"><span class="c0">  學術讀者將隨時隨地聯想到他們機構中的課程是如何進行的。在完整的CSN網站之後，有興趣的讀者可能會發現這些方法如何轉化為有趣的在線環境。</span></p>
+<p class="c2"><span class="c11 c7">15.2.1機構</span></p>
+<p class="c2"><span class="c0">在美國，有一千多所擁有一所工程學校的學院和大學。如果增加歐洲、中國和印度的工程部門數量，則這個數字將大大增加。就課程而言，大多數學校都受到理事機構的監管（例如，美國的ABET），但是美國沒有通用的核心課程。</span></p>
+<p class="c2"><span class="c0">  這意味著在機構A中所教的內容在機構B中可能是膚淺的，甚至根本沒有。在國外，問題更加嚴重。某些國家/地區的一些工程學校沒有通過其本身以外的會議。通過授予工程學學位，這些機構承諾為他們的畢業生提供好工作和更好的生活，甚至根本不認為他們在國內或國外都享有良好的工作。這對學生不利。</span></p>
+<p class="c2"><span class="c8 c5">表15.1 教學方法和教學風格</span></p>
+<table class="c18" style="width: 528px;">
+<tbody>
+<tr class="c10">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
+<p class="c17"><span style="color: #ff0000;"><span class="c7 c24">方法</span></span></p>
+</td>
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
+<p class="c17"><span class="c7 c24" style="color: #ff0000;">註釋</span></p>
+</td>
+</tr>
+<tr class="c10">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
+<p class="c4"><span class="c0">演講</span></p>
+</td>
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
+<p class="c2"><span class="c0">一種靈活的方法，幾乎可以應用於任何內容。 儘管講座可能非常吸引人，但它們使學生處於被動角色。經驗豐富的工作人員可以將他們的實際經驗融入課程材料中，以顯示班級的相關性。</span></p>
+</td>
+</tr>
+<tr class="c10">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
+<p class="c3"><span class="c0">講座討論</span></p>
+</td>
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
+<p class="c2"><span class="c0">將講座與簡短問題期或一系列簡短問題期相結合。</span></p>
+</td>
+</tr>
+<tr class="c10">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
+<p class="c3"><span class="c0">示範</span></p>
+</td>
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
+<p class="c2"><span class="c0">讓學生根據講師的表現學習過程或程序。學生可以參與示範和練習。</span></p>
+</td>
+</tr>
+<tr class="c10">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
+<p class="c4"><span class="c0"></span><span class="c0">模擬</span></p>
+</td>
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
+<p class="c2"><span class="c0">模擬使學習者處於看似真實的情況下，他們可以做出決策並體驗決策的結果而不會冒險。</span></p>
+</td>
+</tr>
+<tr class="c10">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
+<p class="c3"><span class="c0">協同學習</span></p>
+</td>
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
+<p class="c2"><span class="c0">學生通過相互討論與課程相關的問題和主題來處理信息並獲得知識。</span></p>
+</td>
+</tr>
+<tr class="c10">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
+<p class="c17"><span class="c0">合作學習</span></p>
+</td>
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
+<p class="c2"><span class="c0">一小組學生一起解決問題或完成任務。</span></p>
+</td>
+</tr>
+<tr class="c10">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
+<p class="c4"><span class="c0"></span><span class="c0">實例探究</span></p>
+</td>
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
+<p class="c2"><span class="c0">這涉及個人或學生群體一起分析案例，這通常是一種現實情況，旨在突出問題和解決方案。</span></p>
+</td>
+</tr>
+<tr class="c10">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
+<p class="c4"><span class="c0"></span><span class="c0">角色扮演</span></p>
+</td>
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
+<p class="c2"><span class="c0">學生通過採用與之相關的不同角色來解決問題。角色扮演涉及識別，執行和討論問題。小心謹慎，這可能非常有效，特別是在系統工程的非技術方面，例如人力資源管理。</span></p>
+</td>
+</tr>
+<tr class="c10">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
+<p class="c4"><span class="c0"></span><span class="c0">基於問題和探究學習</span></p>
+</td>
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
+<p class="c2"><span class="c0">講師給學生一個問題，學生必須通過收集數據，組織數據並嘗試進行解釋來解決。 學生還應該分析他們用來解決問題的策略。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="c1"><span class="c8 c5"></span></p>
+<p class="c2"><span class="c5"> <span> </span></span><span class="c0">為了解決這個問題，許多知名大學和學院都開設了在線和遠端研究生課程。 機電一體化，機器人技術和其他學科在旨在成為教育對象的領域中很受歡迎。</span></p>
+<p class="c2"><span class="c11 c7">15.2.2學院教職員工</span></p>
+<p class="c2"><span class="c0">大學教學人員、講師和教授最好是成熟的，並且具有一定的實際行業經驗。他們沒有經過真正的教學培訓，就按照所教的內容進行教學、理論豐富，並且與學生的興趣或最終職業無關。大多數教學人員在教學，課堂管理或法律和道德事務上都沒有或很少接受過正式培訓。</span></p>
+<p class="c2"><span class="c0">  《美國新聞與世界報導》每年對排名靠前的學校進行排名，但該排名通常反映出研究支出，所授予博士學位的數量（如果適用），在其機構內擁有最終學位和研究員身份的員工人數。 該等級可以包括畢業率和保留率。 可以為每位工作人員規定教學方法，但是在合同續簽問題上，教學方法的重視程度肯定低於受資助的研究。</span></p>
+<p class="c2"><span class="c0">  英國教學質量評估（TQA）等工作旨在強調和獎勵學校和學院的良好教學實踐，與研究評估練習（RAE）處理研究的方式幾乎相同。 優秀的研究人員和教學人員有責任在TQA和RAE評審中提高成績。 在美國，工程部門需要接受全國范圍內ABET的定期認證程序，但只能獲得學士學位。 但是，什麼是最適合學生的呢？</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c11 c7">15.2.3大學生</span></p>
+<p class="c2"><span class="c0">舉例來說，在美國，許多工程專業的學生在相當集中的課程中花費了兩年多的時間（例如，電氣工程），並且可能在第一年或第二年選擇自己的專業。在進行這些研究的同時，學生將接觸到道德、法律問題和陳述。在歐洲，學生可以進入已經知道他們所選領域的課程，並經歷四年的主題學習。 一些學校在最後一年之前註入工作經驗，而另一些則從事最後一年的學生項目。</span></p>
+<p class="c2"><span class="c0">  幾乎不用說，成功的學生將具有良好的學習技能和對工程學的興趣，而缺乏學習精神的學生則表現較差，並經常轉入其他（自認為更容易）的課程或機構。 這是一個眾所周知的結構，即學生在上大學之前如何學習科學、技術、工程和數學（STEM），這是該大學生選擇哪些研究領域的主要指標；這將在本章末尾顯示，在全球範圍內有所不同。儘管獲得了獎學金和經濟援助，但地理位置、需求和社會地位確實可以確定哪些機構對申請人可行。</span></p>
+<p class="c2"><span class="c0">  全球的工科學校有些挑剔，要獲得學士學位，需要四年甚至五年的學習時間。 機電一體化當然是由學士，碩士和博士學位級別的人教授的，但通常是由熱情的工作人員擁護。 是否吸引學生攻讀研究生學位以幫助員工進行研究和教學，而不是行業僱用？ 這對學生最好嗎？</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c11 c7">15.2.4機電一體化用人單位</span></p>
+<p class="c2"><span class="c0">現在想像一下，該學生已經成功地在一家技術公司找到了工作，該公司為本章的目的生產或使用機電一體化系統。這樣的雇主對專業知識有進一步發展他們的產品或服務的需求，並對即將畢業的畢業生或技術人員寄予厚望。</span></p>
+<p class="c2"><span class="c0">  在法律和醫學專業中，創新者必須先完成居住才能獲得認證，然後才能執業，而在工程學中，成為一家機構的特許會員在很大程度上被認為是可選的、珍貴的且無關緊要的。 對於新員工來說，通常是經驗豐富的工程師，直到他們可以自己分配給項目專家為止。由此，讀者可以推斷出項目失敗的原因，成本超支的發生方式以及產品從未達到客戶預期的效果。 什麼對公司最合適？</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c15 c7">15.3機電一體化：現實世界中的小插圖精選</span></p>
+<p class="c2"><span class="c0">以下內容包含了本章作者的經驗中的三個真實的事實短片，旨在反映機電一體化教育中的必要主題。出於保密原因，省略了公司名稱或公司名稱，但希望讀者會發現示例有用。每個小節將簡要描述一個真實的系統及其設計、問題如何自我呈現、問題的解決方法，最重要的是，機電技術工程師可以使用什麼教育技能來解決問題。為了更好地說明這一點，第一種情況比其他兩種情況更為詳細。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c11 c7">15.3.1注塑成型監控系統</span></p>
+<p class="c2"><span class="c8 c5">總覽</span></p>
+<p class="c2"><span class="c0">一家注塑公司與系統工程公司簽約，以設計和實施其主要場所的生產監控系統，該系統最多可運行40台高科技模塑機。 每天大約有35台機器定期運行，每天生產數千萬個塑料小零件。這些組件按重量包裝在盒子中，然後傳遞到質量控制和庫存中。 圖15.1顯示了一個典型的注塑（IM）工廠。</span></p>
+<p class="c17"><span><img alt="" src="https://lh4.googleusercontent.com/FhlGlOWiy_4sT_dmVNXym8ElVKw0ex-Q9F6Qn1U1icLjv5-IiVw5NXc4P3XQdPJMaeqZ4b5S_lfzN21slnyVQuFeTnlzZoOjdjf-2J2T1aVM_p06lVEt27M8X8ryxm6dq8YdgBk" title=""/></span></p>
+<p class="c2"><span class="c5">圖15.1</span><span class="c0">典型的美國注塑操作（由Rodon Group，Hatfield PA提供）</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c0">  工廠在逐個工作的基礎上生產各種物品。任何機器上的工作變更都需要花費大量的精力來清除先前的有色原始材料和必要的模具安裝，並且新的液態塑料會滲入系統中以用於下一項工作。機械師可能會多次循環機器，直到新零件完美為止，但是這些測試操作永遠不會出現在生產數量中。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c8 c5">要求摘要</span></p>
+<p class="c2"><span class="c0">系統的要求包括以24×7為基礎對每台機器的每個週期進行測量，將實際性能與工廠工作指令進行比較，在整個工廠提供顯示屏以及定期下載 庫存數據到大型計算機。從數據完整性的角度來看，這實際上是很難做到的，因為並非所有的機器週期都會產生例如 技術人員進行新工作或清除卡紙。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c8 c5">系統設計</span></p>
+<p class="c2"><span class="c0">與工業客戶多次會面後，圖15.2作為初步的系統設計出現了。在大多數工業自動化設置中，主要組件是相當標準的。可編程邏輯控制器（PLC）是工業過程控制代理、可抵抗斷電，並具有本地存儲、通信功能以及多個輸入和輸出數據端口。</span></p>
+<p class="c2"><span class="c0">在設計了系統之後，在對系統進行了更詳細的現場檢查之後，提出了以下迄今為止無法預料的問題：</span></p>
+<p class="c2"><span class="c0">1.如何長距離連接機器信息？</span></p>
+<p class="c2"><span class="c0">2.如何在如此長的距離上連接所有系統設備？電信號都是低質量的，注塑機會隨機產生明顯的噪聲。</span></p>
+<p class="c2"><span class="c0">3.顯示多少信息有用？</span></p>
+<p class="c2"><span class="c0">4.操作員和技工如何提供特定數據進行顯示？</span></p>
+<p class="c2"><span class="c0">解決這些問題後，實際上確實需要重新設計系統併購買其他軟件和硬件，然後對系統進行編碼和安裝。</span></p>
+<p class="c17"><span><img alt="https://scontent.frmq2-2.fna.fbcdn.net/v/t1.15752-9/97107811_632633217288351_8921498280475492352_n.png?_nc_cat=100&amp;_nc_sid=b96e70&amp;_nc_ohc=bDSw5Vxox9QAX8blfUz&amp;_nc_ht=scontent.frmq2-2.fna&amp;oh=a3d085cc29e70198d4c95a4f98f6000d&amp;oe=5EDCAF60" src="https://lh5.googleusercontent.com/t6SQaeftb4Zf9XXUZVDn8BLtzb-IL4niE7gaZkiEsLO61DqYf2E7SGno03ARIuZU2NPuXtwrR_NCnINL19oVPxx_mRO3BTEoXGrrh3qPDoBo1D3TVDnpCjjRo02BXWgLPPb1h4c" title=""/></span></p>
+<p class="c2"><span class="c5">圖15.2</span><span class="c0">初步系統設計</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c8 c5">問題領域</span></p>
+<p class="c2"><span class="c0">在系統的日常運行中，出現了以下意外情況：</span></p>
+<p class="c2"><span class="c0">1.在操作期間隨時可能出現凍結的隨機數據。</span></p>
+<p class="c2"><span class="c0">2.主工廠電源中斷或停電後數據丟失。</span></p>
+<p class="c2"><span class="c0">3.處理機器的維護和維修狀態週期。</span></p>
+<p class="c2"><span class="c0">4.輪班報告顯示錯誤時間。</span></p>
+<p class="c2"><span class="c0">  這些問題似乎表明了系統中的致命缺陷，但使用機電一體化原理可以解決。 本章作者的解決方案在15.5.1節中進行了概述。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c11 c7">15.3.2在小型計算機上執行大型機代碼</span></p>
+<p class="c2"><span class="c8 c5">總覽</span></p>
+<p class="c2"><span class="c0">一家公司正在使用大型計算機來執行高級CADCAM和圖形處理。每個設計站的成本超過50,000美元，大型機租賃和操作系統的每月成本超過100,000美元。 顧問找到了一家公司，該公司通過對小型計算機的主板進行一些細微的調整，找到了一種在價值2萬美元的小型計算機上運行大型機指令的方法。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c8 c5">發明概述</span></p>
+<p class="c2"><span class="c0">圖15.3說明瞭如何通過使用專有固件修改小型計算機主板來由小型計算機訪問和執行大型機指令。虛線所示的示意圖是所需的唯一固件修改。小型計算機字的大小必須與從製造商處購買的大型機指令芯片組（32位）相當。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c8 c5">問題領域</span></p>
+<p class="c2"><span class="c0">該系統運行良好，並且CADCAM應用成功，並且是傳統圖形工作站的廉價替代品。在升級小型計算機操作系統之後，系統完全無法運行。嵌入在CADCAM序列中的大型計算機指令突然導致微型計算機返回非法指令陷阱，並完全導CADCAM故障。</span></p>
+<p class="c2"><span class="c0">  此問題表明系統中存在致命缺陷，最終被證明無法解決，導致該項目被終止。本章作者的解釋在15.5.2節中進行了總結。</span></p>
+<p class="c2"><span><img alt="" src="https://lh3.googleusercontent.com/njplqTqzlSd9C2qxnNTU7ZzSMbfLgBmzxSc_LdyTTUpJrqwJ4eWHK4sguxd5uN5k_wN8uhcQScXveWqm-o5-yXfyVT8h8dVCdl57pxIxw8jv1hxBI7kgZSIc3b7P24vfrUkuHhE" title=""/></span></p>
+<p class="c2"><span class="c5">圖15.3</span><span class="c0">修改後的微型計算機主板示意圖</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c11 c7">15.3.3機械不穩定的系統</span></p>
+<p class="c2"><span class="c8 c5">總覽</span></p>
+<p class="c2"><span class="c7">許多研究人員研究了各種將控制引入倒立擺裝置的方法。該系統適用於自適應、智能、進化和學習控制。 圖15.4是作者與之合作的一種此類鑽機的照片。本質上，手推車是在計算機命令下以</span><span class="c5">左右</span><span class="c0">模式驅動的。實驗被限制在一個兩米長的軌道上，兩端各有一個碰撞傳感器。推車上的桿可自由鉸接，但限制在±10°左右。如果系統超出範圍，則推車上的運動將停止。問題在於通過左右移動推車來平衡桿，不應與向上擺動桿平衡動作混淆。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c8 c5">問題領域</span></p>
+<p class="c2"><span class="c0">兩個主要問題是確保系統從初始的隨機但合法的狀態開始使用其學習算法，以便控制器可以識別它並以控制偏移的形式啟動，並在手推車方向反轉時處理從動輪打滑 。15.5.3節概述了本章作者對第一個問題的解決方案的解釋。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c11 c7">15.3.4案件摘要</span></p>
+<p class="c2"><span class="c0">對於上述三種情況中的每一種，如何解決這些有問題的情況在下面的15.5節中都有介紹。鼓勵讀者在閱讀本節之前與學生討論他們的想法。閱讀作者的評論後，讀者應該討論他們機構或公司中的哪些教育模塊可以使創新工程師解決這些問題？</span></p>
+<p class="c17"><span><img alt="" src="https://lh5.googleusercontent.com/eznYtZ7fW-MZAdoIKHhj5_ERrqu28IScpTD_OJLzvgTRpKjzKvnGi78wPQZl_wloTalN10drllhXSy-MAdsz32TgR3MyT6rxRcx4tsNTr2A6oCpkNa1vynXuDILL5DmxJg6rKGs" title=""/></span></p>
+<p class="c2"><span class="c5">圖15.4</span><span class="c0">手推車和桿子實驗台</span></p>
+<p class="c2"><span class="c0">  也許我們的大學缺少教育經驗是對系統工程和系統集成的深入介紹。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c15 c7">15.4系統工程與系統集成</span></p>
+<p class="c2"><span class="c0">在以上章節中給出的情況下。在15.3節中，系統組件、集成系統的設計，甚至系統在其全局範圍內（也稱為系統的系統）中的放置，都很大程度上取決於對系統工程和系統集成的理解 。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c11 c7">15.4.1系統工程</span></p>
+<p class="c2"><span class="c0">可以在國際系統工程理事會（INCOSE）的網站上找到系統工程的最清晰定義：</span></p>
+<p class="c2 c16"><span class="c19 c7">（INCOSE）...代表來自全球行業，政府和學術界的系統工程專業人士。它堅信，系統工程的基本原理在所有工程師的教育中都起著重要作用，無論他們的專業是什麼，以及與系統工程師一起工作但沒有工程背景的專業人員。</span></p>
+<p class="c2"><span class="c0">  同一網站解釋了該學科的性質及其真正基於結果的重點。</span></p>
+<p class="c2 c16"><span class="c19 c7">系統工程是一種跨學科的方法，是實現成功系統的手段。 它著重於在開發週期的早期定義客戶需求和所需的功能，記錄需求，然後在考慮整個問題的同時進行設計綜合和系統驗證。</span></p>
+<p class="c2"><span class="c0">  具體來說，系統工程是一個集成範式，多年來，工程學院從來沒有教過它，前提是他們的程序專業的畢業生將在職業生涯的晚些時候接手。</span></p>
+<p class="c2 c16"><span class="c7 c19">系統工程將所有學科和專業團隊整合為一個團隊，形成了從概念到生產再到運營的結構化開發過程。 系統工程考慮了所有客戶的業務和技術需求，目的是提供滿足用戶需求的優質產品。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c11 c7">15.4.2系統集成</span></p>
+<p class="c2"><span class="c0">系統集成是計算機科學和IT領域眾所周知的一門學科，它的含義是使用即插即用範例從COTS（現成代碼）、SaaS（軟件即服務）和後期的雲端服務。在軟件領域，開放體系結構環境中的主要集成問題是系統和應用程序配置。在此活動中，集成商必須巧妙地將應用程序插入可能用另一種語言在外部編寫的代碼集。例如SAP®之類的企業軟件系統需要使用許多配置表格和數據操作，才能使製造公司從其複雜性和信息能力中受益。大多數問題來自硬件故障，互聯網問題以及術語和用法不當。</span></p>
+<p class="c2"><span class="c0">  在機電工程系統集成中，機械、電氣、計算機和系統學科的結合產生了問題。在一個區域內求解可能會導致另一面突然失效。15.3.2節說明了項目是如何通過無故障而失敗的，如15.5.2節所述。實際上，微型計算機供應商不願對他們的操作系統進行簡單的修改才導致了故障。</span></p>
+<p class="c2"><span class="c0">  計算機工程和計算機科學程序通常包括一些信息集成，數據庫和啟用互聯網的模塊。 總體上，正式的工程計劃很少涉及系統集成的課程。Warminki和Ikonomov認為：基礎工程課程未能教授以下領域的寶貴技能：</span></p>
+<p class="c2"><span class="c0">•知識管理/文檔/召回和重用。</span></p>
+<p class="c2"><span class="c0">•在跨職能的分佈式團隊中工作。</span></p>
+<p class="c2"><span class="c0">•產品設計框架中的批判性思維。</span></p>
+<p class="c2"><span class="c0">•設計方法，包括：將模糊的要求轉換為工程規範，故障模式識別和效果分析、總參數和公差產品設計、製造執行，作為團隊成員進行自動化手冊的分析和集成製造過程。</span></p>
+<p class="c2"><span class="c0">  他們所在機構的這個問題正在通過詳細的動手項目解決，在該項目中，學生面臨要解決的實際問題。 在小組情況下，學生可以從事解決問題的活動，例如Scrum和其他類似的面向團隊的項目工作。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c11 c7">15.4.3實作與基本知識的教學</span></p>
+<p class="c2"><span class="c7">這種基本項目的方法是引入了學生動手</span><span class="c5">彌補</span><span class="c7">教育價值與傳統的固體教育課堂教學的爭議。 常見的</span><span class="c5">邊做邊學</span><span class="c0">在簡單的教學情況下可能會很好地起作用，但在以上15.3節中給出的情況下是否奏效?急於付費客戶可以同等地學習專業知識嗎？在第15.2.4節的內容被低估了。</span></p>
+<p class="c2"><span class="c0">  正式的工程程序，尤其是那些在認證控制下的程序，不願放棄更經典的類型，而傾向於機電一體化或系統工程。許多學校都推出了機電一體化的一兩年制碩士課程。這些在美國比在歐洲更受歡迎。歸根究底，主要是大學教授的經驗、熱情和專注心，信任他們能夠培養出具有道德，世俗明智的各個學科的合格工程師。許多項目工作都是在個人層面上進行的，與其他學生的互動很少，而在行業中，團隊合作的能力則是一種技能。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c15 c7">15.5案例問題的解決方案和教育資源</span></p>
+<p class="c2"><span class="c0">下面概述為如何解決每個案例的問題區域，但是讀者可能希望與同事和班級討論其他解決方案。第一種情況的細節更為詳細，以說明機電一體化系統的複雜性，因為它位於真實的工業環境中。第二個重點是對操作系統和固件有相當深入的了解，第三個重點是機械設計和定時軟件的使用。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c11 c7">15.5.1注塑成型監控系統（範例15.3.1）</span></p>
+<p class="c2"><span class="c0">本節介紹的問題的解決方案。 以下總結了15.3.1，但應清楚地理解，這並不是詳盡的清單。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c8 c5">問題（a）和（b）</span></p>
+<p class="c2"><span class="c0">這些問題集中在長距離連接設備以及低質量和高噪聲電信號上。</span></p>
+<p class="c2"><span class="c7"> <span> </span></span><span class="c5">解決方案</span><span class="c0">—使用短程調製解調器並檢查工廠屋頂中的所有電線屏蔽都可以解決此問題。更好、更昂貴的解決方案是使用光纖電纜進行重新佈線。</span></p>
+<p class="c2"><span class="c7"> <span> </span></span><span class="c5">教育對象</span><span class="c0">—工程師需要熟悉遠距離的調製解調器、通信和光纖線連接。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c8 c5">問題（c）和（b）</span></p>
+<p class="c2"><span class="c0">這些引入了良好的數據收集，顯示和工廠現場輸入的問題。</span></p>
+<p class="c2"><span class="c7"> <span> </span></span><span class="c5">解決方案</span><span class="c0">-至關重要的是，由包括工業客戶和工廠車間人員在內的焦點小組決定要在車間上顯示什麼數據。在所討論的系統中，很明顯需要從操作員那裡收集車間數據。然後，這些數據確定了機器故障的必要性和性質等。必須安裝微終端，並使用數據融合技術將此數據集成到數據庫中。</span></p>
+<p class="c2"><span class="c7"> <span> </span></span><span class="c5">教育對象</span><span class="c0">-系統設計人員需要對數據庫設計和融合以及人機交互有深入的了解。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c5 c8">問題（e）、（f）、（g）和（h）</span></p>
+<p class="c2"><span class="c0">這些全都發生在系統的運行階段中。 在原始系統中，數據收集和所有數據庫操作將凍結，從而模仿斷電的影響。</span></p>
+<p class="c2"><span class="c7"> <span> </span></span><span class="c5">解決方案</span><span class="c7">-工廠軟件的設計和實現需要一定級別的系統智能，以便可以檢測到臨時問題和故障並進行</span><span class="c5">自我修復</span><span class="c0">以避免數據丟失。實際的系統包括可編程邏輯控制器（PLC），其中嵌入了前端智能功能，可以在系統暫停或停止期間臨時存儲數據。</span></p>
+<p class="c2"><span class="c7"> <span> </span></span><span class="c5">教學對象</span><span class="c0">-機電工程師需要了解文件鎖定和系統編程，以釋放鎖定的文件和文件夾。實時操作系統設計知識是必不可少的，因此熟悉可用的工業組件也是如此。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c7 c11">15.5.2在小型計算機系統上執行大型機代碼失敗</span></p>
+<p class="c2"><span class="c8 c5">系統如何運作</span></p>
+<p class="c2"><span class="c5">圖15.2</span><span class="c0">描述瞭如何購買專有固件來修改硬件。小型計算機主板利用了小型計算機的32位處理器狀態字（PSW）中未使用的17位。操作系統內核允許系統用戶訪問高優先級任務中的所有PSW位。PSW中包含位3，可捕獲指令錯誤。小型計算機嘗試執行大型機指令時正是設置了此位（第3位）。 如果執行程序檢測到此類事件，它將設置最後一個未使用的位（第17位），該位用於將執行定向到其他硬件以供執行。</span></p>
+<p class="c2"><span class="c8 c5">失敗原因</span></p>
+<p class="c2"><span class="c0">小型計算機供應商發布了對該操作系統的更新，該更新無辜地將該位（17）用於新的精緻打印功能。 操作系統軟件團隊花了許多時間來開發此新功能，該功能將使其所有其他客戶受益。CAD / CAM項目已取消。</span></p>
+<p class="c2"><span class="c7"> <span> </span></span><span class="c5">教學對象</span><span class="c0">-為了使機電工程師能夠檢測到，這將需要相當高水平的計算機體系結構、系統編程和固件。順帶一提，先進的談判技巧可能已經保存了該項目！</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c11 c7">15.5.3機械不穩定的系統</span></p>
+<p class="c2"><span class="c8 c5">隨機但合法的初始狀態系統</span></p>
+<p class="c2"><span class="c0">許多桿和手推車系統都始於將桿垂直固定在軌道中心附近。釋放後，系統將啟動，過程繼續進行，但總是從幾乎相同的初始狀態變量值開始。這是系統中的真正缺陷。在這種情況下，為了使手推車和桿邏輯從隨機但可識別的初始狀態進入學習範式，有必要構造一個啟動子系統，該子系統將手推車沿一個方向驅動一段隨機時間，然後反轉購物車方向較短的隨機時間，然後再次反轉。這將使磁極從其最初的穩態靜止位置變為動態狀態，但不會使其獲得足夠的動量以至於失敗。在啟動過程中，控制系統監視狀態變量當啟動系統進入狀態時，系統的爆炸控制值與啟動值一致，因此啟動邏輯斷開，對系統有利。</span></p>
+<p class="c2"><span class="c0">  還有許多其他這樣的示例，讀者可以使用這種方法根據自己的經驗選擇插入自己的示例。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c15 c7">15.6結論：本地解決方案帶來的全球性問題</span></p>
+<p class="c2"><span class="c7">解決未來的教育方法</span><span class="c5">要懂得變通</span><span class="c0">，馬歇爾·麥克盧漢（Marshall McLuhan）說，布朗最近在《教育》雜誌上發表的一篇文章中引用了這一觀點。 布朗討論了諸如自適應學習技術、學習空間、學習分析和下一代學習管理系統之類的概念，並著重介紹了學生如何通過教學經歷或途徑進行學習。</span></p>
+<p class="c2"><span class="c0">  這當然有真理的成分，但可能過於簡單化。能夠將研究或其他技術興趣帶入課堂的敬業教師不僅可以吸引班級的注意力，而且可以創造一個學習環境，使學生成為終身的學習者、道德和創新。再次看著15.5節。列出了可行的（和實際的）解決方案時，讀者應考慮在自己的機構中何處教授這些技能。</span></p>
+<p class="c2"><span class="c0">  這件事不僅限於北美或歐洲，而且在中國、印度、新加坡、澳大利亞和許多其他國家通常被歸類為良好機構的情況下，也是全球性的不適。</span></p>
+<p class="c2"><span class="c0">  一個現成的解決方案可能是更好地理解和使用諸如大學和IMechE、IET、IEEE、ASME等專業機構提供的持續專業教育（CPE）模塊。這樣的計劃可以幫助培訓更多的高級工程師，並填補新員工的空缺。為了更深入地了解機電一體化，許多機構都提供了授課式碩士課程，可以面對面或在線學習。在這些計劃中，學生已經是有學歷的工程師，因此可以在無需太多數學或基礎工程學複習的情況下專注於本章中描述的機電問題。</span></p>
+<p class="c2"><span class="c0">  本章的目的是介紹一些機電一體化系統如何解決各種問題的概念，即使是在博士級別的學生，也可能沒有深入的指導，並且還不具備經驗豐富的工程師的才幹。由於數字每年都在如此迅速地變化並且由不可靠的來源提供，因此很大程度上避免了參考統計數據。</span></p>
+<h4><span style="color: #0000ff;"><strong><big>Ch16結論</big></strong></span></h4>
+<p class="c2"><span class="c0">作者希望本書的讀者喜歡本文的基本研究主題和未來的願景。本章反映了這些主要主題的相互作用和集成，並試圖總結關鍵陳述。</span></p>
+<p class="c2"><span class="c0">  應當指出，技術（機電）系統的不斷（發展）與多個學科（例如IT功能和組件）的更深層次的集成以及產品及其相關生產過程之間的詳細考慮是其中的一部分。 產品設計的主要趨勢。此外，一些合作夥伴（遍布全球）的參與和新業務流程的挑戰也起著重要作用。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c15 c7">16.1全球趨勢及其對機電一體化的影響</span></p>
+<p class="c2"><span class="c0">近年來，一些機構已經對全球（巨型）趨勢進行了概述。它們在細節上彼此不同，但是主要的Top-ics參與了所有已發表的研究，如下所示：</span></p>
+<p class="c2"><span class="c0">•人口變化（以及老齡化社會醫療系統）</span></p>
+<p class="c2"><span class="c0">•流動性</span></p>
+<p class="c2"><span class="c0">•全球化（以及勞動世界、濟、融的變化）</span></p>
+<p class="c2"><span class="c0">•城市化（和個性化）</span></p>
+<p class="c2"><span class="c0">•氣候變化和環境變化（以及能源和資源、持續性）</span></p>
+<p class="c2"><span class="c0">•智慧型社會（以及無所不在的情報、數位文化）</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c0">對於2030年的製造業生產，Westkämper討論了以下四個主要主題:</span></p>
+<p class="c2"><span class="c0">•創新的產品和流程</span></p>
+<p class="c2"><span class="c0">•基於知識的製造工程</span></p>
+<p class="c2"><span class="c0">•產品生命週期中的新業務模型</span></p>
+<p class="c2"><span class="c0">•基礎設施和教育</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c0">所有這些趨勢的結果也是該技術必須向前發展。 因此，如本書各章所述，由於多種學科的結合，機電一體化產品具有很高的產品開發潛力。</span></p>
+<p class="c2"><span class="c0">  經濟成功的主要部分是創新產品和工藝的開發。 術語創新包括新產品、服務或程序的發明、介紹和銷售。這不僅包括整個營銷過程，還包括社會和經濟影響。不論發明的質量如何，許多因素都會影響發明向創新的發展。在這種情況下討論的主要因素可以分為三類：技術、經濟和社會影響。 機電一體化領域是眾多創新的源泉。但是，大多數新發展都被認為是漸進式創新。在進行徹底創新的情況下，概念設計已被確定為產品設計中最關鍵的階段，因為成功的主要部分將在那裡建立。</span></p>
+<p class="c2"><span class="c0">  在此早期階段做出的決定會對產品的未來發展產生重大影響。因此，對於整個產品的系統級別的需求定義至關重要。在系統級別上定義的要求應反映客戶的意願。為了確保所考慮的系統滿足要求，有必要將它們轉換為解決方案的屬性。系統的開發融合了來自不同工程學科（例如機械工程、電氣工程、控制工程等）的解決方案。因此，區分只能在系統級別上確保的特性和可以通過以下方法保證的特性非常重要單一的工程學科。因此，必須將不同的屬性分配給相關級別。為了實現此任務模型，必須在不同的層次級別上進行（特定學科模型和系統模型）。從這個角度來看，考慮到的特定方面的建模、模擬、評估和優化是未來機電系統設計的關鍵，前面幾章也提到了這一點。</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c2"><span class="c7 c15">16.2機電一體化未來地圖</span></p>
+<p class="c2"><span class="c7">可以理解，不可能在一本書中討論機電一體化未來的所有方面。本書的目標是如何將挑戰歸類為主要主題，並從不同角度介紹具體方面。下面列出了常見的觀點，而</span><span class="c5">圖16.1</span><span class="c0">顯示了以下主題的地圖：</span></p>
+<p class="c2"><span class="c0">•問題與挑戰</span></p>
+<p class="c2 c16"><span class="c0">機電系統未來發展的主要動力是減少開發成本和時間，以及使用新技術改進設計產品。這主要涉及產品的虛擬化，以改善其架構設計、驗證和確認、生產或運營。實際上，虛擬化可以以較低的成本在開發的不同階段提供更大的靈活性。設計產品與生產系統之間的交互在工業4.0（或智能製造、網絡物理生產系統等）的方向上起著重要作用。</span></p>
+<p class="c2"><span class="c0">•系統設計、建模和模擬</span></p>
+<p class="c2 c12"><span class="c0">機電一體化產品的結構更複雜，並且將具有更多的計算能力和網絡連接性。 這就導致了在理解複雜系統的困難方面面臨的擴展設計挑戰，其中模擬將是掌握這些困難的關鍵技術。機電系統設計過程的未來趨勢，方法和模型必須被認為是將復雜系統轉變為網絡物理系統或物聯網的全球集成的不可替代的推動力。這些用於機電工程的設計過程必須支持新服務的開發或為將來的工廠實施工業互聯網。</span></p>
+<p class="c2"><span class="c0">•製造技術</span></p>
+<p class="c2 c12"><span class="c7">物理創建機電設備和系統的未來技術（例如增材製造或增材製造）將為設計過程帶來新的可能性。 從</span><span class="c5">為組裝設計</span><span class="c7">方法到</span><span class="c5">直接製造</span><span class="c7">方法將發生轉變。 因此，我們無需再進行後期組裝和使用緊固件，從而可以快速生產堅固的設備。如今，典型示例包括3D打印傳感器、3D打印電子產品和集成多種材料，這是生產</span><span class="c5">完全集成產品的基礎機電設備</span><span class="c0">。</span></p>
+<p class="c2"><span class="c0">•物聯網和網絡物理系統</span></p>
+<p class="c2 c12"><span class="c7">機電一體化的當前趨勢涉及將計算和物理過程更深入地集成到網絡機電一體化系統，網絡物理系統（CPS）或物聯網（IoT）中。 因此，通信、集成和數據分析被認為是必不可少的，因為物聯網的範圍將取決於各種系統和標準的整合，</span><span class="c5">低層</span><span class="c7">（本地）系統相互通信而</span><span class="c5">高層</span><span class="c0">（全局）通信。系統典型的應用是自動化、生產、運輸、能源、醫療保健和農業。值得稱讚的潛在的社會和經濟利益是合理的，但尚未得到保證。</span></p>
+<p class="c2"><span class="c0">•通信和信息技術</span></p>
+<p class="c2 c12"><span class="c0">這裡的關鍵問題與促進建立多學科合作夥伴關係有關。 沒有這樣的伙伴關係，就很可能失去在產品設計和服務交付方面進行創新的機會。因此，建立穩健的伙伴關係工作形式的組織更有可能獲得競爭優勢。與此相關的是，需要建立一種新的方法來確保和管理用戶同意，同時確保如果用戶選擇退出數據共享，則不會造成經濟或功能上的不利影響。</span></p>
+<p class="c2 c12"><span class="c0">這反過來又引發了有關如何與法律/法學從業人員一起對技術人員進行教育和宣傳的問題，以便在開發、實施和應用新技術時滿足法律和社會要求。</span></p>
+<p class="c2"><span class="c0">•機電一體化教育</span></p>
+<p class="c2 c12"><span class="c7">機電一體化正朝著複雜物理組件的設計商品化的未來發展。特殊的挑戰是學科多樣性，因此機電一體化教育必須在</span><span class="c5">技術知識</span><span class="c7">、</span><span class="c5">基礎技術技能</span><span class="c7">和</span><span class="c5">個人技能</span><span class="c0">之間尋求平衡，任何教育計劃都應以支持這些領域為導向。機電一體化課程必須涵蓋的典型主題與產品生命週期保持一致，包括創新、創造力、系統思維、工程和集成，這些方法結合了基於項目和問題的學習方法。機電一體化教育便成為應用新技術的基礎。</span></p>
+<p class="c2" id="h.gjdgxs"><span><img alt="" src="https://lh5.googleusercontent.com/pMaSTQ78tPfMZX_vNDDloIYaLrEChs56-YQI-Db2DhJhcxV4L-TJtUVk8I97r1L2ns8Thtew7YzzoCbExqrAF4bX8MAtiIDyQtwy8tCVBA3dJA_LIUV5d1bj1go0j8O7KzUrblg" title=""/></span></p>
+<p class="c2"><span class="c5">圖16.1</span><span class="c0">機電一體化未來地圖</span></p>
+<p></p><br />assignment3 << <a href='assignment3.html'>Previous</a> <a href='CoppeliaSim.html'>Next</a> >> CoppeliaSim</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        
