@@ -1711,7 +1711,780 @@ EXIT</pre>
 <p><span>Due May 27, 2020 for class 2a and May 28, 2020 for class 2b.</span></p>
 <p>According to the reading of Topic 2 and Topic 3, propose a Mechatronic project by using<span> </span><a href="https://www.coppeliarobotics.com/">CoppeliaSim</a><span> </span>or<span> </span><a href="https://cyberbotics.com/">Webots</a><span> </span>and<span> </span><a href="https://www.onshape.com/">Onshape</a>.</p>
 <hr/>
-<p></p><h3>MechaEducFutureNeed</h3>
+<h3>MechatronicDesignCases</h3>
+<p>原文pdf連結:<a href="https://drive.google.com/file/d/1y0QH6vI8uMymK9JI35EShVFS40Q8uwwq/view?usp=sharing">MechatronicDesignCases.pdf</a></p>
+<p>翻譯連結:<a href="/downloads/MechatronicDesignCases翻譯.pdf">MechatronicDesignCases翻譯.pdf</a></p>
+<h4 class="c5"><span style="color: #0000ff;"><strong><span class="c13 c20">Ch11 實例探究</span></strong></span></h4>
+<p class="c5"><span><img alt="" src="https://docs.google.com/drawings/d/s98Q00RBrIAB_YkelPE9Yqg/image?parent=e/2PACX-1vQYPgCKPYtBO4OMhbZ7QtdHwV1nCsCzUyYKhk5Upox2CZJvWV_-oNY2maYQ76FRIw&amp;rev=1&amp;h=176&amp;w=528&amp;ac=1" title=""/></span></p>
+<p class="c5"><span class="c1">11.1 介紹</span></p>
+<p class="c5"><span class="c1">在前面的章節中，我們提出了一些概念，並通過學術示例說明了它們的應用，以向讀者展示這些結果如何應用。更具體地說，我們已經了解瞭如何設計機電一體化系統。介紹了成功完成所需機電系統設計所必須遵循的不同步驟。我們已經介紹了在以下設計中必須使用的方法：</span></p>
+<p class="c5"><span class="c1">•        機械部分</span></p>
+<p class="c5"><span class="c1">•        電子電路</span></p>
+<p class="c5"><span class="c1">•        C語言中用於實時執行的程序</span></p>
+<p class="c5"><span class="c1">  這些工具已應用於一些實際系統，並提供了更多詳細信息以幫助讀者執行自己的設計。</span></p>
+<p class="c5"><span class="c1">  對於控制算法，我們提供的大多數示例都是具有理想模型的學術模型。不幸的是，對於一個實際的系統，我們將擁有的模型只是一個可以在某些特定條件下描述該系統的實現，並且由於某些原因，該模型無法在算法的實時實現過程中按預期方式完美運行。這可能是由於不同的動態動力學可能導致某些頻率的行為改變而引起的。</span></p>
+<p class="c5"><span class="c1">  本章的目的是向讀者展示我們如何實時實現前面幾章中針對實際系統開發的理論結果。我們將逐步進行並顯示所有步驟，以使讀者輕鬆閱讀。我們在本章中考慮的案例研究是在前幾章中討論和設計的案例研究。</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c10">11.2        速度 直流電機套件的控制</span></p>
+<p class="c5"><span class="c1">作為第一個例子，讓我們考慮驅動機械零件的直流電動機的速度控制。該示例的選擇非常重要，因為大多數係統將使用此類直流電動機。我們將考慮的直流電動機由Maxon公司製造。該電動機非常重要，因為它帶有齒輪箱（比率6：1）和編碼器，該編碼器每轉給出一百個脈衝，我們每轉產生600個脈衝，我們通過使用正交方法將其變為24400個脈衝。每轉。如果在本示例中使用的系統具有更靈活和更多的優勢，則可以在前面介紹的控制算法的實時實現中使用。</span></p>
+<p class="c5"><span class="c13">  該電動機的數據表給出了所有重要參數，因此容易獲得該執行器的傳遞函數。在此示例中，我們正在考慮的負載是一個帶有刻度的小磁盤，我們希望在速度上控制它，然後在位置上進行控制。這種設置在</span><span class="c9">圖11.1</span><span class="c13">和11.</span><span class="c9">2</span><span class="c1">中示出。我們正在考慮的圓盤的直徑等於0.06 m、質量等於0.050 Kg。利用這些數據和直流電動機的數據表之一，我們可以獲得磁盤速度和輸入電壓之間的傳遞函數。</span></p>
+<p class="c5"><span class="c1">  首先讓我們專注於負載的速度控制。在這種情況下，為了建立該系統的傳遞函數（直流電動機執行器及其負載），我們可以使用數據表，磁盤上的信息以及Boukas[1]中的結果。</span></p>
+<p class="c5"><span><img alt="" src="https://lh3.googleusercontent.com/aVu60I_ZdBohnp8B1pWkoOntA5yMWbulu333sToedV5EgPJ9OJPDA9Kb4Jsurnwdynj7YoUb9oQSZZGG5dGt1F37bhO02LziNYFNAjpdwXccA7prb2n48ZgyBtTJk8GLKhh-qck" title=""/></span></p>
+<p class="c5"><span class="c9">圖11.1</span><span class="c1"> 直流電動機套件的電子電路</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">或繼續進行識別。使用第一種方法，[1]中第2章的結果是:</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/ORjADtBMAPj7hQfrn1aeL4pZIP54DB6SnQOn6I7S1uHRnXp2PSsERt0Gq9CxCsc3wlbxm_oYhJ4oNbOpFWyITYMEgqTTwr9S9H0gfz60A618TTYKvaM_Wpt8B4hQmHaWhakgB6E" title=""/></span></p>
+<p class="c5"><span class="c13">和                            <span> </span></span><span class="c22">K</span><span class="c1"> = 48.91         </span><span class="c1">τ = 63.921毫秒</span></p>
+<p class="c5"><span class="c1">  為了設計控制器，我們首先應該指定我們希望系統具有的性能。首先，我們需要係統穩定，還需要係統速度在過渡狀態下具有良好的性能，在穩態狀態下具有零誤差，以作為階躍參考。對於瞬態，我們希望負載的穩定時間小於或等於3τ/5的5％，而過衝則小於或等於5％。</span></p>
+<p class="c5"><span class="c1">  為了完成適當控制器的設計，我們既可以連續進行設計，然後獲得應在軟件部分進行編程的算法，也可以直接在離散時間內進行所有設計。在本示例的其餘部分中，我們將選擇第二種方法。</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/qyVbpll2Wdh2N_jSPChOpK67dr7pDGod8-NNswMTQmPn719YwQj06at9arqYAOvEh9P3wcmB8u9oUwBJ5UTgIujFQb8lAbHvYX4RbjyYUoe7aEPCCiEXYf-vmFfmKa_sqGADvMc" title=""/></span></p>
+<p class="c5"><span class="c9">圖11.2</span><span class="c1"> 實時實施設置</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">  根據系統傳遞函數的表達式以及所需的性能，結果表明我們至少需要一個比例積分器（PI）控制器。該控制器的傳遞函數由下式給出：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/K5F3MONJ8LZV4XYk-Oj54UNZLelJl8TKGipQjSTjBYCkGVN5wbeOyQ6S6CjmbiY0jYh12kcL1ys7Zvo28iEPKiWu50vQkbjwM0-fi015wVC50sRkqAhL8tD39oEO5UtBw1Hj4mE" title=""/></span></p>
+<p class="c5"><span class="c1">其中KP和KI是要確定的結果，以迫使負載具有我們施加的性能。</span></p>
+<p class="c5"><span class="c1">  使用零序持有者和Z-transform表，我們得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/_NTFjRbKP7fhgpln3z0_anJ1dm3D999RnBrY-mb0uNgRB7m6iLJ-IKE1F8uTT5JEkR9unGUZ2kIOILf9naB5EziIorgegPsc0XNK_7e_eY5mur8VfiS9wq5daRJhpvoerPsQFuk" title=""/></span></p>
+<p class="c5"><span class="c1">  對於控制器，使用梯形離散化，我們得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/g_no0qPZFf2WSlmONwz--VLVkQ1XKApT2BVKMBAR-ZVa9TiJgik2Tniyr9PLupepA9fqwHAp4JhnNZ_bBxUvNjfg312aYScK6eJN5pqpx9w24C1hAK64G0Co3QqwaaDHtPVm5MQ" title=""/></span></p>
+<p class="c5"><span class="c1">  將分子和分母除以z並回到時間，我們得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/fWhw0QtNlB-MQ6_qe8yfMzGDjSA3vW88RTGV7oeLK7knn_erLYWWOSr5MkqPbyvtiwrTL0-G8Z8Z7AKKZpRakuNcwjpwX5yqUQOIwcztLZ9dPg26gj6DIpHJIIyFzS8r0kmd9Ho" title=""/></span></p>
+<p class="c5"><span class="c1">  結合執行器及其負載和控制器之一的傳遞函數，我們得到以下閉環傳遞函數：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/DjC5aE-99wWoapmbnQP7T4ezMP1PUwVrNFBsPRuh5HlD8mdEn5M2KAaCFgYFWoiZ62zGdIZTMGIEdiiIVFcx1avXtdS9ZrXKA7eu59RNtGz6yFQXyh7QisfmRCK4KKlKNsz0o3w" title=""/></span></p>
+<p class="c5"><span class="c1">  現在使用期望的性能，很容易得出結論，主導根點是:</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/iHsTY8W-0bX4WS1-AEeoPvsyhLiAw-wGFkNnog2TU3E-bx-zxHsw5ifr93JnjP_ECi94vwJ9pZSxFgJ7uVbUctS0WJMu2ne9Z7HaSgz7xQ0PTlqkkFY1cyb4qhUz54mq_Svr2BE" title=""/></span></p>
+<p class="c5"><span class="c1">其中ζ和ωn分別代表我們系統控制閉環的阻尼比和固有頻率。</span></p>
+<p class="c5"><span class="c1">  根據控制理論（請參見Boukas [1]），眾所周知，過衝d％和5％的建立時間ts由下式給出：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/IzAdCcN5XW1G2wMwkfdqCp4jxi2ka_Ye4CKh-4x0Tu_cafv3JIdIv7z51dytMLB8zr2d5lxo-6djWitZxkhggzHslmoi_VE27ZbSr0dzR2PCQ5M6WMa2L3_RjAQ2TEh8ijWdKbg" title=""/></span></p>
+<p class="c5"><span class="c1">使用我們的性能和這些表示，我們得出以下結論:</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/0JcBSPi51xfq-nR32UiptAl9ghnFnxx93ZbshoH8DFPAQY-8UZno2TV3voIeWgO766faT6EAAMVvxqkyhrUhWskSKLx3JEhiRTsJYzYveXXQcA4gihWhjDPJgMKjTJRY0Wx8HFc" title=""/></span></p>
+<p class="c5"><span class="c1">它具有以下主要優勢：</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/MgrZfzhtkMLCyVPMukSrvSOq0i1zP1WCs5x7bGiO-zg6WyMs9Wp0s_NUabfZA13g8qgpV2CE3rdTTUbv_RKomvgj31kz2-jQS0whthkAkdCNSkDqeyzxaVGhBEPCfKSxEyCriAo" title=""/></span></p>
+<p class="c5"><span class="c13">且T =τ/10= 0.0064的變換，我們得到以下結果</span><span class="c1">域中的主要根點：</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/IsrY1i2QbMjhlACfNWpucDZOpwvt1hYT1tLU85jTz3xjjlzwWfBoli-5UGbwflkceZE4zPNyHVnQ0XFDYchpGzEjS6IH0BMvCFNGkzlrmmjy2A4bYiENj491-wG1A8yhimxTark" title=""/></span></p>
+<p class="c5"><span class="c1">  對於這些根點，我們具有以下特徵方程式：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/xAn8nbXksfjsEU_D8FGOE8FyxINyIdVlvi7YEsRxPeNY3Ktp6rzqNWgj54Mf2CYWtO1ZI9zlgQK421J1UmDUCqStO_pkudLi-h7XFECV0feyJYA6tRER5J459kdrljUaMLcgsYY" title=""/></span></p>
+<p class="c5"><span class="c1">  現在使用根點放置技術，我們得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/HpZoEwATHmLCF5fC3zsR9gLrZ1oP0l4NaUOa9YTdGxjLCWHqJlJXxK32gZMXfnWCX2CJYgO-XgwBWG8dgy_5pcLbGQWuwIWQiyL5fyUdP2P6Jey1NmZ_wyE1u5leV7G1WJli72o" title=""/></span></p>
+<p class="c5"><span class="c1">這意味著：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/CYE8XSPBmREHj5TlLf5vpOSETA5IMbEEzX9xoO9NNBuRUWf66j0K4TnnIWb7Be9XQwsa7tCSNyTnqjICvJAQ5GBp2_ObNQo1iUDf3tRa85OZQOawidpw87U5Iuxb1MoFrA9T8hk" title=""/></span></p>
+<p class="c5"><span class="c1">使用K，T和τ的值，我們得到增益KP和KI的以下表達式：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/q0CJAFTbhbDeobaS9m33Cn3JOAtOPKHkBYYhdjwayGed2qALjxbgFkmGEknbSsBG9Pw1bJStp9T56Uf2jtHvIG_DuSYM0rkhs-71baEiouL2hQLPQ9TsjQBWluEVtwIT8RV2jss" title=""/></span></p>
+<p class="c5"><span class="c9">備註11.2.1<span> </span></span><span class="c1">在這種情況下，必須謹慎，因為我們不在乎傳遞函數零的位置，因此在實現此控制器時可能會有些意外。顯然，我們將獲得的性能（穩定時間和過衝）將取決於零的位置。有關此問題的更多詳細信息，請向讀者介紹Boukas[1]。</span></p>
+<p class="c5"><span class="c1">  至現在實施該PI控制算法，並確保達到理想的性能，我們將使用Microship1的微控制器。這種選擇是由於我們在此類微控制器方面的經驗所致。讀者可以記住，其他製造商的任何其他微控制器都可以做些小改動。在本示例中，我們將使用Microhip的單片機dsPIC30F4011。</span></p>
+<p class="c5"><span class="c1">  我們實現的代碼使用C語言編寫。採用這種語言是因為其簡單性。該實現具有以下結構：</span></p>
+<p class="c5 c18"><span class="c1">//</span></p>
+<p class="c5 c18"><span class="c1">// Put here the include</span></p>
+<p class="c5 c18"><span class="c1">//</span></p>
+<p class="c5 c18 c7"><span class="c1"></span></p>
+<p class="c5 c18"><span class="c1">#include "p30F4011.h"        // proc specific header</span></p>
+<p class="c5 c18 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">//</span></p>
+<p class="c5"><span class="c1">// Define a struct</span></p>
+<p class="c5"><span class="c1">//</span></p>
+<p class="c4"><span class="c1">typedef struct {</span></p>
+<p class="c2"><span class="c1">// PI Gains</span></p>
+<p class="c2"><span class="c1">float K_P; // Propotional gain</span></p>
+<p class="c2"><span class="c1">float K_I; // Integral gain</span></p>
+<p class="c5 c8"><span class="c1">//</span></p>
+<p class="c5 c8"><span class="c1">// PI Constants</span></p>
+<p class="c5 c8"><span class="c1">//</span></p>
+<p class="c5 c8"><span class="c1">float Const1_pid; // KP + T KI/2</span></p>
+<p class="c5 c8"><span class="c1">float Const2_pid; // -KP + T KI/2</span></p>
+<p class="c5 c8"><span class="c1">float Reference; // speed reference</span></p>
+<p class="c5 c8 c7"><span class="c1"></span></p>
+<p class="c5 c8"><span class="c1">//</span></p>
+<p class="c5 c8"><span class="c1">// System variables</span></p>
+<p class="c5 c8"><span class="c1">//</span></p>
+<p class="c5 c8"><span class="c1">float y_k; // y_m[k] -&gt; measured output at time k</span></p>
+<p class="c5 c8"><span class="c1">float u_k; // u[k] -&gt; output at time k</span></p>
+<p class="c5 c8"><span class="c1">float e_k; // e[k] -&gt; error at time k</span></p>
+<p class="c5 c8 c7"><span class="c1"></span></p>
+<p class="c5 c8"><span class="c1">//</span></p>
+<p class="c5 c8"><span class="c1">// System past variables</span></p>
+<p class="c5 c8"><span class="c1">//</span></p>
+<p class="c5 c8"><span class="c1">float u_prec; // u[k-1] -&gt; output at time k-1</span></p>
+<p class="c5 c8"><span class="c1">float e_prec; // e[k-1] -&gt; error at time k-1</span></p>
+<p class="c5 c8 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">}PIStruct;</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">PIStruct thePI;</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">thePI.Const1= thePI.K_P+T*thePI.K_I/2;</span></p>
+<p class="c0"><span class="c1">thePI.Const2=-thePI.K_P+T*thePI.K_I/2;</span></p>
+<p class="c0"><span class="c1">thePI.Reference=600;</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">//</span></p>
+<p class="c5"><span class="c1">// Functions</span></p>
+<p class="c5"><span class="c1">//</span></p>
+<p class="c5"><span class="c1">float ReadSpeed(void);</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">float ComputeControl(void);</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">float SendControl(void);</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">//</span></p>
+<p class="c5"><span class="c1">// Interrupt program here using Timer 1 (overflow of counter Timer 1)</span></p>
+<p class="c5"><span class="c1">//</span></p>
+<p class="c5"><span class="c1">void __ISR _T1Interrupt(void) // interrupt routine code</span></p>
+<p class="c0"><span class="c1">{</span></p>
+<p class="c2"><span class="c1">// Interrupt Service Routine code goes here</span></p>
+<p class="c2"><span class="c1">float Position_error;</span></p>
+<p class="c2 c7"><span class="c1"></span></p>
+<p class="c2"><span class="c1">//</span></p>
+<p class="c2"><span class="c1">// Read speed</span></p>
+<p class="c2"><span class="c1">//</span></p>
+<p class="c2"><span class="c1">thePI.y_m=ReadSpeed();</span></p>
+<p class="c2 c7"><span class="c1"></span></p>
+<p class="c2"><span class="c1">thePI.e_k= thePI.Reference-thePI.y_m;</span></p>
+<p class="c2 c7"><span class="c1"></span></p>
+<p class="c2"><span class="c1">//</span></p>
+<p class="c2"><span class="c1">// Compute the control</span></p>
+<p class="c2"><span class="c1">//</span></p>
+<p class="c2"><span class="c1">ComputeContrl();</span></p>
+<p class="c2 c7"><span class="c1"></span></p>
+<p class="c2"><span class="c1">//</span></p>
+<p class="c2"><span class="c1">// Send control</span></p>
+<p class="c2"><span class="c1">//</span></p>
+<p class="c2"><span class="c1">SendControl();</span></p>
+<p class="c2 c7"><span class="c1"></span></p>
+<p class="c2"><span class="c1">IFS0bits.T1IF=0; // Disable the interrupt</span></p>
+<p class="c0"><span class="c1">}</span></p>
+<p class="c5"><span class="c1">int main ( void ) // start of main application code</span></p>
+<p class="c5"><span class="c1">{</span></p>
+<p class="c5"><span class="c1">// Application code goes here</span></p>
+<p class="c5"><span class="c1">int i;</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">// Initialize the variables Reference and ThePID.y_m (it can be read</span></p>
+<p class="c5"><span class="c1">from inputs) Reference = 0x8000; // Hexadecimal number</span></p>
+<p class="c5"><span class="c1">(0b... Binary number) ThePID = 0x8000;</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">// Initialize the registers</span></p>
+<p class="c5"><span class="c1">TRISC=0x9fff; // RC13 and RC14 (pins 15 and 16) are configured as outputs</span></p>
+<p class="c5"><span class="c1">IEC0bits.T1IE=1; // Enable the interrupt on Timer 1</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">// Indefinite loop</span></p>
+<p class="c5"><span class="c1">while (1)</span></p>
+<p class="c5"><span class="c1">{</span></p>
+<p class="c5"><span class="c1">}</span></p>
+<p class="c5"><span class="c1">return 0</span></p>
+<p class="c5"><span class="c1">}</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c2"><span class="c1">% ReadSpeed function</span></p>
+<p class="c2"><span class="c1">int ReadSpeed (void)</span></p>
+<p class="c2"><span class="c1">{</span></p>
+<p class="c2"><span class="c1">}</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">% ComputeControl function</span></p>
+<p class="c5"><span class="c1">int ComputeControl (void)</span></p>
+<p class="c5"><span class="c1">{</span></p>
+<p class="c5"><span class="c1">thePI.u_k=thePI.u_prec+thePI.Const1*thePI.e_k+thePI.Const2*thePI.e_prec;</span></p>
+<p class="c5"><span class="c1">}</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">% SendControl function</span></p>
+<p class="c5"><span class="c1">int Send Control (void)</span></p>
+<p class="c5"><span class="c1">{</span></p>
+<p class="c5"><span class="c1">sendControl()</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">//</span></p>
+<p class="c5"><span class="c1">// Update past data</span></p>
+<p class="c5"><span class="c1">//</span></p>
+<p class="c5"><span class="c1">thePI.u_prec=thePI.u_k;</span></p>
+<p class="c5"><span class="c1">ThePI.e_prec=thePI.e_k;</span></p>
+<p class="c5"><span class="c1">}</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">  從該結構可以看出，首先我們注意到系統將進入循環，並在每次中斷時調用函數：</span></p>
+<p class="c5"><span class="c1">•        ReadSpeed;</span></p>
+<p class="c5"><span class="c1">•        ComputeControl;</span></p>
+<p class="c5"><span class="c1">•        SendControl;</span></p>
+<p class="c5"><span class="c1">並採取適當的措施。</span></p>
+<p class="c5"><span class="c1">  ReadSpeed函數在每個採樣時間返回加載速度，該速度將由ComputeControl函數使用。SendControl功能通過L293D芯片將適當的電壓發送到執行器。</span></p>
+<p class="c5"><span class="c1">  使用編譯器HighTec C獲取十六進制代碼，並使用PicKit-2將文件上傳到微控制器的內存中。 有關如何獲取十六進制代碼的更多詳細信息，我們邀請讀者閱讀編譯器HighTec C或Microchip的編譯器C30的手冊。</span></p>
+<p class="c5"><span class="c1">  在這種情況下，國家方法是微不足道的，我們將不發展它。</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c10">11.3        直流電機套件的位置控制</span></p>
+<p class="c5"><span class="c1">讓我們專注於負載位置控制。遵循與上一節中開發的負載速度控制類似的步驟，我們首先需要選擇我們希望系統具有的理想性能。進行以下展示：</span></p>
+<p class="c5"><span class="c1">•        系統穩定在閉環狀態；</span></p>
+<p class="c5"><span class="c1">•        建立時間ts為2％等於我們可以擁有的最佳時間</span></p>
+<p class="c5"><span class="c1">•        超調等於5％</span></p>
+<p class="c5"><span class="c1">•        階躍函數作為輸入的穩態等於零</span></p>
+<p class="c5"><span class="c1">  使用性能和傳遞函數，很容易得出結論，比例控制器KP足以滿足這些性能。</span></p>
+<p class="c5"><span class="c1">  在此示例中，我們將使用連續時間方法進行控制器的設計。在上一章的基礎         上，我們的系統模型如下：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/xzIi4P4aR5-thvWVnB8n71egZu_4Io64ECyGU3LbcsB7KniLdgPb4gdvfPbeh-p-EJ1-tjFe4AxhtIGWNz2LNOAb4MLobkOK_iQfICNqP3x5ZE7SoQq3wul-u6xS-exdBuQBOCc" title=""/></span></p>
+<p class="c5"><span class="c1">其中K和τ取與速度控制相同的值。</span></p>
+<p class="c5"><span class="c1">  讓傳輸控制器由以下方式給出：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/9ZULqOXhCnAS0DRGvLRgoXSbVC2gxkCH835sBCeYH5--Fn3BCXbu2GqGYN78-dKZlwt9gNzQ2WICceGknwZx3qx-Z1V-V4Ad2BzVe-tFg4WXvlakJosktaBIfVGY5lo_jnR1V9M" title=""/></span></p>
+<p class="c5"><span class="c1">  使用這些表達式，閉環傳遞函數由下式給出：</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/zewc6NQhxSLZIWxpjOasg7DAJuWWVIMBtjDg5s5h6YJVsSHe_pXCJIcQuJVBjq2MdAGJNN7dt1izuTJmmG6Am33xhQYYYLgaMZ2RTFAcZvlQxQcupmzG02WFzpREUMFp5HeG3U4" title=""/></span></p>
+<p class="c5"><span class="c1">  由於系統類型為1，因此使用比例控制器輸入的階躍函數的誤差等於零。</span></p>
+<p class="c5"><span class="c1">  根據規範，以下複雜的兩根：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/02TtlJt_kCMhVo3Z5yp-saPGNo_PpyqXxYnGMxTLvq7EJ9t8wXJQEhbMUEtfoSbAvJD3Xlugg4ECxs7Jmqya_3SYWZxyjQZ9By1geOyiIor9y_JLVCM7Ru0ZRtsR_wTc5MvJ9l0" title=""/></span></p>
+<p class="c5"><span class="c1">將完成這項工作，相應的特徵方程式如下：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/jrKAYcKYK3rO2DVJMQldrn5JgEhrcktqduFE6lPFiGEf34X4PzrrQMGuoY7fttRMvlNBqmAJ0vmR_6F2wtRxJkaJqHGDwhqXdokLXjvAkfXpmHyqI5dHUF2-ixhuOUQEL0x0psY" title=""/></span></p>
+<p class="c5"><span class="c1">  與閉環系統之一等效，我們得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/4qLnkpjvs8Ir6kjaoJWzUfIQ0hLPt6rfCsVihD16B4f7pdtFxlbnIkjcheSVu8WVkorLNBdO-qzvJ6t0JVW0ry0_RuH84LyB12zBfrfTixPzpldEy6h5xIYfAi_sGCkCYwTIDqc" title=""/></span></p>
+<p class="c5"><span class="c1">  為了確定最佳穩定時間ts為2％，請注意，我們有：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/F0b7ebk4hOjx63jkDHzoYrtC81oOchEvTN927ouVEKnYDhher-xUu24JFVeRlpnKj0Y9ap1HwQmAgE7WGv3ifF_l4-jv7oiazUV0KuGx2j4mL8H2O0ubEoIg4awqbry9Ou4KAE0" title=""/></span></p>
+<p class="c5"><span class="c1">  現在使用事實：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/kPWRWXa1kIBy-5AzAwVmaVerr_35X1R49gzG3X1bFIfcPzZjWAlzNBsAllGmsRH3zxr3niZhNt7gu0IXIm3fyRzfrP1XzG5JpESjlcwoMMNitwFG_ThOAfYOqUUIqwEcbExMd84" title=""/></span></p>
+<p class="c5"><span class="c1">我們獲得：</span></p>
+<p class="c3"></p>
+<p class="c5"><span class="c13">  因此，使用此控制器可以在2%處獲得的最佳建立時間是系統恆定時間的8倍。小於可獲得的任何值。實際上，如果我們在改變KP時關注閉環系統的根源，這是微不足道的。這由</span><span class="c9">圖11.3</span><span class="c1">給出。為了將控制器的增益固定為所需的根點s1,2 = 7.5 j，我們使用該圖並選擇一個ζ= 0.707。得出KP = 0.1471。</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/-OAeKCdILZzKtjB_87fwqOIEgFdK2SL6ZpRsS3hBkAxgr8O6sqEcDqecms5ctg6t79f77sX2koSmufJgKy3J99FqZ32Bl58c4Xyt-5r_-QMS6V4OHEiF_vv_Dmo-3NUumLi9ZII" title=""/></span></p>
+<p class="c3"><span class="c9">圖11.3</span><span class="c1"> 帶比例控制器的直流電動機的根軌跡</span></p>
+<p class="c5"><span class="c13">  使用該控制器，幅度等於30度的階躍函數的時間響應由</span><span class="c9">圖11.4</span><span class="c1">表示，從中我們可以得出結論，所設計的控制器以2%的穩定時間等於0.5115 s滿足了所有期望的性能。但是，如果我們實現該控制器，則實際情況將與仿真有所不同，因為齒輪箱的齒隙並未包含在所使用的模型中，因此實時結果將有所不同，誤差永遠不會為零。為了克服這個問題，我們可以使用比例和微分控制器，它可以在2%處提供更好的建立時間。讓該控制器的傳遞函數由下式給出：</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/x4NoNamIzURlsaa3QV9cwFfT4fDoOegL8GxPHNY4sR7u4nmk4sRsD9sIc07osnKILQiuqB7ctqilaWlkcXwUP3Q7o9dupJJIFWQ_21lpMGc_hCxyQcqpoy0CdX5NNljlBu8widI" title=""/></span></p>
+<p class="c5"><span class="c1">其中KP和KD是要確定的增益。</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c9">備註11.3.1</span><span class="c1"> 重要的是要注意，比例和微分控制器的使用將在閉環傳遞中引入零，如果放置得當，則可以縮短建立時間。根據其位置，過沖和建立時間將是受到影響。有關此問題的更多詳細信息，請參閱[1]。</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/fgUdKw3Trwo-BrN0kxOf3E7AyBkoiyRq0mhx4CKcybc9bi5WlBb-c1KNFd_EJIP4Nq1lPHn--KaxXotCT8cI-Mj5a4ZqA6tCm37LEKX7ZhKiBnrwxgMEBAym5wcq3EhNZ6Mf3qU" title=""/></span></p>
+<p class="c3"><span class="c9">圖11.4</span><span class="c1"> 幅度為30度的階躍函數的時間響應</span></p>
+<p class="c3 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">使用該控制器，閉環傳遞函數由下式給出:</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/eGbeqrkQzixC2nWGCcZ6AoDYWokVCG8UwpAlMnD7eZUx24KtRqrwfwGR_yUXm2DcMlIV8_w6RE4U13CeacFL-cho2jIV2pvl772Axo4X5P0OKl0UU4Y3yP7hJNWnvah7sJd1Q9w" title=""/></span></p>
+<p class="c5"><span class="c1">  和以前一樣，控制器的設計使用了兩個複雜的根點。如果將兩個特徵方程式相等，則得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/KT0XUMqWECWFtzJKE0CRGA55Bq7c-Updp7v0UVfT54N-ifBfXa1TKENPTrqRuo7TiPxp4kdTIyY6UobgJddCAbiR5E51FnMpgYTN4lsTTc9g8J0oHYqSE7X-P0kpFHzl0a9Lh-I" title=""/></span></p>
+<p class="c5"><span class="c1">  在這種情況下，我們有兩個未知變量KP和KD以及兩個唯一確定增益的代數方程。它們的表達式如下：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/bmo8ynBcO1OT-7WqINRec3yURYU8AFnh-SwyenE7EHM8yQTihjkKqRqxX-cLgv7RQbutNwIiz0R95EG2Mjd4bSCQcHxFlS7GTgsZcfA3on6Iw4XjETpLLF31SiLZqcEqrQhzGqM" title=""/></span></p>
+<p class="c5"><span class="c1">  現在使用期望的性能，我們得出與之前類似的結論，即等於等於30度幅值階躍函數的輸入的穩態誤差等於零，並且與過衝等於5%的阻尼比ζ等於0.707。我們可以將其固定為系統時間常數的一部分的穩定時間ts在2%處給出：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/VvZoq7JyTibTW0A4-bx3_KoaLTVTIiiUuL21Suhau9belPMl8rbOxigkBjCB9zvwn54fUpVP2LpNkUCxlDCLggVyKd0R77K8IttGw1rRGdkwWjtk9JPC_7ShoqiKPhfLzwTovm4" title=""/></span></p>
+<p class="c5"><span class="c1">  現在，如果將穩定時間固定為3τ，我們將得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/ZNeU6Peg_MhT7ZkaLfn58pf4eONf2fQjfu2CS6LRRavwsUG-7CSpMLONyWEaNWz3d5eIYpj_HLwuWdefs_i_t_oeqcQGFzZgF5oEBjpJe-SoraTwH0SXxNIJph13Uv7kjXI5VMw" title=""/></span></p>
+<p class="c5"><span class="c1">  使用這些值，我們可以得到以下控制器增益值：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/J45Tv1P_9NH94sQPMl4T_lfGejxfxNpvN5G_tCBeSVtKx-uL6d4dSETcpXu6aCaXeOVdbimaDYNGPS1_KTQiHacKoiYkVvGYWXb36Hzv9okwS-D3OYEa0afPukgAOErdXmmVPLU" title=""/></span></p>
+<p class="c5"><span class="c1">它給出了以下複雜的兩根：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/zvgn2Zvpbz9NphMnLhO4BT_YfBENE44HgE5gg3VBSj1DgI1NnHWOgVb-qjoPH8VQyP0bGv2NVQTB4b3AyQgucQErOMslK9euFCqj1QxvbmyZu3msGkpgKudECdjJ156tpUsQSHI" title=""/></span></p>
+<p class="c5"><span class="c1">零為：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/sT8twLdIZyyv352_hTb2UddPerDf2uc-J4_1wR3zkti3A-za5z6llKnpbPOmGPPBzeH0mF2IwQZgW2z55eG6cuaKL_Jg93a5Qf5d7ARoXhNLAMuCBT88lO5caHVAHJyV3-PHTY0" title=""/></span></p>
+<p class="c5"><span class="c13">  使用該控制器，幅度等於30度的輸入的時間響應如</span><span class="c9">圖11.5</span><span class="c1">所示。從該圖可以看出，過沖和建立時間少於使用比例控制器獲得的過沖和建立時間。</span></p>
+<p class="c5"><span class="c13">  至實施比例或比例和微分控制器，我們需要得到控制律的遞推方程。為此，我們需要使用前面介紹的不同方法來離散化控制器的傳遞函數。讓我們使用梯形方法，該方法包括將s替換為</span><span class="c1">。這給出：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/mzcpXz6P0MDpYswgSGWigfLtd75KD4bGmvKT_GWuGvH_CNJDgbl71yzoMJe4ECJIm8Ni05Zvo9EdVapK8YuuVkdr_kDaFMGtw3Bm_MNgos3YzWf3npv3jSqrJ4b1eYpBaHb92nA" title=""/></span></p>
+<p class="c5"><span class="c1">  如果我們通過控制分別表示u（k）和e（k）以及瞬時kT處參考與輸出之間的誤差，我們將得到以下表達式：</span></p>
+<ol class="c19 lst-kix_list_2-0 start" start="1">
+<li class="c5 c32"><span class="c1">對於比例</span></li>
+</ol>
+<p class="c3 c23"><span><img alt="" src="https://lh3.googleusercontent.com/Jci-oGribC1QTRvNrVGwTXv66i0RMoILwggOVWO1z1xgKf6G_pcHCU1Ou7MZN2rAWgoFrrYP3_LjkOzHfmhY2QAqLFajbwK3Q0Ts5WGgV5Y0N8Hlm-XrPB6C0TMEiMvDZ4AohjE" title=""/></span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/Fd6IliWL3zhhWd6nxW1LPKSdjkPmrC6UUUZtsSl6H6gqPtG3URlrrehWByJln0viCJTNWwd1jrKgjE2c4B9XHH192r-CtAg_zUOAQnvjah4G-XtmlP4-uk758F-YsUQnGRpex8k" title=""/></span></p>
+<p class="c3"><span class="c9">圖11.5</span><span class="c1"> 幅度為30度的階躍函數的時間響應</span></p>
+<p class="c3 c7"><span class="c1"></span></p>
+<ol class="c19 lst-kix_list_2-0" start="2">
+<li class="c5 c32"><span class="c1">用於比例和微分控制器</span></li>
+</ol>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/aLhnwW6-AjSpR3o4zqNNO--np5K4_mBJJW9SmC7hCbI6hVYBGheI7mQvpJczW9s2M2eqNd9X6uiNBIE6GymJAVlpXGvXpXFeiCn20cV9gGYjlULeEa5zMTcANUcUjGwFezTdSeQ" title=""/></span></p>
+<p class="c3"><span class="c1">  實現是該控制器使用相同的功能，但有一些小的更改。列出相應的功能是：  </span></p>
+<p class="c5 c8"><span class="c1">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span></p>
+<p class="c5 c8"><span class="c1">% Main program %</span></p>
+<p class="c5 c8"><span class="c1">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span></p>
+<p class="c5 c8 c7"><span class="c1"></span></p>
+<p class="c5 c8"><span class="c1">main</span></p>
+<p class="c5 c8"><span class="c1">% Data</span></p>
+<p class="c5 c8 c7"><span class="c1"></span></p>
+<p class="c5 c8"><span class="c1">% Variables</span></p>
+<p class="c5 c8 c7"><span class="c1"></span></p>
+<p class="c5 c8"><span class="c1">% While loop</span></p>
+<p class="c2"><span class="c1">while (1)</span></p>
+<p class="c5 c18"><span class="c1">do</span></p>
+<p class="c5 c6"><span class="c1">ReadSpeed;</span></p>
+<p class="c5 c6"><span class="c1">ComputeControl;</span></p>
+<p class="c5 c6"><span class="c1">SendControl;</span></p>
+<p class="c5 c18"><span class="c1">end;</span></p>
+<p class="c5 c8"><span class="c1">% ReadSpeed function</span></p>
+<p class="c5 c8 c7"><span class="c1"></span></p>
+<p class="c5 c8"><span class="c1">% ComputeControl function</span></p>
+<p class="c5 c8 c7"><span class="c1"></span></p>
+<p class="c5 c8"><span class="c1">% SendControl function</span></p>
+<p class="c5 c8 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">  現在讓我們使用此示例的狀態空間表示，並設計一個狀態反饋控制器，以保證所需的性能。對於這種情況，我們將首先假定完全訪問狀態，其次通過假設僅可以訪問該職位來放寬此假設。像我們之前所做的那樣，我們可以連續進行，也可以不連續進行。</span></p>
+<p class="c5"><span class="c1">  先前我們建立了該系統的狀態空間描述，其描述為：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/jYovX7QBU7LTCV7jidK57a8E0mQ2n0X7l69bzDWFo-Zu-o7VrVRWjWZw7VAfmuQknEQOH4gOd-UNrFT3qTbrvsvU1H__B5DoyDl1S_G4VHlre6mPsdxTcG5h-SIpAYyXVK0a364" title=""/></span></p>
+<p class="c5"><span><img alt="" src="https://lh3.googleusercontent.com/-7OcbDbVbKzW7Y6w6rFcTmVAtKaSAlflhPLfscizbzJjSmXjr_IsWz9uxk1FdpR_5z16-61dyxanPeD2btS0_9i2ONMG8CjjcpVGyPhW0efvcOAZpoGOiRRQDa69Lh7to5y3vY8" title=""/></span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/z90J8x--hL5T6-cOH1TWRDV8V5qc92R9uwHg-fEhldlDdWvikBKxYtc9Mdtf5Ss9u6BYa-Q1I65U6nV6oHjAUl3zx65H0UdjRraKzYQuDbX4PEyULrmATKYituJSWRWo3951A4Y" title=""/></span></p>
+<p class="c5"><span class="c1">  通過均衡這兩個方程式，我們可以得到以下結果：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/EEf7lcHWzksCjyWyFptI843DRTadMkhH8176H5Zvp_muYvsLsY90elsVJEYv-ay0iKBAZNXTNoF_m0ZOTtOTaWzLlEfgI_7HX3TDYVCWq24ilYI8V6TiSFXc32n3oHkGVm18DVU" title=""/></span></p>
+<p class="c5"><span class="c1">  使用該控制器，幅度等於30度的輸入的時間響應如圖11.6所示。從該圖可以看出，超調和建立時間就是我們想要的。重要的是要注意穩態狀態下錯誤的存在。如果在循環中添加一個積分動作，則可以消除此錯誤。有關此的更多詳細信息，請向讀者介紹[1]。</span></p>
+<p class="c5"><span class="c1">  對於第二種情況，由於我們無法訪問負載速度，因此我們可以從位置計算負載速度，也可以使用觀察者來估計系統狀態。如前所述，我們用於觀察者設計的根點應該比控制器設計中使用的根點更快。</span></p>
+<p class="c5"><span class="c1">  擇以下根點（s1,2，為控制器設計中所用實數的四倍）：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/UwOxykWqXZ6OoqiuJxi_iX1R0Mmpk_nDpBtDV3Iql7o08wQp3g2-mJvC48xeFDIXB3h6zkqNz-FosJntJKDhpJrDNlETjScSVi468N_zSPg1DI_QeH4AEht2QZkWvHQZgl9z4vI" title=""/></span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/lJ22uUmtU_yA9fQii8DUgWg4zWs459K5S8FOQryYF5_4wbvNdDi655zzvEBgVSdvtfyDCzIHHkSQohDfpu-dPjMmaUOw6K898YT8q6_xzDDc0ylvepmHC5cMAC4f1qNl0jVQe3E" title=""/></span></p>
+<p class="c3"><span class="c9">圖11.6</span><span class="c1"> 幅度為30度的階躍函數的時間響應</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">我們為觀察者帶來以下結果：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/T1hu-jvAwOyKlXyrX18gbOnlBHezqZziGmM0o2xCfzjOXgg_b-GK74ssCsyBTYGrdfMvh2Jcoj1U1rQUZtRZlYBZBVFUCoiTGqLWPXaRRi9WSivvXG6iAndCRmGXHjhB9Ijts6s" title=""/></span></p>
+<p class="c5"><span class="c1">  控制器的增益與對狀態向量的完全訪問情況相同。</span></p>
+<p class="c5"><span class="c1">  在下面的Matlab中，我們同時提供控制器和觀察者的設計，並進行仿真，以顯示系統和觀察者的狀態相對於時間的行為。</span></p>
+<p class="c5 c6"><span class="c1">clear all</span></p>
+<p class="c5"><span class="c1">%data</span></p>
+<p class="c5"><span class="c1">tau=0.064</span></p>
+<p class="c5"><span class="c1">k=48.9</span></p>
+<p class="c5"><span class="c1">A = [0 1;0 -1/tau];</span></p>
+<p class="c5"><span class="c1">B = [0 ; k/tau];</span></p>
+<p class="c5"><span class="c1">C = [1 0];</span></p>
+<p class="c5"><span class="c1">D = 0;</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">% controller design</span></p>
+<p class="c5"><span class="c1">K = acker(A,B,[-3+3*j -3-3*j]);</span></p>
+<p class="c5"><span class="c1">L = acker(A’,C’,[-12+3*j -12-3*j])’;</span></p>
+<p class="c5"><span class="c1">% Simualation data</span></p>
+<p class="c5"><span class="c1">Ts = 0.01;</span></p>
+<p class="c5"><span class="c1">x0 = [1 ; 1];</span></p>
+<p class="c5"><span class="c1">z0 = [1.1 ; 0.9];</span></p>
+<p class="c5"><span class="c1">Tf = 2; %final time</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">%augmented system</span></p>
+<p class="c5"><span class="c1">Ah = [A -B*K;</span></p>
+<p class="c5"><span class="c1">L*C A-B*K-L*C];</span></p>
+<p class="c5"><span class="c1">Bh = zeros(size(Ah,1),1);</span></p>
+<p class="c5"><span class="c1">Ch = [C D*K];</span></p>
+<p class="c5"><span class="c1">Dh = zeros(size(Ch,1),1);</span></p>
+<p class="c5"><span class="c1">xh0 = [x0 ; z0];</span></p>
+<p class="c5"><span class="c1">t=0:Ts:Tf;</span></p>
+<p class="c5"><span class="c1">u = zeros(size(t));</span></p>
+<p class="c5"><span class="c1">m = ss(Ah,Bh,Ch,Dh);</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">%simulation</span></p>
+<p class="c5"><span class="c1">[y,t,x] = lsim(m,u,t,xh0);</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">%plotting</span></p>
+<p class="c5"><span class="c1">figure;</span></p>
+<p class="c5"><span class="c1">plot(t,y);</span></p>
+<p class="c5"><span class="c1">title(’Output’);</span></p>
+<p class="c5"><span class="c1">xlabel(’Time in sec’)</span></p>
+<p class="c5"><span class="c1">ylabel(’Output’)</span></p>
+<p class="c5"><span class="c1">grid</span></p>
+<p class="c5"><span class="c1">figure;</span></p>
+<p class="c5"><span class="c1">plot(t,x(:,1:size(A,1)));</span></p>
+<p class="c5"><span class="c1">title(’States of the system’);</span></p>
+<p class="c5"><span class="c1">xlabel(’Time in sec’)</span></p>
+<p class="c5"><span class="c1">ylabel(’System states’)</span></p>
+<p class="c5"><span class="c1">grid</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">figure;</span></p>
+<p class="c5"><span class="c1">plot(t,x(:,size(A,1)+1:end));</span></p>
+<p class="c5"><span class="c1">title(’states of the observer’);</span></p>
+<p class="c5"><span class="c1">xlabel(’Time in sec’)</span></p>
+<p class="c5"><span class="c1">ylabel(’Observer states’)</span></p>
+<p class="c5"><span class="c1">grid</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c9">  圖11.7與11.9<span> </span></span><span class="c1">給出了輸出、系統狀態和觀察者狀態的說明。</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/wZz-5ZLprrq90gNG1UEvE18QWjHWPsAujGEj9Vr2Q2rgtc3U4BvnXFE4ZsHVvIuFHZ9_EYMq0BsEF7gPnwAsVAe2OcFV1sxFTr-a5jlCb-yV3vPycOcDsazkq-dQ9iIS6cJwWrc" title=""/></span></p>
+<p class="c3"><span class="c9">圖11.7</span><span class="c1"> 輸出與時間</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">  我們還可以使用線性二次調節器設計狀態反饋控制器。實際上，如果我們為成本函數選擇以下矩陣：</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/r7EI3pgs1L5wZfg5u-H2NGvL9XBMerGg7SaMK51wTCXqgYBKvpllFhte_8h5YpVd-F89dAPMOiMBesyY4AVzc-yFDc-apPR_YCKCAp8vjsNStaMd64aH84Ux11VDdRH13Ficzq8" title=""/></span></p>
+<p class="c5"><span class="c9">備註11.3.2</span><span class="c1"> 通常，對於成本函數的矩陣的選擇沒有魔術規則。但是通常，例如，我們對控件使用較高的值將迫使控件採用較小的值，並可能防止飽和。</span></p>
+<p class="c5"><span class="c1">  使用這些矩陣和Matlab函數lqr，我們得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/9GWVLwzLqfrPLRe0v783mtUIr4BnTm7QpbOIgVyEd3gKNNoLh5ZMGsFdDLBMfT4xWGfX8V4VhKkjhx2kwko_dRVKGC15fH9m68MtX13Cn824r9PQCpz0LenJ_SmuSK8JJSyhxdo" title=""/></span></p>
+<p class="c5"><span class="c1">  我們也可以使用魯棒控制部分的結果設計狀態反饋控制器。由於系統沒有不確定性，也沒有外部干擾，所以我們可以為名義動態設計一個狀態反饋控制器。使用系統數據和Maltlab，我們得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/FkLgMYieAZ8VToykD8ISqXToiXepDmjOmHhb2duRkkTDr5HUmh4wgEDPzh_amm7ra-KfLUygV27dVJ85BNdP_ihTGanHWeGN2DdF482Jk4pG-nEmFuokkWUwTaeGCXhr6PVmi6A" title=""/></span><span><img alt="" src="https://lh5.googleusercontent.com/j3lTvwA6aqZU9IYSWHdW5J6d5vm67zTfF5TFGt4x7mnmqZYB3fORyCVsL9eMR9X-OAKsfALFljgycJtnnIhePvOmXywqF33Uto2SnwCILpDwc_wldLsq7Hf15jM7ilTa7JRuMZA" title=""/></span></p>
+<p class="c3"><span class="c9">圖11.8</span><span class="c1"> 系統狀態與時間</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">  給出了相應的控制器增益:</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/59ttw3Z8aOnt_yjpjcboCNcfJv1k_LHigeLNg0X-yu84Fi6QphlqUmK78vBw63u_ctVrXhr4dszZAqpwiCw-vOlmnnogfp0lYXqAtwz7vJAUjf2YA9T-q5t5K6G8xoy9rSKfH6w" title=""/></span></p>
+<p class="c5"><span class="c9">備註11.3.3</span><span class="c1"> 由於我們有直流電動機套件的連續時間模型，因此我們用它來設計控制器增益。在這種情況下，我們解決了以下LMI：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/VorJBtpu30sRDmMxTksaWcSvZWeQ4QVmFRSLHPhd7E03WhpglQ5x8Vg9Qk2Xr7wI3FOKVXT-PQiGXVUJIhUmKtPPAMuzUbeFoVAhMnfCFtgP4TWGbQ3x6s3DwAmZlArPHiDXNzY" title=""/></span></p>
+<p class="c5"><span class="c13">  增益K由下式得出：K = YX</span><span class="c28">-1</span><span class="c1">。</span></p>
+<p class="c5"><span class="c1">  有關連續時間情況的更多詳細信息，請向讀者介紹Boukas [2]及其中的參考文獻。</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c10">11.4        平衡機器人控制</span></p>
+<p class="c5"><span class="c1">從控制的角度來看，平衡機器人是一個具有挑戰性的系統，因為它是一個不穩定的開環系統。該系統吸引了許多研究人員，為此已經提出了許多設計方案。在這裡，我們將介紹</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/QfYZq_Z-sO9ec8fcy0w9_WRpSsSiujVNESZUk0n2XQav6r385fxt4BwUag6_At_fB6sLgAsgLeVJZtL1cp9095RqtZkAhd8lTox-5TIZgfYltgqUwJj9ALISMoSphrEn3jCmgSM" title=""/></span></p>
+<p class="c3"><span class="c9">圖11.9<span> </span></span><span class="c1">觀察者狀態與時間</span></p>
+<p class="c5"><span class="c9">  圖11.10與11.11<span> </span></span><span class="c1">給出了機器人的概念。它是為研究目的而開發的，目的是使機電一體化的學生能夠實現他們的控制算法並熟悉複雜的系統。該機器人有兩個獨立的輪子，每個輪子都由一個直流電動機通過一個傳動比為1：6的齒輪驅動。每個電機都有一個編碼器來測量軸的速度。這兩個電機連接到機器人的主體。其他傳感器（如加速度計和陀螺儀）用於測量傾斜角。引入了適當的濾波器以消除這些措施的噪聲，從而獲得有用的控制信號。</span></p>
+<p class="c5"><span class="c1">  機器人的大腦圍繞30F4011系列的MicrochipdsPIC構建。在Microchip的C30使用PCKit2生成可執行代碼之後，所有的編程都以C語言完成，並插入到dsPIC中。</span></p>
+<p class="c5"><span class="c1">  如果我們參考第4章，則數學模型如下：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/__bOwFqZv5X2Rhr_HJkX9ub5BWurq7GfJIFk6Q86R4Hh0A3PB_JoqV74lodOWrvymggtoobS-e1UVWQA0bFvIuRhWuk-kA2UMhWVPhWBZd1uBeXuORiYkf8Km5JoLDyMZZ1Hf18" title=""/></span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/McfwCZbrDXBM1vGJXSv3IkJ6rpxteXfnBYXTu5fEPYdkaT3AIv-0f4eMeq0BEi-AstszvYtOCUhuTZPgW0bRAoc9UsVQuompDUNHlQX8N24LaI8N7CJyv0Z9eBmJlNdaTAvyW88" title=""/></span></p>
+<p class="c3"><span class="c9">圖11.10</span><span class="c1"> 平衡機器人</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">而</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/2KG5UXsvOafrYihswq1kxx86oNrVAGPCmP5KP3cZwtU2PPqOwJyhMXaVttQEuT6W_ZLqyQOPe87cB5ODPsYLTUKtazTfJAwAjHuWpb3k5Anknw_lEHQmwsg-FMJFtbJLW-QsusA" title=""/></span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/_zljVJiWRdSVcxjvSzIgV_Gq261ZggZ8Se50Vv76HZKBS0Z9ppr4DEr05edxWN9mUvP_3Wcp_Wo0rMHWRjjU-CyViOTl-Z7jtEQrCO6QyWlDYhvj3BnraPhjoaqII0iDcdhBH3E" title=""/></span></p>
+<p class="c3"><span class="c9">圖11.11</span><span class="c1"> 平衡機器人的電子電路</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">  由於系統在開環中不穩定，因此讓我們設計一個狀態反饋控制器，該控制器具有以下性能：</span></p>
+<p class="c5"><span class="c1">1.        系統閉環穩定；</span></p>
+<p class="c5"><span class="c1">2.        超調小於或等於5％;</span></p>
+<p class="c5"><span class="c1">3.        2％的穩定時間等於1.5 s;</span></p>
+<p class="c5"><span class="c1">  從規格中我們得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/rvFpPvJfVHy3K-rOwNKw2IYBHCHJwMqVy2QACCt4P201RvmZ4sSZAtsmki29DCEOxpNbsGG02Qn2SEyV6K9OYpVcQKRISC6hBB-eTW5ba-vF4cxlRyQ0vjC1EI69PFclo38jdsU" title=""/></span></p>
+<p class="c5"><span class="c1">  相應的主根對由下式給出：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/ztZOweCS9QVyN0AxTHI4p4456hBgM_tPzkJzSOEHodK06FD1xCq8MQhage-SRAxPDxHTM17o1fH7iLFb0sOafyXJ_2or_HjFi23TVIfzfxUyx38-zMlm0A63SDO_qizslXbwIuM" title=""/></span></p>
+<p class="c5"><span class="c1">  由於矩陣A的等級為4，因此我們需要再放置兩個根點以確定狀態反饋控制器增益K。讓我們選擇以下主根：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/WghDMvGDPjhAMhqEHIwwFuD9mqaCXpGf8me1VxwMmB5nu77cyJJEY3VaUQT-gTGp05ppNs9ukYd2tWsgUIFDn92e2_1Uzl56gOH6MhSyJA0W0EmmNTZVRUg0mghLFXqjxh2EpKY" title=""/></span></p>
+<p class="c5"><span class="c1">使用功能acker，我們獲得了以下結果：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/S4oMkL8LAKSaZJcAJpWnO4LMGdu1F5l7eQRtL61kcsDbx-mykyKZoTbvLDEBY5PVIBaPUSdxdYJj3-tp2tP8GCJMNQdHkXgrMTtPyJ54Q2SLowSUfLHZjFxjqv3LCxKiiwbhr-c" title=""/></span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/iz0dksGiuKUk1rWqSTu1ekbXUpRAQuuO0jorLlgaG6tNgiLs7kV3yvf2QiTBQC3uG8klcjJbaOpOO6xdn4sNUrjg5B-GWmCPZAFKrVJmG5dZY2GtZextS-gT1gGT4z59L7KrwxA" title=""/></span></p>
+<p class="c3"><span class="c9">圖11.12</span><span class="c1"> 輸出與時間</span></p>
+<p class="c3 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c13">  該控制器的模擬結果在</span><span class="c9">圖11.12和圖11.13</span><span class="c13">中示出。系統從初始狀態開始</span><span><img alt="" src="https://lh5.googleusercontent.com/6qPg_d7um7FoQhCHUtSnZKtpqQ8SocZm-sQ2QLXRJm5hPJLGSdXJZsk7pv9vUtqPbARb7tsRIc4y82Gvblg8b3SV7sCsU9qXDX3m2X7uwS8kTs2tYXJmSmW4CCF5pUwTDxWkhog" title=""/></span><span class="c13"> 輸入為零。要是我們嘗試發送輸入參考，我們將在狀態或輸出中出現錯誤。克服這需要添加一個整體動作。如果我們用</span><span><img alt="" src="https://lh3.googleusercontent.com/GUREV-ZM3Odbhlg3fJaQQJaWc4EhXuSS_M7DjLVc5M392s8zVDOAp24xV5JYpqjRXY62Bcg_weC0nWuj87atqpFUZb4loaO5fjW4QkUKWd_tTfVz3J5VCsKpj5lYsiJaHehEVfo" title=""/></span></p>
+<p class="c5"><span class="c1">xr（t）為位置參考，然後跟隨[1]，我們得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/6C7HBC0K4ua9P2XLCEDrOv81p42XcGkbUznsc0KPoUy3g7hFD6SELY2uKHGXEKyGp0NyndGFbQP30KNw0r0FZBEtJKakK_L9dZ4Is7_wBTaGC-2E0aPjZkYcyNhiLThbZD-iGuA" title=""/></span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/7ZBcawdUFxKdfBUFpo5OYrwB5HZD9ur7DKvD_kgXwz5pHt-jLAaeWve5ftCS70P0fQqyaXiSAmjYDPKWKBN4U-PjXILIxaZyWAH6A0OJr5dsp4jBpED2pG1Bek_ImQUykBd2fnk" title=""/></span></p>
+<p class="c3"><span class="c9">圖11.13</span><span class="c1"> 狀態與時間</span></p>
+<p class="c5"><span class="c1">而</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/96QCrfJCWbL6nLusTS0GZ6o7Z4D81XDhBQtYTTKIdlSb6sUde3llcEvkxwgYXia-Dn_QRZtmQz_QFAMbqEVpl6_47Aqxp3tGbav44utyvn-LOuUNLszbJbOF26LO5O_8ktDHr_0" title=""/></span></p>
+<p class="c5"><span class="c1">  新的動力學變為五階，我們需要修復三個主導根點以及規範中的主導根點。這些根固定為以下根：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/QgQn-9c9X7JJwSVnKfkw285xT1A6EB5g8jvmAke79i0MX9fgohgp8tzbezo89lxcHYoJnKSm-26AqhKSd_izjOynrce0EHvL4acPapWtsaqR6shQpfdSMIQqbqLhcKxQZs4SSkk" title=""/></span></p>
+<p class="c5"><span class="c1">  使用功能acker，我們獲得了以下結果：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/AbguuNSC0---rmWcebr50QtBuEPX0fKhVzPlfhmv7HMlKtnkbJtagVd9XaeQVUDm4qPYWzpTm-TISc_zNbSWKhDYn5gwy7W9vLQ-z-eBJb9bLdA309KWxqi51da6V5GW_3jaEnk" title=""/></span></p>
+<p class="c5"><span class="c1">  我們還可以使用線性二次控制技術設計狀態反饋控制器。實際上，如果我們選擇以下矩陣：</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/YCogJaRga0ycixXadUSxw23VoviDXJNwPW3PesRNJOC0Wz37lH-tNwfD6Xryh9vu19wJIktiNOjfcNN5Vvq-My3QNt-KGlMWbjJCKoSfp_x-BwdGsrZrPpMI1o8Jc6iNYJpkteQ" title=""/></span></p>
+<p class="c5"><span class="c1">並使用Matlab函數lqr求解Ricatti方程，我們得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/gokCeWpRJ95n2J90vpMG2zlWl3WCUeFocVcQO9ZyWQfiqNUrbrtGIakVNaQFE8gYTwAshbdDdPBWuZNxbs00snVk-JXWR2Ie1FPk9DFpnXlLFFAm3BuUknz4YvoyAexqA33vUoY" title=""/></span></p>
+<p class="c5"><span class="c1">  閉環的相應特徵值由下式給出：</span></p>
+<p class="c3"></p>
+<p class="c5"><span class="c1">  可以類似地獲得該控制器的仿真結果，並省略了細節。</span></p>
+<p class="c5"><span class="c1">  對於該系統，我們還可以使用穩健控制理論設計狀態反饋控制器。可以連續時間或離散時間完成。由於我們的模型是連續的，因此我們將使用LMI連續進行設計。求解適當的LMI（用於矩陣尺寸不同的直流電動機套件的LMI，我們得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/9qtq3Hse4Ao6XCsmZZULdSod_qhy_lvUms3d6Dgzh1b9Z_PUGwCsqFJXtjDStGXsCNxsLefl1YENUcvZqBIT-tPKHmPgQFWT4yef1j4dvHpStu0My3RYRw-6hreCG6P7JblXTvk" title=""/></span></p>
+<p class="c5"><span class="c1">為狀態反饋控制器提供以下增益：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/monQFLaGCu7j_22Q1YlOobZQTcylEvylZZE-uvotcgdHxjrP1U9XQFCYyTNLNHbLKFo3yVuWlBN76ZgDYWCEUgMytJRwudq5d2vhCFupLXK1IDdM7YLEQUFY75T_ssFZmlMXxis" title=""/></span></p>
+<p class="c5"><span class="c1">  閉環的相應特徵值由下式給出：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/w9nasTmYZCiZrWPeouY7CGEiiEj7v28CVfgvaryIFnrM6_gY1Xn8rx3B1LtMB07nd3W6_PU4tgaaEXIDlx-DS2UFUEfg0nZFpvNYKJxbsizKaPf0TMTujoCDBeNSywTtCd8rNWg" title=""/></span></p>
+<p class="c5"><span class="c1">  對於其他控制器的設計可以很容易地獲得，我們將此作為因為設計是為了編寫Matlab程序而為讀者進行的類似於我們在文本中給出的內容。</span></p>
+<p class="c5"><span class="c1">  作為第一個示例，讓我們考慮兩輪機器人的H∞控制問題。在這種情況下，我們在狀態動態中添加一個項。 該項為Bw（t），其中w（t）是具有有限能量的外部干擾。 通過γ= 0.1求解適當的LMI，我們得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/Z8M-OCDU7BjF4YaxoWXXLjngsC_mCZsYSx6tPeNcrPcWrwpOjrbUUqukORTcEgozdZUk0HJPUJH3HzsmqZZTqINiCwtOVHfHwjqOSTfCZ-j8us-IHa71LCmxocYRp0BeMuR5mrY" title=""/></span></p>
+<p class="c5"><span class="c1">為狀態反饋控制器提供以下增益：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/2UdWc0b-gUmLGNOCNuKCbfdOM5xYXl53ZaoRrwzUIV7N-X0fdbKZud5LF_-1qTrzFh2ibp7JFd78bhYdM4cHIMvYJPBc1XAO8C5xaS5n3s4ohcQrv0IkyaOZJ2D_Q8uevCBTNK4" title=""/></span></p>
+<p class="c5"><span class="c1">  閉環的相應特徵值由下式給出：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/9kajIvUMP-eg0ytqH3MibJIiBBh8Hsf1r4BkZ8f6ROiHtAKPdvNX0jqHHxWHGW2Y7Yh39fWd93PvHD1UtcGV2s5eJmGZxzCbD-uAmg9w7GNlW1dc3C8dh93rdSiWA8L-ikDZ1R8" title=""/></span></p>
+<p class="c5"><span class="c1">  對於其他控制器的設計，可以很容易地獲得，並且我們將此作為讀者的練習，因為設計被引入來編寫類似於我們在本文中給出的Matlab程序。</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c10">11.5        磁懸浮系統</span></p>
+<p class="c5"><span class="c13">在本節中，我們將介紹前面介紹的磁懸浮系統。由我們的機電實驗室開發的機電系統由兩部分組成：一個固定的部分，代表線圈並產生電磁力，另一個是我們希望通過作用於電磁場產生的電磁力而放置在某個位置的鐵磁物體。線圈。該系統的目的是通過輸入電壓調節電磁鐵中的電流來控制移動物體的垂直位置。使用霍爾效應傳感器測量物體位置。dsPIC30F4011周圍的電子電路通過L298（集成電路）為線圈供電，電流與致動器的指令電壓成正比。由於磁力只具有吸引力，互導放大器會轉為否定命令。該系統如</span><span class="c9">圖11.14</span><span class="c1">所示。</span></p>
+<p class="c5"><span class="c1">  該系統的數學模型由以下方程式給出:</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/6OSytHoDDKwM6PNstIvpQopqbJNvV9SBiqOZUHO4PvMVhshTBkGkfdVzrs5-kJ7zEsvYUJcdWggXnVGXccpbbO95ca65Hxj64xeymbYpiF_t74oFQfxX8z14_-e6Fkr4_MLrhHw" title=""/></span></p>
+<p class="c5"><span class="c1">其中m是運動物體的質量，l（t）R+是從電磁體測量的距離，F1和F2分別是當電流為i（t）時線圈產生的力以及電磁體與電磁體之間的電磁力。永久磁鐵放置在移動物體的頭部。</span></p>
+<p class="c5"><span class="c1">  這些力的表達方式如下：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/d59BIFJ-LGIljhm5cUxUpS7n0HKuY68vHWF_rxYO5VMIC6fUHtuLS23VV1PSjcvVLWZKIbHMXuD9rP3oRcguuryH5mKwnTDDlybdL5I-N6Wxlx-Mi-IEKnUB7eI4i2aMMxKFZiI" title=""/></span></p>
+<p class="c5"><span class="c1">  我們可以線性化這個非線性模型，得到以下信息（請參閱第1章）：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/NCXD4SJHeBgFmzRSzsLG7uKtUGBZFsB5INHnpAUMgvb3wuzxygX2LufIYSqnh3ETRYHs1ugDqXT8hPYm-0bmqVJstIUfNnt--Ug7ax1xhka_i0qb2Y8ZPsFMDwEB_SD8iXuvAgM" title=""/></span></p>
+<p class="c5"><span class="c1">而</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/wzLegC-C77uQYni826V1uUZeAfsxKO52vdiOq9DcTudTh8fYMDekHrCmMuemmHePqMATTFZ8arhhEcRVqrkzsJqpmwPGSAP2uoCac-bI_A5U3QBxQ7Z7ZoT9D8C4_bhkEmI4Tso" title=""/></span></p>
+<p class="c5"><span class="c1">  該系統的數據由表11.1給出。使用此數據，矩陣由下式給出：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/YowfOOoYyBCmU0WmoSEAVLgbs0SYLaf05OKKPryOW76jg4-pIl10j20_oJS7Nu3fz_wXZNK0YLLydiyUTT2o3mL63LI5T6R1BwjytXQ9v1Hzyf4eZzqiXGA62wd9mXGWZSLoY_U" title=""/></span></p>
+<p class="c5"><span class="c1">  重要的是要注意，系統在開環中不穩定，因為它具有積極的一面。可以通過計算的特徵值來檢查矩陣A。</span></p>
+<p class="c5"><span class="c1">  讓我們設計一個狀態反饋控制器來保證以下性能：</span></p>
+<p class="c5"><span class="c1">1.系統穩定閉環</span></p>
+<p class="c5"><span class="c1">2.超調量小於或等於0.2％</span></p>
+<p class="c5"><span class="c1">3.％2的建立時間等於0.05秒</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/tdVEceCC8O3zB0Hj_25vhKmSsVsXgzRTKiuGSGlMhgznHSt9k5dDsICjCo9v1qtLdAW4y1U3I8Pet9rTXL4_MwKdYonUSq0y-XtI1DSQ5mWOHsq0f0cS_yCXYzxFzaWVF2xxucw" title=""/></span></p>
+<p class="c3"><span class="c9">圖11.14</span><span class="c1"> 磁懸浮系統</span></p>
+<p class="c3"><span class="c9">表11.1</span><span class="c1"> 磁懸浮系統的數據</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/VdkKwrku13AijaqKtBe_L_jeI3SQxHUURylKY2hVUH53L-c92b-HQXsFbk5BC5oUUWcWn2NA4B4bvVjdw6OfwRoGhtqQOBFk19ynOul1rAj3sY_152fi-9GtutZDC75btFp6olQ" title=""/></span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">  由於過衝小於或等於0.2％，因此ζ= 0.9的2％的時間建立時間由下式給出：</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/3CZ0b43yEc1Zje5pDZIXwFydZjC1cm5QZXJ7WPTY9nL-TZWkwW9anXlEpk2AHdNpROPel-iHZ0ColTkXuC63vM3ZJXVIvbzUxpDns0UVFXf5peAJhFtbOeLP9t5cpoViFoun98o" title=""/></span></p>
+<p class="c5"><span class="c1">wn是自然脈衝。如果將穩定時間固定為0.05秒，我們將得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/8EJgFW9xPYQN7JQ8t8GQ1HjxCv0ZfXKL-rZDNk8KNGSw48aAN5wVHqqe2EsUbDmtcCuNpnHwJM7q3DssJ0k578I5Sroo7xY2MwL4fEBEm1e5FOGiDAEfTqj3yO8FnXcsxtx_KeI" title=""/></span></p>
+<p class="c5"><span class="c1">  設計的主要根點如下：</span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/rp6pRQhlkYtuZ2NcOoCKuNgyzVbVBEMNcWN4ADasql6WxmlOkZGHO7CCA1Xvc_AfgyFhOJRrQw2ouP0w6Ld7ZwVzOm3zbbbX06ePXsy7NeofWCkYY_yc-mSufgMBahI6qMLxEpo" title=""/></span></p>
+<p class="c5"><span class="c1">  使用這對根，我們得到：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/CN0FnFmuZJ2HOROw40ar005BDd8t9POlXFKIEctvC0jgQ9hs_GzRswe3QQuGIIyLZTD3QCoSKG5MsJD9e56Y_MnYfiDLjs-GBpOT-iIoKBBr7xSZJg0iKdqzuV2b2_wbh685Vos" title=""/></span></p>
+<p class="c5"><span class="c13">  使用該控制器，從給定的初始條件開始的時間響應如</span><span class="c9">圖11.15</span><span class="c1">所示。從該圖可以看出，過沖和建立時間就是我們想要的。</span></p>
+<p class="c5"><span class="c1">  對於第二種情況，由於我們無法訪問負載速度，因此我們可以從位置計算負載速度，也可以使用觀察者來估計系統狀態。如前所述，我們用於觀察者設計的根點應該比控制器設計中使用的根點更快。</span></p>
+<p class="c5"><span class="c1">  選擇以下根點（s1,2，為控制器設計中所用實數的四倍）：</span></p>
+<p class="c3"><span><img alt="" src="https://lh6.googleusercontent.com/EVGmpfZxvz3unTz2EG-pXYrVRZ4OH3A_jAprmwYKBQ5laRhCVz27pVkVkxNJU9J0WtyjIdw8DCdmbeY7DvLKHRFYQJLso79l3JDCvb50wk5uIhWJtiaIW8MBkMdwEZrIC_SMEBk" title=""/></span></p>
+<p class="c3 c7"><span class="c1"></span></p>
+<p class="c3"></p>
+<p class="c3"><span class="c9">圖11.15</span><span class="c1"> 運動物體的時間響應</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">我們為觀察者帶來以下結果：</span></p>
+<p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/Uu0vHxGY1z06mI_CZ-DUebYhiRDrPc73n4-5snQ6bnaurgysDtkfemUwubZ7JTXKxRMHBa518gjRJwCC1PtIqS0c5cmN0F2EdCqNFRXQUT7HbD0OlcoLebUpe2dOemMMtar1rf0" title=""/></span></p>
+<p class="c5"><span class="c1">  我們可以像我們對直流電動機套件和雙輪機器人所做的那樣試驗所有其他控制器，但是我們更喜歡讓這一部分作為練習供讀者練習工具。注意，我們邀請他/她在連續時間和離散時間情況下進行設計並比較結果。該系統的尺寸可以做到這一點。</span></p>
+<p class="c5"><span class="c1">  下面給出了用於對該系統的狀態反饋控制進行編程的示例：</span></p>
+<p class="c5"><span class="c1"> #include &lt;p30fxxxx.h&gt;</span></p>
+<p class="c5"><span class="c1">#include &lt;stdio.h&gt;</span></p>
+<p class="c5"><span class="c1">#include &lt;stdlib.h&gt;</span></p>
+<p class="c5"><span class="c1">#include &lt;adc10.h&gt;</span></p>
+<p class="c5"><span class="c1">#include &lt;math.h&gt;</span></p>
+<p class="c5"><span class="c1">#include &lt;uart.h&gt;</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">//</span></p>
+<p class="c5"><span class="c1">// Configuration</span></p>
+<p class="c5"><span class="c1">//</span></p>
+<p class="c5"><span class="c1">// Interne frequency (30 MIPS) instructions/sec</span></p>
+<p class="c5"><span class="c1">// Number of samples: 7,37*16/4 = 29480000</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">_FOSC(CSW_FSCM_OFF &amp; FRC_PLL16);</span></p>
+<p class="c5"><span class="c1">_FWDT(WDT_OFF);</span></p>
+<p class="c5"><span class="c1">_FBORPOR(PBOR_OFF &amp; MCLR_DIS);</span></p>
+<p class="c5"><span class="c1">_FGS(CODE_PROT_OFF);</span></p>
+<p class="c5"><span class="c1">_FICD( ICS_NONE );</span></p>
+<p class="c5"><span class="c1">__C30_UART=2;</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1">//</span></p>
+<p class="c5"><span class="c1">// Variables</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">#define Freq_pic 29480000 // PIC Frequency</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">#define a11 7.8510061454215840e-001</span></p>
+<p class="c0"><span class="c1">#define a12 2.2727760074413661e-004</span></p>
+<p class="c0"><span class="c1">#define a21 5.0829248960838420e+001</span></p>
+<p class="c0"><span class="c1">#define a22 1.0000643300984893e+000</span></p>
+<p class="c0"><span class="c1">#define b11 3.7771272752681438e-005</span></p>
+<p class="c0"><span class="c1">#define b12 4.5392069137012870e-004</span></p>
+<p class="c0"><span class="c1">#define b21 8.7496385285734044e-003</span></p>
+<p class="c0"><span class="c1">#define b22 1.0852723324638587e-001</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">#define Ts 2.2727272727272727e-004</span></p>
+<p class="c0"><span class="c1">#define u_max 1.1789999999999999e+001</span></p>
+<p class="c0"><span class="c1">#define ref_tension 5.0000000000000000e+000</span></p>
+<p class="c0"><span class="c1">#define ref_pic 1.0240000000000000e+003</span></p>
+<p class="c0"><span class="c1">#define duty_cycle_ref 5.8481764206955049e+001</span></p>
+<p class="c0"><span class="c1">#define x_ref 7.8768775539549939e-003</span></p>
+<p class="c0"><span class="c1">#define u_ref 2.0000000000000000e+000</span></p>
+<p class="c0"><span class="c1">#define y_ref 8.5691877396730676e-001</span></p>
+<p class="c0"><span class="c1">#define K0 5.2128678707944724e+004</span></p>
+<p class="c0"><span class="c1">#define K1 3.9336557697049994e+002</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c2"><span class="c1">double y[2] = {0.0, 0.0};</span></p>
+<p class="c2"><span class="c1">double u[2] = {0.0, 0.0};</span></p>
+<p class="c2"><span class="c1">double y_tilde[2] = {0.0, 0.0};</span></p>
+<p class="c2"><span class="c1">double tension_tilde[2] = {0.0, 0.0};</span></p>
+<p class="c2"><span class="c1">double tension = 0.0;</span></p>
+<p class="c2"><span class="c1">double duty_cycle_tilde = 0.0;</span></p>
+<p class="c2"><span class="c1">double lim_Sup = 0.0;</span></p>
+<p class="c2"><span class="c1">double lim_Inf = 0.0;</span></p>
+<p class="c2"><span class="c1">double position_tilde[2] = {0.0, 0.0};</span></p>
+<p class="c2"><span class="c1">double vitesse_tilde[2] = {0.0, 0.0};</span></p>
+<p class="c2"><span class="c1">double integrale_tilde[2] = {0.0, 0.0};</span></p>
+<p class="c2"><span class="c1">double duty_cycle = 0.0;</span></p>
+<p class="c2"><span class="c1">double temps_total = 0.0;</span></p>
+<p class="c2"><span class="c1">double n = 6553500.0/65536.0;</span></p>
+<p class="c2"><span class="c1">int compteur = 0;</span></p>
+<p class="c2"><span class="c1">int compteur_freq = 0;</span></p>
+<p class="c2"><span class="c1">int uart_flag = 1;</span></p>
+<p class="c2"><span class="c1">unsigned long Val_reg = 0;</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">//</span></p>
+<p class="c0"><span class="c1">// Functions</span></p>
+<p class="c0"><span class="c1">//</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">void init(void){</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">INTCON1bits.NSTDIS=0; // Activation of the level of interruption</span></p>
+<p class="c0"><span class="c1">TRISE = 0; // Configuration of PORTE as output</span></p>
+<p class="c0"><span class="c1">TRISD = 0; //Configuration of PORTD as output</span></p>
+<p class="c0"><span class="c1">PORTEbits.RE8 = 1;</span></p>
+<p class="c0"><span class="c1">PORTEbits.RE2 = 0;</span></p>
+<p class="c0"><span class="c1">PORTDbits.RD0 = 1;</span></p>
+<p class="c0"><span class="c1">ADPCFG= 0xFFFF; // Configuration of the pins of PORTB as digital</span></p>
+<p class="c0"><span class="c1">I/O</span></p>
+<p class="c0"><span class="c1">}</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">void init_ADC (void){</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">SetChanADC10(ADC_CHX_POS_SAMPLEA_AN3AN4AN5 &amp;</span></p>
+<p class="c0"><span class="c1">ADC_CHX_NEG_SAMPLEA_NVREF);</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">ConfigIntADC10(ADC_INT_DISABLE);</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">OpenADC10(ADC_MODULE_ON &amp; ADC_IDLE_CONTINUE &amp; ADC_FORMAT_INTG</span></p>
+<p class="c5 c8"><span class="c1">&amp; ADC_CLK_AUTO &amp; ADC_AUTO_SAMPLING_ON &amp; ADC_SAMPLE_SIMULTANEOUS,</span></p>
+<p class="c5 c8"><span class="c1">ADC_VREF_AVDD_AVSS &amp; ADC_SCAN_OFF &amp; ADC_CONVERT_CH_0ABC</span></p>
+<p class="c5 c8"><span class="c1">&amp; ADC_SAMPLES_PER_INT_1 &amp; ADC_ALT_BUF_OFF &amp; ADC_ALT_INPUT_OFF,</span></p>
+<p class="c5 c8"><span class="c1">ADC_SAMPLE_TIME_1 &amp; ADC_CONV_CLK_SYSTEM &amp; ADC_CONV_CLK_32Tcy,</span></p>
+<p class="c5 c8"><span class="c1">ENABLE_AN4_ANA &amp; ENABLE_AN5_ANA, SCAN_NONE);</span></p>
+<p class="c0"><span class="c1">}</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">void init_Timer1 (void){</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">INTCON1bits.NSTDIS=0; // Activation of mode 16 bits of the Timer1</span></p>
+<p class="c0"><span class="c1">T1CONbits.TON = 1; // Autorisation du Timer1</span></p>
+<p class="c0"><span class="c1">T1CONbits.TGATE = 0; // Dsactivation du mode Timer Gate</span></p>
+<p class="c0"><span class="c1">T1CONbits.TSIDL=1; // Synchronisation of Timer1 sur le Idle mode</span></p>
+<p class="c0"><span class="c1">T1CONbits.TCKPS = 0; // Choice of the Prescaler 1:1</span></p>
+<p class="c5 c15"><span class="c1">(1=1:8, 2=1:64)</span></p>
+<p class="c0"><span class="c1">T1CONbits.TCS=0; // Selection of the interne clock (0=FOSC/4)</span></p>
+<p class="c0"><span class="c1">IFS0bits.T1IF = 0; // Put to zero the overflow bit for the</span></p>
+<p class="c5 c15"><span class="c1">interrupt of Timer</span></p>
+<p class="c0"><span class="c1">IEC0bits.T1IE = 1; // Activation of the interruption of Timer1</span></p>
+<p class="c0"><span class="c1">PR1 = 6699; // Sampling frequency at 4400 Hz environ</span></p>
+<p class="c0"><span class="c1">IPC0bits.T1IP = 5; // Priority 5 for the interruption of the</span></p>
+<p class="c5 c15"><span class="c1">Timer1</span></p>
+<p class="c5 c15 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">}</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">/* ROUTINE D’INITIALISATION DE L’UART */</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">void init_UART (void){</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">ConfigIntUART2(UART_RX_INT_DIS &amp; UART_RX_INT_PR0</span></p>
+<p class="c0"><span class="c1">&amp; UART_TX_INT_DIS &amp; UART_TX_INT_PR0);</span></p>
+<p class="c2 c7"><span class="c1"></span></p>
+<p class="c2"><span class="c1">// Configuration of the register</span></p>
+<p class="c2 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">U2MODEbits.UARTEN = 1; // UART pins controlled by UART</span></p>
+<p class="c0"><span class="c1">U2MODEbits.USIDL = 0; // UART communication continue in</span></p>
+<p class="c5 c16"><span class="c1">Idle Mode</span></p>
+<p class="c5 c7 c16"><span class="c1"></span></p>
+<p class="c0"><span class="c1">U2MODEbits.WAKE = 1; // Wake up enable in sleep Mode</span></p>
+<p class="c0"><span class="c1">U2MODEbits.LPBACK = 0; // Loopback mode disabled</span></p>
+<p class="c0"><span class="c1">U2MODEbits.ABAUD = 0; // Autobaud process disabled</span></p>
+<p class="c0"><span class="c1">U2MODEbits.PDSEL = 0; // 8-bit data, no parity</span></p>
+<p class="c0"><span class="c1">U2MODEbits.STSEL = 0; // 1 stop-bit.</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">// Configuration du registre U2STA</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">U2STAbits.UTXISEL = 0; // Transmission Interrupt Mode</span></p>
+<p class="c5 c12"><span class="c1">Selection bit</span></p>
+<p class="c0"><span class="c1">U2STAbits.UTXBRK = 0; // UxTX pin operates normally</span></p>
+<p class="c0"><span class="c1">U2STAbits.UTXEN = 1; // Transmit enable</span></p>
+<p class="c0"><span class="c1">U2STAbits.URXISEL = 1; // Interrupt occurs when one charater</span></p>
+<p class="c5 c12"><span class="c1">is received</span></p>
+<p class="c0"><span class="c1">U2STAbits.ADDEN = 0; // Address detect disabled</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">U2BRG = 31; // Value for 57600 bps baudrate</span></p>
+<p class="c0"><span class="c1">}</span></p>
+<p class="c0"><span class="c1">//</span></p>
+<p class="c0"><span class="c1">// Initialization of the complementary mode PWM</span></p>
+<p class="c0"><span class="c1">//</span></p>
+<p class="c0"><span class="c1">void init_PWM (void){</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">Val_reg = 1023; // Frquence de 30000 Hz environ</span></p>
+<p class="c0"><span class="c1">lim_Sup = (u_max*(2*Val_reg + 1)/(2*Val_reg + 2)) - u_ref;</span></p>
+<p class="c0"><span class="c1">lim_Inf = -u_max - u_ref;</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">PTCONbits.PTEN = 1; // Activation of the time base</span></p>
+<p class="c0"><span class="c1">PTCONbits.PTSIDL = 1; // Configuration in Idle Mode</span></p>
+<p class="c0"><span class="c1">PTCONbits.PTCKPS = 0; // Selection de 4TCY ( Prescale: 00 = 1:1;</span></p>
+<p class="c5 c12"><span class="c1">01= 1:4; 10 = 1:16; 11 = 1:64)</span></p>
+<p class="c0"><span class="c1">PTCONbits.PTMOD = 0; // Selection of the free running mode</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">PTMRbits.PTDIR = 0; // Increment of the time base</span></p>
+<p class="c0"><span class="c1">PTMRbits.PTMR = Val_reg; // Register value of the Time base</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">PTPER = Val_reg; // Value of the signal period</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">PWMCON1bits.PMOD1 = 0; // Selection the mode PWM complementary</span></p>
+<p class="c0"><span class="c1">PWMCON1bits.PEN1H = 1; // Activation of the pins in mode PWM</span></p>
+<p class="c0"><span class="c1">PWMCON1bits.PEN1L = 1; // Activation of the pins in mode PWM</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">DTCON1bits.DTAPS = 0; // Time base unit is 1TCY</span></p>
+<p class="c0"><span class="c1">DTCON1bits.DTA = 0; // Value of the DT for the unity A</span></p>
+<p class="c0"><span class="c1">PDC1 = 0; // zero of the dutycycle</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">}</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">void __attribute__((interrupt, auto_psv)) _T1Interrupt (void){</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">if (IFS0bits.T1IF){</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">PORTEbits.RE2 = !PORTEbits.RE2;</span></p>
+<p class="c0"><span class="c1">PDC1 = (2.0 * (Val_reg + 1) * duty_cycle)/100.0; // Calcul de la</span></p>
+<p class="c5 c21"><span class="c1">valeur du registre PDC1</span></p>
+<p class="c0"><span class="c1">y[0] = (ReadADC10(2)*ref_tension)/ref_pic; // Signal of the</span></p>
+<p class="c5 c11"><span class="c1">sensor in Volts</span></p>
+<p class="c0"><span class="c1">y_tilde[0] = y[0] - y_ref;</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">position_tilde[1] = position_tilde[0];</span></p>
+<p class="c0"><span class="c1">vitesse_tilde[1] = vitesse_tilde[0];</span></p>
+<p class="c0"><span class="c1">integrale_tilde[1] = integrale_tilde[0];</span></p>
+<p class="c0"><span class="c1">y_tilde[1] = y_tilde[0];</span></p>
+<p class="c0"><span class="c1">tension_tilde[1] = tension_tilde[0];</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">position_tilde[0] = (a11*position_tilde[1]+a12*vitesse_tilde[1]</span></p>
+<p class="c5 c30"><span class="c1">+b11*tension_tilde[1]+b12*y_tilde[1]);</span></p>
+<p class="c0"><span class="c1">vitesse_tilde[0] = (-a21*position_tilde[1]+a22*vitesse_tilde[1]</span></p>
+<p class="c5 c30"><span class="c1">+b21*tension_tilde[1]+b22*y_tilde[1]);</span></p>
+<p class="c0"><span class="c1">tension_tilde[0] = (K0*position_tilde[0]) +</span></p>
+<p class="c5 c14"><span class="c1">(K1*vitesse_tilde[0]);// + N*ref;</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">if(tension_tilde[0]&gt;lim_Sup){tension_tilde[0] = lim_Sup;}</span></p>
+<p class="c0"><span class="c1">// Saturation of the tension tilde</span></p>
+<p class="c0"><span class="c1">if(tension_tilde[0]&lt;lim_Inf){tension_tilde[0] = lim_Inf;}</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">tension = u_ref + tension_tilde[0];</span></p>
+<p class="c0"><span class="c1">duty_cycle_tilde = tension_tilde[0]*(50.0/u_max);</span></p>
+<p class="c0"><span class="c1">duty_cycle = duty_cycle_ref + duty_cycle_tilde; // Computation</span></p>
+<p class="c5 c14"><span class="c1">of the duty cycle in percentage</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">temps_total += Ts;</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">compteur_freq = 0;</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">compteur++;</span></p>
+<p class="c0"><span class="c1">if(compteur == 10){ // Print data every 1 ms</span></p>
+<p class="c0"><span class="c1">compteur = 0.0;</span></p>
+<p class="c0"><span class="c1">uart_flag = 1;</span></p>
+<p class="c0"><span class="c1">}</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">IFS0bits.T1IF = 0; // put to zero of the overflow bit</span></p>
+<p class="c0"><span class="c1">}</span></p>
+<p class="c0"><span class="c1">}</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">/* PROGRAMME PRINCIPAL */</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">int main (void){</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c2"><span class="c1">init();</span></p>
+<p class="c2"><span class="c1">init_PWM();</span></p>
+<p class="c2"><span class="c1">init_ADC();</span></p>
+<p class="c2"><span class="c1">init_UART();</span></p>
+<p class="c2"><span class="c1">init_Timer1();</span></p>
+<p class="c2"><span class="c1">while(1){</span></p>
+<p class="c5 c6"><span class="c1">init();</span></p>
+<p class="c5 c6"><span class="c1">init_PWM();</span></p>
+<p class="c5 c6"><span class="c1">init_ADC();</span></p>
+<p class="c5 c6"><span class="c1">init_UART();</span></p>
+<p class="c5 c6"><span class="c1">init_Timer1();</span></p>
+<p class="c5 c6"><span class="c1">while(1){</span></p>
+<p class="c5 c17"><span class="c1">if (uart_flag){</span></p>
+<p class="c5 c17"><span class="c1">printf("%lf %lf %lf %lf %lf %lf %lf\n\r",</span></p>
+<p class="c5 c17"><span class="c1">temps_total, tension, u_ref, y[0], y_ref,</span></p>
+<p class="c5 c17"><span class="c1">position_tilde[0], x_ref);</span></p>
+<p class="c5 c17"><span class="c1">uart_flag = 0;</span></p>
+<p class="c5 c17"><span class="c1">}</span></p>
+<p class="c0"><span class="c1">}</span></p>
+<p class="c5"><span class="c1">}</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c10">11.6 結論</span></p>
+<p class="c5"><span class="c1">本章涵蓋了一些案例研究，這些案例是在我們位於蒙特利爾的E'cole PolytechniquedeMontre´al的機電一體化實驗室中開發的。我們詳細介紹了機電系統設計的所有步驟。重點放在每個提出的系統的控制算法的設計。</span></p>
+<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c10">11.7 問題</span></p>
+<p class="c5"><span class="c1">1.讓我們考慮一個具有以下數據的動態離散時間系統：</span></p>
+<p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/tLvMu6A86TSu9XLv0sivBCsLnX5mxamPLD52eSuhf6GZsXLY_vBZAcb0cSaY9ag6ULrOoBTiDosip4ZIKVfDNE-lcV51xE0ZFnVeNOhljsOg5DyG8l5AeV2Z4VwXpfdiZU9YKZc" title=""/></span></p>
+<p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/FiJzdCIzxadQH8MhMazSLflU55YZBVtIHE5tSM-Ng3RoHTGZ1ekFQw6rRWpEIB5VSHzOgHhebx8JCcmKdfHPKYxI1z2-rd3G-qL1UPG31BGfKoD73YmrT7WvBWL-8eNBo5-6WLY" title=""/></span></p>
+<p class="c4"><span class="c1">(a)        為標稱系統設計以下控制器：</span></p>
+<p class="c5 c8"><span class="c1">i.        狀態反饋控制器</span></p>
+<p class="c5 c8"><span class="c1">ii.        靜態輸出反饋控制器</span></p>
+<p class="c5 c8"><span class="c1">iii.        動態輸出反饋控制器</span></p>
+<p class="c4"><span class="c1">(b)        為不確定係統設計以下控制器：</span></p>
+<p class="c5 c8"><span class="c1">i.        狀態反饋控制器</span></p>
+<p class="c5 c8"><span class="c1">ii.        靜態輸出反饋控制器</span></p>
+<p class="c5 c8"><span class="c1">iii.        動態輸出反饋控制器</span></p>
+<p class="c4"><span class="c13">(c)        如果我們在狀態動力學中有一個額外的術語會增加外部干擾：</span><span><img alt="" src="https://lh4.googleusercontent.com/oOHzMsZvlM4J6S2qTul1b6RPmxGw_oaim86q6MM4wOrRg8XdYc8GOm2r-prx7eRCUI2PtJtYJQbGP6e6X4UMPgaxE4PX39V_5HRWX6F8CwNtXe5rZsHCQkSgLIvqlFWSbenFOus" title=""/></span><span class="c1">。為標稱和不確定係統設計控制器（狀態反饋、靜態輸出、動態輸出反饋），以確保H∞性能。</span></p>
+<p class="c4"><span class="c1">(d)        設計狀態反饋，靜態輸出反饋和動態反饋控制器，以確保所有容許的不確定性的保證成本。</span></p>
+<p class="c5"><span class="c1">2.在這個問題中，我們邀請您進行小船的設計，您可以使用操縱桿控制小船，使其例如在小紫膠中移動。</span></p>
+<p class="c4"><span class="c1">(a)        給出原理圖設計（電池、電動機等）</span></p>
+<p class="c4"><span class="c1">(b)        建立數學模型</span></p>
+<p class="c4"><span class="c1">(c)        修正您想要的規格，並設計合適的控制器以達到這種性能</span></p>
+<p class="c5"><span class="c1">3.在這個問題上，我們邀請您進行小型飛機的設計，您可以使用操縱桿控制小型飛機的飛行。</span></p>
+<p class="c4"><span class="c1">(a)        給出原理圖設計（電池、電動機等）</span></p>
+<p class="c4"><span class="c1">(b)        建立數學模型</span></p>
+<p class="c4"><span class="c1">(c)        修正您想要的規格，並設計合適的控制器以達到這種性能</span></p>
+<p class="c5"><span class="c1">4.在這個問題上，我們要求設計真空吸塵器。此設備應為自動設備，並避免其環境中的障礙物。設計便宜的，可以通過發射器、接收器和操縱桿進行無線通信的控制器也很重要。</span></p>
+<p class="c4"><span class="c1">(a)        給出原理圖設計（電子電路、電機等）</span></p>
+<p class="c4"><span class="c1">(b)        建立數學模型</span></p>
+<p class="c4"><span class="c1">(c)        修正您想要的規格，並設計合適的控制器以達到這種性能</span></p>
+<p class="c5"><span class="c1">5.在這個問題上，我們邀請您繼續進行機電系統的設計，該系統控制乒乓球的小球的位置。可以使用壓縮空氣來定位球。</span></p>
+<p class="c4"><span class="c1">(a)        給出原理圖設計（電子電路、電機等）</span></p>
+<p class="c4"><span class="c1">(b)        建立數學模型</span></p>
+<p class="c4"><span class="c1">(c)        修正您想要的規格，並設計合適的控制器以達到這種性能</span></p>
+<p class="c5"><span class="c1">6.在此問題中，我們希望設計一種單腿機器人，該機器人可以在保持垂直位置的情況下使用一個輪子移動。提供此類機電一體化系統的設計。</span></p>
+<p class="c4"><span class="c1">(a)        給出原理圖設計（電子電路、電機等）</span></p>
+<p class="c4"><span class="c1">(b)        建立數學模型</span></p>
+<p class="c4"><span class="c1">(c)        修正您想要的規格，並設計合適的控制器以達到這種性能</span></p>
+<p class="c5"><span class="c1">7.太陽能是可以使用的替代能源。在這個問題上，我們要求您設計一個太陽能係統，以使太陽能電池板產生的能量最大化。</span></p>
+<p class="c4"><span class="c1">(a)        給出原理圖設計（電子電路、電機等）</span></p>
+<p class="c4"><span class="c1">(b)        建立數學模型</span></p>
+<p class="c4"><span class="c1">(c)        修正您想要的規格，並設計合適的控制器以達到這種性能</span></p>
+<p class="c5"><span class="c1">8.在這個問題中，我們要求設計一種可通過操縱桿通過發射器和接收器控制在水上進行密封的胡佛。</span></p>
+<p class="c4"><span class="c1">(a)        給出原理圖設計（電子電路、電機等）</span></p>
+<p class="c4"><span class="c1">(b)        建立數學模型</span></p>
+<p class="c4"><span class="c1">(c)        修正您想要的規格，並設計合適的控制器以達到這種性能</span></p>
+<p class="c5"><span class="c10"></span></p><h3>MechaEducFutureNeed</h3>
 <p>原文pdf連結:<a href="https://drive.google.com/file/d/1AFADmyNrwprE7AesaFAecZZquIfzbLw-/view?usp=sharing">MechaEducFutureNeed.pdf</a></p>
 <p>翻譯連結:<a href="/downloads/MechaEducFutureNeed翻譯.pdf">MechaEducFutureNeed翻譯.pdf</a></p>
 <h4 class="c17"><span style="color: #0000ff;"><strong><span class="c5 c22 c26">Ch15機電一體化教育：滿足未來需求</span></strong></span></h4>
@@ -1729,85 +2502,85 @@ EXIT</pre>
 <p class="c2"><span class="c0">在美國，有一千多所擁有一所工程學校的學院和大學。如果增加歐洲、中國和印度的工程部門數量，則這個數字將大大增加。就課程而言，大多數學校都受到理事機構的監管（例如，美國的ABET），但是美國沒有通用的核心課程。</span></p>
 <p class="c2"><span class="c0">  這意味著在機構A中所教的內容在機構B中可能是膚淺的，甚至根本沒有。在國外，問題更加嚴重。某些國家/地區的一些工程學校沒有通過其本身以外的會議。通過授予工程學學位，這些機構承諾為他們的畢業生提供好工作和更好的生活，甚至根本不認為他們在國內或國外都享有良好的工作。這對學生不利。</span></p>
 <p class="c2"><span class="c8 c5">表15.1 教學方法和教學風格</span></p>
-<table class="c18" style="width: 529px;">
+<table class="c18" style="width: 528px;">
 <tbody>
 <tr class="c10">
-<td class="c14" colspan="1" rowspan="1" style="width: 163.6px;">
-<p class="c17"><span class="c7 c24">方法</span></p>
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
+<p class="c17"><span style="color: #ff0000;"><span class="c7 c24">方法</span></span></p>
 </td>
-<td class="c14" colspan="1" rowspan="1" style="width: 362.4px;">
-<p class="c17"><span class="c7 c24">註釋</span></p>
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
+<p class="c17"><span class="c7 c24" style="color: #ff0000;">註釋</span></p>
 </td>
 </tr>
 <tr class="c10">
-<td class="c14" colspan="1" rowspan="1" style="width: 163.6px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
 <p class="c4"><span class="c0">演講</span></p>
 </td>
-<td class="c14" colspan="1" rowspan="1" style="width: 362.4px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
 <p class="c2"><span class="c0">一種靈活的方法，幾乎可以應用於任何內容。 儘管講座可能非常吸引人，但它們使學生處於被動角色。經驗豐富的工作人員可以將他們的實際經驗融入課程材料中，以顯示班級的相關性。</span></p>
 </td>
 </tr>
 <tr class="c10">
-<td class="c14" colspan="1" rowspan="1" style="width: 163.6px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
 <p class="c3"><span class="c0">講座討論</span></p>
 </td>
-<td class="c14" colspan="1" rowspan="1" style="width: 362.4px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
 <p class="c2"><span class="c0">將講座與簡短問題期或一系列簡短問題期相結合。</span></p>
 </td>
 </tr>
 <tr class="c10">
-<td class="c14" colspan="1" rowspan="1" style="width: 163.6px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
 <p class="c3"><span class="c0">示範</span></p>
 </td>
-<td class="c14" colspan="1" rowspan="1" style="width: 362.4px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
 <p class="c2"><span class="c0">讓學生根據講師的表現學習過程或程序。學生可以參與示範和練習。</span></p>
 </td>
 </tr>
 <tr class="c10">
-<td class="c14" colspan="1" rowspan="1" style="width: 163.6px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
 <p class="c4"><span class="c0"></span><span class="c0">模擬</span></p>
 </td>
-<td class="c14" colspan="1" rowspan="1" style="width: 362.4px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
 <p class="c2"><span class="c0">模擬使學習者處於看似真實的情況下，他們可以做出決策並體驗決策的結果而不會冒險。</span></p>
 </td>
 </tr>
 <tr class="c10">
-<td class="c14" colspan="1" rowspan="1" style="width: 163.6px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
 <p class="c3"><span class="c0">協同學習</span></p>
 </td>
-<td class="c14" colspan="1" rowspan="1" style="width: 362.4px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
 <p class="c2"><span class="c0">學生通過相互討論與課程相關的問題和主題來處理信息並獲得知識。</span></p>
 </td>
 </tr>
 <tr class="c10">
-<td class="c14" colspan="1" rowspan="1" style="width: 163.6px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
 <p class="c17"><span class="c0">合作學習</span></p>
 </td>
-<td class="c14" colspan="1" rowspan="1" style="width: 362.4px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
 <p class="c2"><span class="c0">一小組學生一起解決問題或完成任務。</span></p>
 </td>
 </tr>
 <tr class="c10">
-<td class="c14" colspan="1" rowspan="1" style="width: 163.6px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
 <p class="c4"><span class="c0"></span><span class="c0">實例探究</span></p>
 </td>
-<td class="c14" colspan="1" rowspan="1" style="width: 362.4px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
 <p class="c2"><span class="c0">這涉及個人或學生群體一起分析案例，這通常是一種現實情況，旨在突出問題和解決方案。</span></p>
 </td>
 </tr>
 <tr class="c10">
-<td class="c14" colspan="1" rowspan="1" style="width: 163.6px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
 <p class="c4"><span class="c0"></span><span class="c0">角色扮演</span></p>
 </td>
-<td class="c14" colspan="1" rowspan="1" style="width: 362.4px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
 <p class="c2"><span class="c0">學生通過採用與之相關的不同角色來解決問題。角色扮演涉及識別，執行和討論問題。小心謹慎，這可能非常有效，特別是在系統工程的非技術方面，例如人力資源管理。</span></p>
 </td>
 </tr>
 <tr class="c10">
-<td class="c14" colspan="1" rowspan="1" style="width: 163.6px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 169.2px;">
 <p class="c4"><span class="c0"></span><span class="c0">基於問題和探究學習</span></p>
 </td>
-<td class="c14" colspan="1" rowspan="1" style="width: 362.4px;">
+<td class="c14" colspan="1" rowspan="1" style="width: 355.8px;">
 <p class="c2"><span class="c0">講師給學生一個問題，學生必須通過收集數據，組織數據並嘗試進行解釋來解決。 學生還應該分析他們用來解決問題的策略。</span></p>
 </td>
 </tr>
