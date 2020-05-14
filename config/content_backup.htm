@@ -3,12 +3,12 @@
 <p><a href="https://s40723210.github.io/cd2020/content/Week6-9.html">Week6-9</a></p>
 <p><a href="https://s40723210.github.io/cd2020/content/Week10-14.html">Week10-14</a></p>
 <p><a href="https://s40723210.github.io/cd2020/content/Week15-18.html">Week15-18</a></p>
+<p><a href="https://s40723210.github.io/cd2020/content/Weeks%20Meeting.html">Weeks Meeting</a></p>
 <hr/>
 <p>倉儲網址:<a href="https://github.com/s40723210/cd2020" title="https://github.com/s40723210/cd2020">https://github.com/s40723210/cd2020</a></p>
 <p>youtube:<a href="https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw">https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw</a></p>
 <p>分組倉儲網址:<a href="https://s40723210.github.io/cd2020bg4" title="https://s40723210.github.io/cd2020bg4">https://s40723210.github.io/cd2020bg4</a></p>
-<p><span>gitter : </span><a href="https://gitter.im/40723210/cd2020">https://gitter.im/40723210/cd2020</a></p>
-<h2>Week1-5</h2>
+<p><span>gitter : </span><a href="https://gitter.im/40723210/cd2020">https://gitter.im/40723210/cd2020</a></p><h2>Week1-5</h2>
 <h4 class="post-title entry-title" itemprop="name"><strong>建立個人cd2020倉儲</strong></h4>
 <p><span>1.下載<a href="https://drive.google.com/file/d/1fxMdqdCoCL__O1IpZ-Sv-A_4-c77Wx4E/view?usp=sharing">2019Fall可攜套件.7z</a>，完成後開啟start。</span><span><br/></span><span></span><span><span>2.先登入自己的github帳號，</span><span>創建一個新的倉儲cd2020。</span></span><span><span><br/></span><span>3.進入要存放該資料的資料夾tmp。</span></span><span><span><br/></span></span><span></span><span><span>4.git clone </span><span>https://github.com/s40723210/cd2020 。</span><span><br/></span><span>5.</span><span>git submodule add https://github.com/mdecourse/cmsimde.git。</span></span><span><span><br/>6.再進入cmsimde，將up_dir的所有項目複<span>製到cd2020</span>。</span></span><span><span><br/>7.完成後，python wsgi.py 開始編輯倉儲。<br/></span></span><span><span>8.login密碼為admin，gitconfig要有帳號密碼。</span></span><span><span><br/>9.處理完，git status &gt; git add . &gt; git commit -m "標題" &gt; git push。</span></span><span><span><br/>10.開啟github倉儲設定，點選要推送的branch即可。<br/></span></span></p>
 <p><span>我的教學影片:<a href="https://youtu.be/jBFzju1F43s">https://youtu.be/jBFzju1F43s<br/><br/><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/jBFzju1F43s" width="560"></iframe></a></span></p>
@@ -394,7 +394,7 @@
 <h4>V-rep bubbleRob Tutorial</h4>
 <p>操作影片連結:<a href="https://youtu.be/BStp8J-KXuY">https://youtu.be/BStp8J-KXuY</a></p>
 <div><span><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/BStp8J-KXuY" width="560"></iframe><br/><br/></span></div>
-<hr color="00ffee"/>
+<hr color="00ffee">
 <h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">V-rep 馬達驅動四輪車</yt-formatted-string></h4>
 <p>使用內建功能來創建模型，並且模擬最基本馬達的直線移動。</p>
 <p>影片連結:<a href="https://youtu.be/y8DJ1sjuAqM">https://youtu.be/y8DJ1sjuAqM</a></p>
@@ -620,8 +620,28 @@ end
 <hr/>
 <p><span></span></p><h3>SSH setting</h3>
 <h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">以ssh 對 Github 連線(目前使用的)</yt-formatted-string></h4>
-<p><span>1.先將Y:\portablegit\bin下的sh.exe(通常會有)建立起來。</span><br/><span><br/></span><span></span><span>2.輸入sh，輸入<span>ssh-keygen -t rsa -b 4096 -C "學號</span><span>"。</span></span><br/><span><span><br/></span></span><span></span><span><span>3.在Y:</span><span>\home_mdecourse裡創建一個.ssh。</span></span><br/><span><span><br/></span></span><span></span><span><span>4.輸入</span><span>Y:</span><span>\home_mdecourse</span><span>\.ssh/id_rsa。</span></span><br/><span><span><br/></span></span><span></span><span><span>5.按完Enter後，下載putty放在Y槽內。</span></span><br/><span><br/></span><span></span><span>6.編輯<span>start_mdecourse.bat，加入如下的指令。<br/><br/></span></span><span><span>Set GIT_HOME=%Disk%:\portablegit\bin\</span></span><br/><span><span>Set GIT_SSH=%Disk%:\putty\plink.exe</span></span><br/><span><br/>7.到自己倉儲的.git，url改成ssh(github)形式。</span><br/><span><br/></span><span></span><span>8.開啟puttygen.exe，將鑰匙存成private key。</span><br/><span><br/></span><span></span><span>9.</span><span>開啟putty.exe，設定proxy和路徑，在案save。</span><br/><span><br/></span><span></span><span>10.再到github存入自己的key，就可以了。</span></p>
-<p><span>我的教學影片(有字幕):<a href="https://youtu.be/k-sOF6PQa1I">https://youtu.be/k-sOF6PQa1I</a></span></p>
+<p><span>1.先將Y:\portablegit\bin下的sh.exe(通常會有)建立起來。</span><br/><span><br/></span><span></span><span>2.輸入sh，輸入<span>ssh-keygen -t rsa -b 4096 -C "學號</span><span>"。</span></span><br/><span><span><br/></span></span><span></span><span><span>3.在Y:</span><span>\home_mdecourse裡創建一個.ssh。</span></span><br/><span><span><br/></span></span><span></span><span><span>4.輸入</span><span>Y:</span><span>\home_mdecourse</span><span>\.ssh/id_rsa。</span></span><br/><span><span><br/></span></span><span></span><span><span>5.按完Enter後，下載putty放在Y槽內。</span></span><br/><span><br/></span><span></span><span>6.編輯<span>start_mdecourse.bat，加入如下的指令。<br/><br/></span></span><span><span>Set GIT_HOME=%Disk%:\portablegit\bin\</span></span><br/><span><span>Set GIT_SSH=%Disk%:\putty\plink.exe</span></span><br/><span><br/>7.到自己倉儲的.git，url改成ssh(github)形式。</span><br/><span><br/></span><span></span><span>8.開啟puttygen.exe，將鑰匙存成private key。</span><br/><span><br/></span><span></span><span>9.</span><span>開啟putty.exe，設定proxy和路徑，在案save。</span></p>
+<p><span>10.再到github存入自己的key，就可以了。</span></p>
+<p><span>11.home_mdecourse下的.ssh目錄中的config 如下</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"># no proxy at home
+#ProxyCommand y:/PortableGit/mingw64/bin/connect.exe -H proxy.mde.nfu.edu.tw:3128 %h %p
+# set git_ssh=y:/putty/plink.exe with auth under putty github.com session setup
+ProxyCommand y:/putty/plink.exe github.com %h %p
+  
+Host github.com
+    User git
+    Port 22
+    Hostname github.com
+     
+    # for connect.exe need openssh key format
+    #IdentityFile "y:\home\.ssh\id_rsa_mdecourse"
+    # for plink.exe need rsa key format but set under putty github.com session
+    # plink.exe do not need the following setting
+    #IdentityFile "y:\home\.ssh\mdecourse_putty_private.ppk"
+  
+    TCPKeepAlive yes
+    IdentitiesOnly yes</pre>
+<p><br/><span>我的教學影片(有字幕):<a href="https://youtu.be/k-sOF6PQa1I">https://youtu.be/k-sOF6PQa1I</a></span></p>
 <p><span><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/k-sOF6PQa1I" width="560"></iframe></span></p>
 <hr/>
 <h4>IPv4 ssh key 設定(之前使用的)</h4>
@@ -630,11 +650,30 @@ end
 </div>
 <div class="post-body entry-content" id="post-body-7756927037016291787" itemprop="description articleBody"><span>1.先把<span>git config --edit --system裡面的</span><span>helper = manager刪除後輸入:wq(是指儲存後退出)</span></span><span>。</span><br/><span><span><br/></span></span><span><span>2.進入控制台&gt;使用者帳戶&gt;認證管理員&gt;windows認證&gt;刪除現存的github帳號。</span></span><br/><span><span><br/></span></span><span><span>3.輸入</span></span><span><span>ssh-keygen -t rsa -b 4096 -C "github的email</span><span>"。</span></span><br/><span><span><br/></span></span><span><span>4.輸入你想存放的位子例如:</span></span><span>Y:\home\.ssh/id_rsa。</span><br/><span><br/></span><span>5.一直案Enter到結束。</span><br/><span><br/></span><span>6.打開</span><span>id_rsa並且全部複製&gt;進入setting&gt;</span><span><span>SSH and </span></span><span>GPG </span><span>keys 。</span><br/><span><br/></span><span>7.案New ssh key 貼上&gt;輸入想要的名子儲存。</span><br/><span><br/></span><span>我的教學影片:</span><span><a href="https://youtu.be/SJHMm3o5uEw">https://youtu.be/SJHMm3o5uEw</a></span></div>
 <div class="post-body entry-content" itemprop="description articleBody"><span></span></div>
-<div class="post-body entry-content" itemprop="description articleBody"><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/SJHMm3o5uEw" width="560"></iframe></span></div><h1>Notes</h1>
+<div class="post-body entry-content" itemprop="description articleBody"><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/SJHMm3o5uEw" width="560"></iframe></span></div>
+<h2>Week15-18</h2>
+<p><span></span></p>
+<h2>Weeks Meeting</h2>
+<h4><span style="background-color: #ffff99;">Week10</span></h4>
+<p>分配Assignment 3的<span>topic2、topic3的原文書翻譯工作，</span> 並討論老師的<a href="http://mde.tw/cd2020pj1/content/CMS.html">CMS</a>、<a href="https://drive.google.com/file/d/1G4MzXUIbNRK7z2XdjtxXzhX51zHHwq85/view?usp=sharing">影片教學</a>，來進行<yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">gm用戶登錄設置。</yt-formatted-string></p>
+<p><span><span style="color: #ff0000;">MSModelingAndTFApproaches:</span><br/><br/></span>40723232 前20<br/>40723234 21-50<br/>40723204 51-80<br/>40723225 81-110<br/>40623115 111-140<br/>40623251 141-170<br/>40723245 171-207<br/><br/><span style="color: #ff0000;">MSModelingAndTFApproaches:<br/></span><br/>40723238 <br/><span>40723210 </span></p>
+<p><span><span style="color: #ff0000;">MechaEducFutureNeed:</span><br/><br/></span>40723250 <br/><span>40723210</span><br/><br/><span style="color: #ff0000;">MechaFutureAndChallenges:</span><br/><br/>40723212 <br/><br/><span><span style="color: #ff0000;">Mechatronic project</span><br/><br/></span>40723210 </p>
+<p><br/>直播影片:<a href="https://youtu.be/GmKxlNPx-gs">https://youtu.be/GmKxlNPx-gs</a></p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/GmKxlNPx-gs" width="560"></iframe></p>
+<hr/>
+<h4><span style="background-color: #ffff99;">Week11</span></h4>
+<p><span><a href="https://drive.google.com/file/d/1WZH3Xrogi3xUStrHYSL6AcTWzHCWt-gA/view?usp=sharing">Virtualbox 虛擬主機 NAT 設定與 X-win 連線</a> (登入 @gm 後可以在線觀看)</span></p>
+<p><span><a href="https://drive.google.com/open?id=1S9gTVrscJAvGmXz0UxVKbWkAqEXkmO9d">Ubuntu 20.04 上的 CoppeliaSim 四輪車與 Windows 上的 Python Remote API 在 X-Windows 介面下協同控制影片</a><span> </span>(登入 @gm 後可以在線觀看)</span></p>
+<p><span>討論上課內容如上方連結影片，以及講解ssh的設置，可以參考我的</span><span><a href="https://s40723210.github.io/cd2020/content/SSH%20setting.html">SSH setting</a>。</span></p>
+<p><span>直播影片:<a href="https://youtu.be/NjWnIy4vX1g">https://youtu.be/NjWnIy4vX1g</a></span></p>
+<p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/NjWnIy4vX1g" width="560"></iframe></span></p>
+<hr/>
+<h4><span style="background-color: #ffff99;">Week12</span></h4><h1>Notes</h1>
 <p><a href="https://s40723210.github.io/cad2019/content/git%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4.html">git基本指令</a></p>
 <p><a href="https://s40723210.github.io/cad2019/content/python%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95.html">python基本語法</a></p>
 <p><a href="https://s40723210.github.io/cad2019/content/vi%20%E8%88%87%20vim%20%E7%9A%84%E6%8C%87%E4%BB%A4%E6%95%B4%E7%90%86.html">vi 與 vim 的指令整理</a></p>
 <p><a href="https://s40723210.github.io/cad2019/content/Dos%20%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4.html">Dos 基本指令</a></p>
+<p><a href="https://s40723210.github.io/cd2020/content/SSH%20setting.html">SSH setting</a></p>
 <p><a href="https://s40723210.github.io/cad2019/content/SolveSpace%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%8D%B5.html">SolveSpace的快捷鍵</a></p>
 <p><a href="https://s40723210.github.io/cad2019/content/Nx12%E5%BF%AB%E6%8D%B7%E9%8D%B5.html">Nx12快捷鍵</a></p>
 <p><a href="https://s40723210.github.io/cd2020/content/Q&amp;A.html">Q&amp;A</a></p><h2>Linux 指令</h2>
@@ -3246,7 +3285,7 @@ void deinitializationCallback
 <p><span mce-data-marked="1">1.一樣先建立新的檔案。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">2.創建一個python程式檔。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">3.將控制改為現在的程式檔。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">4.將教材給的程式複製貼上。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">5.儲存之後即可開始模擬。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">6.機器會緩慢的閃避障礙物。</span></p>
 <p>我的操作影片(有字幕):<a href="https://youtu.be/7zeqP98Y2ek">https://youtu.be/7zeqP98Y2ek</a></p>
 <p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/7zeqP98Y2ek" width="560"></iframe></p>
-<hr>
+<hr/>
 <h4>Webots Tutorial-5</h4>
 <p><span mce-data-marked="1">1.另存一個新的檔案。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">2.新增實體</span><span mce-data-marked="1">在創建連趕及三個型體。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">3.設定好三個的形狀、大小及參數。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">4.調整位子、</span><span mce-data-marked="1">重量、密度和</span><span mce-data-marked="1">質心位置。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">5.將物體</span><span mce-data-marked="1">方向轉正，提</span><span mce-data-marked="1">高位置。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">6.設置啞鈴沒有摩擦力，儲存即可。</span></p>
 <p>我的操作影片(有字幕):<a href="https://youtu.be/iJBotPDJ5ME">https://youtu.be/iJBotPDJ5ME</a></p>
