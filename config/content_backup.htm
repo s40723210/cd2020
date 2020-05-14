@@ -603,7 +603,34 @@ end
 <p>6.用ls來顯示資料，再用cd來進入該資料夾內</p>
 <p>7.輸入./coppeliaSim.sh 來開啟vrep就可準備連線了</p>
 <p>影片連結:<a href="https://youtu.be/3lDOCkIkJ00">https://youtu.be/3lDOCkIkJ00</a></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/3lDOCkIkJ00" width="560"></iframe></p><h1>Notes</h1>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/3lDOCkIkJ00" width="560"></iframe></p>
+<hr/>
+<h4>Remote API 連線</h4>
+<p>1.先下載老師的<a href="https://drive.google.com/open?id=1KlnsgBFyp6OpCC_BlYH-jKL4uJixpoBl">控制程式</a>，和<a href="https://sourceforge.net/projects/xming/files/latest/download">Xming</a> 軟體</p>
+<p>2.Xmig 解開後，放在data下就可以了</p>
+<p>3.新增<span>設定3個</span>虛擬主機的NAT網路埠號</p>
+<p>4.開啟putty新增一個localhost ，port 22</p>
+<p>5.設定SSH下的X11，儲存之後按Open</p>
+<p>6.開啟XLaunch.exe，都按下一步即可</p>
+<p>7.putty開啟視窗的帳密都是kmol2020</p>
+<p>8.使用mv cop*  coppeliasim 來更改名子</p>
+<p>9.開啟<span>car_model.py</span>，Tools &gt; Go 即可</p>
+<p><span>影片連結:<a href="https://youtu.be/6vVJh1cni3c">https://youtu.be/6vVJh1cni3c</a></span></p>
+<p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/6vVJh1cni3c" width="560"></iframe></span></p>
+<hr/>
+<p><span></span></p><h3>SSH setting</h3>
+<h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">以ssh 對 Github 連線(目前使用的)</yt-formatted-string></h4>
+<p><span>1.先將Y:\portablegit\bin下的sh.exe(通常會有)建立起來。</span><br/><span><br/></span><span></span><span>2.輸入sh，輸入<span>ssh-keygen -t rsa -b 4096 -C "學號</span><span>"。</span></span><br/><span><span><br/></span></span><span></span><span><span>3.在Y:</span><span>\home_mdecourse裡創建一個.ssh。</span></span><br/><span><span><br/></span></span><span></span><span><span>4.輸入</span><span>Y:</span><span>\home_mdecourse</span><span>\.ssh/id_rsa。</span></span><br/><span><span><br/></span></span><span></span><span><span>5.按完Enter後，下載putty放在Y槽內。</span></span><br/><span><br/></span><span></span><span>6.編輯<span>start_mdecourse.bat，加入如下的指令。<br/><br/></span></span><span><span>Set GIT_HOME=%Disk%:\portablegit\bin\</span></span><br/><span><span>Set GIT_SSH=%Disk%:\putty\plink.exe</span></span><br/><span><br/>7.到自己倉儲的.git，url改成ssh(github)形式。</span><br/><span><br/></span><span></span><span>8.開啟puttygen.exe，將鑰匙存成private key。</span><br/><span><br/></span><span></span><span>9.</span><span>開啟putty.exe，設定proxy和路徑，在案save。</span><br/><span><br/></span><span></span><span>10.再到github存入自己的key，就可以了。</span></p>
+<p><span>我的教學影片(有字幕):<a href="https://youtu.be/k-sOF6PQa1I">https://youtu.be/k-sOF6PQa1I</a></span></p>
+<p><span><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/k-sOF6PQa1I" width="560"></iframe></span></p>
+<hr/>
+<h4>IPv4 ssh key 設定(之前使用的)</h4>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+</div>
+<div class="post-body entry-content" id="post-body-7756927037016291787" itemprop="description articleBody"><span>1.先把<span>git config --edit --system裡面的</span><span>helper = manager刪除後輸入:wq(是指儲存後退出)</span></span><span>。</span><br/><span><span><br/></span></span><span><span>2.進入控制台&gt;使用者帳戶&gt;認證管理員&gt;windows認證&gt;刪除現存的github帳號。</span></span><br/><span><span><br/></span></span><span><span>3.輸入</span></span><span><span>ssh-keygen -t rsa -b 4096 -C "github的email</span><span>"。</span></span><br/><span><span><br/></span></span><span><span>4.輸入你想存放的位子例如:</span></span><span>Y:\home\.ssh/id_rsa。</span><br/><span><br/></span><span>5.一直案Enter到結束。</span><br/><span><br/></span><span>6.打開</span><span>id_rsa並且全部複製&gt;進入setting&gt;</span><span><span>SSH and </span></span><span>GPG </span><span>keys 。</span><br/><span><br/></span><span>7.案New ssh key 貼上&gt;輸入想要的名子儲存。</span><br/><span><br/></span><span>我的教學影片:</span><span><a href="https://youtu.be/SJHMm3o5uEw">https://youtu.be/SJHMm3o5uEw</a></span></div>
+<div class="post-body entry-content" itemprop="description articleBody"><span></span></div>
+<div class="post-body entry-content" itemprop="description articleBody"><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/SJHMm3o5uEw" width="560"></iframe></span></div><h1>Notes</h1>
 <p><a href="https://s40723210.github.io/cad2019/content/git%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4.html">git基本指令</a></p>
 <p><a href="https://s40723210.github.io/cad2019/content/python%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95.html">python基本語法</a></p>
 <p><a href="https://s40723210.github.io/cad2019/content/vi%20%E8%88%87%20vim%20%E7%9A%84%E6%8C%87%E4%BB%A4%E6%95%B4%E7%90%86.html">vi 與 vim 的指令整理</a></p>
@@ -1773,126 +1800,127 @@ EXIT</pre>
 <p class="c5"><span class="c9">備註11.2.1<span> </span></span><span class="c1">在這種情況下，必須謹慎，因為我們不在乎傳遞函數零的位置，因此在實現此控制器時可能會有些意外。顯然，我們將獲得的性能（穩定時間和過衝）將取決於零的位置。有關此問題的更多詳細信息，請向讀者介紹Boukas[1]。</span></p>
 <p class="c5"><span class="c1">  至現在實施該PI控制算法，並確保達到理想的性能，我們將使用Microship1的微控制器。這種選擇是由於我們在此類微控制器方面的經驗所致。讀者可以記住，其他製造商的任何其他微控制器都可以做些小改動。在本示例中，我們將使用Microhip的單片機dsPIC30F4011。</span></p>
 <p class="c5"><span class="c1">  我們實現的代碼使用C語言編寫。採用這種語言是因為其簡單性。該實現具有以下結構：</span></p>
-<p class="c5 c18"><span class="c1">//</span></p>
-<p class="c5 c18"><span class="c1">// Put here the include</span></p>
-<p class="c5 c18"><span class="c1">//</span></p>
-<p class="c5 c18 c7"><span class="c1"></span></p>
-<p class="c5 c18"><span class="c1">#include "p30F4011.h"        // proc specific header</span></p>
-<p class="c5 c18 c7"><span class="c1"></span></p>
-<p class="c5"><span class="c1">//</span></p>
-<p class="c5"><span class="c1">// Define a struct</span></p>
-<p class="c5"><span class="c1">//</span></p>
-<p class="c4"><span class="c1">typedef struct {</span></p>
-<p class="c2"><span class="c1">// PI Gains</span></p>
-<p class="c2"><span class="c1">float K_P; // Propotional gain</span></p>
-<p class="c2"><span class="c1">float K_I; // Integral gain</span></p>
-<p class="c5 c8"><span class="c1">//</span></p>
-<p class="c5 c8"><span class="c1">// PI Constants</span></p>
-<p class="c5 c8"><span class="c1">//</span></p>
-<p class="c5 c8"><span class="c1">float Const1_pid; // KP + T KI/2</span></p>
-<p class="c5 c8"><span class="c1">float Const2_pid; // -KP + T KI/2</span></p>
-<p class="c5 c8"><span class="c1">float Reference; // speed reference</span></p>
-<p class="c5 c8 c7"><span class="c1"></span></p>
-<p class="c5 c8"><span class="c1">//</span></p>
-<p class="c5 c8"><span class="c1">// System variables</span></p>
-<p class="c5 c8"><span class="c1">//</span></p>
-<p class="c5 c8"><span class="c1">float y_k; // y_m[k] -&gt; measured output at time k</span></p>
-<p class="c5 c8"><span class="c1">float u_k; // u[k] -&gt; output at time k</span></p>
-<p class="c5 c8"><span class="c1">float e_k; // e[k] -&gt; error at time k</span></p>
-<p class="c5 c8 c7"><span class="c1"></span></p>
-<p class="c5 c8"><span class="c1">//</span></p>
-<p class="c5 c8"><span class="c1">// System past variables</span></p>
-<p class="c5 c8"><span class="c1">//</span></p>
-<p class="c5 c8"><span class="c1">float u_prec; // u[k-1] -&gt; output at time k-1</span></p>
-<p class="c5 c8"><span class="c1">float e_prec; // e[k-1] -&gt; error at time k-1</span></p>
-<p class="c5 c8 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">}PIStruct;</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">PIStruct thePI;</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">thePI.Const1= thePI.K_P+T*thePI.K_I/2;</span></p>
-<p class="c0"><span class="c1">thePI.Const2=-thePI.K_P+T*thePI.K_I/2;</span></p>
-<p class="c0"><span class="c1">thePI.Reference=600;</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c5"><span class="c1">//</span></p>
-<p class="c5"><span class="c1">// Functions</span></p>
-<p class="c5"><span class="c1">//</span></p>
-<p class="c5"><span class="c1">float ReadSpeed(void);</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c5"><span class="c1">float ComputeControl(void);</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c5"><span class="c1">float SendControl(void);</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c5"><span class="c1">//</span></p>
-<p class="c5"><span class="c1">// Interrupt program here using Timer 1 (overflow of counter Timer 1)</span></p>
-<p class="c5"><span class="c1">//</span></p>
-<p class="c5"><span class="c1">void __ISR _T1Interrupt(void) // interrupt routine code</span></p>
-<p class="c0"><span class="c1">{</span></p>
-<p class="c2"><span class="c1">// Interrupt Service Routine code goes here</span></p>
-<p class="c2"><span class="c1">float Position_error;</span></p>
-<p class="c2 c7"><span class="c1"></span></p>
-<p class="c2"><span class="c1">//</span></p>
-<p class="c2"><span class="c1">// Read speed</span></p>
-<p class="c2"><span class="c1">//</span></p>
-<p class="c2"><span class="c1">thePI.y_m=ReadSpeed();</span></p>
-<p class="c2 c7"><span class="c1"></span></p>
-<p class="c2"><span class="c1">thePI.e_k= thePI.Reference-thePI.y_m;</span></p>
-<p class="c2 c7"><span class="c1"></span></p>
-<p class="c2"><span class="c1">//</span></p>
-<p class="c2"><span class="c1">// Compute the control</span></p>
-<p class="c2"><span class="c1">//</span></p>
-<p class="c2"><span class="c1">ComputeContrl();</span></p>
-<p class="c2 c7"><span class="c1"></span></p>
-<p class="c2"><span class="c1">//</span></p>
-<p class="c2"><span class="c1">// Send control</span></p>
-<p class="c2"><span class="c1">//</span></p>
-<p class="c2"><span class="c1">SendControl();</span></p>
-<p class="c2 c7"><span class="c1"></span></p>
-<p class="c2"><span class="c1">IFS0bits.T1IF=0; // Disable the interrupt</span></p>
-<p class="c0"><span class="c1">}</span></p>
-<p class="c5"><span class="c1">int main ( void ) // start of main application code</span></p>
-<p class="c5"><span class="c1">{</span></p>
-<p class="c5"><span class="c1">// Application code goes here</span></p>
-<p class="c5"><span class="c1">int i;</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c5"><span class="c1">// Initialize the variables Reference and ThePID.y_m (it can be read</span></p>
-<p class="c5"><span class="c1">from inputs) Reference = 0x8000; // Hexadecimal number</span></p>
-<p class="c5"><span class="c1">(0b... Binary number) ThePID = 0x8000;</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c5"><span class="c1">// Initialize the registers</span></p>
-<p class="c5"><span class="c1">TRISC=0x9fff; // RC13 and RC14 (pins 15 and 16) are configured as outputs</span></p>
-<p class="c5"><span class="c1">IEC0bits.T1IE=1; // Enable the interrupt on Timer 1</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c5"><span class="c1">// Indefinite loop</span></p>
-<p class="c5"><span class="c1">while (1)</span></p>
-<p class="c5"><span class="c1">{</span></p>
-<p class="c5"><span class="c1">}</span></p>
-<p class="c5"><span class="c1">return 0</span></p>
-<p class="c5"><span class="c1">}</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c2"><span class="c1">% ReadSpeed function</span></p>
-<p class="c2"><span class="c1">int ReadSpeed (void)</span></p>
-<p class="c2"><span class="c1">{</span></p>
-<p class="c2"><span class="c1">}</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c5"><span class="c1">% ComputeControl function</span></p>
-<p class="c5"><span class="c1">int ComputeControl (void)</span></p>
-<p class="c5"><span class="c1">{</span></p>
-<p class="c5"><span class="c1">thePI.u_k=thePI.u_prec+thePI.Const1*thePI.e_k+thePI.Const2*thePI.e_prec;</span></p>
-<p class="c5"><span class="c1">}</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c5"><span class="c1">% SendControl function</span></p>
-<p class="c5"><span class="c1">int Send Control (void)</span></p>
-<p class="c5"><span class="c1">{</span></p>
-<p class="c5"><span class="c1">sendControl()</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c5"><span class="c1">//</span></p>
-<p class="c5"><span class="c1">// Update past data</span></p>
-<p class="c5"><span class="c1">//</span></p>
-<p class="c5"><span class="c1">thePI.u_prec=thePI.u_k;</span></p>
-<p class="c5"><span class="c1">ThePI.e_prec=thePI.e_k;</span></p>
-<p class="c5"><span class="c1">}</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">//
+// Put here the include
+//
+
+#include "p30F4011.h"	// proc specific header
+
+//
+// Define a struct
+//
+typedef struct {
+// PI Gains
+float K_P; // Propotional gain
+float K_I; // Integral gain
+//
+// PI Constants
+//
+float Const1_pid; // KP + T KI/2
+float Const2_pid; // -KP + T KI/2
+float Reference; // speed reference
+
+//
+// System variables
+//
+float y_k; // y_m[k] -&gt; measured output at time k
+float u_k; // u[k] -&gt; output at time k
+float e_k; // e[k] -&gt; error at time k
+
+//
+// System past variables
+//
+float u_prec; // u[k-1] -&gt; output at time k-1
+float e_prec; // e[k-1] -&gt; error at time k-1
+
+}PIStruct;
+
+PIStruct thePI;
+
+thePI.Const1= thePI.K_P+T*thePI.K_I/2;
+thePI.Const2=-thePI.K_P+T*thePI.K_I/2;
+thePI.Reference=600;
+
+//
+// Functions
+//
+float ReadSpeed(void);
+
+float ComputeControl(void);
+
+float SendControl(void);
+
+//
+// Interrupt program here using Timer 1 (overflow of counter Timer 1)
+//
+void __ISR _T1Interrupt(void) // interrupt routine code
+{
+// Interrupt Service Routine code goes here
+float Position_error;
+
+//
+// Read speed
+//
+thePI.y_m=ReadSpeed();
+
+thePI.e_k= thePI.Reference-thePI.y_m;
+
+//
+// Compute the control
+//
+ComputeContrl();
+
+//
+// Send control
+//
+SendControl();
+
+IFS0bits.T1IF=0; // Disable the interrupt
+}
+int main ( void ) // start of main application code
+{
+// Application code goes here
+int i;
+
+// Initialize the variables Reference and ThePID.y_m (it can be read
+from inputs) Reference = 0x8000; // Hexadecimal number
+(0b... Binary number) ThePID = 0x8000;
+
+// Initialize the registers
+TRISC=0x9fff; // RC13 and RC14 (pins 15 and 16) are configured as outputs
+IEC0bits.T1IE=1; // Enable the interrupt on Timer 1
+
+// Indefinite loop
+while (1)
+{
+}
+return 0
+}
+
+% ReadSpeed function
+int ReadSpeed (void)
+{
+}
+
+% ComputeControl function
+int ComputeControl (void)
+{
+thePI.u_k=thePI.u_prec+thePI.Const1*thePI.e_k+thePI.Const2*thePI.e_prec;
+}
+
+% SendControl function
+int Send Control (void)
+{
+sendControl()
+
+//
+// Update past data
+//
+thePI.u_prec=thePI.u_k;
+ThePI.e_prec=thePI.e_k;
+}
+</pre>
+<p class="c5 c18"><span class="c1"></span></p>
 <p class="c5"><span class="c1">  從該結構可以看出，首先我們注意到系統將進入循環，並在每次中斷時調用函數：</span></p>
 <p class="c5"><span class="c1">•        ReadSpeed;</span></p>
 <p class="c5"><span class="c1">•        ComputeControl;</span></p>
@@ -1972,28 +2000,28 @@ EXIT</pre>
 </ol>
 <p class="c3"><span><img alt="" src="https://lh3.googleusercontent.com/aLhnwW6-AjSpR3o4zqNNO--np5K4_mBJJW9SmC7hCbI6hVYBGheI7mQvpJczW9s2M2eqNd9X6uiNBIE6GymJAVlpXGvXpXFeiCn20cV9gGYjlULeEa5zMTcANUcUjGwFezTdSeQ" title=""/></span></p>
 <p class="c3"><span class="c1">  實現是該控制器使用相同的功能，但有一些小的更改。列出相應的功能是：  </span></p>
-<p class="c5 c8"><span class="c1">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span></p>
-<p class="c5 c8"><span class="c1">% Main program %</span></p>
-<p class="c5 c8"><span class="c1">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span></p>
-<p class="c5 c8 c7"><span class="c1"></span></p>
-<p class="c5 c8"><span class="c1">main</span></p>
-<p class="c5 c8"><span class="c1">% Data</span></p>
-<p class="c5 c8 c7"><span class="c1"></span></p>
-<p class="c5 c8"><span class="c1">% Variables</span></p>
-<p class="c5 c8 c7"><span class="c1"></span></p>
-<p class="c5 c8"><span class="c1">% While loop</span></p>
-<p class="c2"><span class="c1">while (1)</span></p>
-<p class="c5 c18"><span class="c1">do</span></p>
-<p class="c5 c6"><span class="c1">ReadSpeed;</span></p>
-<p class="c5 c6"><span class="c1">ComputeControl;</span></p>
-<p class="c5 c6"><span class="c1">SendControl;</span></p>
-<p class="c5 c18"><span class="c1">end;</span></p>
-<p class="c5 c8"><span class="c1">% ReadSpeed function</span></p>
-<p class="c5 c8 c7"><span class="c1"></span></p>
-<p class="c5 c8"><span class="c1">% ComputeControl function</span></p>
-<p class="c5 c8 c7"><span class="c1"></span></p>
-<p class="c5 c8"><span class="c1">% SendControl function</span></p>
-<p class="c5 c8 c7"><span class="c1"></span></p>
+<p class="c5 c8"><span class="c1"></span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main program %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+main
+% Data
+
+% Variables
+
+% While loop
+while (1)
+do
+ReadSpeed;
+ComputeControl;
+SendControl;
+end;
+% ReadSpeed function
+
+% ComputeControl function
+
+% SendControl function</pre>
 <p class="c5"><span class="c1">  現在讓我們使用此示例的狀態空間表示，並設計一個狀態反饋控制器，以保證所需的性能。對於這種情況，我們將首先假定完全訪問狀態，其次通過假設僅可以訪問該職位來放寬此假設。像我們之前所做的那樣，我們可以連續進行，也可以不連續進行。</span></p>
 <p class="c5"><span class="c1">  先前我們建立了該系統的狀態空間描述，其描述為：</span></p>
 <p class="c3"><span><img alt="" src="https://lh4.googleusercontent.com/jYovX7QBU7LTCV7jidK57a8E0mQ2n0X7l69bzDWFo-Zu-o7VrVRWjWZw7VAfmuQknEQOH4gOd-UNrFT3qTbrvsvU1H__B5DoyDl1S_G4VHlre6mPsdxTcG5h-SIpAYyXVK0a364" title=""/></span></p>
@@ -2193,252 +2221,254 @@ EXIT</pre>
 <p class="c3"><span><img alt="" src="https://lh5.googleusercontent.com/Uu0vHxGY1z06mI_CZ-DUebYhiRDrPc73n4-5snQ6bnaurgysDtkfemUwubZ7JTXKxRMHBa518gjRJwCC1PtIqS0c5cmN0F2EdCqNFRXQUT7HbD0OlcoLebUpe2dOemMMtar1rf0" title=""/></span></p>
 <p class="c5"><span class="c1">  我們可以像我們對直流電動機套件和雙輪機器人所做的那樣試驗所有其他控制器，但是我們更喜歡讓這一部分作為練習供讀者練習工具。注意，我們邀請他/她在連續時間和離散時間情況下進行設計並比較結果。該系統的尺寸可以做到這一點。</span></p>
 <p class="c5"><span class="c1">  下面給出了用於對該系統的狀態反饋控制進行編程的示例：</span></p>
-<p class="c5"><span class="c1"> #include &lt;p30fxxxx.h&gt;</span></p>
-<p class="c5"><span class="c1">#include &lt;stdio.h&gt;</span></p>
-<p class="c5"><span class="c1">#include &lt;stdlib.h&gt;</span></p>
-<p class="c5"><span class="c1">#include &lt;adc10.h&gt;</span></p>
-<p class="c5"><span class="c1">#include &lt;math.h&gt;</span></p>
-<p class="c5"><span class="c1">#include &lt;uart.h&gt;</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c5"><span class="c1">//</span></p>
-<p class="c5"><span class="c1">// Configuration</span></p>
-<p class="c5"><span class="c1">//</span></p>
-<p class="c5"><span class="c1">// Interne frequency (30 MIPS) instructions/sec</span></p>
-<p class="c5"><span class="c1">// Number of samples: 7,37*16/4 = 29480000</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c5"><span class="c1">_FOSC(CSW_FSCM_OFF &amp; FRC_PLL16);</span></p>
-<p class="c5"><span class="c1">_FWDT(WDT_OFF);</span></p>
-<p class="c5"><span class="c1">_FBORPOR(PBOR_OFF &amp; MCLR_DIS);</span></p>
-<p class="c5"><span class="c1">_FGS(CODE_PROT_OFF);</span></p>
-<p class="c5"><span class="c1">_FICD( ICS_NONE );</span></p>
-<p class="c5"><span class="c1">__C30_UART=2;</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c5"><span class="c1">//</span></p>
-<p class="c5"><span class="c1">// Variables</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">#define Freq_pic 29480000 // PIC Frequency</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">#define a11 7.8510061454215840e-001</span></p>
-<p class="c0"><span class="c1">#define a12 2.2727760074413661e-004</span></p>
-<p class="c0"><span class="c1">#define a21 5.0829248960838420e+001</span></p>
-<p class="c0"><span class="c1">#define a22 1.0000643300984893e+000</span></p>
-<p class="c0"><span class="c1">#define b11 3.7771272752681438e-005</span></p>
-<p class="c0"><span class="c1">#define b12 4.5392069137012870e-004</span></p>
-<p class="c0"><span class="c1">#define b21 8.7496385285734044e-003</span></p>
-<p class="c0"><span class="c1">#define b22 1.0852723324638587e-001</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">#define Ts 2.2727272727272727e-004</span></p>
-<p class="c0"><span class="c1">#define u_max 1.1789999999999999e+001</span></p>
-<p class="c0"><span class="c1">#define ref_tension 5.0000000000000000e+000</span></p>
-<p class="c0"><span class="c1">#define ref_pic 1.0240000000000000e+003</span></p>
-<p class="c0"><span class="c1">#define duty_cycle_ref 5.8481764206955049e+001</span></p>
-<p class="c0"><span class="c1">#define x_ref 7.8768775539549939e-003</span></p>
-<p class="c0"><span class="c1">#define u_ref 2.0000000000000000e+000</span></p>
-<p class="c0"><span class="c1">#define y_ref 8.5691877396730676e-001</span></p>
-<p class="c0"><span class="c1">#define K0 5.2128678707944724e+004</span></p>
-<p class="c0"><span class="c1">#define K1 3.9336557697049994e+002</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c2"><span class="c1">double y[2] = {0.0, 0.0};</span></p>
-<p class="c2"><span class="c1">double u[2] = {0.0, 0.0};</span></p>
-<p class="c2"><span class="c1">double y_tilde[2] = {0.0, 0.0};</span></p>
-<p class="c2"><span class="c1">double tension_tilde[2] = {0.0, 0.0};</span></p>
-<p class="c2"><span class="c1">double tension = 0.0;</span></p>
-<p class="c2"><span class="c1">double duty_cycle_tilde = 0.0;</span></p>
-<p class="c2"><span class="c1">double lim_Sup = 0.0;</span></p>
-<p class="c2"><span class="c1">double lim_Inf = 0.0;</span></p>
-<p class="c2"><span class="c1">double position_tilde[2] = {0.0, 0.0};</span></p>
-<p class="c2"><span class="c1">double vitesse_tilde[2] = {0.0, 0.0};</span></p>
-<p class="c2"><span class="c1">double integrale_tilde[2] = {0.0, 0.0};</span></p>
-<p class="c2"><span class="c1">double duty_cycle = 0.0;</span></p>
-<p class="c2"><span class="c1">double temps_total = 0.0;</span></p>
-<p class="c2"><span class="c1">double n = 6553500.0/65536.0;</span></p>
-<p class="c2"><span class="c1">int compteur = 0;</span></p>
-<p class="c2"><span class="c1">int compteur_freq = 0;</span></p>
-<p class="c2"><span class="c1">int uart_flag = 1;</span></p>
-<p class="c2"><span class="c1">unsigned long Val_reg = 0;</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">//</span></p>
-<p class="c0"><span class="c1">// Functions</span></p>
-<p class="c0"><span class="c1">//</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">void init(void){</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">INTCON1bits.NSTDIS=0; // Activation of the level of interruption</span></p>
-<p class="c0"><span class="c1">TRISE = 0; // Configuration of PORTE as output</span></p>
-<p class="c0"><span class="c1">TRISD = 0; //Configuration of PORTD as output</span></p>
-<p class="c0"><span class="c1">PORTEbits.RE8 = 1;</span></p>
-<p class="c0"><span class="c1">PORTEbits.RE2 = 0;</span></p>
-<p class="c0"><span class="c1">PORTDbits.RD0 = 1;</span></p>
-<p class="c0"><span class="c1">ADPCFG= 0xFFFF; // Configuration of the pins of PORTB as digital</span></p>
-<p class="c0"><span class="c1">I/O</span></p>
-<p class="c0"><span class="c1">}</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">void init_ADC (void){</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">SetChanADC10(ADC_CHX_POS_SAMPLEA_AN3AN4AN5 &amp;</span></p>
-<p class="c0"><span class="c1">ADC_CHX_NEG_SAMPLEA_NVREF);</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">ConfigIntADC10(ADC_INT_DISABLE);</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">OpenADC10(ADC_MODULE_ON &amp; ADC_IDLE_CONTINUE &amp; ADC_FORMAT_INTG</span></p>
-<p class="c5 c8"><span class="c1">&amp; ADC_CLK_AUTO &amp; ADC_AUTO_SAMPLING_ON &amp; ADC_SAMPLE_SIMULTANEOUS,</span></p>
-<p class="c5 c8"><span class="c1">ADC_VREF_AVDD_AVSS &amp; ADC_SCAN_OFF &amp; ADC_CONVERT_CH_0ABC</span></p>
-<p class="c5 c8"><span class="c1">&amp; ADC_SAMPLES_PER_INT_1 &amp; ADC_ALT_BUF_OFF &amp; ADC_ALT_INPUT_OFF,</span></p>
-<p class="c5 c8"><span class="c1">ADC_SAMPLE_TIME_1 &amp; ADC_CONV_CLK_SYSTEM &amp; ADC_CONV_CLK_32Tcy,</span></p>
-<p class="c5 c8"><span class="c1">ENABLE_AN4_ANA &amp; ENABLE_AN5_ANA, SCAN_NONE);</span></p>
-<p class="c0"><span class="c1">}</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">void init_Timer1 (void){</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">INTCON1bits.NSTDIS=0; // Activation of mode 16 bits of the Timer1</span></p>
-<p class="c0"><span class="c1">T1CONbits.TON = 1; // Autorisation du Timer1</span></p>
-<p class="c0"><span class="c1">T1CONbits.TGATE = 0; // Dsactivation du mode Timer Gate</span></p>
-<p class="c0"><span class="c1">T1CONbits.TSIDL=1; // Synchronisation of Timer1 sur le Idle mode</span></p>
-<p class="c0"><span class="c1">T1CONbits.TCKPS = 0; // Choice of the Prescaler 1:1</span></p>
-<p class="c5 c15"><span class="c1">(1=1:8, 2=1:64)</span></p>
-<p class="c0"><span class="c1">T1CONbits.TCS=0; // Selection of the interne clock (0=FOSC/4)</span></p>
-<p class="c0"><span class="c1">IFS0bits.T1IF = 0; // Put to zero the overflow bit for the</span></p>
-<p class="c5 c15"><span class="c1">interrupt of Timer</span></p>
-<p class="c0"><span class="c1">IEC0bits.T1IE = 1; // Activation of the interruption of Timer1</span></p>
-<p class="c0"><span class="c1">PR1 = 6699; // Sampling frequency at 4400 Hz environ</span></p>
-<p class="c0"><span class="c1">IPC0bits.T1IP = 5; // Priority 5 for the interruption of the</span></p>
-<p class="c5 c15"><span class="c1">Timer1</span></p>
-<p class="c5 c15 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">}</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">/* ROUTINE D’INITIALISATION DE L’UART */</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">void init_UART (void){</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">ConfigIntUART2(UART_RX_INT_DIS &amp; UART_RX_INT_PR0</span></p>
-<p class="c0"><span class="c1">&amp; UART_TX_INT_DIS &amp; UART_TX_INT_PR0);</span></p>
-<p class="c2 c7"><span class="c1"></span></p>
-<p class="c2"><span class="c1">// Configuration of the register</span></p>
-<p class="c2 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">U2MODEbits.UARTEN = 1; // UART pins controlled by UART</span></p>
-<p class="c0"><span class="c1">U2MODEbits.USIDL = 0; // UART communication continue in</span></p>
-<p class="c5 c16"><span class="c1">Idle Mode</span></p>
-<p class="c5 c7 c16"><span class="c1"></span></p>
-<p class="c0"><span class="c1">U2MODEbits.WAKE = 1; // Wake up enable in sleep Mode</span></p>
-<p class="c0"><span class="c1">U2MODEbits.LPBACK = 0; // Loopback mode disabled</span></p>
-<p class="c0"><span class="c1">U2MODEbits.ABAUD = 0; // Autobaud process disabled</span></p>
-<p class="c0"><span class="c1">U2MODEbits.PDSEL = 0; // 8-bit data, no parity</span></p>
-<p class="c0"><span class="c1">U2MODEbits.STSEL = 0; // 1 stop-bit.</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">// Configuration du registre U2STA</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">U2STAbits.UTXISEL = 0; // Transmission Interrupt Mode</span></p>
-<p class="c5 c12"><span class="c1">Selection bit</span></p>
-<p class="c0"><span class="c1">U2STAbits.UTXBRK = 0; // UxTX pin operates normally</span></p>
-<p class="c0"><span class="c1">U2STAbits.UTXEN = 1; // Transmit enable</span></p>
-<p class="c0"><span class="c1">U2STAbits.URXISEL = 1; // Interrupt occurs when one charater</span></p>
-<p class="c5 c12"><span class="c1">is received</span></p>
-<p class="c0"><span class="c1">U2STAbits.ADDEN = 0; // Address detect disabled</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">U2BRG = 31; // Value for 57600 bps baudrate</span></p>
-<p class="c0"><span class="c1">}</span></p>
-<p class="c0"><span class="c1">//</span></p>
-<p class="c0"><span class="c1">// Initialization of the complementary mode PWM</span></p>
-<p class="c0"><span class="c1">//</span></p>
-<p class="c0"><span class="c1">void init_PWM (void){</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">Val_reg = 1023; // Frquence de 30000 Hz environ</span></p>
-<p class="c0"><span class="c1">lim_Sup = (u_max*(2*Val_reg + 1)/(2*Val_reg + 2)) - u_ref;</span></p>
-<p class="c0"><span class="c1">lim_Inf = -u_max - u_ref;</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">PTCONbits.PTEN = 1; // Activation of the time base</span></p>
-<p class="c0"><span class="c1">PTCONbits.PTSIDL = 1; // Configuration in Idle Mode</span></p>
-<p class="c0"><span class="c1">PTCONbits.PTCKPS = 0; // Selection de 4TCY ( Prescale: 00 = 1:1;</span></p>
-<p class="c5 c12"><span class="c1">01= 1:4; 10 = 1:16; 11 = 1:64)</span></p>
-<p class="c0"><span class="c1">PTCONbits.PTMOD = 0; // Selection of the free running mode</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">PTMRbits.PTDIR = 0; // Increment of the time base</span></p>
-<p class="c0"><span class="c1">PTMRbits.PTMR = Val_reg; // Register value of the Time base</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">PTPER = Val_reg; // Value of the signal period</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">PWMCON1bits.PMOD1 = 0; // Selection the mode PWM complementary</span></p>
-<p class="c0"><span class="c1">PWMCON1bits.PEN1H = 1; // Activation of the pins in mode PWM</span></p>
-<p class="c0"><span class="c1">PWMCON1bits.PEN1L = 1; // Activation of the pins in mode PWM</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">DTCON1bits.DTAPS = 0; // Time base unit is 1TCY</span></p>
-<p class="c0"><span class="c1">DTCON1bits.DTA = 0; // Value of the DT for the unity A</span></p>
-<p class="c0"><span class="c1">PDC1 = 0; // zero of the dutycycle</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">}</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">void __attribute__((interrupt, auto_psv)) _T1Interrupt (void){</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">if (IFS0bits.T1IF){</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">PORTEbits.RE2 = !PORTEbits.RE2;</span></p>
-<p class="c0"><span class="c1">PDC1 = (2.0 * (Val_reg + 1) * duty_cycle)/100.0; // Calcul de la</span></p>
-<p class="c5 c21"><span class="c1">valeur du registre PDC1</span></p>
-<p class="c0"><span class="c1">y[0] = (ReadADC10(2)*ref_tension)/ref_pic; // Signal of the</span></p>
-<p class="c5 c11"><span class="c1">sensor in Volts</span></p>
-<p class="c0"><span class="c1">y_tilde[0] = y[0] - y_ref;</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">position_tilde[1] = position_tilde[0];</span></p>
-<p class="c0"><span class="c1">vitesse_tilde[1] = vitesse_tilde[0];</span></p>
-<p class="c0"><span class="c1">integrale_tilde[1] = integrale_tilde[0];</span></p>
-<p class="c0"><span class="c1">y_tilde[1] = y_tilde[0];</span></p>
-<p class="c0"><span class="c1">tension_tilde[1] = tension_tilde[0];</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">position_tilde[0] = (a11*position_tilde[1]+a12*vitesse_tilde[1]</span></p>
-<p class="c5 c30"><span class="c1">+b11*tension_tilde[1]+b12*y_tilde[1]);</span></p>
-<p class="c0"><span class="c1">vitesse_tilde[0] = (-a21*position_tilde[1]+a22*vitesse_tilde[1]</span></p>
-<p class="c5 c30"><span class="c1">+b21*tension_tilde[1]+b22*y_tilde[1]);</span></p>
-<p class="c0"><span class="c1">tension_tilde[0] = (K0*position_tilde[0]) +</span></p>
-<p class="c5 c14"><span class="c1">(K1*vitesse_tilde[0]);// + N*ref;</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">if(tension_tilde[0]&gt;lim_Sup){tension_tilde[0] = lim_Sup;}</span></p>
-<p class="c0"><span class="c1">// Saturation of the tension tilde</span></p>
-<p class="c0"><span class="c1">if(tension_tilde[0]&lt;lim_Inf){tension_tilde[0] = lim_Inf;}</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">tension = u_ref + tension_tilde[0];</span></p>
-<p class="c0"><span class="c1">duty_cycle_tilde = tension_tilde[0]*(50.0/u_max);</span></p>
-<p class="c0"><span class="c1">duty_cycle = duty_cycle_ref + duty_cycle_tilde; // Computation</span></p>
-<p class="c5 c14"><span class="c1">of the duty cycle in percentage</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">temps_total += Ts;</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">compteur_freq = 0;</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">compteur++;</span></p>
-<p class="c0"><span class="c1">if(compteur == 10){ // Print data every 1 ms</span></p>
-<p class="c0"><span class="c1">compteur = 0.0;</span></p>
-<p class="c0"><span class="c1">uart_flag = 1;</span></p>
-<p class="c0"><span class="c1">}</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">IFS0bits.T1IF = 0; // put to zero of the overflow bit</span></p>
-<p class="c0"><span class="c1">}</span></p>
-<p class="c0"><span class="c1">}</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">/* PROGRAMME PRINCIPAL */</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c0"><span class="c1">int main (void){</span></p>
-<p class="c0 c7"><span class="c1"></span></p>
-<p class="c2"><span class="c1">init();</span></p>
-<p class="c2"><span class="c1">init_PWM();</span></p>
-<p class="c2"><span class="c1">init_ADC();</span></p>
-<p class="c2"><span class="c1">init_UART();</span></p>
-<p class="c2"><span class="c1">init_Timer1();</span></p>
-<p class="c2"><span class="c1">while(1){</span></p>
-<p class="c5 c6"><span class="c1">init();</span></p>
-<p class="c5 c6"><span class="c1">init_PWM();</span></p>
-<p class="c5 c6"><span class="c1">init_ADC();</span></p>
-<p class="c5 c6"><span class="c1">init_UART();</span></p>
-<p class="c5 c6"><span class="c1">init_Timer1();</span></p>
-<p class="c5 c6"><span class="c1">while(1){</span></p>
-<p class="c5 c17"><span class="c1">if (uart_flag){</span></p>
-<p class="c5 c17"><span class="c1">printf("%lf %lf %lf %lf %lf %lf %lf\n\r",</span></p>
-<p class="c5 c17"><span class="c1">temps_total, tension, u_ref, y[0], y_ref,</span></p>
-<p class="c5 c17"><span class="c1">position_tilde[0], x_ref);</span></p>
-<p class="c5 c17"><span class="c1">uart_flag = 0;</span></p>
-<p class="c5 c17"><span class="c1">}</span></p>
-<p class="c0"><span class="c1">}</span></p>
-<p class="c5"><span class="c1">}</span></p>
-<p class="c5 c7"><span class="c1"></span></p>
+<p class="c5"><span class="c1"></span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"> #include &lt;p30fxxxx.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;adc10.h&gt;
+#include &lt;math.h&gt;
+#include &lt;uart.h&gt;
+
+//
+// Configuration
+//
+// Interne frequency (30 MIPS) instructions/sec
+// Number of samples: 7,37*16/4 = 29480000
+
+_FOSC(CSW_FSCM_OFF &amp; FRC_PLL16);
+_FWDT(WDT_OFF);
+_FBORPOR(PBOR_OFF &amp; MCLR_DIS);
+_FGS(CODE_PROT_OFF);
+_FICD( ICS_NONE );
+__C30_UART=2;
+
+//
+// Variables
+
+#define Freq_pic 29480000 // PIC Frequency
+
+#define a11 7.8510061454215840e-001
+#define a12 2.2727760074413661e-004
+#define a21 5.0829248960838420e+001
+#define a22 1.0000643300984893e+000
+#define b11 3.7771272752681438e-005
+#define b12 4.5392069137012870e-004
+#define b21 8.7496385285734044e-003
+#define b22 1.0852723324638587e-001
+
+#define Ts 2.2727272727272727e-004
+#define u_max 1.1789999999999999e+001
+#define ref_tension 5.0000000000000000e+000
+#define ref_pic 1.0240000000000000e+003
+#define duty_cycle_ref 5.8481764206955049e+001
+#define x_ref 7.8768775539549939e-003
+#define u_ref 2.0000000000000000e+000
+#define y_ref 8.5691877396730676e-001
+#define K0 5.2128678707944724e+004
+#define K1 3.9336557697049994e+002
+
+double y[2] = {0.0, 0.0};
+double u[2] = {0.0, 0.0};
+double y_tilde[2] = {0.0, 0.0};
+double tension_tilde[2] = {0.0, 0.0};
+double tension = 0.0;
+double duty_cycle_tilde = 0.0;
+double lim_Sup = 0.0;
+double lim_Inf = 0.0;
+double position_tilde[2] = {0.0, 0.0};
+double vitesse_tilde[2] = {0.0, 0.0};
+double integrale_tilde[2] = {0.0, 0.0};
+double duty_cycle = 0.0;
+double temps_total = 0.0;
+double n = 6553500.0/65536.0;
+int compteur = 0;
+int compteur_freq = 0;
+int uart_flag = 1;
+unsigned long Val_reg = 0;
+
+//
+// Functions
+//
+
+void init(void){
+
+INTCON1bits.NSTDIS=0; // Activation of the level of interruption
+TRISE = 0; // Configuration of PORTE as output
+TRISD = 0; //Configuration of PORTD as output
+PORTEbits.RE8 = 1;
+PORTEbits.RE2 = 0;
+PORTDbits.RD0 = 1;
+ADPCFG= 0xFFFF; // Configuration of the pins of PORTB as digital
+I/O
+}
+
+void init_ADC (void){
+
+SetChanADC10(ADC_CHX_POS_SAMPLEA_AN3AN4AN5 &amp;
+ADC_CHX_NEG_SAMPLEA_NVREF);
+
+ConfigIntADC10(ADC_INT_DISABLE);
+
+OpenADC10(ADC_MODULE_ON &amp; ADC_IDLE_CONTINUE &amp; ADC_FORMAT_INTG
+&amp; ADC_CLK_AUTO &amp; ADC_AUTO_SAMPLING_ON &amp; ADC_SAMPLE_SIMULTANEOUS,
+ADC_VREF_AVDD_AVSS &amp; ADC_SCAN_OFF &amp; ADC_CONVERT_CH_0ABC
+&amp; ADC_SAMPLES_PER_INT_1 &amp; ADC_ALT_BUF_OFF &amp; ADC_ALT_INPUT_OFF,
+ADC_SAMPLE_TIME_1 &amp; ADC_CONV_CLK_SYSTEM &amp; ADC_CONV_CLK_32Tcy,
+ENABLE_AN4_ANA &amp; ENABLE_AN5_ANA, SCAN_NONE);
+}
+
+void init_Timer1 (void){
+
+INTCON1bits.NSTDIS=0; // Activation of mode 16 bits of the Timer1
+T1CONbits.TON = 1; // Autorisation du Timer1
+T1CONbits.TGATE = 0; // Dsactivation du mode Timer Gate
+T1CONbits.TSIDL=1; // Synchronisation of Timer1 sur le Idle mode
+T1CONbits.TCKPS = 0; // Choice of the Prescaler 1:1
+(1=1:8, 2=1:64)
+T1CONbits.TCS=0; // Selection of the interne clock (0=FOSC/4)
+IFS0bits.T1IF = 0; // Put to zero the overflow bit for the
+interrupt of Timer
+IEC0bits.T1IE = 1; // Activation of the interruption of Timer1
+PR1 = 6699; // Sampling frequency at 4400 Hz environ
+IPC0bits.T1IP = 5; // Priority 5 for the interruption of the
+Timer1
+
+}
+
+/* ROUTINE D’INITIALISATION DE L’UART */
+
+void init_UART (void){
+
+ConfigIntUART2(UART_RX_INT_DIS &amp; UART_RX_INT_PR0
+&amp; UART_TX_INT_DIS &amp; UART_TX_INT_PR0);
+
+// Configuration of the register
+
+U2MODEbits.UARTEN = 1; // UART pins controlled by UART
+U2MODEbits.USIDL = 0; // UART communication continue in
+Idle Mode
+
+U2MODEbits.WAKE = 1; // Wake up enable in sleep Mode
+U2MODEbits.LPBACK = 0; // Loopback mode disabled
+U2MODEbits.ABAUD = 0; // Autobaud process disabled
+U2MODEbits.PDSEL = 0; // 8-bit data, no parity
+U2MODEbits.STSEL = 0; // 1 stop-bit.
+
+// Configuration du registre U2STA
+
+U2STAbits.UTXISEL = 0; // Transmission Interrupt Mode
+Selection bit
+U2STAbits.UTXBRK = 0; // UxTX pin operates normally
+U2STAbits.UTXEN = 1; // Transmit enable
+U2STAbits.URXISEL = 1; // Interrupt occurs when one charater
+is received
+U2STAbits.ADDEN = 0; // Address detect disabled
+
+U2BRG = 31; // Value for 57600 bps baudrate
+}
+//
+// Initialization of the complementary mode PWM
+//
+void init_PWM (void){
+
+Val_reg = 1023; // Frquence de 30000 Hz environ
+lim_Sup = (u_max*(2*Val_reg + 1)/(2*Val_reg + 2)) - u_ref;
+lim_Inf = -u_max - u_ref;
+
+PTCONbits.PTEN = 1; // Activation of the time base
+PTCONbits.PTSIDL = 1; // Configuration in Idle Mode
+PTCONbits.PTCKPS = 0; // Selection de 4TCY ( Prescale: 00 = 1:1;
+01= 1:4; 10 = 1:16; 11 = 1:64)
+PTCONbits.PTMOD = 0; // Selection of the free running mode
+
+PTMRbits.PTDIR = 0; // Increment of the time base
+PTMRbits.PTMR = Val_reg; // Register value of the Time base
+
+PTPER = Val_reg; // Value of the signal period
+
+PWMCON1bits.PMOD1 = 0; // Selection the mode PWM complementary
+PWMCON1bits.PEN1H = 1; // Activation of the pins in mode PWM
+PWMCON1bits.PEN1L = 1; // Activation of the pins in mode PWM
+
+DTCON1bits.DTAPS = 0; // Time base unit is 1TCY
+DTCON1bits.DTA = 0; // Value of the DT for the unity A
+PDC1 = 0; // zero of the dutycycle
+
+}
+
+void __attribute__((interrupt, auto_psv)) _T1Interrupt (void){
+
+if (IFS0bits.T1IF){
+
+PORTEbits.RE2 = !PORTEbits.RE2;
+PDC1 = (2.0 * (Val_reg + 1) * duty_cycle)/100.0; // Calcul de la
+valeur du registre PDC1
+y[0] = (ReadADC10(2)*ref_tension)/ref_pic; // Signal of the
+sensor in Volts
+y_tilde[0] = y[0] - y_ref;
+
+position_tilde[1] = position_tilde[0];
+vitesse_tilde[1] = vitesse_tilde[0];
+integrale_tilde[1] = integrale_tilde[0];
+y_tilde[1] = y_tilde[0];
+tension_tilde[1] = tension_tilde[0];
+
+position_tilde[0] = (a11*position_tilde[1]+a12*vitesse_tilde[1]
++b11*tension_tilde[1]+b12*y_tilde[1]);
+vitesse_tilde[0] = (-a21*position_tilde[1]+a22*vitesse_tilde[1]
++b21*tension_tilde[1]+b22*y_tilde[1]);
+tension_tilde[0] = (K0*position_tilde[0]) +
+(K1*vitesse_tilde[0]);// + N*ref;
+
+if(tension_tilde[0]&gt;lim_Sup){tension_tilde[0] = lim_Sup;}
+// Saturation of the tension tilde
+if(tension_tilde[0]&lt;lim_Inf){tension_tilde[0] = lim_Inf;}
+
+tension = u_ref + tension_tilde[0];
+duty_cycle_tilde = tension_tilde[0]*(50.0/u_max);
+duty_cycle = duty_cycle_ref + duty_cycle_tilde; // Computation
+of the duty cycle in percentage
+
+temps_total += Ts;
+
+compteur_freq = 0;
+
+compteur++;
+if(compteur == 10){ // Print data every 1 ms
+compteur = 0.0;
+uart_flag = 1;
+}
+
+IFS0bits.T1IF = 0; // put to zero of the overflow bit
+}
+}
+
+/* PROGRAMME PRINCIPAL */
+
+int main (void){
+
+init();
+init_PWM();
+init_ADC();
+init_UART();
+init_Timer1();
+while(1){
+init();
+init_PWM();
+init_ADC();
+init_UART();
+init_Timer1();
+while(1){
+if (uart_flag){
+printf("%lf %lf %lf %lf %lf %lf %lf\n\r",
+temps_total, tension, u_ref, y[0], y_ref,
+position_tilde[0], x_ref);
+uart_flag = 0;
+}
+}
+}
+</pre>
+<p class="c5 c7"><span class="c1"><br/></span></p>
 <p class="c5"><span class="c10">11.6 結論</span></p>
 <p class="c5"><span class="c1">本章涵蓋了一些案例研究，這些案例是在我們位於蒙特利爾的E'cole PolytechniquedeMontre´al的機電一體化實驗室中開發的。我們詳細介紹了機電系統設計的所有步驟。重點放在每個提出的系統的控制算法的設計。</span></p>
 <p class="c5 c7"><span class="c1"></span></p>
@@ -3216,7 +3246,7 @@ void deinitializationCallback
 <p><span mce-data-marked="1">1.一樣先建立新的檔案。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">2.創建一個python程式檔。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">3.將控制改為現在的程式檔。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">4.將教材給的程式複製貼上。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">5.儲存之後即可開始模擬。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">6.機器會緩慢的閃避障礙物。</span></p>
 <p>我的操作影片(有字幕):<a href="https://youtu.be/7zeqP98Y2ek">https://youtu.be/7zeqP98Y2ek</a></p>
 <p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/7zeqP98Y2ek" width="560"></iframe></p>
-<hr/>
+<hr>
 <h4>Webots Tutorial-5</h4>
 <p><span mce-data-marked="1">1.另存一個新的檔案。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">2.新增實體</span><span mce-data-marked="1">在創建連趕及三個型體。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">3.設定好三個的形狀、大小及參數。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">4.調整位子、</span><span mce-data-marked="1">重量、密度和</span><span mce-data-marked="1">質心位置。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">5.將物體</span><span mce-data-marked="1">方向轉正，提</span><span mce-data-marked="1">高位置。</span><br/><span mce-data-marked="1"><br/></span><span mce-data-marked="1"></span><span mce-data-marked="1">6.設置啞鈴沒有摩擦力，儲存即可。</span></p>
 <p>我的操作影片(有字幕):<a href="https://youtu.be/iJBotPDJ5ME">https://youtu.be/iJBotPDJ5ME</a></p>
@@ -3589,4 +3619,4 @@ void deinitializationCallback
 <li>
 <p><strong><span><span>顯示調整大小手柄</span></span></strong><span><span>：顯示用於調整大小和縮放3D窗口中選定節點的手柄。</span><span>僅對“幾何”節點和“<span> </span></span></span><a href="https://cyberbotics.com/doc/reference/transform"><span><span>變換”</span></span></a><span><span>節點</span><span>派生的節點顯示此選項</span><span>。</span><span>對於過程性PROTO節點，僅當在模板語句中未使用調整大小或縮放所涉及的字段時才可用。</span></span></p>
 </li>
-</ul>
+</ul></hr>

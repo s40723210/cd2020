@@ -603,11 +603,39 @@ end
 <p>6.用ls來顯示資料，再用cd來進入該資料夾內</p>
 <p>7.輸入./coppeliaSim.sh 來開啟vrep就可準備連線了</p>
 <p>影片連結:<a href="https://youtu.be/3lDOCkIkJ00">https://youtu.be/3lDOCkIkJ00</a></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/3lDOCkIkJ00" width="560"></iframe></p><h1>Notes</h1>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/3lDOCkIkJ00" width="560"></iframe></p>
+<hr/>
+<h4>Remote API 連線</h4>
+<p>1.先下載老師的<a href="https://drive.google.com/open?id=1KlnsgBFyp6OpCC_BlYH-jKL4uJixpoBl">控制程式</a>，和<a href="https://sourceforge.net/projects/xming/files/latest/download">Xming</a> 軟體</p>
+<p>2.Xmig 解開後，放在data下就可以了</p>
+<p>3.新增<span>設定3個</span>虛擬主機的NAT網路埠號</p>
+<p>4.開啟putty新增一個localhost ，port 22</p>
+<p>5.設定SSH下的X11，儲存之後按Open</p>
+<p>6.開啟XLaunch.exe，都按下一步即可</p>
+<p>7.putty開啟視窗的帳密都是kmol2020</p>
+<p>8.使用mv cop*  coppeliasim 來更改名子</p>
+<p>9.開啟<span>car_model.py</span>，Tools &gt; Go 即可</p>
+<p><span>影片連結:<a href="https://youtu.be/6vVJh1cni3c">https://youtu.be/6vVJh1cni3c</a></span></p>
+<p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/6vVJh1cni3c" width="560"></iframe></span></p>
+<hr/>
+<p><span></span></p><h3>SSH setting</h3>
+<h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">以ssh 對 Github 連線(目前使用的)</yt-formatted-string></h4>
+<p><span>1.先將Y:\portablegit\bin下的sh.exe(通常會有)建立起來。</span><br/><span><br/></span><span></span><span>2.輸入sh，輸入<span>ssh-keygen -t rsa -b 4096 -C "學號</span><span>"。</span></span><br/><span><span><br/></span></span><span></span><span><span>3.在Y:</span><span>\home_mdecourse裡創建一個.ssh。</span></span><br/><span><span><br/></span></span><span></span><span><span>4.輸入</span><span>Y:</span><span>\home_mdecourse</span><span>\.ssh/id_rsa。</span></span><br/><span><span><br/></span></span><span></span><span><span>5.按完Enter後，下載putty放在Y槽內。</span></span><br/><span><br/></span><span></span><span>6.編輯<span>start_mdecourse.bat，加入如下的指令。<br/><br/></span></span><span><span>Set GIT_HOME=%Disk%:\portablegit\bin\</span></span><br/><span><span>Set GIT_SSH=%Disk%:\putty\plink.exe</span></span><br/><span><br/>7.到自己倉儲的.git，url改成ssh(github)形式。</span><br/><span><br/></span><span></span><span>8.開啟puttygen.exe，將鑰匙存成private key。</span><br/><span><br/></span><span></span><span>9.</span><span>開啟putty.exe，設定proxy和路徑，在案save。</span><br/><span><br/></span><span></span><span>10.再到github存入自己的key，就可以了。</span></p>
+<p><span>我的教學影片(有字幕):<a href="https://youtu.be/k-sOF6PQa1I">https://youtu.be/k-sOF6PQa1I</a></span></p>
+<p><span><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/k-sOF6PQa1I" width="560"></iframe></span></p>
+<hr/>
+<h4>IPv4 ssh key 設定(之前使用的)</h4>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+</div>
+<div class="post-body entry-content" id="post-body-7756927037016291787" itemprop="description articleBody"><span>1.先把<span>git config --edit --system裡面的</span><span>helper = manager刪除後輸入:wq(是指儲存後退出)</span></span><span>。</span><br/><span><span><br/></span></span><span><span>2.進入控制台&gt;使用者帳戶&gt;認證管理員&gt;windows認證&gt;刪除現存的github帳號。</span></span><br/><span><span><br/></span></span><span><span>3.輸入</span></span><span><span>ssh-keygen -t rsa -b 4096 -C "github的email</span><span>"。</span></span><br/><span><span><br/></span></span><span><span>4.輸入你想存放的位子例如:</span></span><span>Y:\home\.ssh/id_rsa。</span><br/><span><br/></span><span>5.一直案Enter到結束。</span><br/><span><br/></span><span>6.打開</span><span>id_rsa並且全部複製&gt;進入setting&gt;</span><span><span>SSH and </span></span><span>GPG </span><span>keys 。</span><br/><span><br/></span><span>7.案New ssh key 貼上&gt;輸入想要的名子儲存。</span><br/><span><br/></span><span>我的教學影片:</span><span><a href="https://youtu.be/SJHMm3o5uEw">https://youtu.be/SJHMm3o5uEw</a></span></div>
+<div class="post-body entry-content" itemprop="description articleBody"><span></span></div>
+<div class="post-body entry-content" itemprop="description articleBody"><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/SJHMm3o5uEw" width="560"></iframe></span></div><h1>Notes</h1>
 <p><a href="https://s40723210.github.io/cad2019/content/git%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4.html">git基本指令</a></p>
 <p><a href="https://s40723210.github.io/cad2019/content/python%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95.html">python基本語法</a></p>
 <p><a href="https://s40723210.github.io/cad2019/content/vi%20%E8%88%87%20vim%20%E7%9A%84%E6%8C%87%E4%BB%A4%E6%95%B4%E7%90%86.html">vi 與 vim 的指令整理</a></p>
 <p><a href="https://s40723210.github.io/cad2019/content/Dos%20%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4.html">Dos 基本指令</a></p>
+<p><a href="https://s40723210.github.io/cad2019/content/SSH%20setting.html">SSH setting</a></p>
 <p><a href="https://s40723210.github.io/cad2019/content/SolveSpace%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%8D%B5.html">SolveSpace的快捷鍵</a></p>
 <p><a href="https://s40723210.github.io/cad2019/content/Nx12%E5%BF%AB%E6%8D%B7%E9%8D%B5.html">Nx12快捷鍵</a></p>
 <p><a href="https://s40723210.github.io/cd2020/content/Q&amp;A.html">Q&amp;A</a></p><h2>Linux 指令</h2>
