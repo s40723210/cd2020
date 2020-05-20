@@ -2564,7 +2564,291 @@ uart_flag = 0;
 <p class="c4"><span class="c1">(a)        給出原理圖設計（電子電路、電機等）</span></p>
 <p class="c4"><span class="c1">(b)        建立數學模型</span></p>
 <p class="c4"><span class="c1">(c)        修正您想要的規格，並設計合適的控制器以達到這種性能</span></p>
-<p class="c5"><span class="c10"></span></p><h3>MechaEducFutureNeed</h3>
+<p class="c5"><span class="c10"></span></p><h3>MechaFutureAndChallenges</h3>
+<p><span>原文pdf連結:</span><a href="https://drive.google.com/file/d/118Vho5ECQfQ1XK_hnlptpCVdNgQ00HuZ/view?usp=sharing">MechaFutureAndChallenges.pdf</a></p>
+<p><span>翻譯連結:</span><a href="/downloads/MechaFutureAndChallenges翻譯.pdf">MechaFutureAndChallenges翻譯.pdf</a></p>
+<h4 class="c21" id="h.gjdgxs"><strong><span class="c9" style="color: #0000ff;">Ch1機電整合未來</span></strong></h4>
+<p class="c0"><span class="c10">1.1 挑戰</span></p>
+<p class="c0"><span class="c2">自從</span><span class="c20">Tetsuro Mori</span><span class="c1">提出機電一體化系統的概念以來已有40多年的歷史，它表達了電子部件的可用性對固有機械系統的控制和操作的日益增長的影響及重大迅速的技術變革。</span></p>
+<p class="c0"><span class="c1">特別是系統內部的重點已從硬件轉移到固件和軟件，從而導致引入了一系列圍繞使用智能設備的消費產品，其中許多產品本質上仍是機電一體化的，因為它們帶來了將機械工程的核心與日趨完善的電子設備和軟件結合在一起， 當與增強的本地和遠程通信結合使用時，這導致了基於智能對象彼此通信的能力的系統的發展，因此可以根據上下文有效地進行自我配置。</span></p>
+<p class="c0"><span class="c1">相反的這導致了如計算機物理系統，物聯網和大數據[2-11]等概念的發展，其中通過智能對象和信息的組合來驅動交互。(參照圖1至圖4。 1.1、1.2和表1.1中)，用戶通過智能對象訪問雲端結構已利用由一系列通常不知名或不可見的資源提供的資源。</span></p>
+<p class="c0"><span class="c1">表1.1所表示的供應量的增長也導致了複雜的用戶系統的可用性的增長，例如，智能手機越來越多地結合了高質量的靜態和視頻成像功能，以至於它們現在比傳統相機負責更多的圖像 。</span></p>
+<p class="c0"><span class="c1">它還導致引入了一系列用於行為監控的用戶設備如智能手錶和平板電腦，所有這些設備都能夠通過Internet媒體與其他智能設備進行交互，如圖1.3和1.4一起說明了此類設備的日常使用情況[12-15]，以上所有這些對機電一體化系統的設計，開發和實施以及機電一體化本身的未來都有影響[16，17]。</span></p>
+<p class="c0"><span class="c2">2014年，在瑞典卡爾斯塔德舉行的機電一體化論壇會議上，來自世界各地的許多從業人員被要求以簡單的方式提供他們對機電一體化在未來幾年所面臨的最重大挑戰的看法及收到的響應如圖1.5所示，並將在本章的以下各節中進行詳細討論。</span><span><img alt="" src="https://lh6.googleusercontent.com/UZ9PsPsT4Mi1nDK-n8-MpOYdfCEjEUlnijEfHPFEy5hyN_sLa4hMJb0yOMIpwg1ldiGuU0sOxrqAi-YnqKL_fv18CzGQG-lsbpTMKqAN7RFyVSPtl9JvBFbPZ4xpyd46RLYUUj4" title=""/></span></p>
+<p class="c0"><span><img alt="" height="426" src="https://lh6.googleusercontent.com/2AWFv5b6YKc6hMR7dY2Xd7l1HubwKp_XEpWfprd28-awdv27gOD3MDG666UmiM-RZ9mclC8k4jNJJcHwZaS5GgYqvWBTUBZd1rYvZLRWX9YTC4Bd_oDseUOv-vAT9uSmYZX8dUQ" title="" width="569"/></span></p>
+<p class="c0"><span class="c1">它還導致引入了一系列用於行為監控的用戶設備，智能手錶和平板電腦，所有這些設備都可以通過Internet媒體與其他智能設備進行交互。 圖1.3和1.4一起說明了此類設備的日常使用情況[12-15]。 以上所有這些對機電一體化系統的設計，開發和實施以及機電一體化本身的未來都有影響[16，17]。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c10">1.2 挑戰性</span></p>
+<p class="c0"><span class="c1">通過以上回答，關鍵問題可以總結為：</span></p>
+<ul class="c4 lst-kix_list_1-0 start">
+<li class="c3"><span class="c1">設計</span></li>
+<li class="c3"><span class="c1">隱私和安全</span></li>
+<li class="c3"><span class="c1">複雜性與道德</span></li>
+<li class="c3"><span class="c1">人口老齡化</span></li>
+<li class="c3"><span class="c1">用戶</span></li>
+<li class="c3"><span class="c1">可持續發展</span></li>
+<li class="c0 c11"><span class="c1">教育</span><span><img alt="" height="370" src="https://lh6.googleusercontent.com/qhMUnhYVQ6gjQW0kVLX9vkjzyO-jyJn694BtIJ8dAl2JvOQMG_tzT28g0IuftDhiiMK20Fdnf8LODnQ7aH3qukW7O1TQHtkUxZ7vcX5bW4HgFwz-YRGY5LxNrmhWwdGGlPmJel0" title="" width="522"/></span></li>
+</ul>
+<p class="c0"><span class="c1">以下各節將簡要討論其中的每一個。</span></p>
+<p class="c0"><span class="c1">1.2.1 設計</span></p>
+<p class="c0"><span class="c1">工程設計的常規方法通常遵循如圖1.6的簡化V模型所定義的路徑，通過結構化的系統定義實現集成，然後通過適當的測試制度支持的系統開發過程來支持驗證和確認，透過通過規範、測試、驗證和確認過程將各個模塊和子模塊（包括來自外部資源的模塊和子模塊）綁定到設計中，以確保整個系統的功能。</span></p>
+<p class="c0"><span class="c1">通過設計理論與設計實踐之間的協同相互作用，這種方法已經發展了許多年，但是在這種情況下，設計理論必然不可避免地落後於實踐，但在這種實踐中，人們正在探索新技術所帶來的可能性，也許不一定完全了解其能力或含義。</span></p>
+<p class="c0"><span><img alt="" src="https://lh5.googleusercontent.com/NCSVx4kYLdUdNySqlrdObyC92UX5mNU8okXXn7wBdiWv2MnWfZLwnXkHQ08lcIHhO7-NGcQXAjvmE5NfAae5_JCoZGroHipnoD1tbVfxcoXAfR_txnH0eLtqUht-nu-SnbliIqs" title=""/></span></p>
+<p class="c0"><span><img alt="" src="https://lh5.googleusercontent.com/ET9_ZEY_kW_J3fC2nr5-yC-TCc-MuIVaKOngb9HstzO29KsA0Nr99Ik1HHwEaXzdQ4ZzhRGUwnopH26uM_0otgbqfHDFJt21pg-GtN5lXqQNjtJMQQCRdxY3cC8Bjoj-4z52Q3U" title=""/></span></p>
+<p class="c0"><span class="c1">對於網絡物理系統和物聯網來說系統是一個動態實體，智能對象（用戶）根據上下文和需要進入或離開，而在大多數情況下基於雲的組件在被採用之前對於用戶是未知的，並且它們很可能適用於任何功能性智能對象，這就給設計人員帶來了確保系統不易被其包含的問題，同時認識到系統可以根據需要進行自我配置的問題。</span></p>
+<p class="c0"><span class="c1">因此從本質上講，用戶指定了系統功能和內容，然後系統自動配置從雲中選擇具有信息的所需軟件和數據組件，則成為其價值由用戶上下文確定的商品，在涉及物理組件的地方，例如在智能家居環境中，標識和選擇將由用戶在指導下進行，設計人員面臨的一個挑戰是提供工具以使動態系統配置的含義能夠在設計過程的最早階段就得到探索，並將這些結果適當地集成到設備功能中[18]。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">1.2.2隱私和安全</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">與物聯網相關的許多設備都具有收集大量個人數據的能力，其中許多可能保存在用戶不知道的區域和方式中。 然而這些數據將受到分析的可能性的影響，而誤解的相關風險會影響隱私[20-23]，但是這必須與潛在的提取有益知識的能力進行權衡，特別是在基於IoT的應用程序（例如eHealth）的背景下[24]。 在更廣泛的安全性範圍內，系統在個人和公司級別上保護自身免受入侵的能力越來越重要。</span></p>
+<p class="c0"><span class="c2">表1.2根據信息系統審計與控制協會[19]進行調查顯示了感知到的威脅級別。</span><span><img alt="" src="https://lh6.googleusercontent.com/MYFSRx7z1i09sYbZCkx0Scxl04LkoXwhXxzNEWtlk8dhQXTFl4GQiZfn1_DZYjYrVqpGo-030fo1wO38s1JXlMJoTDqj3IrxOzEs5Lryc_ipXZyZpbnFzBew1arJSnjL0O6iOpE" title=""/></span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">很明顯在物聯網，網絡物理系統和大數據各自的上下文中，系統設計人員將隱私置於其設計過程的核心的負擔越來越重，這必須反映在設計中過程本身以及支持該過程的方法和工具。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">1.2.3複雜性與道德</span></p>
+<p class="c0"><span class="c1">隨著系統變得越來越複雜並開始具有更大的自主權，從醫療保健到自動駕駛汽車的所有應用和環境，所有利益相關者了解其性質和功能的能力提出了問題[25-28]。 在對一個人或多個人的福祉或生命負有責任的情況下尤其如此</span></p>
+<p class="c0"><span class="c1">委託給系統[29]。 其他問題包括：</span></p>
+<ul class="c4 lst-kix_list_2-0 start">
+<li class="c3"><span class="c1">技術的雙重用途-諸如無人機之類的技術可以與有益的應用相關聯，例如在作物管理中，也可以用於軍事和其他目的。</span></li>
+<li class="c3"><span class="c1">技術對環境的影響-將技術引入環境可以以多種方式破壞和改變該環境，即使根本目的是良性的。</span></li>
+<li class="c3"><span class="c1">技術對全球財富分配的影響-技術的使用可以增加不同社會群體之間的距離，即使在同一國家[13]。</span></li>
+<li class="c3"><span class="c1">數字鴻溝和相關的社會技術鴻溝-訪問和使用通過雲提供的服務的能力之間的距離越來越大。</span></li>
+<li class="c3"><span class="c1">確保公平獲取技術-控制對技術的訪問可能會限制開發。</span></li>
+<li class="c3"><span class="c1">技術成癮—個人沉迷於他們使用的技術[30]。</span></li>
+<li class="c3"><span class="c1">技術鎖定-個人可以被鎖定在特定技術中，一個簡單的例子就是在Apple和Android之間進行選擇。</span></li>
+<li class="c0 c11"><span class="c1">人類的非人性化和擬人化-通過消除對其活動和福祉的責任[31]。</span></li>
+</ul>
+<p class="c0"><span><img alt="" src="https://lh3.googleusercontent.com/Jy8dbBEbliYPVTnoPRLHMHy8ZDPkJcrxGFWzcD_Bn4alOO1mk1soU1yh-YZdhM9uSznQCM1iQ5Tbo7Ea62bCnZ0T-tKZVnMhgz2QPbq-6LeuBWmTjcEeLzhvlkKLw4ifHqH9ZHE" title=""/></span></p>
+<p class="c0"><span class="c1">1.2.4人口老齡化</span></p>
+<p class="c0"><span class="c1">面對人口老齡化，圖1.7顯示了歐洲範圍內過去和預期的年齡組分佈變化，[1]提出了一些問題，即如何最好地利用技術來支持老年人，並試圖為他們提供更高水平的老年人服務，特別是有必要確保物理和信息領域內的流動性達到適當水平，以防止個人保持獨立性並與社會互動[33，34]。</span></p>
+<p class="c0"><span class="c1">1.2.5用戶</span></p>
+<p class="c0"><span class="c1">由此可以看出，具有互聯網功能的設備的可用性通過使用社交媒體對社交行為產生了重大影響，但與以往相比，還提供了更便捷的信息訪問方式。這樣的設備還支持與環境的交互級別提高，例如在智能家居中，此外可穿戴設備的引入為eHealth和mHealth等領域的發展提供了機會，以支持個人福祉[35]，從而引發了隱私和個人數據控制問題。</span></p>
+<p class="c0"><span class="c1">但是這還需要開發新形式的用戶界面，以支持更廣泛範圍的用戶與此類系統進行交互的能力，特別地越來越需要能夠以不需要復雜形式的通信或關於基礎技術的知識的方式來捕獲用戶意圖和上下文。</span></p>
+<p class="c0"><span class="c1">1.2.6可持續發展</span></p>
+<p class="c0"><span class="c1">人們已經認識到有必要朝著以個人及其需求為中心的更加可持續的社會形式轉變，並以有效管理和使用所有可用資源為基礎進行結構化，如圖1.8所示，在機電一體化[36，37]的背景下這融入了諸如智能的概念家庭和智慧城市，其中信息用於管理日常活動。</span></p>
+<p class="c0"><span class="c1">例如在德國城市中找到一個停車位需要大約4.5 km的行駛，這對於排放約140 g CO2 / km的車輛將產生至少630 g不必要的CO2，並且明顯更多在走走停停的交通中。通過適當的通信將可用停車位的知識與車輛目的地聯繫起來，多餘的部分可以消除[38]。表1.3中提出了其他影響城市的可持續發展問題。</span></p>
+<p class="c0"><span class="c2">因此總體來說，正在朝著建立以個人為核心的可持續社會邁進，以解決諸如人口老齡化，資源可獲得性和管理，氣候變化和彈性等問題[40-44]。有關機電一體化和物聯網，實現可持續性的基本要求是有效管理和使用所有資源；通過綜合使用一系列智能對象提供的信息來實現技術，物理和人類的工作。</span><span><img alt="" src="https://lh6.googleusercontent.com/-T1WVw9wldg_ijO5Mpzhb1rQ_EbyFL6p_TUuBXhDCnDhBnkHhjaN-EZXedKrZIF5RmVE0V7Pe2Pf9nd6MfwCBToBSgZ8VWZUC4z2OE-ODSMnBZTQ-mswROGPfB-UHnk_uypGtQY" title=""/></span><span><img alt="" src="https://lh3.googleusercontent.com/QJyQzBJN8EG9vMpK6KGj5L9DYy2SS5gUX37qsToJDLUfoospBc4OEvBsTaPqjtzPVWYeKNShD-cho-IuCLaCg47wVhR2_ZSwWIUTpNwXqlGP5KcZvB_buL2T_GuOOnCbUEiEENg" title=""/></span></p>
+<p></p>
+<p class="c0"><span class="c1">反過來說這意味著通過採用新穎、創新的方法來理解構建和管理物理和信息環境及其之間的關係，可以有效適當地利用信息來支持個人參與其生活方式的各個方面，圍繞物聯網配置的知識經濟的一部分考慮以下兩種不同的城市場景：</span></p>
+<p class="c0"><span class="c1">方案1：新建設-目的是從一開始就實現物理和信息環境的集成，並獲得對高速寬帶網絡等設施的訪問以及在這些環境中部署全套智能技術的能力。</span></p>
+<p class="c0"><span class="c1">方案2：建立的社區-這些社區代表了大多數人口，這意味著在引入基礎架構方面的變化將需要考慮對現有環境的影響以及該環境對技術需求的適應性。</span></p>
+<p class="c0"><span class="c1">1.2.7教育</span></p>
+<p class="c0"><span class="c1">機電一體化教育一直面臨著在適當水平的技術內容與對機械工程、電子學和信息技術等核心學科的集成要求的理解之間取得平衡的挑戰[16、17、45-47]，如圖1.9 [17]所示鑑於過去40多年來技術基礎的增長，機電一體化課程設計者在實現這種平衡方面面臨的挑戰變得更加複雜。</span></p>
+<p class="c0"><span><img alt="" src="https://lh3.googleusercontent.com/-61w2-N5ldB8vZ4YpaWdyzWCZLblxLViLa0w77M21WlJwpragDLE8_QWLuEYByS60HN-TXblllbsyZQrxjkpK30AKYkaNPMFgHhtKMuk233GnYSyrb7NyIVnUQUY4S1eBfAtjMM" title=""/></span></p>
+<p class="c0"><span><img alt="" src="https://lh4.googleusercontent.com/KIrNcmRRKD6Nyiw9acbGR8A35-V1cRvkY8i6lGKWxOtfqPhT1YYUiVayY4oBVHq6_lODOALx1CM9NFol4UBod1HacePm4nJhhxAvE91MHO_5K6qPsQpRgEA2cL-k6wE3u2RRlQI" title=""/></span></p>
+<p class="c0"><span class="c1">除了與技術發展相關的課程設計面臨的挑戰外，還需要考慮許多其他因素。 這些包括：</span></p>
+<ul class="c4 lst-kix_list_3-0 start">
+<li class="c3"><span class="c1">交貨變更</span></li>
+</ul>
+<ol class="c4 lst-kix_list_4-0 start" start="1">
+<li class="c5"><span class="c1">大規模在線公開課程（MOOCS）[48]。</span></li>
+<li class="c5"><span class="c1">基於教程和研討會的學習支持。</span></li>
+<li class="c5"><span class="c1">混合學習[49]。</span></li>
+<li class="c5"><span class="c1">社交媒體對學習的影響[50]。</span></li>
+</ol>
+<ul class="c4 lst-kix_list_3-0">
+<li class="c3"><span class="c1">結構性問題</span></li>
+</ul>
+<ol class="c4 lst-kix_list_6-0 start" start="1">
+<li class="c5"><span class="c1">–分佈式學習資源。</span></li>
+<li class="c5"><span class="c1">–內容的時間值。</span></li>
+<li class="c0 c16"><span class="c1">–協同工作。</span></li>
+</ol>
+<p class="c0"><span class="c1">因此，未來的關鍵因素是鼓勵通過教育採用創新的機電一體化方法（圖1.10）。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">1.3章節結構</span></p>
+<p class="c0"><span class="c1">本書由邀請作者組成的一系列章節構成，每個作者都是機電一體化特定領域的專家，在各種情況下作者都面臨著以自己的研究或專業知識為出發點來建立當前技術水平的挑戰，然後試圖隔離和識別，未來幾年需要或可能發生重大發展的關鍵領域，各章本身的組織如表1.4所示。</span></p>
+<p class="c0"><span class="c1">1.4總結</span></p>
+<p class="c0"><span class="c1">儘管核心技術和概念基本上保持不變，但自最初提出該概念以來機電一體化的性質已經發生了重大變化，並且這種變化可能會以加速的速度持續下去。 解決方案中已經確定了一些需要解決的問題和挑戰前幾節，並將在後續章節中進行開發和擴展。</span></p>
+<p class="c0"><span><img alt="" src="https://lh6.googleusercontent.com/oUmS6Ln7M9Ou95Hx5tlctqd_H-X9o3ABSwrPu8d9PIk4pF4j5-wwvgSSShG2SF3dPEdMBftnany5c5EuDFlOFtRDbTxNoRx1HtvKfwLyFpiR3hB9ovXmm3MVVWnQ-ZZHCcJMbLM" title=""/></span></p>
+<p class="c0"><span class="c1">致謝作者要感謝許多同事，研究人員和學生多年來對本章和本書的背景，結構和原理的投入，由於人數太多了不能單獨命名，但是我們由衷感謝大家！</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c14"><span class="c9">Ch2機電工程干擾</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">2.1它是如何開始的</span></p>
+<p class="c0"><span class="c1">機電一體化領域始於1970年代，當時機械系統需要更精確的受控運動。 這迫使工業界和學術界探索傳感器和電子輔助反饋，同時在生產設施中主要使用電驅動代替機械凸輪軸。</span></p>
+<p class="c0"><span class="c1">引入反饋控制的運動構成了使機械工程師和電子工程師能夠更好地協作並相互理解語言的基礎，在那時控制工程部門大部分是工業和學術界的電氣開發或研究部門的一部分並且採取了各種舉措來發展共同的語言或方法，一些機構推動機電一體化成為一門新興學科。</span></p>
+<p class="c0"><span class="c1">在工業設計中，設計團隊通常被迫在規範級別上從他們的特定學科知識中進行更深入的了解，計算機輔助設計和仿真工具確實在1980年代末和1990年推動了該領域的發展，機電一體化的工作方式是光存儲設備的開發，例如圖2.1 [1]，機械設計人員的團隊使用他們的有限元程序，以及電子和控制專家以及他們的特定仿真工具共同開發了機制，這些機制在製造性、成本和動力學方面都有非常嚴格的規範。</span></p>
+<p class="c0"><span class="c2">在1980年代的同一時期，在許多行業和學術界機械工程師越來越多地開始著手解決動力學和控制問題，並且機械工程部門中也出現了控制小組，所有這些都標誌著人們逐漸擺脫了單一原則，圖2.2 [1]的學科方法。</span><span><img alt="" src="https://lh3.googleusercontent.com/9y_3GSV8MsnPBpGUbwVIMkn90drGqVjCbyklE4DtvXgKjuGigZQIJ31SN2pcIp30Bu7DlPIj90T9H8jt0fY6coyCVIuHpAa0mSjXeVGsr_mD1y9WeqcCaQBpil1Z-DcuJ8h5jQ8" title=""/></span></p>
+<p class="c0"><span><img alt="" src="https://lh5.googleusercontent.com/RnFGcCCZFDCrKlvs8GldDATw_xQLNf4-Ecl16KZE4GIAUn5m-dVs-tg3lib7rH0t7YPXpRhP_wH4ewHvT_mh5_Rnc5tAhRV4ORCkxgw-p2t7CqKcjiCMhQq0SofWPcxF7nrx5EI" title=""/></span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">2.2計算機控制設備</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">個人計算機的快速發展，使人們能夠更好地使用仿真和設計工具，從而在早期階段改善了總體設計過程和設計思想交流的質量，但是基於PC的數字化計算機控制的機電一體化系統的測試和實施，這要求解決計算機科學工程的作用，並表明需要包括軟件學科，但是范圍仍然很有限，這也導致了越來越多的系統工程領域的出現，作為在工業上研究更複雜的產品和高科技系統的一種方式，考慮使用“通用”語言或至少更好地理解彼此，顯然在硬件和軟件領域之間的瑣事要比在硬件領域本身內的瑣事少得多。</span></p>
+<p class="c0"><span class="c1">從研究的角度來看，這些問題始於離散的時間級別，即如何使用計算機來實現控制功能，從而盡可能地保持以前使用模擬實現的性能，但是很快將更高級別的監督控制模式帶入了機電一體化領域，這迫使人們進行研究以轉向離散事件系統中更為困難的問題，從而面臨機械系統中持續的時間動態變化， 這導致了系統和控制學科內混合系統的研究領域，這部分形成了硬件（“舊的”機電一體化）和軟件（計算機科學）領域。</span></p>
+<p class="c0"><span class="c1">2.3應用</span></p>
+<p class="c0"><span class="c1">機電一體化思想帶來的性能提升是深刻且獲得廣泛認可，機電一體化的應用可以在許多產品和生產環境中找到，儘管在早期電動機的控制是一種常見的應用，但是機電一體化的思想也用於液壓系統、壓電驅動執行器、生產設備、科學設備、光機電一體化、汽車機電一體化等的建模和控制中。</span></p>
+<p class="c0"><span class="c1">在過去的幾年中，由於監督了機電一體化論文的流入，使得醫療設備高精度系統、無人機（UAV），汽車和機器人技術上提交了更多的應用論文，關於建模語言和工具的科學成就的論文減少了，這可能意味著適當的工具現在更加普遍，機電一體化教育方面的論文似乎也是如此，這是1990年代後期的熱門話題，在那裡找到了很好的例子包括為學生做的實驗工作。</span></p>
+<p class="c0"><span class="c1">關於所謂的機電一體化設計方法的討論文件已經很少了，因為到現在為止，很明顯，機電一體化在實踐中所做的部分創新更多地與幫助學科進行交流有關，最好是通過使用共享模型或量化模擬，機電期刊提交中涉及的科學方法主要出現在系統和控制領域，其中機電應用位置通常用作驗證或僅作為展示用例，一個新興的領域是使用優化算法，不僅用於找到最佳控制律且越來越多地用於組件設計，直到作為新的設計工具進行系統拓撲優化[2]，機電一體化項目和社區的核心仍然是機械工程，電氣工程以及系統和控制領域與計算機科學和物理之間的相互關係仍然相當有限，但這將轉移到未來幾年。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">2.4複合物理場</span></p>
+<p class="c0"><span class="c1">高端機電一體化系統（例如用於光學光刻或電子掃描探針的圖2.3的晶圓掃描儀）以及在空間應用和科學儀器中的誤差預算越來越接近於在各種源上的平坦分佈。</span></p>
+<p class="c0"><span class="c1">例如現代晶圓掃描儀在由熱和冷卻流體引起的振動與由致動器激發的機械模態振動一樣重要，這與極端條件和要求有關；以超過10 g的加速度移動80 kg的質量，並達到以下精度</span></p>
+<p class="c0"><span class="c1">納米具有mKelvin溫度變化[3]，這意味著“常規”機電一體化及其運動控制系統現在開始與熱和流體控制動力學產生動態相互作用，現在整體性能評估和設計改進不僅涵蓋機械和電氣/電子和軟件學科，而且還涉及物理問題，例如基於熱和流體偏微分方程的建模而當我們將增材製造的可能性包括在內時，這會對機電一體化設計思想產生什麼影響？如果可以使用3D工業金屬或陶瓷打印機自由調整我們的機構形狀，那麼如何獲得整體最佳設計？</span></p>
+<p class="c0"><span><img alt="" src="https://lh5.googleusercontent.com/r8YqVQYlTRNLjzOZpEEd6iF5ndjO0u3hE9txrk-hYV9EExjtwOoXYdmcZbZoJ5VOY9hfJfbedBkWAYa38Qk3uNV9rUSxESkT5D2fRaUxEj0HCo-bRGoCKSpZZirZpTg9Pt48CWA" title=""/></span></p>
+<p class="c0"><span><img alt="" src="https://lh4.googleusercontent.com/zNV93C7jx7RGCdcXDppd8XpFPsg0IJI6LvVG96onuQKv88oZvdu9aMpak1oi-B8KkKgc1ohUvhu1vJxFMVR6OtFUu4Q5pudmRxFFpiewLZkVnXVc6Cesc1z19pAPbiv70_MRrCM" title=""/></span></p>
+<p class="c0"><span class="c1">如果我們能夠通過適當的系統工程和更多學科來處理這種複雜性，那麼現在只能將性能折衷提升到一個新的水平。</span></p>
+<p class="c0"><span class="c1">在圖2.4中以性能與資源圖的形式描述了這種趨勢，資源可以是金錢、人員、開發時間、計算機能力，能源等。性能通常是準確性，吞吐量和可靠性。曲線表明，達到更高的性能確實會花費越來越多的資源，直到不可行為止。在圖中，還繪製了示例，首先是一種簡單的變速箱系統，其性能較低（在準確度方面），並且還需要有限的資源，圖中的第二個示例是現代晶圓掃描儀，作為極端性能和需要大量資源的示例。</span></p>
+<p class="c0"><span class="c1">曲線表明為了進一步促進創新我們需要結合兩種方法，首先通過解決所有相關學科，例如物理問題我們將能夠提高性能，其次通過引入系統工程方法，我們可以以更好的方式處理。</span></p>
+<p class="c0"><span class="c1">2.5機器人</span></p>
+<p class="c0"><span class="c1">與上述高端系統幾乎相反，機器人技術領域也影響機電一體化領域，在這裡不是需要多物理學科，而是計算機科學領域來應對非結構化和不斷變化的環境，在機器人技術方面，開發方向是視覺、地圖和本地化，因此不僅要了解環境（“世界建模”）還要了解人工智能（AI）領域，這已經是數十年的承諾但可能會在未來迅速發展，未來幾年由於即將推出的自動駕駛汽車，這兩個領域目前都處於加速階段，在動力總成（即電力傳動和變速箱）領域以及計算機科學的應用（例如現代汽車中的傳感器）領域，汽車行業的破壞是巨大的，包括實現的自主功能的迅速發展實際上，這與機電一體化，人工智能，控制系統有關！</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">機器人技術領域（包括自動駕駛汽車）可以被視為機電一體化領域之外的一個單獨的研究領域，但是例如工業機器人的速度要求或外科機器人（例如圖2.5的Preceyes機器人）的精度要求必須包括在內，機器人動態行為的描述，從剛體建模到柔性系統的轉變直接使其成為機電一體化的核心，系統工程思想和系統拓撲優化也是如此，在車輛的混合動力系統中也是如此，那麼機電一體化在哪裡結束而機器人技術在哪裡開始呢？</span></p>
+<p class="c14"><span><img alt="" src="https://lh5.googleusercontent.com/Pm3GnuzUxCwVcE6Bpr-8cuzDXGXSm3BZGJ6SHcS27TmntHbXZdF1cSuTQ46eLpgUIs85Th2TbQSLqQPwzlwOZ6OEUCJh6iYmnz-CQEiWclxXB79gjW84FOoRWAxUdrA97Diwtd8" title=""/></span></p>
+<p class="c0"><span class="c1">2.6網絡物理系統，智能產業和物聯網</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">從分散式機電一體化系統向聯網系統的轉變被稱為網絡物理系統領域，指的是控制論領域，研究的問題是如何保證穩定性，圖2.5 Preceyes眼科手術機器人[5]以及數據包（信息）丟失期間或之後的性能，以及如何處理可變延遲，該領域甚至離機電一體化的硬件還很遠，但是發展如此之快以至於我們應該問一個問題，即如何在遠程狀態監視和服務領域中將網絡控制系統的潛力納入其中，在接下來的十年中物聯網（IoT）的爆炸式增長進一步要求找到該問題的答案[6]。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">機電一體化將滿足物聯網的一個應用是我們製造業的未來。工業4.0或智能工業的關注點是關於聯網的現代工業自動化。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">•如果共享物流知識優化一個工作站的性能作為整個物流或運營的一部分，如果生產設施中的服務和維修可靠，則對於通過製造工廠的貨物流意味著什麼？工作站是否靈活並且可以適應？</span></p>
+<p class="c0"><span class="c1">•這對工業機器人和智能機電一體化生產設備意味著什麼？</span></p>
+<p class="c0"><span class="c1">•這將如何影響我們的機電設備和產品的設計要求？物聯網不僅會改變現代化的工廠，據估計到2020年將有500億台設備連接到互聯網，這意味著它將進入我們的家庭，家用設備以及汽車，當可穿戴電子設備被進一步推動時，我們被傳感器包圍我們只需要朝著致動的一步就可以閉合環路，並由此再次進入機電一體化的世界[6]！</span></p>
+<p class="c0"><span class="c1">2.7指向集成系統</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">觀看這些發展我們可能會質疑機電一體化到底是什麼或將是什麼，機電一體化是否受到干擾？它已經蒸發到系統工程中了嗎？它是否是支持學科的一部分？它是否擴大成為網絡物理的中堅力量？而且，如果生物系統也將具有技術設備（人類互聯網），那麼機電一體化學科的作用是什麼？我們應該如何在機電一體化思維方面對人們進行教育？在圖2.6中，使用系統工程的作用來實現學科和技術貢獻的必要整合。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">在本書中許多提到的發展將得到解決，我們不會對機電一體化的未來及其教育有確切的答案，但是我們也知道由於我們無法預測未來因此它應該是強大且適應性強的！我們肯定知道技術發展的步伐正在加快因此我們也應該如此！</span></p>
+<p class="c14"><span><img alt="" src="https://lh6.googleusercontent.com/FoNrdkVq4Kayh5h__KMMxIfB-WEO4_TGMAgLZlni8oY98HLS3EdHKpH2mSb08fcYcxlna_L5oiypOx4bCNl9EnFm-K5CGSmrsa4Ote_kPabiRvoH3EXMgqc74dVhqyDmToM8-vI" title=""/></span></p>
+<p class="c7 c14"><span class="c9"></span></p>
+<p class="c14 c7"><span class="c9"></span></p>
+<p class="c14"><span class="c9">Ch3機電一體化的未來挑戰</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">3.1引言</span></p>
+<p class="c0"><span class="c1">在航空航天工業中掌握機電一體化系統的設計是一項主要要求，確實程序成本的很大一部分花在了這些系統的設計上，這也代表了產品性能的很大一部分。 在本章中我們將揭露工業界在機電一體化領域未來幾年將面臨的一些主要挑戰，這些挑戰涉及設計機電一體化系統其驗證/確認及其操作。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">3.2設計中的挑戰-架構和規模</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">3.2.1使用模型確定體系結構的大小</span></p>
+<p class="c0"><span class="c1">嵌入式技術系統的物理體系結構，例如圖3.1a [1]的飛行控制系統的機電執行器或圖3.2b [2]的供電網絡的電力電子模塊是來自不同技術的組件的組合，Van der Auweraer等人的工作、[3]和Hehenberger等……[4]強調了這樣的多域系統的設計需要不同的建模層，如圖3.2所示：</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<ol class="c4 lst-kix_list_7-0 start" start="1">
+<li class="c3"><span class="c1">機電一體化層必須考慮組件之間的功能和物理耦合，通常使用0D / 1D模型[3]（也稱為集總參數模型）完成此級別的建模，以代數方程、常微分方程（ODE）或微分代數方程（DAE）表示</span></li>
+<li class="c0 c11"><span class="c1">基於幾何表示在上一層中需要一個特定的域層來描述性能極限和參數，特定域現象通常通過偏微分方程（PDE）表示，對於這種水平的建模可以使用解析模型來簡化幾何或者對於復雜的2D和3D幾何，例如通過使用數值逼近法（例如有限元方法（FEM））來實現。</span></li>
+</ol>
+<p class="c0"><span class="c1">從系統集成商的角度出發，功率元件的設計應允許通過多種相互作用的技術來優化組件的尺寸和規格，該系統級設計與組件設計不同需要在機電一體化層中使用專用模型來表示特定領域層的關鍵信息[5-7]。</span></p>
+<p class="c0"><span class="c1">被Budinger等人稱為“估計模型”[7]，它們使設計人員能夠輕鬆考慮多個設計約束，這些模型直接和明確地將一些主要特徵（例如組件的整體尺寸）鏈接到大小確定[5]和優化[1]所需的次要特徵及估計模型所需的能力如下：</span></p>
+<ol class="c4 lst-kix_list_8-0 start" start="1">
+<li class="c3"><span class="c1">提出易於處理並在不同計算工具中實施的表格。</span></li>
+<li class="c3"><span class="c1">使自己易於進行分析操作。</span></li>
+<li class="c0 c11"><span class="c1">可在與最初使用它們的區域稍有不同的區域中重複使用。</span></li>
+</ol>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">為了滿足這些約束而我們通常使用簡化的分析模型，其中比例定律已被證明可以有效地代表大範圍變化中的物理現象[6]，但是這些模型僅在特定條件下有效，其中可以提到幾何形狀和材料相似性以及行駛物理現象的唯一性。</span></p>
+<p class="c0"><span class="c1">對於系統設計人員而言模型應盡可能具有預測性，在這種情況下，能夠精確預測物理現象的詳細有限元模型仍然很耗時。儘管最近有工作在減少模型階數上，但在初步設計階段，有限元模型的計算成本仍然很高。使用元建模技術，因此，[7，8]為此很有趣。機電設計的挑戰是開發元建模技術，該技術專門用於從集成商的角度選擇系統組件，Budinger等人的論文[7]提出了一種基於比例定律的元建模方法，該方法從局部數值模擬（FEM）中提取估計模型的簡單全局表達式。</span></p>
+<p class="c0"><span class="c1">為了滿足這些約束通常使用簡化的分析模型，其中比例定律已被證明可以有效地代表大範圍變化中的物理現象[6]，但是這些模型僅在特定條件下有效，其中可以提到幾何形狀和材料相似性以及行駛物理現象的唯一性，對於系統設計人員而言模型應盡可能具有預測性，在這種情況下能夠精確預測物理現象的詳細有限元模型仍然很耗時，儘管最近有工作在減少模型階數上但在初步設計階段有限元模型的計算成本仍然很高，因此[7，8]為此很有趣。機電設計的挑戰是開發元建模技術，該技術專門用於從集成商的角度選擇系統組件，Budinger等人的論文[7]提出了一種基於比例定律的元建模方法，該方法從局部數值模擬（FEM）中提取估計模型的簡單全局表達式。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">3.2.2機電一體化設計學科</span></p>
+<p class="c0"><span class="c1">系統篇</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">圖3.1中系統的設計受到以下主要方面的驅動，以滿足各種要求：機身與驅動負載之間的集成（質量，幾何包絡），耐環境（熱和振動），瞬時功率和節能 ，動態性能，使用壽命，可靠性，對故障的耐受性或耐受性。 表3.1總結了這些不同的設計觀點以及基於模型的設計可能的關聯建模級別。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">優化此類系統時這些多種設計觀點產生了真正的挑戰，為了在同一循環中考慮這些標準來自多學科設計優化（MDO）的工具可能會有用[8]，MDO是工程領域，它使用統計和優化方法來解決設計問題，這些問題同時包含了以2D / 3D FEM分析，0D / 1D模擬和代數計算為代表的所有相關學科，每個特定的計算都被視為一個黑匣子可以直接調用它並通過實驗設計（DoE）進行分析，所有計算都可以鏈接在一起並用於設計探索、靈敏度、優化和穩健性分析，iSight [9]、Optimus [10]和ModelCenter [11]是此類框架的示例。</span></p>
+<p class="c0"><span class="c1">優化任務需要較少的模型計算時間，替代模型或元模型[8]是另一種模型的簡化或近似描述模型，可以用於表示機電一體化層中的特定領域層模型（FEM），機電一體化層通常在時域中處理動態系統並使用瞬態時間仿真，但是在設計優化期間，依靠評估負載曲線的主要諧波來近似時域行為的方法[12]可能很有吸引力。</span></p>
+<p class="c0"><span class="c1">這些優化和統計支持工具允許以自由選擇的順序鏈接設計過程的步驟，但是它們在選擇如何構造計算中的連接或將哪些參數作為設計參數，約束或目標考慮在內時沒有提供幫助。</span></p>
+<p class="c0"><span><img alt="" src="https://lh4.googleusercontent.com/orxbiRIuzcklA6XcwFzJzLcxygPsKy2ItNqKuauEc4wKechO-lr5BK_l66AxpDaiiU491Jm-XsAxqFrLRDjTyWUNWd2CiQopVaWjLKs8TmgAaInaz8uFulzTAEfCIVvTbtHxQH0" title=""/></span></p>
+<p class="c0"><span class="c1">基於知識的工程（KBE）是一門結合了基於知識的方法和計算機輔助設計的學科對設計支持也很有用，KBE軟件包專用於集中特定產品設計的所有知識和專長，這些環境中使用的科學概念和方法如下：</span></p>
+<ol class="c4 lst-kix_list_9-0 start" start="1">
+<li class="c3"><span class="c1">知識庫和計算機輔助設計：使用非定向的代數方程式（聲明性方法）來充分利用組件的知識[13]。這些組件可以輕鬆組裝以描述不同的體系結構。</span></li>
+<li class="c0 c11"><span class="c1">約束網絡，圖論和優化：以聲明形式最初定義的一組方程式經過定向，以便獲得可用於優化算法的計算程序。</span></li>
+</ol>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">可以通過符號計算、間隔計算或人工智能來支持對等式的適應或分析。這些KBE工具可以是：</span></p>
+<ol class="c4 lst-kix_list_10-0 start" start="1">
+<li class="c3"><span class="c1">鏈接到Genus Designer [14]中的CAD軟件，該軟件捕獲配置規則並為Solidworks執行過程自動化。</span></li>
+<li class="c3"><span class="c1">如Enventive [15]中所述，專門用於平面機構的概念設計（優化，公差，靈敏度分析）；</span></li>
+<li class="c3"><span class="c1">開發了多個領域，例如FST研究所軟件（TUHH大學），該軟件在相同的基礎上支持飛機升力機構[16]，液壓網絡[17]和EMA的初步設計；</span></li>
+<li class="c0 c11"><span class="c1">常規語言，例如TKSolver [18]、Ascend [19]、Cades [20]、Design 43 [21]或PaceLab suite [22]，它們通常是說明性語言，可以根據不同的輸入使用一組代數方程式在設計目標上。</span></li>
+</ol>
+<p class="c0"><span class="c1">這些工具可以為設計人員提供有趣而重要的幫助，尤其是當系統由於多種技術而變得複雜時，結合MDO工具和專用的元建模技術它們可能代表機電一體化系統設計的未來。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">3.2.3綜合最佳架構的能力</span></p>
+<p class="c0"><span class="c1">在設計機電一體化系統時，可以在體系結構級別設想許多解決方案選擇最合適的體系結構的任務是一項複雜的任務，目前主要通過手動定義評估和比較設想的體系結構來完成，在體系結構級別使用設計綜合和優化技術可以使設計人員設想更廣泛的解決方案，其中包括潛在的創新解決方案並在形式上進行比較（使用定義明確的指標）用以選擇合適的解決方案。</span></p>
+<p class="c0"><span class="c1">工程設計綜合[23]是一套技術，可基於對人工製品的目的其預期特性和設計知識（明確形式化或提取的）的知識對工程人工製品（2D / 3D形狀、建築等）進行綜合。優化技術迭代地修改一些初始解決方案（通常是隨機生成的）以優化所測試解決方案的特性，但是他們幾乎不考慮設計知識以生成可行的解決方案。</span></p>
+<p class="c0"><span class="c1">耦合設計綜合和優化可以生成可行的解決方案，並找到性能最佳的解決方案。由於探索的設計空間可能更大並且該過程不受認知偏見（例如信念）的影響，因此它通常比手動過程更有效，但是這需要能夠評估任何生成的解決方案以及所有定義的選擇，標準（優化目標/約束）這種類型技術的使用示例是機器人手臂[24]、真空吸塵器[25]或飛機駕駛艙[26]的設計。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">3.2.4機電整合的安全性和可用性研究系統篇</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">可靠性，可用性，可維護性和安全性（RAMS）標准通常是在設計過程中進行的研究的一部分。為了針對這些標準（可靠性，可用性，可維護性等）量化不同體系結構的性能，必須對每種考慮的替代方案進行大量此類研究，當前這些研究由建立機電系統RAMS模型並對其進行分析以得出結論的專家進行，RAMS模型通常使用專門的形式來構建，例如Petri網、貝葉斯網絡、可靠性框圖或更高級的語言，例如Altarica [27]和Figaro [28]。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">為了加快研究速度，將RAMS研究與（描述性或行為）體系結構模型聯繫起來將是一個優勢，實際上RAMS研究期間可以重用設計模型中嵌入的許多信息，第一種方法考慮使用RAMS數據（故障模式，可靠性比率等）豐富設計模型，以便能夠自動生成RAMS模型。例如，SysML [29]模型（具有特定配置文件）可用於自動計算系統級故障率[30]，另一種方法考慮將設計模型鏈接到RAMS模型確保RAMS模型的一致性，在MODRIO項目[31]的框架中，開發了一個原型以從Modelica [32]模型和Figaro知識庫[33]自動生成Figaro模型，使用Modelica特定的構造從知識中聲明與Figaro塊的對應關係邊緣基礎和其他必要信息。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">3.2.5產品的功能虛擬表示</span></p>
+<p class="c0"><span class="c1">機電系統的設計和集成是一個多學科的設計過程需要多個領域進行協作和交換信息，在當今的大型公司和擴展型企業中掌握這些信息流對於提高設計效率至關重要。</span></p>
+<p class="c0"><span class="c1">改善團隊之間溝通的一種方法是共享集成了所有觀點的產品的通用虛擬表示，這種表示方式使不同的團隊可以查看其他團隊的約束並始終可以訪問設計的最新版，此外它還可以在仿真過程中考慮來自其他領域的影響。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">綜合觀點還可以為決策提供更堅實的基礎因為它可以了解所有相關學科的所有限制和目標，這種表示形式的主要技術推動因素是能夠在使用不同工具和數據格式的不同團隊之間交換工程數據，以及能夠集成來自不同學科的模型的能力。</span></p>
+<p class="c0"><span class="c1">3.3驗證和驗證中的挑戰</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">3.3.1虛擬驗證系統的能力</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">機電一體化系統的驗證對工業界（尤其是在航空航天業中）是一項非常昂貴的任務。確實，這既需要係統可用，又需要開發和製造測試平台，而這些測試平台通常無法在程序之間重複使用。降低測試成本的一種方法是虛擬測試。該實踐旨在開發虛擬手段（系統模型和系統仿真環境）來測試系統並驗證其是否符合要求。例如，實際機翼上的測試可以用有限元模型代替。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">虛擬測試的主要好處是成本，因為虛擬測試台的成本通常比實際測試台低得多並且通常可以從一個程序重用到另一個程序，確實許多系統在程序之間都是相似的並且它們的模型通常可以在有限的範圍內適應新設計的需要努力，不太明顯的好處是虛擬測試台可以在比系統在其生命週期中遇到的實際刺激更近的條件下刺激系統，例如在機翼彎曲測試中載荷局部施加在實際的試驗台上，而載荷則可以均勻地施加在虛擬的試驗台上從而以更準確的方式表示實際載荷，在系統模型中某些方面（例如熱效應）也可以更輕鬆地考慮到，而如果需要進行實際測試則它們需要非常昂貴的測試手段，要啟用虛擬測試必須很好地管理驗證過程的多個方面，首先必須對模型及其仿真環境進行驗證，這可以通過將結果與測試台數據或飛行測試數據進行比較來完成，在這方面需要模型校準和不確定性管理技術。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">3.3.2正式向模型供應商發出模型請求</span></p>
+<p class="c0"><span class="c1">模型越來越多地用於在系統上執行驗證和確認（V＆V）活動，這些模型通常由系統的供應商（內部或外部客戶）設計，但是在功能有效性範圍精度等方面能夠陳述模型期望的內容仍然是一個挑戰，實際上請求者對總體仿真環境（即其他交互模型，仿真輸入等）具有很少的看法，而很少以正式的方式傳達給模型開發者，在將預期模型實際提供給模型請求者之前這通常會導致多次迭代。</span></p>
+<p class="c0"><span class="c1">最近模型身份證被提出作為模型要求的標準描述[34]，MIC允許描述模型的某些所需特性以指導模型的開發，首先必須定義模型的接口以描述模型的端口和交換的變量，第二模型信息的四個部分必須填寫如下：</span></p>
+<ul class="c4 lst-kix_list_3-0">
+<li class="c3"><span class="c1">物件-型號名稱、粒度級別、參考文檔</span></li>
+<li class="c3"><span class="c1">對像上下</span><span class="c17"></span><span class="c1">文用法-時間計算、工具</span></li>
+<li class="c3"><span class="c1">方法-模型尺寸、方法、線性</span></li>
+<li class="c0 c11"><span class="c1">模型質量-準確性、驗證、確認</span></li>
+</ul>
+<p class="c0"><span class="c1">這種標準化模型規範的另一潛在用途是對現有模型的重用，實際上對模型的特徵進行形式化可以在模型數據庫中進行後搜索，並可以在不同的上下文中重用模型。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">3.3.3在工業合作夥伴之間交換和無縫集成模型的能力</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">關於構建用於驗證機電系統的多系統仿真平台的目標，主要要素是交換和集成模型的能力，目前模型集成商傾向於迫使其供應商使用一種工具並遵循特定的建模程序（例如AP2633 [35]），在這方面模型供應商希望使用自己的工具對系統進行建模，因此能夠交換和集成來自不同工具的模型將是巨大的進步，功能模型接口（FMI）計劃[36]通過為動態模型的交換和協同仿真提供獨立於工具的標準而朝著這個方向發展，它允許生成“中性格式”模型（以C代碼和xml1文件的形式），這些模型可以無縫集成在兼容平台中。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">當前大約有70種工具支持該標準，這些標準模型交換形式的使用提供了靈活性因為可以使用許多不同的工具來開髮用於仿真平台的組成模型，因此模型提供者可以自由選擇和更改其首選工具而不會影響整個仿真框架，在模型集成商方面還可以確保靈活性，因為集成平台可以在一組可用工具中進行選擇和更改而不會影響現有模型。</span></p>
+<p class="c0"><span class="c1">這種類型的標準還可能替代內部開發的工具之間的許多點對點接口，這些工具是為滿足特定需求而內部開發或由工具供應商出售的，對於公司而言這可以節省大量開發或許可成本。</span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">3.3.4通過模型對機電系統進行形式驗證</span></p>
+<p class="c0"><span class="c1">在早期設計階段檢測系統缺陷一直是基於模型的系統工程（MBSE）的核心，以減少全球開發時間同時提高最終產品的質量，迄今為止仿真是驗證開發中系統行為的最常用方法，但是存在一個固有的主要缺點即有限數量的測試方案的局限性。</span></p>
+<p class="c0"><span class="c1">正式的驗證技術可以證明模型確實符合其規範即使情況是無限的，其中模型檢查能夠以自動化過程在計算機上執行驗證，在航空航天、鐵路、微型計算機等高科技工業領域以及更普遍地在開發任何關鍵的嵌入式系統時，使用模型檢查已經是一種普遍做法以確保獲得最佳的可靠性能力，技術和工具已經發展起來克服了模型檢查的某些原始限制，如今可以處理具有連續和離散零件的物理模型而這被稱為混合模型檢查，這開闢了新的應用前景尤其是在機電一體化領域。</span></p>
+<p class="c0"><span class="c1">在當前的現有技術中，混合模型檢查器通常限於證明安全性（即係統將永遠不會進入一組特定的狀態）因為它們經常依賴於過度逼近，這使他們成為證明飛機避碰機動性正確性的良好候選人。</span></p>
+<p class="c0"><span class="c1">圖3.3顯示了另一個案例，衛星的任務是根據請求捕獲地球圖像並在可見時將其下載到地面站，目標是根據特定的地面站配置和每個軌道的最大請求數量，正式驗證衛星的存儲緩衝區不會超出，請求是離散的而數據轉移是連續建模的。</span></p>
+<p class="c0"><span class="c1">混合模型檢查器在表達能力（例如它們支持哪種微分方程）和它們提供的過逼近方法方面彼此不同，當證明安全性還不夠時混合定理證明如KeYmaera [37]可以用作機電一體化背景下的另一種形式驗證選擇，這些嘗試使所需屬性的數學證明自動化，但是通常需要用戶在演示過程中進行一些高級輸入才能得出結論這對於復雜的系統可能非常棘手。</span></p>
+<p class="c0"><span><img alt="" src="https://lh5.googleusercontent.com/wW2xkCCGcA9UPzpdSyukQJpBV7n0c553xRNca6NUgKUObCeCBKDtcNusRdhepV4NfXoXljuiB8lWo9pc1uteonGjAUGQQA7hvZQZRtfzqDl4K5ngHndiiER6sJI0TbrP-8J3KxM" title=""/></span></p>
+<p class="c0 c7"><span class="c1"></span></p>
+<p class="c0"><span class="c1">3.3.5優化測試活動的能力</span></p>
+<p class="c0"><span class="c1">有時，由於復雜的建模偽像或可伸縮性問題對機電一體化系統進行形式驗證是不可行的，不論是否可能一旦構建了產品以檢查其是否符合規格模型並根據要求對其進行驗證仍然需要進行測試活動，在任何情況下都可以執行有限數量的測試用例（先在模擬中，在現實生活）必須找出最相關和最具代表性的模型。</span></p>
+<p class="c0 c15"><span class="c1">趨勢是自動生成最佳測試用例有兩個主要因素決定如何完成此任務，首先是測試選擇標準該標准定義了驅動測試用例生成的因素，其次是測試生成技術即實際產生結果的算法，兩者的典型示例在下面給出[38]。</span></p>
+<p class="c0"><span class="c1">測試選擇標準：</span></p>
+<ol class="c4 lst-kix_list_11-0 start" start="1">
+<li class="c3"><span class="c1">結構模型覆蓋標準-這些利用模型的結構來選擇測試用例。他們根據從控制流到代碼的思想處理整個模型的控制流。</span></li>
+<li class="c3"><span class="c1">數據覆蓋標準—想法是將數據范圍分為等效類，並從每類中選擇一位代表。通常通過邊界值分析來補充這種劃分，在邊界分析中，還額外選擇了由約束條件確定的數據範圍或邊界的臨界極限。</span></li>
+<li class="c3"><span class="c1">需求覆蓋標準-旨在覆蓋所有受測非正式系統（SuT）需求。 SuT需求對系統或測試模型/代碼的可追溯性可以支持該標準的實現。幾乎所有測試方法都將其作為目標。</span></li>
+<li class="c3"><span class="c1">測試用例規範-當測試工程師以某種正式符號定義測試用例規範時，這些規範可用於確定將生成哪些測試。明確決定應涵蓋哪組測試目標。</span></li>
+<li class="c3"><span class="c1">隨機和隨機準則—它們大多數適用於環境模型，因為環境決定了SuT的使用模式，一種典型的方法是使用馬爾可夫鏈來指定預期的SuT使用情況配置文件，另一個示例是除了SUT的行為模型之外還使用統計使用模型。</span></li>
+<li class="c0 c11"><span class="c1">基於故障的標準-這些標準依賴於通常會以故障模型形式設計的典型故障的知識。</span></li>
+</ol>
+<p class="c0"><span class="c1">測試生成技術：</span></p>
+<ol class="c4 lst-kix_list_12-0 start" start="1">
+<li class="c3"><span class="c1">隨機生成-通過採樣系統的輸入空間來完成測試的隨機生成。</span></li>
+<li class="c3"><span class="c1">圖形搜索算法-專用圖形搜索算法包括節點或弧覆蓋算法，例如中文Postman算法2，該算法至少覆蓋每個弧一次。</span></li>
+<li class="c3"><span class="c1">模型檢查-模型檢查是一種用於驗證或偽造系統屬性的技術，但可用於基於給定的反例來生成測試用例。</span></li>
+<li class="c3"><span class="c1">符號執行-符號執行的想法是運行一個不具有單個輸入值而是具有一組輸入值的可執行模型。這些表示為約束。通過這種做法，將生成符號跟踪。通過使用具體值實例化這些跡線，可以得出測試用例。</span></li>
+<li class="c3"><span class="c1">定理證明-通常使用定理證明來檢查直接出現在模型中的公式的可滿足性。在這裡，它使用數學過程來搜索模型的可能執行路徑，從而找到測試用例和反例。</span></li>
+<li class="c0 c11"><span class="c1">在線/離線生成技術-通過在線測試生成，算法可以在測試執行期間對SuT的實際輸出做出反應，這個想法也用於實施反應性測試脫機測試意味著測試用例在運行之前就已生成，一組測試用例僅生成一次並且可以執行多次。</span></li>
+</ol>
+<p class="c0 c13"><span class="c1">最合適的測試生成技術通常取決於要處理的源模型的類型，一些方法是根據測試模型創建測試用例的而另一些方法則將設計模型作為輸入，如圖3.4所示兩者都可以是行為模型，但第一種描述了測試人員對SuT進行測試的方式（即他給出了哪些刺激以及他進行了驗證），而後者則描述了SuT的工作方式，因此觀點（測試者與實施者）以及目標（驗證與解決方案）不同。</span></p>
+<p class="c0 c13"><span class="c1">3.4運營中的挑戰</span></p>
+<p class="c0 c13"><span class="c1">3.4.1使用設計模型改善維護的能力</span></p>
+<p class="c0 c6"><span class="c1">當前在航空航天系統的維護中很少重複使用設計模型。但是有關係統行為的知識可用於改善診斷預後和維護計劃，在診斷中行為模型可用於將對系統的觀察結果與某些故障模式或組件的某些退化相關聯。由於可以檢測到系統故障的根本原因而無需檢查所有部件，因此這允許以更準確和更快的方式估計組件的當前狀態（例如，過濾器堵塞）和維護操作的性能。</span></p>
+<p class="c0 c13"><span class="c1">同樣預測活動會嘗試預測系統的未來狀態以便預測故障併計劃預防性維護任務。例如，通過分析傳感器傳來的數據來估算系統的剩餘使用壽命，就可以規劃特定的維護任務（例如，重新加註儲罐）預測所需的資源（備件）並相應地調整操作。</span></p>
+<p class="c0 c6"><span class="c1">從技術上講使用模型進行診斷/預後通常需要狀態估計技術（例如線性回歸、卡爾曼濾波器）這些技術允許通過播放模型的某些參數（故障、降級）來最小化實際系統和模型上的觀測值之間的誤差，由於模型的幾種配置可能與觀察到的行為相匹配因此觀察到的變量的定義是有效診斷的主要驅動力，實際上由於所需的計算資源並非總是可以嵌入模型，但是可以根據透射遙測（離線PHM）在地面上完成診斷/預後任務。</span></p>
+<p class="c0 c13"><span class="c1">3.4.2使用設計模型改善控制能力</span></p>
+<p class="c0 c13"><span class="c1">設計模型用於改善操作的另一種用途是將其用於系統控制，實際上在某些情況下，有必要在系統的控制邏輯中使用行為模型中包含的知識，這稱為模型預測控制（MPC），如果系統動力學較慢（例如化工廠）或控制系統必須考慮以下因素，則MPC的使用特別適合系統的長期使用情況（例如計劃任務的資源使用情況），MPC的用法示例是能源管理例如可以在功率控制算法中使用混合動力推進車輛的簡單模型來優化燃油消耗和給定特定任務的電池使用，與經典控制算法相比這可以顯著提高性能，但是這種智能算法的認證仍然是一個挑戰。</span></p>
+<p class="c0 c6"><span class="c1">而且由於嵌入式模型受實時需求的限制，並且由於設計模型通常不是為此類應用程序而設計的因此必須實現模型的簡化，這種簡化過程會在模型的實時性能和表示性之間進行權衡。</span></p>
+<p class="c0 c13"><span class="c1">3.5結論</span></p>
+<p class="c0 c13"><span class="c1">從工業角度看機電一體化系統設計中的一些主要挑戰已暴露出來，這種發展的主要動力是減少開發成本和時間以及在成本和性能方面改進設計產品，可以看出許多挑戰都涉及產品的虛擬化以改善其設計、驗證或操作。實際上，虛擬化可以以較低的成本在開發的不同階段提供更大的靈活性。</span></p>
+<p class="c0 c6"><span class="c1">在設計中組件的多樣性和特定領域藉由機電一體化系統需要在設計過程中將FEM和系統級模型無縫集成，為此借助基於圖形的MDO方法，未來的工作可以集中在用於機電一體化大小調整活動和模型易於組裝的專用元模型上，而在V＆V中未來的工作應集中在機電系統的正式驗證上，因為它將大大降低認證成本。</span></p>
+<p></p>
+<p></p><h3>MechaEducFutureNeed</h3>
+<p><span></span></p>
 <p>原文pdf連結:<a href="https://drive.google.com/file/d/1AFADmyNrwprE7AesaFAecZZquIfzbLw-/view?usp=sharing">MechaEducFutureNeed.pdf</a></p>
 <p>翻譯連結:<a href="/downloads/MechaEducFutureNeed翻譯.pdf">MechaEducFutureNeed翻譯.pdf</a></p>
 <h4 class="c17"><span style="color: #0000ff;"><strong><span class="c5 c22 c26">Ch15機電一體化教育：滿足未來需求</span></strong></span></h4>
