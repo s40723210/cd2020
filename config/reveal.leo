@@ -69,6 +69,39 @@
 <v t="leo.20200506225339.1"><vh>2pdf</vh>
 <v t="leo.20200506225339.2"><vh>封面投影片內容</vh></v>
 </v>
+<v t="leo.20200524000013.1"><vh>W10</vh>
+<v t="leo.20200524000013.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200524001204.1"><vh>gm</vh>
+<v t="leo.20200524001204.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200524001205.1"><vh>api</vh>
+<v t="leo.20200524001205.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200524001207.1"><vh>ipv6</vh>
+<v t="leo.20200524001207.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200524001530.1"><vh>ipv4</vh>
+<v t="leo.20200524001530.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200524000854.1"><vh>a3</vh>
+<v t="leo.20200524000854.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200524000806.1"><vh>meet3</vh>
+<v t="leo.20200524000806.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200524001637.1"><vh>w2建倉</vh>
+<v t="leo.20200524001637.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200524001638.1"><vh>w2建倉</vh>
+<v t="leo.20200524001638.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200524001640.1"><vh>w2建倉</vh>
+<v t="leo.20200524001640.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200524001822.1"><vh>3pdf</vh>
+<v t="leo.20200524001822.2"><vh>封面投影片內容</vh></v>
+</v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
 </v>
@@ -451,7 +484,7 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 &lt;hr&gt;
 * 創建分組倉儲
 &lt;hr&gt;
-* 直播分配作業一
+* 直播分配assignment1作業
 &lt;hr&gt;
 * 完成assignment1報告
 &lt;hr&gt;
@@ -465,7 +498,7 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 
 						
 </t>
-<t tx="leo.20200506222827.2">##  作業一直播會議
+<t tx="leo.20200506222827.2">##  assignment1直播會議
 
 &lt;iframe width="760" height="520" src="https://www.youtube.com/embed/r0AABAp474U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 </t>
@@ -480,7 +513,7 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 </t>
 <t tx="leo.20200506223845.2">##  [Week6-9](https://s40723210.github.io/cd2020/content/Week6-9.html)
 
-* 直播分配作業二
+* 直播分配作assignment2作業
 &lt;hr&gt;
 * 使用webcam進行串流
 &lt;hr&gt;
@@ -503,7 +536,7 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 
 						
 </t>
-<t tx="leo.20200506224443.2">##  作業二直播會議
+<t tx="leo.20200506224443.2">##  assignment2直播會議
 
 &lt;iframe width="760" height="520" src="https://www.youtube.com/embed/a69tNWKmC64" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 </t>
@@ -584,7 +617,7 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 
 						
 </t>
-<t tx="leo.20200506225339.2">###  assignment1 pdf
+<t tx="leo.20200506225339.2">###  assignment2 pdf
 
 &lt;iframe height="600" src="https://s40723210.github.io/cd2020/downloads/assignment2.pdf" width="880"&gt;&lt;/iframe&gt;
 </t>
@@ -613,6 +646,164 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 <t tx="leo.20200506230204.2">### Article impression
 
 &lt;iframe height="600" src="https://s40723210.github.io/cd2020/content/Article%20impression.html" width="880"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200524000013.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200524000013.2">##  [Week10-14](https://s40723210.github.io/cd2020/content/Week10-14.html)
+
+* 直播分配作assignment3作業
+&lt;hr&gt;
+* gm用戶登入設置
+&lt;hr&gt;
+* Remote API 虛擬主機連線
+&lt;hr&gt;
+* 以 ssh 對 Github 連線
+&lt;hr&gt;
+* Ubuntu 對外連線設定
+&lt;hr&gt;
+* 完成assignment3報告
+&lt;hr&gt;
+
+</t>
+<t tx="leo.20200524000806.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200524000806.2">##  assignment3直播會議
+
+&lt;iframe width="760" height="520" src="https://www.youtube.com/embed/GmKxlNPx-gs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200524000854.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200524000854.2">##  [assignment3](https://s40723210.github.io/cd2020/content/assignment3.html)
+
+* According to the reading of Topic 2 and Topic 3, propose a Mechatronic project by using CoppeliaSim or Webots and Onshape.
+&lt;hr&gt;
+</t>
+<t tx="leo.20200524001204.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200524001204.2">##  gm用戶登入設置
+
+&lt;iframe width="760" height="520" src="https://www.youtube.com/embed/fdH7k_-vIpk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200524001205.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200524001205.2">##  Remote API 虛擬主機連線
+
+&lt;iframe width="760" height="520" src="https://www.youtube.com/embed/6vVJh1cni3c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200524001207.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200524001207.2">##  IPv6 Ubuntu 對外連線設定
+
+&lt;iframe width="760" height="520" src="https://www.youtube.com/embed/2BFxNK5TtEk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+</t>
+<t tx="leo.20200524001530.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200524001530.2">##  IPv4 Ubuntu 對外連線設定
+
+&lt;iframe width="760" height="520" src="https://www.youtube.com/embed/HSmI0PzFVFs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+</t>
+<t tx="leo.20200524001637.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200524001637.2">###  MechatronicDesignCases
+
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/content/MechatronicDesignCases.html" width="880"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200524001638.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200524001638.2">###  MechaFutureAndChallenges
+
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/content/MechaFutureAndChallenges.html" width="880"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200524001640.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200524001640.2">###  MechaEducFutureNeed
+
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/content/MechaEducFutureNeed.html" width="880"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200524001822.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200524001822.2">###  assignment3 pdf
+
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/downloads/assignment3.pdf" width="880"&gt;&lt;/iframe&gt;
 </t>
 </tnodes>
 </leo_file>
