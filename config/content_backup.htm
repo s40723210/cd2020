@@ -632,7 +632,8 @@ end
            dhcp6: true
            nameservers:
                addresses:
-                   - 2001:b000:168::11  </pre>
+                   - 2001:b000:168::11  
+  version: 2</pre>
 <p>8.輸入ping6 2001:288:6004:17::254來測試是否連線<br/><br/>9.在<span>VirtualBox</span>新增整體系統的埠號，如影片中的各4個埠號<br/><br/>10.輸入ifconfig來查詢IPv6的ip，fd17:625c:f037.....<br/><br/>11.進入cd2020pj1 &gt; git config --global --add http.proxy [2001:288:6004:17::53]:3128<br/><br/>12.git pull 更新內容，再tmp下<span>sudo vi </span>oauth_scrum.txt<br/><br/>13.sudo vi wsgi.py，將近端的host改為:: ，python3 wsgi.py<br/><br/>14.網址為https://[::1]:18443/alogin ，在開啟cd2020pj1.leo<br/><br/>15.再Nav搜尋allowExt，新增一個'ttt'檔，重開就可上傳.ttt檔</p>
 <p>影片連結:<a href="https://youtu.be/2BFxNK5TtEk">https://youtu.be/2BFxNK5TtEk</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/2BFxNK5TtEk" width="560"></iframe></p>
@@ -642,8 +643,8 @@ end
 <p><span>影片連結:<a href="https://youtu.be/HSmI0PzFVFs">https://youtu.be/HSmI0PzFVFs</a></span></p>
 <p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/HSmI0PzFVFs" width="560"></iframe></span></p>
 <hr/>
-<h4 class="title">遠端控制虛擬主機設置</h4>
-<p>1.打開老師的<a href="https://github.com/mdecourse/cd2020/blob/master/downloads/w13_ipv6_assignment.txt">ipv6_assignment.txt</a>，這裡有詳細的ipv6說明<br/><br/>2.照著上面的說明，來設定網路的ipv6，7210為乙班10號2為乙班<br/><br/>3.再來設定整體系統的埠號，把Host改為自己的ip，啟動Ubuntn主機<br/><br/>4.進入cd2020pj1，先git pull看看有沒有新版本，在進入docs &gt; cmsimde<br/><br/>5.使用vi wsgi.py來編輯，將host改為自己主機的ip，按i編輯，按esc輸入:wq儲存<br/><br/>6.另一台電腦開啟putty，輸入想遠端要連線的ip (我們所設定網路的ipv6)<br/><br/>7.都設定好之後，save再open就可以連到該主機，帳號密碼為kmol2020<br/><br/>8.使用XLaunch(為<a href="https://sourceforge.net/projects/xming/files/latest/download">Xming</a>軟件)來開啟，直接遠端控制開啟python3 wsgi.py<br/><br/>9.網址是該控制主機的ip加上括號和17443，必須要關掉proxy才可以通</p>
+<h4 class="title"><span>Bridged IPv6 </span>遠端控制(請在學校使用)</h4>
+<p>1.打開老師的<a href="https://github.com/mdecourse/cd2020/blob/master/downloads/w13_ipv6_assignment.txt">ipv6_assignment.txt</a>，這裡有詳細的ipv6設置說明<br/><br/>2.照著上面的說明，來設定網路的ipv6，7210為乙班10號2為乙班<br/><br/>3.再來設定整體系統的埠號，把Host改為自己的ip，啟動Ubuntn主機<br/><br/>4.進入cd2020pj1，先git pull看看有沒有新版本，在進入docs &gt; cmsimde<br/><br/>5.使用vi wsgi.py來編輯，將host改為自己主機的ip，按i編輯，按esc輸入:wq儲存<br/><br/>6.另一台電腦開啟putty，輸入想遠端要連線的ip (我們所設定網路的ipv6)<br/><br/>7.都設定好之後，save再open就可以連到該主機，帳號密碼為kmol2020<br/><br/>8.使用XLaunch(為<a href="https://sourceforge.net/projects/xming/files/latest/download">Xming</a>軟件)來開啟，直接遠端控制開啟python3 wsgi.py<br/><br/>9.網址是該控制主機的ip加上括號和17443，必須要關掉proxy才可以通</p>
 <p>影片連結:<a href="https://youtu.be/5NTALa4xvEc">https://youtu.be/5NTALa4xvEc</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/5NTALa4xvEc" width="560"></iframe></p>
 <hr/>
