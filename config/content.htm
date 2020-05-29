@@ -644,9 +644,14 @@ end
 <p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/HSmI0PzFVFs" width="560"></iframe></span></p>
 <hr/>
 <h4 class="title"><span>Bridged IPv6 </span>遠端控制(請在學校使用)</h4>
-<p>1.打開老師的<a href="https://github.com/mdecourse/cd2020/blob/master/downloads/w13_ipv6_assignment.txt">ipv6_assignment.txt</a>，這裡有詳細的ipv6設置說明<br/><br/>2.照著上面的說明，來設定網路的ipv6，7210為乙班10號2為乙班<br/><br/>3.再來設定整體系統的埠號，把Host改為自己的ip，啟動Ubuntn主機<br/><br/>4.進入cd2020pj1，先git pull看看有沒有新版本，在進入docs &gt; cmsimde<br/><br/>5.使用vi wsgi.py來編輯，將host改為自己主機的ip，按i編輯，按esc輸入:wq儲存<br/><br/>6.另一台電腦開啟putty，輸入想遠端要連線的ip (我們所設定網路的ipv6)<br/><br/>7.都設定好之後，save再open就可以連到該主機，帳號密碼為kmol2020<br/><br/>8.使用XLaunch(為<a href="https://sourceforge.net/projects/xming/files/latest/download">Xming</a>軟件)來開啟，直接遠端控制開啟python3 wsgi.py<br/><br/>9.網址是該控制主機的ip加上括號和17443，必須要關掉proxy才可以通</p>
+<p>1.打開老師的<a href="https://github.com/mdecourse/cd2020/blob/master/downloads/w13_ipv6_assignment.txt">ipv6_assignment.txt</a>，這裡有詳細的ipv6設置說明<br/><br/>2.照著上面的說明，來設定網路的ipv6，7210為乙班10號2為乙班<br/><br/>3.再來設定整體系統的埠號，把Host改為自己的ip，啟動Ubuntn主機<br/><br/>4.進入cd2020pj1，先git pull看看有沒有新版本，在進入docs &gt; cmsimde<br/><br/>5.使用vi wsgi.py來編輯，將host改為自己主機的ip，按i編輯，按esc輸入:wq儲存<br/><br/>6.另一台電腦開啟putty，輸入想遠端要連線的ip <span style="color: #ff0000;">(記得被連線的主機要關防火牆)</span><br/><br/>7.都設定好之後，save再open就可以連到該主機，帳號密碼為kmol2020<br/><br/>8.使用XLaunch(為<a href="https://sourceforge.net/projects/xming/files/latest/download">Xming</a>軟件)來開啟，直接遠端控制開啟python3 wsgi.py<br/><br/>9.網址是該控制主機的ip加上括號和17443，必須要關掉proxy才可以通</p>
 <p>影片連結:<a href="https://youtu.be/5NTALa4xvEc">https://youtu.be/5NTALa4xvEc</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/5NTALa4xvEc" width="560"></iframe></p>
+<hr/>
+<h4>Bridged IPv4 遠端控制(可在家裡使用)</h4>
+<p>1.在系統搜尋cmd來開啟命令窗，輸入ipconfig來查ipv4<br/><br/>2.設定整體系統的埠號，改為電腦的ipv4，啟動Ubuntn主機<br/><br/>3.另一台電腦開啟LXTermial、putty，輸入要連線的ip<span> <span style="color: #ff0000;">(要關防火牆)</span></span><br/><br/>4.再設定SSH下的X11，save再Open就可以連到該ip的主機<br/><br/>5.帳號密碼為kmol2020，輸入xterm&amp; ，使用ctrl+滑鼠右鍵來放大視窗<br/><br/>6.進入cd2020pj1，先git pull看看有沒有新版本，在進入docs &gt; cmsimde<br/><br/>7.輸入vi wsgi.py，按 i 編輯，將host改為10.0.2.4，按ESC並輸入:wq來儲存<br/><br/>8.輸入python3 wsgi.py來啟動，網址就是該控制主機的ip加上17443</p>
+<p>影片連結:<a href="https://youtu.be/ZyKg5drxQXA">https://youtu.be/ZyKg5drxQXA</a></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ZyKg5drxQXA" width="560"></iframe></p>
 <hr/>
 <h4 class="title">FileZilla 虛擬主機文件共享</h4>
 <p>1.下載<a href="https://portableapps.com/redirect/?a=FileZillaPortable&amp;s=s&amp;d=pa&amp;f=FileZillaPortable_3.48.1.paf.exe">FileZilla</a> <span>，</span></p>
