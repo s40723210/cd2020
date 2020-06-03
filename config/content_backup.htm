@@ -644,12 +644,12 @@ end
 <p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/HSmI0PzFVFs" width="560"></iframe></span></p>
 <hr/>
 <h4 class="title"><span>Bridged IPv6 </span>遠端控制(請在學校使用)</h4>
-<p>1.打開老師的<a href="https://github.com/mdecourse/cd2020/blob/master/downloads/w13_ipv6_assignment.txt">ipv6_assignment.txt</a>，這裡有詳細的ipv6設置說明<br/><br/>2.照著上面的說明，來設定網路的ipv6，7210為乙班10號2為乙班<br/><br/>3.再來設定整體系統的埠號，把Host改為自己的ip，啟動Ubuntn主機<br/><br/>4.進入cd2020pj1，先git pull看看有沒有新版本，在進入docs &gt; cmsimde<br/><br/>5.使用vi wsgi.py來編輯，將host改為自己主機的ip，按i編輯，按esc輸入:wq儲存<br/><br/>6.另一台電腦開啟putty，輸入想遠端要連線的ip (我們所設定網路的ipv6)<br/><br/>7.都設定好之後，save再open就可以連到該主機，帳號密碼為kmol2020<br/><br/>8.使用XLaunch(為<a href="https://sourceforge.net/projects/xming/files/latest/download">Xming</a>軟件)來開啟，直接遠端控制開啟python3 wsgi.py<br/><br/>9.網址是該控制主機的ip加上括號和17443，必須要關掉proxy才可以通</p>
+<p>1.打開老師的<a href="https://github.com/mdecourse/cd2020/blob/master/downloads/w13_ipv6_assignment.txt">ipv6_assignment.txt</a>，這裡有詳細的ipv6設置說明<br/><br/>2.照著上面的說明，來設定網路的ipv6，7210為乙班10號2為乙班<br/><br/>3.再來設定整體系統的埠號，把Host改為自己的ip，啟動Ubuntn主機<br/><br/>4.進入cd2020pj1，先git pull看看有沒有新版本，在進入docs &gt; cmsimde<br/><br/>5.使用vi wsgi.py來編輯，將host改為自己主機的ip，按i編輯，按esc輸入:wq儲存<br/><br/>6.另一台電腦開啟putty，輸入想遠端要連線的ip <span style="color: #ff0000;">(記得被連線的主機要關防火牆)</span><br/><br/>7.都設定好之後，save再open就可以連到該主機，帳號密碼為kmol2020<br/><br/>8.使用XLaunch(為<a href="https://sourceforge.net/projects/xming/files/latest/download">Xming</a>軟件)來開啟，直接遠端控制開啟python3 wsgi.py<br/><br/>9.網址是該控制主機的ip加上括號和17443，必須要關掉proxy才可以通</p>
 <p>影片連結:<a href="https://youtu.be/5NTALa4xvEc">https://youtu.be/5NTALa4xvEc</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/5NTALa4xvEc" width="560"></iframe></p>
 <hr/>
 <h4>Bridged IPv4 遠端控制(可在家裡使用)</h4>
-<p>1.在系統搜尋cmd來開啟命令窗，輸入ipconfig來查ipv4<br/><br/>2.設定整體系統的埠號，改為電腦的ipv4，啟動Ubuntn主機<br/><br/>3.另一台電腦開啟LXTermial和開啟putty，輸入想遠端要連線的ip<br/><br/>4.再設定SSH下的X11，save再Open就可以連到該ip的主機<br/><br/>5.帳號密碼為kmol2020，輸入xterm&amp; ，使用ctrl+滑鼠右鍵來放大視窗<br/><br/>6.進入cd2020pj1，先git pull看看有沒有新版本，在進入docs &gt; cmsimde<br/><br/>7.輸入vi wsgi.py，按 i 編輯，將host改為10.0.2.4，按ESC並輸入:wq來儲存<br/><br/>8.輸入python3 wsgi.py來啟動，網址就是該控制主機的ip加上17443</p>
+<p>1.在系統搜尋cmd來開啟命令窗，輸入ipconfig來查ipv4<br/><br/>2.設定整體系統的埠號，改為電腦的ipv4，啟動Ubuntn主機<br/><br/>3.另一台電腦開啟LXTermial、putty，輸入要連線的ip<span> <span style="color: #ff0000;">(要關防火牆)</span></span><br/><br/>4.再設定SSH下的X11，save再Open就可以連到該ip的主機<br/><br/>5.帳號密碼為kmol2020，輸入xterm&amp; ，使用ctrl+滑鼠右鍵來放大視窗<br/><br/>6.進入cd2020pj1，先git pull看看有沒有新版本，在進入docs &gt; cmsimde<br/><br/>7.輸入vi wsgi.py，按 i 編輯，將host改為10.0.2.4，按ESC並輸入:wq來儲存<br/><br/>8.輸入python3 wsgi.py來啟動，網址就是該控制主機的ip加上17443</p>
 <p>影片連結:<a href="https://youtu.be/ZyKg5drxQXA">https://youtu.be/ZyKg5drxQXA</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ZyKg5drxQXA" width="560"></iframe></p>
 <hr/>
@@ -1661,7 +1661,7 @@ EXIT</pre>
 <p>剛開始可以使用內建的功能來創建模型，Add &gt; Primitive shape &gt; Cuboid(需要的 形狀)，給定所需形狀的參數值即可，創建出一個正方形本體，還有四個圓柱形輪子， 移動到相對應的位置，再來加上馬達 Add &gt; Joint &gt; Revolute，分別定位在四個輪 子的軸上，雙擊Revolute_joint圖示，在彈出的屬性框點擊Show dynamic parameters dialog，勾選 Motor enable，並設置 Target velocity 為 10，四個馬達都是如此。 </p>
 <p>影片連結:<a href="https://youtu.be/y8DJ1sjuAqM">https://youtu.be/y8DJ1sjuAqM</a></p>
 <p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/y8DJ1sjuAqM" width="560"></iframe></p>
-<hr color="00ffee">
+<hr color="00ffee"/>
 <h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">四輪車鍵盤控制轉向</yt-formatted-string></h4>
 <p>V-rep 檔案連結: <a href="/downloads/4%20wheel%20car%20keyboard.ttt">4 wheel car keyboard.ttt</a></p>
 <p>四輪車加上轉向及鍵盤控制，先開啟之前做好的四輪車，將兩個前輪馬達複製貼上，再使兩個馬達原地轉向90度，創建兩個小正方體，位置與前輪一模一樣，<span>需要設定屬性避免與其他部件衝突，本體、輪子、小正方體都要關閉如下圖。</span></p>
@@ -1831,7 +1831,7 @@ EXIT</pre>
 <h2>assignment3</h2>
 <p><span>Due May 27, 2020 for class 2a and May 28, 2020 for class 2b.</span></p>
 <p>According to the reading of Topic 2 and Topic 3, propose a Mechatronic project by using<span> </span><a href="https://www.coppeliarobotics.com/">CoppeliaSim</a><span> </span>or<span> </span><a href="https://cyberbotics.com/">Webots</a><span> </span>and<span> </span><a href="https://www.onshape.com/">Onshape</a>.</p>
-<hr>
+<hr/>
 <p>報告連結:<a href="/downloads/assignment3.pdf">assignment3.pdf</a></p>
 <p><iframe height="700px" iframe="" src="https://s40723210.github.io/cd2020/downloads/assignment3.pdf" width="100%"></iframe></p><h3>MSModelingAndTFApproaches</h3>
 <p><span>原文pdf連結:</span><a href="https://drive.google.com/file/d/1KRb8vX_LB_3hkLwK1z1LOP8wl_StIZOR/view?usp=sharing">MSModelingAndTFApproaches.pdf</a></p>
@@ -3456,7 +3456,7 @@ end</pre>
 <ul>
 <li><span><span>控制機器人或模擬的第七種方法是編寫一個外部應用程序，該應用程序通過各種方式（例如管道，套接字，串行端口等）與CoppeliaSim插件或CoppeliaSim腳本進行通信。</span><span>選擇編程語言（可以是任何一種語言）和靈活性是兩個主要優點。</span><span>同樣，控制代碼也可以在機器人或其他計算機上運行。</span><span>但是，與使用</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiOverview.htm"><span><span>遠程API</span></span></a><span><span>的方法相比，這種控制仿真或模型的方法更加乏味</span><span>。</span></span><span><span></span></span></li>
 </ul>
-<hr>
+<hr/>
 <p><span><span>有8個與本教程相關的場景文件：</span></span></p>
 <ul>
 <li><em>scenes/controlTypeExamples/controlledViaScript</em>: one robot is controlled via a<span> </span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#nonThreaded">non-threaded child script</a>, the other is controlled via a<span> </span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#threaded">threaded child script</a>.</li>
@@ -3468,7 +3468,7 @@ end</pre>
 <li><em>scenes/controlTypeExamples/controlledViaRos2</em>: the robot is controlled via the<span> </span><a href="https://www.coppeliarobotics.com/helpFiles/en/rosInterf.htm">ROS2 interface</a>.</li>
 <li><em>scenes/controlTypeExamples/controlledViaTcp</em>: the robot is controlled via<span> </span><a href="http://w3.impa.br/~diego/software/luasocket/">LuaSocket</a><span> </span>and TCP.</li>
 </ul>
-<hr>
+<hr/>
 <p></p>
 <ul>
 <li><span><span><em>scenes/controlTypeExamples/controlledViaScript</em><span>:</span>一個機器人通過控制</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#nonThreaded"><span><span>非螺紋子腳本</span></span></a><span><span>，另一種是通過受控的</span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm#threaded"><span><span>螺紋子腳本</span></span></a><span><span>。</span></span></li>
@@ -3611,7 +3611,7 @@ void deinitializationCallback
 <p>10.完成後儲存，即可照著腳本進行移動。</p>
 <p><span mce-data-marked="1">我的操作影片(有字幕):<a href="https://youtu.be/zINF95Z_b1s">https://youtu.be/zINF95Z_b1s</a></span></p>
 <p><span mce-data-marked="1"><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/zINF95Z_b1s" width="560"></iframe></span></p>
-<hr>
+<hr/>
 <div></div>
 <p></p>
 <h4>Webots Tutorial-2</h4>
@@ -4001,4 +4001,4 @@ void deinitializationCallback
 <li>
 <p><strong><span><span>顯示調整大小手柄</span></span></strong><span><span>：顯示用於調整大小和縮放3D窗口中選定節點的手柄。</span><span>僅對“幾何”節點和“<span> </span></span></span><a href="https://cyberbotics.com/doc/reference/transform"><span><span>變換”</span></span></a><span><span>節點</span><span>派生的節點顯示此選項</span><span>。</span><span>對於過程性PROTO節點，僅當在模板語句中未使用調整大小或縮放所涉及的字段時才可用。</span></span></p>
 </li>
-</ul></hr></hr></hr></hr></hr>
+</ul>
