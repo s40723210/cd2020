@@ -235,13 +235,13 @@ img.add_border {
 <p><span>影片連結:<a href="https://youtu.be/HSmI0PzFVFs">https://youtu.be/HSmI0PzFVFs</a></span></p>
 <p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/HSmI0PzFVFs" width="560"></iframe></span></p>
 <hr/>
-<h4 class="title"><span>Bridged IPv6 </span>遠端控制(請在學校使用)</h4>
+<h4 class="title"><span>IPv6 </span>遠端控制伺服(請在學校使用)</h4>
 <p><span style="color: #ff0000;">必須先完成IPv6 Ubuntu 對外連線設定，才可以開始測試IPv6遠端控制</span></p>
 <p>1.打開老師的<a href="https://github.com/mdecourse/cd2020/blob/master/downloads/w13_ipv6_assignment.txt">ipv6_assignment.txt</a>，這裡有詳細的ipv6設置說明<br/><br/>2.照著上面的說明，來設定網路的ipv6，7210為乙班10號2為乙班<br/><br/>3.再來設定整體系統的埠號，把Host改為自己的ip，啟動Ubuntn主機<br/><br/>4.進入cd2020pj1，先git pull看看有沒有新版本，在進入docs &gt; cmsimde<br/><br/>5.使用vi wsgi.py來編輯，將host改為自己主機的ip，按i編輯，按esc輸入:wq儲存<br/><br/>6.另一台電腦開啟putty，輸入想遠端要連線的ip <span style="color: #ff0000;">(記得被連線的主機要關防火牆)</span><br/><br/>7.都設定好之後，save再open就可以連到該主機，帳號密碼為kmol2020<br/><br/>8.使用XLaunch(為<a href="https://sourceforge.net/projects/xming/files/latest/download">Xming</a>軟件)來開啟，直接遠端控制開啟python3 wsgi.py<br/><br/>9.網址是該控制主機的ip加上括號和17443，必須要關掉proxy才可以通</p>
 <p>影片連結:<a href="https://youtu.be/5NTALa4xvEc">https://youtu.be/5NTALa4xvEc</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/5NTALa4xvEc" width="560"></iframe></p>
 <hr/>
-<h4>Bridged IPv4 遠端控制(可在家裡使用)</h4>
+<h4>IPv4 遠端控制伺服(可在家裡使用)</h4>
 <p>1.在系統搜尋cmd來開啟命令窗，輸入ipconfig來查ipv4<br/><br/>2.設定整體系統的埠號，改為電腦的ipv4，啟動Ubuntn主機<br/><br/>3.另一台電腦開啟LXTermial、putty，輸入要連線的ip<span> <span style="color: #ff0000;">(要關防火牆)</span></span><br/><br/>4.再設定SSH下的X11，save再Open就可以連到該ip的主機<br/><br/>5.帳號密碼為kmol2020，輸入xterm&amp; ，使用ctrl+滑鼠右鍵來放大視窗<br/><br/>6.進入cd2020pj1，先git pull看看有沒有新版本，在進入docs &gt; cmsimde<br/><br/>7.輸入vi wsgi.py，按 i 編輯，將host改為10.0.2.4，按ESC並輸入:wq來儲存<br/><br/>8.輸入python3 wsgi.py來啟動，網址就是該控制主機的ip加上17443</p>
 <p>影片連結:<a href="https://youtu.be/ZyKg5drxQXA">https://youtu.be/ZyKg5drxQXA</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ZyKg5drxQXA" width="560"></iframe></p>
@@ -249,7 +249,34 @@ img.add_border {
 <h4 class="title">FileZilla 虛擬主機文件共享</h4>
 <p>1.下載<a href="https://portableapps.com/redirect/?a=FileZillaPortable&amp;s=s&amp;d=pa&amp;f=FileZillaPortable_3.48.1.paf.exe">FileZilla</a> <span>，將下載好的檔案解壓縮，放入隨身系統<br/><br/>2.啟動Ubuntu主機，確認整體系統的埠號，開啟putty<br/><br/>3.設定ip來連接，跟之前一樣得設定，帳密為kmol2020<br/><br/>4.打開FileZilla，新增一個站台::1，設定SFTP - SSH以及如影片內容<br/><br/>5.密碼koml2020，完成就可以使用上傳下載來編輯比較方便<br/></span></p>
 <p>影片連結:<a href="https://youtu.be/Cq5Xv94dYrA">https://youtu.be/Cq5Xv94dYrA</a></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Cq5Xv94dYrA" width="560"></iframe></p><br />Article impression << <a href='Article impression.html'>Previous</a> <a href='SSH setting.html'>Next</a> >> SSH setting</div>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Cq5Xv94dYrA" width="560"></iframe></p>
+<hr/>
+<h4>虛擬主機問題</h4>
+<p>目前因為老師將cd2020pj1改版了，所以照著之前的操作，就會出現錯誤，幾乎都是在開啟python3 wsgi.py的錯誤。</p>
+<p><span style="background-color: #ffcc00; color: #000000;"><strong>1.使用allowExt搜尋位子變更，一樣是在Nav下搜尋，可以在最後一行找到。</strong></span></p>
+<p><span style="background-color: #ffcc00; color: #000000;"><strong><img alt="" height="406" src="./../images/allowext.jpg" width="543"/></strong></span></p>
+<p><span style="background-color: #ffcc00; color: #000000;"><strong>2.輸入ping6 2001:288:6004:17::254出現錯誤</strong></span></p>
+<p>要確保/etc/netplan &gt; sudo vi 00-installer-config.yaml，編輯的內容要完全正確<span style="color: #ff0000;"> #間格和縮牌都要一樣</span>，還要記的輸入<span>sudo netplan apply來更新</span></p>
+<p><strong></strong><strong><span><span><img alt="" height="36" src="./../images/ping.PNG" width="548"/></span></span></strong></p>
+<p><strong><span style="background-color: #ffcc00; color: #000000;">3.在使用git pull更新cd2020pj1時出現衝突</span></strong></p>
+<p>直接輸入git checkout .來捨棄目前的改版，然後再git pull一次就可以了</p>
+<p><strong><span style="background-color: #ffcc00; color: #000000;"><img alt="" height="209" src="./../images/git pull.PNG" width="557"/></span></strong></p>
+<p><strong><span style="background-color: #ffcc00; color: #000000;"></span></strong></p>
+<p><strong><span style="background-color: #ffcc00; color: #000000;">4.使用python3 wsgi.py顯示找不到資料的錯誤</span></strong></p>
+<p><span style="background-color: #ffcc00;"></span>要確定好在tmp下輸入<span>sudo vi </span><span>oauth_scrum.txt(內容是自己google api 的密碼)。<span style="color: #ff0000;">#注意名子不能打錯，有很多人都打錯</span></span></p>
+<p><strong><span style="background-color: #ffcc00; color: #000000;"><img alt="" height="330" src="./../images/oauth.jpg" width="481"/></span></strong></p>
+<p><strong><span style="background-color: #ffcc00; color: #000000;">5.開啟python3 wsgi.py缺少模組'pydrive'</span></strong></p>
+<p>直接輸入pip3 install pydrive，來安裝這個缺少的模<span>組(沒有權限的話就</span><span>使用sudo pip3 install pydrive)</span></p>
+<p><strong><span style="background-color: #ffcc00; color: #000000;"><img src="https://s40723221.github.io/cd2020/images/IMG_1770.JPG"/></span></strong></p>
+<p><strong><span style="background-color: #ffcc00; color: #000000;">6.編輯sudo vi wsgi.py設定錯誤</span></strong></p>
+<p><strong></strong>在host='10.0.2.4'的ip設定錯誤(是客體的ip)，或是有不小心刪除某些字，也有可能是多打了幾個字，也要檢查<span>VirtualBox</span><span>整體的埠號是否輸入錯誤</span></p>
+<p><strong><span style="background-color: #ffcc00; color: #000000;"><img alt="" height="257" src="./../images/ip輸入錯誤.PNG" width="541"/></span></strong></p>
+<p><strong><span style="background-color: #ffcc00; color: #000000;">7.<span>在VirtualBox無法匯入<span>老師用好的</span>Ubuntu.ova檔案</span></span></strong></p>
+<p>在電腦的使用者下 C:\Users\"使用者名稱"\VirtualBox VMs，資料夾內將重複名子的檔案刪除就可以了</p>
+<p><img height="351" src="https://s40723221.github.io/cd2020/images/Failed-to-open-session.png" width="238"/></p>
+<p><span style="background-color: #ffcc00; color: #000000;"><strong>8.遠端連線時出現Mako error的問題</strong></span></p>
+<p>因為虛擬主機的mako版本是舊的，所以要輸入pip3 install mako==1.1.3來更新版本，如果是在自己的隨身系統下，就直接輸入pip install mako來安裝模組就行了</p>
+<p><span style="background-color: #ffcc00; color: #000000;"><strong><img alt="" height="263" src="./../images/mako erro.PNG" width="503"/></strong></span></p><br />Article impression << <a href='Article impression.html'>Previous</a> <a href='SSH setting.html'>Next</a> >> SSH setting</div>
         
     <!-- footer -->
       <div class="container">
