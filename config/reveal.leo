@@ -81,8 +81,17 @@
 <v t="leo.20200524001207.1"><vh>ipv6</vh>
 <v t="leo.20200524001207.2"><vh>封面投影片內容</vh></v>
 </v>
+<v t="leo.20200611205138.1"><vh>ipv6-2</vh>
+<v t="leo.20200611205138.2"><vh>封面投影片內容</vh></v>
+</v>
 <v t="leo.20200524001530.1"><vh>ipv4</vh>
 <v t="leo.20200524001530.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200611205142.1"><vh>ipv4-2</vh>
+<v t="leo.20200611205142.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200611205323.1"><vh>file</vh>
+<v t="leo.20200611205323.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20200524000854.1"><vh>a3</vh>
 <v t="leo.20200524000854.2"><vh>封面投影片內容</vh></v>
@@ -101,6 +110,15 @@
 </v>
 <v t="leo.20200524001822.1"><vh>3pdf</vh>
 <v t="leo.20200524001822.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200611205447.1"><vh>w2建倉</vh>
+<v t="leo.20200611205447.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200611205634.1"><vh>W15</vh>
+<v t="leo.20200611205634.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200611210114.1"><vh>F p</vh>
+<v t="leo.20200611210114.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
@@ -435,7 +453,7 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 
 						
 </t>
-<t tx="leo.20200430131151.2">###  assignment1 pdf
+<t tx="leo.20200430131151.2">###  assignment1
 
 &lt;iframe height="600" src="https://s40723210.github.io/cd2020/downloads/assignment1.pdf" width="880"&gt;&lt;/iframe&gt;
 </t>
@@ -617,7 +635,7 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 
 						
 </t>
-<t tx="leo.20200506225339.2">###  assignment2 pdf
+<t tx="leo.20200506225339.2">###  assignment2
 
 &lt;iframe height="600" src="https://s40723210.github.io/cd2020/downloads/assignment2.pdf" width="880"&gt;&lt;/iframe&gt;
 </t>
@@ -804,6 +822,93 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 <t tx="leo.20200524001822.2">###  assignment3 pdf
 
 &lt;iframe height="600" src="https://s40723210.github.io/cd2020/downloads/assignment3.pdf" width="880"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200611205138.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200611205138.2">##  IPv6 遠端控制伺服
+
+&lt;iframe width="760" height="520" src="https://www.youtube.com/embed/5NTALa4xvEc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+</t>
+<t tx="leo.20200611205142.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200611205142.2">##  IPv6 Ubuntu 遠端控制伺服
+
+&lt;iframe width="760" height="520" src="https://www.youtube.com/embed/ZyKg5drxQXA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+</t>
+<t tx="leo.20200611205323.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200611205323.2">##  FileZilla 虛擬主機文件共享
+
+&lt;iframe width="760" height="520" src="https://www.youtube.com/embed/Cq5Xv94dYrA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+</t>
+<t tx="leo.20200611205447.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200611205447.2">###  Weeks Meeting
+
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/content/Weeks%20Meeting.html" width="880"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200611205634.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200611205634.2">##  [Week15-18](https://s40723210.github.io/cd2020/content/Week15-18.html)
+
+* Api限制用戶遠端控制
+&lt;hr&gt;
+* 四輪車模擬實行
+&lt;hr&gt;
+* 完成Final project報告
+&lt;hr&gt;
+* 完成期末課程報告
+&lt;hr&gt;</t>
+<t tx="leo.20200611210114.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200611210114.2">###  final project
+
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/downloads/finalproject.pdf" width="880"&gt;&lt;/iframe&gt;
 </t>
 </tnodes>
 </leo_file>
