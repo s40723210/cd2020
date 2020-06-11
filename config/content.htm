@@ -691,7 +691,9 @@ end
 <p><span style="background-color: #ffcc00; color: #000000;"><strong>8.遠端連線時出現Mako error的問題</strong></span></p>
 <p>因為虛擬主機的mako版本是舊的，所以要輸入pip3 install mako==1.1.3來更新版本，如果是在自己的隨身系統下，就直接輸入pip install mako來安裝模組就行了</p>
 <p><span style="background-color: #ffcc00; color: #000000;"><strong><img alt="" height="263" src="/images/mako erro.PNG" width="503"/></strong></span></p>
-<h3>SSH setting</h3>
+<p><span style="background-color: #ffcc00; color: #000000;"><strong>9.使用python3 wsgi.py時，出現key的錯誤</strong></span></p>
+<p><span style="color: #000000;">在tmp下的oauth_scrum.txt，內容必須至少要有兩行，使用sudo vi oauth_scrum.txt來進行編輯，只有一段的話會出現錯誤</span></p>
+<p><span style="background-color: #ffcc00; color: #000000;"><strong><img alt="" height="132" src="/images/key1.PNG" width="509"/></strong></span></p><h3>SSH setting</h3>
 <h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">以ssh 對 Github 連線(目前使用的)</yt-formatted-string></h4>
 <p><span>1.先將Y:\portablegit\bin下的sh.exe(通常會有)建立起來。</span><br/><span><br/></span><span></span><span>2.輸入sh，輸入<span>ssh-keygen -t rsa -b 4096 -C "學號</span><span>"。</span></span><br/><span><span><br/></span></span><span></span><span><span>3.在Y:</span><span>\home_mdecourse裡創建一個.ssh。</span></span><br/><span><span><br/></span></span><span></span><span><span>4.輸入</span><span>Y:</span><span>\home_mdecourse</span><span>\.ssh/id_rsa。</span></span><br/><span><span><br/></span></span><span></span><span><span>5.按完Enter後，下載putty放在Y槽內。</span></span><br/><span><br/></span><span></span><span>6.編輯<span>start_mdecourse.bat，加入如下的指令。<br/><br/></span></span><span><span>Set GIT_HOME=%Disk%:\portablegit\bin\</span></span><br/><span><span>Set GIT_SSH=%Disk%:\putty\plink.exe</span></span><br/><span><br/>7.到自己倉儲的.git，url改成ssh(github)形式。</span><br/><span><br/></span><span></span><span>8.開啟puttygen.exe，將鑰匙存成private key。</span><br/><span><br/></span><span></span><span>9.</span><span>開啟putty.exe，設定proxy和路徑，在案save。</span></p>
 <p><span>10.再到github存入自己的key，就可以了。</span></p>
