@@ -727,8 +727,12 @@ Host github.com
 <div class="post-body entry-content" itemprop="description articleBody"><span></span></div>
 <div class="post-body entry-content" itemprop="description articleBody"><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/SJHMm3o5uEw" width="560"></iframe></span></div>
 <h2>Week15-18</h2>
-<h4><span></span>Api限制用戶遠端控制</h4>
-<p>1.先開啟之前所設定好的ubuntu虛擬主機，<span>VirtualBox的IPv6埠號也要檢查有沒有錯誤<br/><br/>2.將虛擬主機tmp下的oauth_scrum.txt內容，改為之前所設定好的Google API憑證帳號密碼，使用sudo vi oauth_scrum.txt來進行編輯。<br/><br/>3.必須要有自己的DNS才可以讓其他電腦進行連線</span></p>
+<h4><span></span>Api限制用戶遠端控制(要先有自己的DNS)</h4>
+<p><span style="color: #000000;">1.先開啟之前所設定好的ubuntu虛擬主機，</span><span><span style="color: #000000;">VirtualBox的IPv6埠號也要檢查有沒有錯誤。</span><br/><br/><span style="color: #000000;">2.將虛擬主機tmp下的oauth_scrum.txt內容，改為之前所設定好的Google API憑證帳號密碼，使用sudo vi oauth_scrum.txt來進行編輯。</span><br/><br/><span style="color: #000000;">3.必須要有自己的DNS才可以讓其他台電腦進行連線(只能透過老師幫忙設定才行)，沒有的話就只能在自己的電腦內進行測試。</span><br/></span><span><img alt="" height="328" src="/images/cmd DNS.png" width="551"/></span></p>
+<p><span style="color: #000000;">4.因為有DNS的關係，所以網路也必須要設定才行，IPv6位置跟之前一樣就行了，新增一個慣用的DNS伺服器，可以到cmd用nslookup來查詢。</span><br/><img alt="" height="440" src="/images/網路設定.png" width="536"/></p>
+<p>5.自己的 <span>Google API 的''OAuth 客戶端ID''也要進行URI的設定，這樣子別人才可以用DNS網址來進行連線。</span><br/><img alt="" height="535" src="/images/api設定.PNG" width="474"/></p>
+<p>6.在虛擬主機開啟python3 wsgi.py後，另一台電腦就可以使用https://cdb10.mde.nfu.edu.tw:18443 來進行google登入認證連線了。</p>
+<p>7.一樣是要關掉proxy和防火牆才可以連線，不過還有很多問題沒有解決，目前還沒有辦法進行編輯，就只能認證而已。</p>
 <p></p><h2>Weeks Meeting</h2>
 <h4><span style="background-color: #ffff99;">Week10</span></h4>
 <p>分配Assignment 3的<span>topic2、topic3的原文書翻譯工作，</span> 並討論老師的<a href="http://mde.tw/cd2020pj1/content/CMS.html">CMS</a>、<a href="https://drive.google.com/file/d/1G4MzXUIbNRK7z2XdjtxXzhX51zHHwq85/view?usp=sharing">影片教學</a>，來進行<yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">gm用戶登錄設置，可以參考我的<a href="https://youtu.be/fdH7k_-vIpk">影片</a>。</yt-formatted-string></p>
@@ -1135,7 +1139,7 @@ Host github.com
 <p>因為虛擬主機的mako版本是舊的，所以要輸入pip3 install mako==1.1.3來更新版本，如果是在自己的隨身系統下，就直接輸入pip install mako來安裝模組就行了</p>
 <p><span style="background-color: #ffcc00; color: #000000;"><strong><img alt="" height="263" src="/images/mako erro.PNG" width="503"/></strong></span></p>
 <h1>Assignments</h1>
-<p><span>報告連結:</span><a href="/downloads/assignment1.pdf">assignment1.pdf</a>、<a href="/downloads/assignment2.pdf">assignment2.pdf</a></p>
+<p><span>報告連結:</span><a href="/downloads/assignment1.pdf">assignment1.pdf</a>、<a href="/downloads/assignment2.pdf">assignment2.pdf</a>、<a href="/downloads/assignment3.pdf">assignment3.pdf</a>、<a href="/downloads/finalproject.pdf">finalproject.pdf</a></p>
 <h4>Assignment 1:</h4>
 <p><span>Due March 25, 2020</span><span> </span>for class 2a and<span> </span><span>March 26, 2020</span><span> </span>for class 2b.</p>
 <p>1. Describe how to do an efficient random grouping for this course or do the roll calling randomly?</p>
@@ -1150,8 +1154,7 @@ Host github.com
 <p>According to the reading of Topic 2 and Topic 3, propose a Mechatronic project by using<span> </span><a href="https://www.coppeliarobotics.com/">CoppeliaSim</a><span> </span>or<span> </span><a href="https://cyberbotics.com/">Webots</a><span> </span>and<span> </span><a href="https://www.onshape.com/">Onshape</a>.</p>
 <h4>Final project:</h4>
 <p><span>Due June 24, 2020.</span></p>
-<p>Realize your Mechatronic project and conclude with a presentation video and pdf report.</p>
-<h2>assignment1</h2>
+<p>Realize your Mechatronic project and conclude with a presentation video and pdf report.</p><h2>assignment1</h2>
 <p>Due March 25, 2020 for class 2a and March 26, 2020 for class 2b.</p>
 <ol>
 <li>
@@ -3260,6 +3263,8 @@ uart_flag = 0;
 <p class="c2" id="h.gjdgxs"><span><img alt="" src="https://lh5.googleusercontent.com/pMaSTQ78tPfMZX_vNDDloIYaLrEChs56-YQI-Db2DhJhcxV4L-TJtUVk8I97r1L2ns8Thtew7YzzoCbExqrAF4bX8MAtiIDyQtwy8tCVBA3dJA_LIUV5d1bj1go0j8O7KzUrblg" title=""/></span></p>
 <p class="c2"><span class="c5">圖16.1</span><span class="c0">機電一體化未來地圖</span></p>
 <p></p>
+<h2>Final project</h2>
+<p></p>
 <h1>CoppeliaSim</h1>
 <p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/CoppeliaSim.png"/></p>
 <p align="center"><span><span>版本4.0.0</span></span></p>
@@ -3291,8 +3296,7 @@ uart_flag = 0;
 <li><a href="http://forum.coppeliarobotics.com/" target="_blank"><span><span>CoppeliaSim / V-REP論壇</span></span></a></li>
 </ul>
 <p></p>
-<p></p>
-<h2>BubbleRob tutorial</h2>
+<p></p><h2>BubbleRob tutorial</h2>
 <p>由40723210提供</p>
 <p>個人操作影片連結:<a href="https://youtu.be/BStp8J-KXuY">https://youtu.be/BStp8J-KXuY</a></p>
 <p>本教程將在設計簡單的移動機器人<em>BubbleRob</em>時嘗試介紹很多CoppeliaSim功能。與本教程相關的CoppeliaSim場景文件位於CoppeliaSim的安裝文件夾的<em>tutorials / BubbleRob</em>文件夾中。下圖說明了我們將設計的仿真場景：</p>
