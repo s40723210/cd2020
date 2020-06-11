@@ -727,8 +727,13 @@ Host github.com
 <div class="post-body entry-content" itemprop="description articleBody"><span></span></div>
 <div class="post-body entry-content" itemprop="description articleBody"><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/SJHMm3o5uEw" width="560"></iframe></span></div>
 <h2>Week15-18</h2>
-<p><span></span></p>
-<h2>Weeks Meeting</h2>
+<h4><span></span>Api限制用戶遠端控制(要先有自己的DNS)</h4>
+<p><span style="color: #000000;">1.先開啟之前所設定好的ubuntu虛擬主機，</span><span><span style="color: #000000;">VirtualBox的IPv6埠號也要檢查有沒有錯誤。</span><br/><br/><span style="color: #000000;">2.將虛擬主機tmp下的oauth_scrum.txt內容，改為之前所設定好的Google API憑證帳號密碼，使用sudo vi oauth_scrum.txt來進行編輯。</span><br/><br/><span style="color: #000000;">3.必須要有自己的DNS才可以讓其他台電腦進行連線(只能透過老師幫忙設定才行)，沒有的話就只能在自己的電腦內進行測試。</span><br/></span><span><img alt="" height="328" src="/images/cmd DNS.png" width="551"/></span></p>
+<p><span style="color: #000000;">4.因為有DNS的關係，所以網路也必須要設定才行，IPv6位置跟之前一樣就行了，新增一個慣用的DNS伺服器，可以到cmd用nslookup來查詢。</span><br/><img alt="" height="440" src="/images/網路設定.png" width="536"/></p>
+<p>5.自己的 <span>Google API 的''OAuth 客戶端ID''也要進行URI的設定，這樣子別人才可以用DNS網址來進行連線。</span><br/><img alt="" height="535" src="/images/api設定.PNG" width="474"/></p>
+<p>6.在虛擬主機開啟python3 wsgi.py後，另一台電腦就可以使用https://cdb10.mde.nfu.edu.tw:18443 來進行google登入認證連線了。</p>
+<p>7.一樣是要關掉proxy和防火牆才可以連線，不過還有很多問題沒有解決，目前還沒有辦法進行編輯，就只能認證而已。</p>
+<p></p><h2>Weeks Meeting</h2>
 <h4><span style="background-color: #ffff99;">Week10</span></h4>
 <p>分配Assignment 3的<span>topic2、topic3的原文書翻譯工作，</span> 並討論老師的<a href="http://mde.tw/cd2020pj1/content/CMS.html">CMS</a>、<a href="https://drive.google.com/file/d/1G4MzXUIbNRK7z2XdjtxXzhX51zHHwq85/view?usp=sharing">影片教學</a>，來進行<yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">gm用戶登錄設置，可以參考我的<a href="https://youtu.be/fdH7k_-vIpk">影片</a>。</yt-formatted-string></p>
 <p><span><span style="color: #ff0000;">MSModelingAndTFApproaches:</span><br/><br/></span>40723232 前20<br/>40723234 21-50<br/>40723204 51-80<br/>40723225 81-110<br/>40623115 111-140<br/>40623251 141-170<br/>40723245 171-207<br/><br/><span style="color: #ff0000;">MSModelingAndTFApproaches:<br/></span><br/>40723238 <br/><span>40723210 </span></p>
