@@ -117,7 +117,13 @@
 <v t="leo.20200611205634.1"><vh>W15</vh>
 <v t="leo.20200611205634.2"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20200611210114.1"><vh>F p</vh>
+<v t="leo.20200623132608.1"><vh>w2建倉</vh>
+<v t="leo.20200623132608.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200623132405.1"><vh>個人</vh>
+<v t="leo.20200623132405.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200611210114.1"><vh>f r</vh>
 <v t="leo.20200611210114.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
@@ -909,6 +915,32 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 <t tx="leo.20200611210114.2">###  final project
 
 &lt;iframe height="600" src="https://s40723210.github.io/cd2020/downloads/finalproject.pdf" width="880"&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200623132405.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200623132405.2">##  IPv6 連線個人倉儲
+
+&lt;iframe width="760" height="520" src="https://www.youtube.com/embed/zVGsjqsvlEc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200623132608.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200623132608.2">###  Car gripper Implement
+
+&lt;iframe height="600" src="https://s40723210.github.io/cd2020/content/Car%20gripper%20Implement.html" width="880"&gt;&lt;/iframe&gt;
 </t>
 </tnodes>
 </leo_file>
