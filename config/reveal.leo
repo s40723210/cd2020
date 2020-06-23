@@ -852,7 +852,7 @@ Created by [李承澤](https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw)
 
 						
 </t>
-<t tx="leo.20200611205142.2">##  IPv6 Ubuntu 遠端控制伺服
+<t tx="leo.20200611205142.2">##  IPv4 遠端控制伺服
 
 &lt;iframe width="760" height="520" src="https://www.youtube.com/embed/ZyKg5drxQXA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
