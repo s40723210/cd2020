@@ -4,12 +4,12 @@
 <p><a href="https://s40723210.github.io/cd2020/content/Week10-14.html">Week10-14</a></p>
 <p><a href="https://s40723210.github.io/cd2020/content/Week15-18.html">Week15-18</a></p>
 <p><a href="https://s40723210.github.io/cd2020/content/Weeks%20Meeting.html">Weeks Meeting</a></p>
+<p><a href="https://s40723210.github.io/cd2020/content/%E6%9C%9F%E6%9C%AB%E5%A0%B1%E5%91%8A.html">期末報告</a></p>
 <hr/>
 <p>倉儲網址:<a href="https://github.com/s40723210/cd2020" title="https://github.com/s40723210/cd2020">https://github.com/s40723210/cd2020</a></p>
 <p>youtube:<a href="https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw">https://www.youtube.com/channel/UC8l7lxn3l0ENuxYDhLjgxRw</a></p>
 <p>分組倉儲網址:<a href="https://s40723210.github.io/cd2020bg4" title="https://s40723210.github.io/cd2020bg4">https://s40723210.github.io/cd2020bg4</a></p>
-<p><span>gitter : </span><a href="https://gitter.im/40723210/cd2020">https://gitter.im/40723210/cd2020</a></p>
-<h2>Week1-5</h2>
+<p><span>gitter : </span><a href="https://gitter.im/40723210/cd2020">https://gitter.im/40723210/cd2020</a></p><h2>Week1-5</h2>
 <h4 class="post-title entry-title" itemprop="name"><strong>建立個人cd2020倉儲</strong></h4>
 <p><span>1.下載<a href="https://drive.google.com/file/d/1fxMdqdCoCL__O1IpZ-Sv-A_4-c77Wx4E/view?usp=sharing">2019Fall可攜套件.7z</a>，完成後開啟start。</span><span><br/></span><span></span><span><span>2.先登入自己的github帳號，</span><span>創建一個新的倉儲cd2020。</span></span><span><span><br/></span><span>3.進入要存放該資料的資料夾tmp。</span></span><span><span><br/></span></span><span></span><span><span>4.git clone </span><span>https://github.com/s40723210/cd2020 。</span><span><br/></span><span>5.</span><span>git submodule add https://github.com/mdecourse/cmsimde.git。</span></span><span><span><br/>6.再進入cmsimde，將up_dir的所有項目複<span>製到cd2020</span>。</span></span><span><span><br/>7.完成後，python wsgi.py 開始編輯倉儲。<br/></span></span><span><span>8.login密碼為admin，gitconfig要有帳號密碼。</span></span><span><span><br/>9.處理完，git status &gt; git add . &gt; git commit -m "標題" &gt; git push。</span></span><span><span><br/>10.開啟github倉儲設定，點選要推送的branch即可。<br/></span></span></p>
 <p><span>我的教學影片:<a href="https://youtu.be/jBFzju1F43s">https://youtu.be/jBFzju1F43s<br/><br/><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/jBFzju1F43s" width="560"></iframe></a></span></p>
@@ -388,7 +388,7 @@
 <p><br/>Topic 1 的文章很長，自己看要翻哪一大章節都可，Topic 0 有兩篇pdf也是一樣自己決定，要全翻也行自己斟酌。最後是個人網頁要有assignment2，downloads裡面也要有檔案assignment2.pdf。作業期限到4/23，要自行檢查是否完成所有內容。</p>
 <p><span>直播影片:<a href="https://youtu.be/a69tNWKmC64">https://youtu.be/a69tNWKmC64</a></span></p>
 <p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/a69tNWKmC64" width="560"></iframe></span></p>
-<hr color="00ffee"/>
+<hr color="00ffee">
 <h4>webcam 畫面製作</h4>
 <p>老師要求每個人之後的影片，都必須要有視訊畫面，所以要準備一台webcam ，但是需要花錢買，我們可以使用手機來代替webcam，就是使用<a href="https://www.e2esoft.com/ivcam/">iVcam</a>來進行畫面製作，電腦以及手機都要下載，至於obs與iVcam連線可以參考下方的影片。</p>
 <p>教學影片連結:<a href="https://youtu.be/YCAGt9qku6I">https://youtu.be/YCAGt9qku6I</a></p>
@@ -735,6 +735,7 @@ Host github.com
 <p>7.一樣是要關掉proxy和防火牆才可以連線，不過還有很多問題沒有解決，目前還沒有辦法進行編輯，就只能認證而已。</p>
 <hr/>
 <h4 class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">IPv6 連線個人倉儲</yt-formatted-string></h4>
+<p>1.先設定好<yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style=""><a href="https://youtu.be/5NTALa4xvEc">IPv6 遠端控制伺服</a>、<a href="https://youtu.be/2BFxNK5TtEk">IPv6 Ubuntu對外連線設定</a></yt-formatted-string><br/><br/>2.開啟主機後，在tmp下把自己的倉儲給clone下來(用<span>submodules</span>)<br/><br/>3.輸入ifconfig查詢主機IPv6的IP位置，進入自己倉儲的cmsimde<br/><br/>4.輸入sudo vi wsgi.py更改host，存儲後輸入python3 wsgi.py來啟動<br/><br/>5.輸入網址https://[2001:288:6004:17:2020:2:0:7210]:19443開啟<br/><br/>6.記得要更改<span>vitualbox</span><span>網路埠號，加上一個新的19443 以及 9443</span></p>
 <p>影片連結:<a href="https://youtu.be/zVGsjqsvlEc">https://youtu.be/zVGsjqsvlEc</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/zVGsjqsvlEc" width="560"></iframe></p><h2>Weeks Meeting</h2>
 <h4><span style="background-color: #ffff99;">Week10</span></h4>
@@ -4103,4 +4104,4 @@ void deinitializationCallback
 <li>
 <p><strong><span><span>顯示調整大小手柄</span></span></strong><span><span>：顯示用於調整大小和縮放3D窗口中選定節點的手柄。</span><span>僅對“幾何”節點和“<span> </span></span></span><a href="https://cyberbotics.com/doc/reference/transform"><span><span>變換”</span></span></a><span><span>節點</span><span>派生的節點顯示此選項</span><span>。</span><span>對於過程性PROTO節點，僅當在模板語句中未使用調整大小或縮放所涉及的字段時才可用。</span></span></p>
 </li>
-</ul>
+</ul></hr>
